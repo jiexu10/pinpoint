@@ -11,5 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+
 pinpoint.txt
 .env
+
+/coverage
