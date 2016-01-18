@@ -1,7 +1,7 @@
 Devise.setup do |config|
 
   # ==> Mailer Configuration
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
 
@@ -9,7 +9,6 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
-
 
   # Configure which authentication keys should be case-insensitive.
   config.case_insensitive_keys = [:email]

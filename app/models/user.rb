@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
   ]
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :role, presence: true, inclusion: { in: ROLES.map { |role| role[0] } }
+  validates :role,
+    presence: true,
+    inclusion: { in: ROLES.map { |role| role[0] } }
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable
 end
