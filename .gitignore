@@ -13,3 +13,5 @@
 /tmp
 pinpoint.txt
 .env
+
+/coverage
