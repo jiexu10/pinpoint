@@ -7,6 +7,7 @@ FactoryGirl.define do
     role '1'
 
     trait :restaurant do
+      company_name 'restaurant name'
       role '2'
     end
   end
