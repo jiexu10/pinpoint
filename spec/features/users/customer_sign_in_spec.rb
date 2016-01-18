@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 feature 'customer signs in', %{
@@ -8,9 +7,9 @@ feature 'customer signs in', %{
 } do
 
   # Acceptance Criteria:
-  # - [ ] If I specify a valid, previous registered email and password, I am authenticated and I gain access to the system
-  # - [ ] If I specify an invalid email and password, I remain unauthenticated
-  # - [ ] If I am already signed in, I can't sign in again
+  # - [x] If I specify a valid, previous registered email and password, I am authenticated and I gain access to the system
+  # - [x] If I specify an invalid email and password, I remain unauthenticated
+  # - [x] If I am already signed in, I can't sign in again
 
   let (:user) { FactoryGirl.create(:user) }
 
