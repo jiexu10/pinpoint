@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-feature 'user signs up', %{
+feature 'customer signs up', %{
   As a customer
   I want to create an account
   So that I can use the site
 } do
 
   # Acceptance Criteria:
-  # - [ ] I must specify a valid email address
-  # - [ ] I must specify a password and confirm that password
-  # - [ ] If I do not give valid information, I get an error message
-  # - [ ] If I specify valid information, register my account and authenticate
+  # - [x] I must specify a valid email address
+  # - [x] I must specify a password and confirm that password
+  # - [x] If I do not give valid information, I get an error message
+  # - [x] If I specify valid information, register my account and authenticate
 
   scenario 'user specifies valid and required information' do
     visit root_path
@@ -25,7 +25,7 @@ feature 'user signs up', %{
     choose 'Customer'
     click_button 'Sign Up'
 
-    expect(page).to have_content('Welcome to the club!', count: 1)
+    expect(page).to have_content('Account Created!', count: 1)
     expect(page).to have_content('Sign Out')
   end
 

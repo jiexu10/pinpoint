@@ -4,17 +4,17 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name, 'First Name' %><br />
     <%= f.text_field :first_name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name, 'Last Name' %><br />
     <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= f.label :company_name %><br />
+    <%= f.label :company_name, 'Company Name' %><br />
     <%= f.text_field :company_name %>
   </div>
 
@@ -32,17 +32,17 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, 'Password Confirmation' %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div>
-    <%= f.label :roles %>
-    <%= f.collection_check_boxes(:role_id, Role.all, :id, :name) %>
+    <%= f.label :role %>
+    <%= f.collection_radio_buttons(:role, User::ROLES, :first, :last) %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign Up" %>
   </div>
 <% end %>
 
