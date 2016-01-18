@@ -7,7 +7,8 @@ feature 'customer signs in', %{
 } do
 
   # Acceptance Criteria:
-  # - [x] If I specify a valid, previous registered email and password, I am authenticated and I gain access to the system
+  # - [x] If I specify a valid, previous registered email and password,
+  #   I am authenticated and I gain access to the system
   # - [x] If I specify an invalid email and password, I remain unauthenticated
   # - [x] If I am already signed in, I can't sign in again
 
