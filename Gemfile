@@ -19,9 +19,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'foundation-rails'
+gem 'foundation-rails', '6.1.1.1'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -33,18 +34,18 @@ gem 'active_model_serializers'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'valid_attribute'
-  gem 'database_cleaner'
 end
 
 group :test do
   gem 'launchy', require: false
+  gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 
 group :development do
