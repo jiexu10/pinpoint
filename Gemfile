@@ -22,6 +22,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -46,6 +47,7 @@ end
 group :test do
   gem 'launchy', require: false
   gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 
 group :development do
