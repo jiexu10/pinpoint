@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'customer signs up', %{
+feature 'restaurant signs up', %{
   As a restaurant
   I want to create an account
   So that I can have my restaurant on the site
@@ -17,13 +17,14 @@ feature 'customer signs up', %{
     visit root_path
     click_link 'Sign Up'
 
+    click_link 'Restaurant Sign Up'
+
     fill_in 'First Name', with: 'firstname'
     fill_in 'Last Name', with: 'lastname'
     fill_in 'Company Name', with: 'My Company'
     fill_in 'Email', with: 'fake@email.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password Confirmation', with: 'password'
-    choose 'Restaurant'
     click_button 'Sign Up'
 
     expect(page).to have_content('Account Created!')
@@ -34,15 +35,16 @@ feature 'customer signs up', %{
     visit root_path
     click_link 'Sign Up'
 
+    click_link 'Restaurant Sign Up'
+
     fill_in 'First Name', with: 'firstname'
     fill_in 'Last Name', with: 'lastname'
     fill_in 'Email', with: 'fake@email.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password Confirmation', with: 'password'
-    choose 'Restaurant'
     click_button 'Sign Up'
 
-    expect(page).to have_content("Company name can't be blank for restaurants!")
+    expect(page).to have_content("can't be blank")
     expect(page).to_not have_content('Sign Out')
   end
 end

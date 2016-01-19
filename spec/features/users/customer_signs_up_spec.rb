@@ -22,7 +22,6 @@ feature 'customer signs up', %{
     fill_in 'Email', with: 'fake@email.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password Confirmation', with: 'password'
-    choose 'Customer'
     click_button 'Sign Up'
 
     expect(page).to have_content('Account Created!', count: 1)
