@@ -2,13 +2,20 @@ require 'net/http'
 require 'pry'
 require 'openssl'
 require 'json'
+require 'httparty'
 
 class LocuData
-  attr_reader :data
-  attr_accessor :location
+  include HTTParty
+  attr_reader :data, :name, :location, :categories
 
-  def initialize
-    # @location = location
+  base_uri "https://api.locu.com"
+
+  def initialize(query = {})
+    @name = query['name']
+    @location = query['location']
+    @categories = query['categories']
+    @open_hours = query['open_hours']
+    @menus = query['menus']
     @data = nil
   end
 
@@ -50,10 +57,15 @@ class LocuData
     uri = URI.parse(uri_string)
     message = %Q({
       "api_key": "#{ENV['LOCU_API_KEY']}",
-      "fields": [ "name" ],
+      "fields": [ "name", "categories", "location", "menus" ],
       "venue_queries": [
         {
-          "name": "bistro central parc"
+          "location": {
+              "locality": "Boston"
+            },
+          "categories": {
+              "str_id": "restaurants"
+          }
         }
       ]
     })
@@ -64,11 +76,38 @@ class LocuData
     request.body = message
 
     response = http.request(request)
-    binding.pry
     @data = JSON.parse(response.body)
     binding.pry
   end
 
+  def build_venue_queries
+    venue_queries = {}
+    venue_queries['name'] = @name if @name
+    venue_queries['categories']['str_id'] = @categories if @categories
+    venue_queries['menus']['$present'] = true if @menu
+    venue_queries['open_hours'] = @open_hours if @open_hours
+    venue_queries['location']['locality'] = @location['locality'] if @location['locality']
+    venue_queries['location']['postal_code'] = @location['postal_code'] if @location['postal_code']
+    venue_queries['location']['geo']['$in_lat_lng_radius'] = @location['lat_lng_radius'] if @location['lat_lng_radius']
+    if venue_queries.empty?
+      venue_queries['location']['locality'] = 'Boston'
+    end
+    venue_queries
+  end
+
+  def search_function
+    default_fields = [ "name", "description", "website_url", "menus", "open_hours", "categories", "location", "contact", "delivery" ]
+    post_url = "https://api.locu.com/v2/venue/search"
+    message = {
+      "api_key" => "#{ENV['LOCU_API_KEY']}",
+      "fields" => default_fields,
+      "venue_queries" => [ build_venue_queries ]
+    }
+    @data = HTTParty.post(post_url,
+      body: message.to_json,
+      headers: {'Content-Type' =>'application/json'} )
+    binding.pry
+  end
   # def parse
   #   unless @data
   #     get_posts

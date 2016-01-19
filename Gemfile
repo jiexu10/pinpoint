@@ -23,6 +23,7 @@ gem 'foundation-rails', '6.1.1.1'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'devise'
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
