@@ -1,7 +1,3 @@
-require 'pry'
-require 'net/http'
-require 'json'
-
 class IpApi
   attr_reader :data
 
