@@ -13,7 +13,7 @@ feature 'user signs out', %{
   # - [x] Restaurant account can sign out
 
   let (:user) { FactoryGirl.create(:user) }
-  let (:restaurant) { FactoryGirl.create(:user, :restaurant) }
+  let (:restaurant) { FactoryGirl.create(:restaurant) }
 
   scenario 'a signed-in user logs out' do
     user_sign_in(user)
@@ -25,7 +25,7 @@ feature 'user signs out', %{
   end
 
   scenario 'a signed-in restaurant logs out' do
-    user_sign_in(restaurant)
+    restaurant_sign_in(restaurant)
     click_link 'Sign Out'
 
     expect(page).to have_content('Signed out successfully.')
