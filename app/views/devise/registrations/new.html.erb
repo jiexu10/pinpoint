@@ -1,5 +1,9 @@
 <h2>Sign up</h2>
 
+<% unless resource.is_a?(Restaurant) %>
+  <%= link_to 'Restaurant Sign Up', new_restaurant_registration_path %>
+<% end %>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -34,11 +38,6 @@
   <div class="field">
     <%= f.label :password_confirmation, 'Password Confirmation' %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div>
-    <%= f.label :role %>
-    <%= f.collection_radio_buttons(:role, User::ROLES, :first, :last) %>
   </div>
 
   <div class="actions">

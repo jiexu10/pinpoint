@@ -24,6 +24,7 @@ gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'devise'
 gem 'httparty'
+gem 'webmock'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -41,6 +42,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'valid_attribute'
+  gem 'vcr'
 end
 
 group :test do
