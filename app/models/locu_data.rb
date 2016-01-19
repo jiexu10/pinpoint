@@ -15,19 +15,20 @@ class LocuData
   def get_posts
     uri_string = "https://api.locu.com"
     uri = URI.parse(uri_string)
-    message = %Q({
-      "api_key" => "0a617b50e355f12544adc19e76d4714d0d8a6a46",
-      "fields" => [ "name" ],
-      "venue_queries" => [
+    message = '{
+      "api_key": "0a617b50e355f12544adc19e76d4714d0d8a6a46",
+      "fields": [ "name" ],
+      "venue_queries": [
         {
-          "name" => "bistro central parc"
+          "name": "bistro central parc"
         }
       ]
-    })
+    }'
+    # binding.pry
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     # http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    request = Net::HTTP::Post.new("/v2/venue/search")
+    request = Net::HTTP::Post.new("/v2/venue/search", initheader = {'Content-Type' =>'application/json'})
     # request.add_field('Content-Type', 'application/json')
     request.body = message
     # response = http.start { |http| http.request(request) }
@@ -45,46 +46,26 @@ class LocuData
   end
 
   def get_stuff
-    # uri = URI("https://api.locu.com/v2/venue/search")
-    # https = Net::HTTP.new(uri.host, uri.port)
-    # https.use_ssl = true
-    message = {
-      "api_key" => "0a617b50e355f12544adc19e76d4714d0d8a6a46",
-      "fields" => [ "name" ],
-      "venue_queries" => [
+    uri_string = "https://api.locu.com"
+    uri = URI.parse(uri_string)
+    message = %Q({
+      "api_key": "#{ENV['LOCU_API_KEY']}",
+      "fields": [ "name" ],
+      "venue_queries": [
         {
-          "name" => "bistro central parc"
+          "name": "bistro central parc"
         }
       ]
-    }
-    # response = https.post(uri.path, message)
-    # binding.pry
-
-    uri = URI.parse('https://api.locu.com/v2/venue/search')
-    res = Net::HTTP.post_form(uri, message)
-    binding.pry
-  end
-
-  def post_req
-    uri = URI.parse('https://api.locu.com/v2/venue/search')
-
+    })
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
-
-    message = {
-      "api_key" => "0a617b50e355f12544adc19e76d4714d0d8a6a46",
-      "fields" => [ "name" ],
-      "venue_queries" => [
-        {
-          "name" => "bistro central parc"
-        }
-      ]
-    }
-
-    request = Net::HTTP::Post.new(uri.request_uri)
-    request.set_form_data(message)
+    # http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    request = Net::HTTP::Post.new("/v2/venue/search", initheader = {'Content-Type' =>'application/json'})
+    request.body = message
 
     response = http.request(request)
+    binding.pry
+    @data = JSON.parse(response.body)
     binding.pry
   end
 
