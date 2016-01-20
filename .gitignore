@@ -14,5 +14,7 @@
 
 pinpoint.txt
 .env
+data.txt
+locu_structure.txt
 
 /coverage

@@ -1,0 +1,180 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.locu.com/v2/venue/search
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"0a617b50e355f12544adc19e76d4714d0d8a6a46","fields":["name","description","website_url","menus","open_hours","categories","location","contact","delivery"],"venue_queries":[{"name":"bistro
+        central parc"}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 19 Jan 2016 21:57:31 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '8526'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status": "success", "http_status": 200, "venues": [{"name": "Bistro
+        Central Parc", "open_hours": {"sunday": [["17:30", "22:30"], ["09:00", "15:00"]],
+        "friday": [["17:30", "22:30"]], "wednesday": [["17:30", "22:30"]], "thursday":
+        [["17:30", "22:30"]], "saturday": [["17:30", "22:30"], ["09:00", "15:00"]]},
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id":
+        "french", "name": "French"}], "menus": [{"menu_name": "Brunch", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"text": "ORGANIC -
+        with potatoes & greens", "type": "SECTION_TEXT"}, {"price": "13.00", "type":
+        "ITEM", "name": "Eggs Benedict"}, {"price": "14.00", "type": "ITEM", "name":
+        "Salmon Benedict"}, {"price": "14.00", "type": "ITEM", "name": "Eggs Florentine"},
+        {"price": "9.00", "type": "ITEM", "name": "Two Eggs any style"}, {"price":
+        "9.00", "type": "ITEM", "name": "Plain Omelet"}]}], "section_name": "Les Oeufs\u200b"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "14.00", "type":
+        "ITEM", "name": "French Toast"}, {"price": "10.00", "type": "ITEM", "name":
+        "Half French Toast"}, {"price": "8.00", "type": "ITEM", "name": "Fresh Fruit
+        Salad"}, {"price": "7.00", "type": "ITEM", "name": "Yogurt and Granola"}]}],
+        "section_name": "Plats Sucrees \u00a0- Sweet\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "6.00", "type": "ITEM", "name": "Vegetables", "description":
+        "Ratatouille or Spinach"}, {"price": "6.00", "type": "ITEM", "name": "Grilled
+        Potatoes"}, {"price": "6.00", "type": "ITEM", "name": "Pommes Frites"}, {"price":
+        "6.00", "type": "ITEM", "name": "Smoked Salmon"}]}], "section_name": "Side
+        Orders\u200b"}, {"subsections": [{"subsection_name": "", "contents": [{"price":
+        "8.00", "type": "ITEM", "name": "Soupe du Jour"}, {"price": "10.00", "type":
+        "ITEM", "name": "Soupe \u00e1 l\u2019oignon"}, {"price": "8.00", "type": "ITEM",
+        "name": "Mixed Greens", "description": "(Balsamic)"}, {"price": "12.00", "type":
+        "ITEM", "name": "Fris\u00e9e aux Lardons"}, {"price": "12.00", "type": "ITEM",
+        "name": "Croque Monsieur", "description": "Ham & Melted Swiss topped with
+        Bechamel"}, {"price": "13.00", "type": "ITEM", "name": "Croque Madame", "description":
+        "A monsieur with a sunny side egg"}, {"price": "13.00", "type": "ITEM", "name":
+        "Pates du jour"}, {"price": "11.00", "type": "ITEM", "name": "Escargots Bourguignon"},
+        {"price": "14.00", "type": "ITEM", "name": "Moules Marinieres", "description":
+        "White wine, shallots, parsley, cream"}, {"price": "23.00", "type": "ITEM",
+        "name": "Risotto aux Coquilles St Jacques", "description": "Risotto, lobster
+        sauce, scallops"}, {"price": "20.00", "type": "ITEM", "name": "Confit de Canard",
+        "description": "(With braised lentils)"}, {"price": "23.00", "type": "ITEM",
+        "name": "New York Steak & Eggs"}, {"price": "23.00", "type": "ITEM", "name":
+        "Steak / Frites"}, {"price": "11.00", "type": "ITEM", "name": "Baked Brie"}]}],
+        "section_name": "Nos Plats\u200b"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"price": "7.00", "type": "ITEM", "name": "Pellegrino/Perrier"},
+        {"price": "3.00", "type": "ITEM", "name": "Cafe ou tea"}, {"price": "5.00",
+        "type": "ITEM", "name": "Fresh Squeezed OJ"}, {"price": "4.00", "type": "ITEM",
+        "name": "Caf\u00e9 au lait"}, {"price": "3.00", "type": "ITEM", "name": "Soda"},
+        {"price": "3.50", "type": "ITEM", "name": "Mocha"}, {"price": "4.00", "option_groups":
+        [{"text": "", "type": "OPTION_CHOOSE", "options": [{"name": "Cranberry"},
+        {"name": "Apple"}]}], "type": "ITEM", "name": "Juice"}, {"price": "4.00",
+        "type": "ITEM", "name": "Cappuccino"}, {"price": "4.00", "type": "ITEM", "name":
+        "Iced Tea"}, {"price": "4.00", "type": "ITEM", "name": "Latte"}, {"price":
+        "8.00", "type": "ITEM", "name": "Mimosa"}, {"price": "2.00", "type": "ITEM",
+        "name": "Espresso"}, {"price": "8.00", "type": "ITEM", "name": "Champairelle"},
+        {"price": "2.50", "type": "ITEM", "name": "Machiato"}, {"price": "8.00", "type":
+        "ITEM", "name": "Bellini"}, {"price": "3.00", "type": "ITEM", "name": "Americano"},
+        {"price": "8.00", "type": "ITEM", "name": "Kir"}, {"price": "1.00", "type":
+        "ITEM", "name": "Extra shot"}, {"price": "10.00", "type": "ITEM", "name":
+        "Kir Royal"}, {"price": "4.00", "type": "ITEM", "name": "Hot Chocolate"},
+        {"price": "5.00", "type": "ITEM", "name": "Non Alcoholic Wine"}, {"price":
+        "3.00", "type": "ITEM", "name": "Milk"}]}], "section_name": "Les Boissons\u200b"}],
+        "currency_symbol": "$"}, {"menu_name": "Dinner", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"price": "10.00", "type": "ITEM", "name":
+        "Soupe a L\u2019Oignon", "description": "Traditional french onion soup"},
+        {"price": "8.00", "type": "ITEM", "name": "Soupe Du Jour"}, {"price": "11.00",
+        "type": "ITEM", "name": "Duo De Tartare De Saumon", "description": "Duo of
+        salmon tartar, and gravlax topped with salmon roe"}, {"price": "13.00", "type":
+        "ITEM", "name": "American Kobe Style Beef Tartare"}, {"price": "8.00", "type":
+        "ITEM", "name": "Mixed Green Salad"}, {"price": "12.00", "type": "ITEM", "name":
+        "Fris\u00e9e Aux Lardons", "description": "Fris\u00e9e with lardons and poached
+        egg"}, {"price": "11.00", "type": "ITEM", "name": "Brie Chaud", "description":
+        "Baked brie croutons tomates concasse"}, {"price": "11.00", "type": "ITEM",
+        "name": "Salade D\u2019Endives Au Roquefort", "description": "Walnuts, apples,
+        pears, balsamic vinaigrette rosemary"}, {"price": "11.00", "type": "ITEM",
+        "name": "Wild Mushroom Risotto", "description": "With truffle oil"}, {"price":
+        "11.00", "type": "ITEM", "name": "Escargots Bourguignon", "description": "Garlic
+        and parsley butter"}, {"price": "14.00", "type": "ITEM", "name": "Ris De Veau
+        Aux Champignons", "description": "Sweet breads with mushrooms"}]}], "section_name":
+        "Hors D\u2019\u0153uvres\u200b"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"price": "14.00", "type": "ITEM", "name": "Moules Marinieres",
+        "description": "Mussels, white wine, shallots, parsley, cream"}, {"price":
+        "14.00", "type": "ITEM", "name": "Moules Au Curry Madras", "description":
+        "Mussels with white wine, shallots parsley, curry madras & cr\u00e8me fraiche"}]}],
+        "section_name": "Les Moules\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Pasta of the Day", "description":
+        "A-q\u200b"}]}], "section_name": "Les Pates\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "22.00", "type": "ITEM", "name": "Magret De Canard",
+        "description": "Breast of duck"}, {"price": "23.00", "type": "ITEM", "name":
+        "Steak Frites", "description": "New york angus, green peppercorn sauce, french
+        fries and vegetables"}, {"price": "19.00", "type": "ITEM", "name": "Half Roasted
+        Organic Chicken", "description": "Cornish hen, jus de poulet, salardaise potatoes
+        and bacon"}, {"price": "20.00", "type": "ITEM", "name": "Confit De Canard,
+        Potato Salardaise", "description": "Bacon, mushrooms"}, {"price": "20.00",
+        "type": "ITEM", "name": "Braised Beef Cheeks, Red Beet Puree", "description":
+        "Goat cheese, mushrooms, potato fondant"}, {"price": "29.00", "type": "ITEM",
+        "name": "Carr\u00e9 D\u2019Agneau, Ratatouille", "description": "Rack\u200b
+        of lamb with rosemary fleur de sel and ratatouille"}, {"price": "24.00", "type":
+        "ITEM", "name": "Bouillabaisse", "description": "Southern france (marseille)
+        seafood specialty"}, {"price": "23.00", "type": "ITEM", "name": "Risotto Aux
+        Coquilles St Jacques", "description": "Risotto, lobster sauce, scallops"},
+        {"price": "Market", "type": "ITEM", "name": "Poisson Du Jour", "description":
+        "Fish of the day"}, {"price": "12.00", "type": "ITEM", "name": "Plat Vegetarien",
+        "description": "Risotto topped with ratatouille"}, {"price": "26.00", "type":
+        "ITEM", "name": "Filet Mignon", "description": "Green peppercorn sauce, potato
+        gratin"}]}], "section_name": "Les Plats\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "6.00", "type": "ITEM", "name": "Pommes Frites"},
+        {"price": "6.00", "type": "ITEM", "name": "Spinach"}, {"price": "6.00", "type":
+        "ITEM", "name": "Ratatouille"}, {"price": "6.00", "type": "ITEM", "name":
+        "Mushrooms"}]}], "section_name": "Side Orders\u200b"}], "currency_symbol":
+        "$"}], "locu_id": "3ac33e6306c52465e30a", "contact": {"phone": "(415) 931-7272"},
+        "location": {"locality": "San Francisco", "country": "United States", "region":
+        "CA", "postal_code": "94117", "address1": "560 Central Ave.", "geo": {"type":
+        "Point", "coordinates": [-122.44428, 37.775002]}}, "website_url": "http://bistrocentralparc.com/"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 21:57:31 GMT
+- request:
+    method: get
+    uri: http://ip-api.com/json/?fields=24816
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - ip-api.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 19 Jan 2016 22:55:08 GMT
+      Content-Length:
+      - '104'
+    body:
+      encoding: UTF-8
+      string: '{"city":"Boston","lat":42.3571,"lon":-71.0655,"query":"50.241.127.209","status":"success","zip":"02108"}'
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 22:55:08 GMT
+recorded_with: VCR 3.0.1
