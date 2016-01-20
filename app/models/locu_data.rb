@@ -33,7 +33,7 @@ class LocuData
     message = {
       "api_key" => "#{ENV['LOCU_API_KEY']}",
       "fields" => default_fields,
-      "venue_queries" => [ build_venue_queries ]
+      "venue_queries" => [build_venue_queries]
     }
     @data = HTTParty.post(post_url,
       body: message.to_json,
@@ -56,9 +56,10 @@ class LocuData
         venue_queries['location']['locality'] = location['locality']
       elsif location['postal_code']
         venue_queries['location']['postal_code'] = location['postal_code']
-      elsif location['lat_lng_radius']
+      elsif location['lat_lng_rad']
         venue_queries['location']['geo'] = {}
-        venue_queries['location']['geo']['$in_lat_lng_radius'] = location['llr']
+        venue_queries['location']['geo']['$in_lat_lng_radius'] =
+          location['lat_lng_rad']
       end
     end
   end
