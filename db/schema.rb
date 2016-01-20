@@ -11,17 +11,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119161013) do
+ActiveRecord::Schema.define(version: 20160120183820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "str_id",     null: false
+  end
+
   create_table "items", force: :cascade do |t|
-    t.string  "name",            null: false
+    t.string  "name",                null: false
     t.string  "description"
-    t.string  "price",           null: false
-    t.integer "menucategory_id"
-    t.integer "restaurant_id",   null: false
+    t.string  "price",               null: false
+    t.integer "menusection_id"
+    t.integer "restaurantdetail_id", null: false
+  end
+
+  create_table "menusections", force: :cascade do |t|
+    t.string   "name",                null: false
+    t.integer  "restaurantdetail_id", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "opentimes", force: :cascade do |t|
+    t.integer  "restaurantdetail_id", null: false
+    t.string   "day",                 null: false
+    t.string   "hours",               null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "restaurantcategories", force: :cascade do |t|
+    t.integer  "restaurantdetail_id", null: false
+    t.integer  "category_id",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "restaurantdetails", force: :cascade do |t|
+    t.integer  "restaurant_id", null: false
+    t.string   "name",          null: false
+    t.string   "description"
+    t.string   "locuid",        null: false
+    t.string   "phone",         null: false
+    t.string   "website_url"
+    t.string   "address_one",   null: false
+    t.string   "city",          null: false
+    t.string   "state",         null: false
+    t.string   "zip_code",      null: false
+    t.string   "coordinates"
+    t.string   "delivery"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "address_two"
   end
 
   create_table "restaurants", force: :cascade do |t|

@@ -1,8 +1,7 @@
-class Item < ActiveRecord::Base
-  belongs_to :menusection
+class Menusection < ActiveRecord::Base
   belongs_to :restaurantdetail
+  has_many :items
 
   validates :name, presence: true
-  validates :price, presence: true
   validates :restaurantdetail, presence: true
 end
