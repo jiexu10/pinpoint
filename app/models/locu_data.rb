@@ -28,7 +28,7 @@ class LocuData
 
   def search_function
     default_fields = ["name", "description", "website_url", "menus",
-        "open_hours", "categories", "location", "contact", "delivery"]
+      "open_hours", "categories", "location", "contact", "delivery"]
     post_url = "https://api.locu.com/v2/venue/search"
     message = {
       "api_key" => "#{ENV['LOCU_API_KEY']}",
