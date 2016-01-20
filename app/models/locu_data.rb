@@ -27,8 +27,8 @@ class LocuData
   end
 
   def search_function
-    default_fields = [ "name", "description", "website_url", "menus",
-      "open_hours", "categories", "location", "contact", "delivery" ]
+    default_fields = ["name", "description", "website_url", "menus",
+        "open_hours", "categories", "location", "contact", "delivery"]
     post_url = "https://api.locu.com/v2/venue/search"
     message = {
       "api_key" => "#{ENV['LOCU_API_KEY']}",
@@ -37,7 +37,7 @@ class LocuData
     }
     @data = HTTParty.post(post_url,
       body: message.to_json,
-      headers: {'Content-Type' =>'application/json'} )
+      headers: { 'Content-Type' => 'application/json' })
   end
 
   private
@@ -63,5 +63,4 @@ class LocuData
       end
     end
   end
-
 end
