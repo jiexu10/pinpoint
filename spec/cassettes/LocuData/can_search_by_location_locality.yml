@@ -1,0 +1,1723 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.locu.com/v2/venue/search
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"0a617b50e355f12544adc19e76d4714d0d8a6a46","fields":["name","description","website_url","menus","open_hours","categories","location","contact","delivery"],"venue_queries":[{"categories":{"str_id":"restaurants"},"location":{"locality":"Cambridge"}}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 19 Jan 2016 23:31:56 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status": "success", "http_status": 200, "venues": [{"name": "Hi-Rise
+        Bread Company", "locu_id": "9250e2e0770a554e8164", "contact": {"phone": "(617)
+        876-8766"}, "website_url": "http://www.hi-risebread.com", "categories": [{"str_id":
+        "restaurants", "name": "Restaurants"}], "location": {"locality": "Cambridge",
+        "country": "United States", "region": "MA", "postal_code": "02138", "address1":
+        "208 Concord Ave.", "geo": {"type": "Point", "coordinates": [-71.13129471,
+        42.382498]}}}, {"name": "Subway", "open_hours": {"monday": [["07:00", "22:00"]],
+        "tuesday": [["07:00", "22:00"]], "friday": [["07:00", "22:00"]], "wednesday":
+        [["07:00", "22:00"]], "thursday": [["07:00", "22:00"]], "sunday": [["09:00",
+        "22:00"]], "saturday": [["08:00", "22:00"]]}, "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}, {"str_id": "sandwiches", "name": "Sandwiches"}], "menus":
+        [{"menu_name": "Menu", "sections": [{"subsections": [{"subsection_name": "",
+        "contents": [{"type": "ITEM", "name": "B.L.T.", "description": "The sub that
+        proves great things come in threes. In this case, those three things happen
+        to be crisp bacon, lettuce and juicy tomato. While there is no scientific
+        way of proving it, this B.L.T might be the most perfect sub in existence."},
+        {"type": "ITEM", "name": "Black Forest Ham", "description": "Simply delicious.
+        This flavorful sandwich is packed with lean Black Forest ham and served on
+        your favorite freshly baked bread, like 9 grain wheat or Italian. All this
+        mouthwatering greatness for less than 6g of fat. Can not beat that"}, {"type":
+        "ITEM", "name": "Buffalo Chicken", "description": "Good things are hard to
+        come by. That''s why we''ve brought the Buffalo Chicken back for good! All
+        that cool, creamy ranch, poured over tender glazed buffalo chicken. Get it
+        as a delicious Footlong sub!"}, {"type": "ITEM", "name": "Chicken and Bacon
+        Ranch Melt", "description": "Saddle up and try the fresh toasted subway chicken
+        and bacon ranch sandwich. Stuffed with melted monterey cheddar cheese, tender
+        all-white meat chicken, crispy bacon, lettuce, tomato, onions and green peppers."},
+        {"type": "ITEM", "name": "Cold Cut Combo", "description": "Can''t decide what
+        kind of meat you want? Get them all. The cold cut combo is stacked with turkey-based
+        meats - ham, salami and bologna. It''s topped with crisp vegetables and served
+        on freshly baked bread. This combo has a little bit of everything."}, {"type":
+        "ITEM", "name": "Italian B.M.T.", "description": "An Italian masterpiece with
+        Genoa salami, spicy pepperoni, and black forest ham. Add your favorite veggies
+        on your choice of freshly baked bread and get ready to enjoy."}, {"type":
+        "ITEM", "name": "Meatball Marinara", "description": "We take Italian style
+        meatballs, drench them in mangialicious marinara sauce, and then serve \u00ebem
+        on your favorite freshly baked bread with your choice of crisp veggies. Buon
+        appetito!"}, {"type": "ITEM", "name": "Oven Roasted Chicken", "description":
+        "Oven roasted to perfection and piled high atop freshly baked bread with your
+        favorite toppings from spicy jalapenos to crisp green peppers or whatever
+        you like. With all this juicy flavor, your taste buds won''t believe it has
+        6g of fat."}, {"type": "ITEM", "name": "Roast Beef", "description": "This\u200e
+        tasty number, with less than 6g of fat, is piled high with lean roast beef
+        and your choice of fresh veggies, like crisp green peppers and juicy tomatoes.
+        Want to take it up a notch? Try it with some spicy jalapenos for a kick in
+        the taste buds."}, {"type": "ITEM", "name": "Spicy Italian", "description":
+        "Go ahead, spice up your life. Served on your favorite freshly baked bread
+        and toasted to perfection, the spicy Italian features spicy pepperoni and
+        sensational salami. Try one today with everything else your taste buds desire."},
+        {"type": "ITEM", "name": "Steak and Cheese", "description": "Back by popular
+        demand, the steak and cheese is here to stay. The two most elemental, irresistible
+        ingredients in the world - piled high onto freshly baked bread and your choice
+        of crisp veggies."}, {"type": "ITEM", "name": "Subway Club", "description":
+        "Tender sliced turkey, lean roast beef and tasty Black Forest ham come together
+        with your choice of fresh veggies for a low-fat flavor fiesta. Try it today
+        on freshly baked bread and experience all the deliciously for 6 grams of fat"},
+        {"type": "ITEM", "name": "Subway Melt", "description": "Imagine freshly baked
+        bread stuffed with tender sliced turkey, ham, crispy bacon, melted cheese,
+        and your choice of tasty vegetables and condiments. Now, stop imagining and
+        get your mouth over to your nearest Subway Restaurant."}, {"type": "ITEM",
+        "name": "Sweet Onion Chicken Teriyaki", "description": "This gourmet specialty
+        is a flavorful blend of tender teriyaki glazed chicken strips and our own
+        fat-free sweet onion sauce. Served hot and toasted on freshly baked bread.
+        A taste so big, you won''t believe it has less than 6g of fat"}, {"type":
+        "ITEM", "name": "The Big Philly Cheesesteak", "description": "The Big Philly
+        Cheesesteak is every meat lover''s dream. With lots of steak smothered in
+        melted cheese, it''s easy to see why this classic is the taste that Philly
+        is so proud of."}, {"type": "ITEM", "name": "Tuna", "description": "Our tasty
+        tuna sandwich is simply sumptuous. Flaked tuna, mixed with mayo, and your
+        choice of fresh vegetables, this local favorite can be built to suit your
+        craving."}, {"type": "ITEM", "name": "Turkey Breast", "description": "Get
+        flavor without the flab when you try this American classic. Dive into tender
+        turkey breast piled sky-high with everything from lettuce and tomatoes to
+        banana peppers, maybe even jalapenos if you''re feeling spicy."}, {"type":
+        "ITEM", "name": "Turkey Breast and Black Forest Ham", "description": "A sandwich
+        so deliciously hearty, you won''t know you''re eating low fat. Enjoy the flavor
+        of tender sliced turkey breast and Black Forest ham with your favorite veggies
+        from juicy tomatoes to sweet red onions served on your favorite freshly baked
+        bread."}, {"type": "ITEM", "name": "Tuscan Chicken Melt", "description": "All
+        the flavors of tuscany in the palm of your hand. This delicious sub is loaded
+        with tender, juicy chicken tossed in zesty herb seasoning, then fresh toasted
+        with melty cheese on your choice of bread. It is topped with a tasty balsamic
+        vinaigrette. With just 8 grams of fat on a 6in sub, it\u00eds healthy and
+        tastes great. Or, try it as a 6.00 Footlong Special."}, {"type": "ITEM", "name":
+        "Veggie Delite", "description": "Crispy, crunchy and classically delicious.
+        The Veggie Delite is tangible proof that a sandwich can be high in flavor
+        without being high in fat. Try a delicious combination of lettuce, tomatoes,
+        green peppers, black olives and onions with your choice of fat-free condiments
+        on freshly baked bread."}]}], "section_name": "All Sandwiches\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "B.L.T.", "description":
+        "The sub that proves great things come in threes. In this case, those three
+        things happen to be crisp bacon, lettuce and juicy tomato. While there is
+        no scientific way of proving it, this B.L.T might be the most perfect sub
+        in existence."}, {"type": "ITEM", "name": "Black Forest Ham", "description":
+        "Simply\u200e delicious. This flavorful sandwich is packed with lean Black
+        Forest ham and served on your favorite freshly baked bread, like 9 grain wheat
+        or Italian. All this mouthwatering greatness for less than 6g of fat. Can\u00edt
+        beat that."}, {"type": "ITEM", "name": "Cold Cut Combo", "description": "Can''t
+        decide what kind of meat you want? Get them all. The Cold Cut Combo is stacked
+        with turkey-based meats - ham, salami and bologna. It''s topped with crisp
+        vegetables and served on freshly baked bread. This combo has a little bit
+        of everything."}, {"type": "ITEM", "name": "Egg and Cheese", "description":
+        "A classic for a reason. Our egg and cheese is simply delicious. Enjoy a fluffy
+        egg omelet with melted cheese fresh toasted on freshly baked bread. It''s
+        unbeatable. Try it with egg white on 3\" flatbread or English Muffin to make
+        it a fresh fit breakfast sandwich!"}, {"type": "ITEM", "name": "Meatball Marinara",
+        "description": "We take Italian style meatballs, drench them in mangialicious
+        marinara sauce, and then serve ''em on your favorite freshly baked bread with
+        your choice of crisp veggies. Buon appetito!"}, {"type": "ITEM", "name": "Veggie
+        Delite", "description": "Crispy, crunchy and classically delicious. The Veggie
+        Delite is tangible proof that a sandwich can be high in flavor without being
+        high in fat. Try a delicious combination of lettuce, tomatoes, green peppers,
+        black olives and onions with your choice of fat-free condiments on freshly
+        baked bread."}]}], "section_name": "$5 Footlongs\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Black Forest
+        Ham", "description": "Simply delicious. This flavorful sandwich is packed
+        with lean Black Forest ham and served on your favorite freshly baked bread,
+        like 9 grain wheat or Italian. All this mouthwatering greatness for less than
+        6g of fat. Can''t beat that."}, {"type": "ITEM", "name": "Oven Roasted Chicken",
+        "description": "Oven roasted to perfection and piled high atop freshly baked
+        bread with your favorite toppings from spicy jalapenos to crisp green peppers
+        or whatever you like. With all this juicy flavor, your taste buds won''t believe
+        it has 6g of fat."}, {"type": "ITEM", "name": "Roast Beef", "description":
+        "This tasty number, with less than 6g of fat, is piled high with lean roast
+        beef and your choice of fresh veggies, like crisp green peppers and juicy
+        tomatoes. Want to take it up a notch? Try it with some spicy jalapenos for
+        a kick in the taste buds."}, {"type": "ITEM", "name": "Subway Club", "description":
+        "Tender sliced turkey, lean roast beef and tasty black forest ham come together
+        with your choice of fresh veggies for a low-fat flavor fiesta. Try it today
+        on freshly baked bread and experience all the deliciously for 6 grams of fat."},
+        {"type": "ITEM", "name": "Sweet Onion Chicken Teriyaki", "description": "This
+        gourmet specialty is a flavorful blend of tender teriyaki glazed chicken strips
+        and our own fat-free sweet onion sauce. Served hot and toasted on freshly
+        baked bread. A taste so big, you won''t believe it has less than 6g of fat!"},
+        {"type": "ITEM", "name": "Turkey Breast", "description": "Get flavor without
+        the flab when you try this American classic. Dive into tender turkey breast
+        piled sky-high with everything from lettuce and tomatoes to banana peppers,
+        maybe even jalapenos if you''re feeling spicy."}, {"type": "ITEM", "name":
+        "Turkey Breast and Black Forest Ham", "description": "A sandwich so deliciously
+        hearty, you won''t know you''re eating low fat. Enjoy the flavor of tender
+        sliced turkey breast and Black Forest ham with your favorite veggies from
+        juicy tomatoes to sweet red onions served on your favorite freshly baked bread."},
+        {"type": "ITEM", "name": "Veggie Delite", "description": "Crispy, crunchy
+        and classically delicious. The Veggie Delite is tangible proof that a sandwich
+        can be high in flavor without being high in fat. Try a delicious combination
+        of lettuce, tomatoes, green peppers, black olives and onions with your choice
+        of fat-free condiments on freshly baked bread."}, {"type": "ITEM", "name":
+        "Tuscan Chicken Melt", "description": "All the flavors of Tuscany in the palm
+        of your hand. This delicious sub is loaded with tender, juicy chicken tossed
+        in zesty herb seasoning, then fresh toasted with melty cheese on your choice
+        of bread. It''s topped with a tasty balsamic vinaigrette. With just 8 grams
+        of fat on a 6\" sub, it''s healthy and tastes great. or, try it as a 6.00
+        Footlong Special."}]}], "section_name": "Fresh Fit Choices\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Buffalo Chicken",
+        "description": "Good things are hard to come by. That''s why we''ve brought
+        the Buffalo Chicken back for good! All that cool, creamy ranch, poured over
+        tender glazed buffalo chicken. Get it as a delicious Footlong sub!"}, {"type":
+        "ITEM", "name": "Sweet Onion Chicken Teriyaki", "description": "This\u200e
+        gourmet specialty is a flavorful blend of tender teriyaki glazed chicken strips
+        and our own fat-free sweet onion sauce. Served hot and toasted on freshly
+        baked bread. A taste so big, you won''t believe it has less than 6g of fat!"},
+        {"type": "ITEM", "name": "Tuscan Chicken Melt", "description": "All the flavors
+        of Tuscany in the palm of your hand. This delicious sub is loaded with tender,
+        juicy chicken tossed in zesty herb seasoning, then fresh toasted with melty
+        cheese on your choice of bread. It''s topped with a tasty balsamic vinaigrette.
+        With just 8 grams of fat on a 6\u00ee sub, it\u00eds healthy and tastes great.
+        Or, try it as a $6.00 Footlong Special."}]}], "section_name": "Featured Products\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"type": "ITEM", "name":
+        "Chopped Salads", "description": "We''re taking salad to a new level. Now,
+        you can make any 6\u00ee sub or double meat sub a chopped salad. Try your
+        favorite as a chopped salad today."}]}], "section_name": "Salad\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Kids - Veggie
+        Delite", "description": "You no longer have to sacrifice nutrition or flavor
+        when you''re short on time. Choose a Mini sub (Black Forest Ham, Turkey Breast
+        or Roast Beef) and pair it with fresh apple slices. Add a 1% low fat white
+        milk to wash it down and you have a better-for-them meal that kids will love."}]}],
+        "section_name": "Fresh Fit for Kids\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Apple Slices", "description": "As\u200e
+        delicious as our sandwiches are, they are even better when paired with the
+        perfect side and drink. Our sides run from salty to sweet and from fit to
+        indulgent. With such a variety of drinks to choose from, there''s truly something
+        for every taste."}, {"type": "ITEM", "name": "Chips/Crisps", "description":
+        "As delicious as our sandwiches are, they are even better when paired with
+        the perfect side and drink. Our sides run from salty to sweet and from fit
+        to indulgent. With such a variety of drinks to choose from, there''s truly
+        something for every taste."}, {"type": "ITEM", "name": "Yogurt Parfait", "description":
+        "Enjoy the delicious taste of our new yogurt parfait, made with sweet, juicy
+        strawberries, crunchy granola and smooth, creamy yogurt. It''s the perfect
+        treat for breakfast, lunch or any time of day."}, {"type": "ITEM", "name":
+        "Cookies", "description": "As delicious as our sandwiches are, they are even
+        better when paired with the perfect side and drink. Our sides run from salty
+        to sweet and from fit to indulgent. With such a variety of drinks to choose
+        from, there''s truly something for every taste."}]}], "section_name": "Sides\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"type": "ITEM", "name":
+        "Pepperoni", "description": "As\u200e delicious as our sandwiches are, they
+        are even better when paired with the perfect side and drink. Our sides run
+        from salty to sweet and from fit to indulgent. With such a variety of drinks
+        to choose from, there''s truly something for every taste."}, {"type": "ITEM",
+        "name": "Cheese", "description": "As delicious as our sandwiches are, they
+        are even better when paired with the perfect side and drink. Our sides run
+        from salty to sweet and from fit to indulgent. With such a variety of drinks
+        to choose from, there''s truly something for every taste."}, {"type": "ITEM",
+        "name": "Bacon", "description": "As delicious as our sandwiches are, they
+        are even better when paired with the perfect side and drink. Our sides run
+        from salty to sweet and from fit to indulgent. With such a variety of drinks
+        to choose from, there''s truly something for every taste."}]}], "section_name":
+        "Extras\u200e"}], "currency_symbol": "$"}, {"menu_name": "Breakfast", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"type": "ITEM", "name":
+        "Bacon, Egg and Cheese", "description": "Start your day in a sizzlin'' way
+        with crispy bacon, egg and melty cheese on fresh toasted Flatbread or whatever
+        you like. It''s hard to imagine this trio of tasty ingredients could get even
+        better, but just wait till you try it with everything from juicy tomatoes
+        to spicy jalapenos for a full on flavor free-for-all."}, {"type": "ITEM",
+        "name": "Black Forest Ham, Egg and Cheese", "description": "Enjoy savory Black
+        Forest Ham, melted cheese, and egg whites all on a fresh toasted English muffin.
+        Add your choice of toasty veggies for a tasty way to start the day! Try this
+        Breakfast Melt with egg white on 3\" flatbread to make it a Fresh Fit breakfast
+        sandwich!"}, {"type": "ITEM", "name": "Breakfast B.M.T. Melt", "description":
+        "Fluffy egg whites, Black Forest ham, salami and spicy pepperoni come together
+        with bubbly melted cheese for a morning masterpiece worthy of the breakfast
+        hall of fame. Try it today on a hot toasted light wheat English muffin with
+        all your favorite crisp veggies."}, {"type": "ITEM", "name": "Egg and Cheese",
+        "description": "A classic for a reason. Our egg and cheese is simply delicious.
+        Enjoy a fluffy egg omelet with melted cheese fresh toasted on freshly baked
+        bread. It''s unbeatable. Try it with egg white on 3\" flatbread or English
+        Muffin to make it a Fresh Fit breakfast sandwich!"}, {"type": "ITEM", "name":
+        "Steak, Egg and Cheese", "description": "No matter what side of the bed you
+        wake up on, you''ll love this. Yummy egg with tender and delicious steak.
+        All covered in melty cheese on freshly baked bread. Oh, what a beautiful breakfast.
+        Try it with egg white on 3\" flatbread or English Muffin to make it a Fresh
+        Fit breakfast sandwich!"}, {"type": "ITEM", "name": "Sunrise Subway Melt",
+        "description": "Rise and shine to a delightfully delicious breakfast of tender
+        turkey, crispy bacon, Black Forest ham and fluffy egg white under a blanket
+        of bubbly melted cheese. Try one today on hot toasted flatbread with your
+        choice of tasty veggies."}]}], "section_name": ""}], "currency_symbol": "$"},
+        {"menu_name": "Drinks", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "1% Low Fat Milk", "description":
+        "As delicious as our sandwiches are, they are even better when paired with
+        the perfect side and drink. Our sides run from salty to sweet and from fit
+        to indulgent. With such a variety of drinks to choose from, there''s truly
+        something for every taste."}, {"type": "ITEM", "name": "Coca Cola Fountain
+        Sodas", "description": "As delicious as our sandwiches are, they are even
+        better when paired with the perfect side and drink. Our sides run from salty
+        to sweet and from fit to indulgent. With such a variety of drinks to choose
+        from, there''s truly something for every taste."}, {"type": "ITEM", "name":
+        "Dasani Bottled Water", "description": "As delicious as our sandwiches are,
+        they are even better when paired with the perfect side and drink. Our sides
+        run from salty to sweet and from fit to indulgent. With such a variety of
+        drinks to choose from, there''s truly something for every taste."}, {"type":
+        "ITEM", "name": "Minute Maid Apple Juice", "description": "As delicious as
+        our sandwiches are, they are even better when paired with the perfect side
+        and drink. Our sides run from salty to sweet and from fit to indulgent. With
+        such a variety of drinks to choose from, there''s truly something for every
+        taste"}, {"type": "ITEM", "name": "Fresh Brewed Iced Tea", "description":
+        "As delicious as our sandwiches are, they are even better when paired with
+        the perfect side and drink. Our sides run from salty to sweet and from fit
+        to indulgent. With such a variety of drinks to choose from, there''s truly
+        something for every taste."}, {"type": "ITEM", "name": "Coffee", "description":
+        "As delicious as our sandwiches are, they are even better when paired with
+        the perfect side and drink. Our sides run from salty to sweet and from fit
+        to indulgent. With such a variety of drinks to choose from, there''s truly
+        something for every taste."}, {"type": "ITEM", "name": "Vitamin Water Zero",
+        "description": "Looking for the perfect drink to pair with your better for
+        you favorite? We''ve got delicious, refreshing vitaminwater zero! Great tasting,
+        zero calorie vitaminwater zero is just what you''d expect from us."}]}], "section_name":
+        ""}], "currency_symbol": "$"}], "locu_id": "d6864fdb32d9798b9060", "contact":
+        {"phone": "(617) 492-5351"}, "location": {"locality": "Cambridge", "country":
+        "United States", "region": "MA", "postal_code": "02138", "address1": "1105
+        Mass Ave.", "geo": {"type": "Point", "coordinates": [-71.1136496, 42.3706518]}},
+        "website_url": "http://www.subway.com/"}, {"name": "Village Kitchen", "locu_id":
+        "06fb51bde030678d9eae", "contact": {"phone": "(617) 491-3133"}, "website_url":
+        "http://villagekitchencambridge.com/", "categories": [{"str_id": "italian",
+        "name": "Italian"}, {"str_id": "restaurants", "name": "Restaurants"}, {"str_id":
+        "pizza", "name": "Pizza"}], "location": {"locality": "Cambridge", "country":
+        "United States", "region": "MA", "postal_code": "02138", "address1": "359
+        Huron Ave.", "geo": {"type": "Point", "coordinates": [-71.13844, 42.3811639142857]}}},
+        {"locu_id": "db758b374efbbc31357b", "contact": {"phone": "(617) 547-1130"},
+        "name": "Yen Ching Restaurant", "categories": [{"str_id": "restaurants", "name":
+        "Restaurants"}, {"str_id": "food", "name": "Food"}], "location": {"locality":
+        "Cambridge", "country": "United States", "region": "MA", "postal_code": "02138",
+        "address1": "1326 Massachusetts Ave.", "geo": {"type": "Point", "coordinates":
+        [-71.11791, 42.37312]}}}, {"name": "Charlie''s Beer Garden", "open_hours":
+        {"monday": [["10:00", "01:00"]], "tuesday": [["10:00", "01:00"]], "friday":
+        [["10:00", "02:00"]], "wednesday": [["10:00", "01:00"]], "thursday": [["10:00",
+        "02:00"]], "sunday": [["10:00", "01:00"]], "saturday": [["10:00", "02:00"]]},
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}], "menus":
+        [{"menu_name": "Menu", "sections": [{"subsections": [{"subsection_name": "",
+        "contents": [{"price": "7.00", "type": "ITEM", "name": "Buffalo Wings (with
+        or Without Buffalo Sauce) ."}, {"price": "5.00", "type": "ITEM", "name": "Homemade
+        (Chicken Fingers)"}, {"price": "7.00", "type": "ITEM", "name": "Fried Calamari"},
+        {"price": "5.00", "type": "ITEM", "name": "Mozzarella Sticks"}, {"price":
+        "6.00", "type": "ITEM", "name": "Jalapeno Poppers"}, {"price": "8.00", "type":
+        "ITEM", "name": "Combo Platter", "description": "2 Mozzarella sticks, 2 chicken
+        fingers, 2 chicken wing, 2 jalapeno poppers"}, {"price": "6.00", "type": "ITEM",
+        "name": "Homemade Clam Chowder"}, {"price": "Market", "type": "ITEM", "name":
+        "Soup of the Day"}, {"price": "4.00", "type": "ITEM", "name": "Tossed Salad"},
+        {"price": "5.00", "type": "ITEM", "name": "Greek Salad"}, {"price": "6.00",
+        "option_groups": [{"text": "Meat", "type": "OPTION_ADD", "options": [{"price":
+        "+2.00", "name": "Chicken"}]}], "type": "ITEM", "name": "Ceasar Salad"}, {"price":
+        "9.00", "type": "ITEM", "name": "Boneless Buffalo Chicken Wrap", "description":
+        "With blue cheese dressing and waffle fries"}]}], "section_name": "Appetizers,
+        Soups and Salads\u200e"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "5.25", "type": "ITEM", "name": "Charlie''s Double Cheeseburger",
+        "description": "Lettuce, tomato. pickle and French fries"}, {"price": "8.00",
+        "type": "ITEM", "name": "Charlie''s Triple Cheeseburger", "description": "On
+        a bulkie roll with lettuce, tomatoe, bacon, cheese and French fries"}, {"price":
+        "9.00", "type": "ITEM", "name": "Hawaiian Doublee Cheeseburger", "description":
+        "Our famous double cheese with grilled pineapple, homemade ginger dressing.
+        lettuce, tomato, pickles and French frie"}, {"price": "9.00", "type": "ITEM",
+        "name": "Double Mushroom and Swiss Cheeseburger", "description": "Our famous
+        double (swiss) cheese with mushrooms and onion, lettuce, tomato, pickle and
+        waffle fries"}, {"price": "12.00", "type": "ITEM", "name": "Charlie''s Double
+        Lobster Roll Special", "description": "Served with French fries"}, {"price":
+        "10.00", "type": "ITEM", "name": "Charlie''s Buffalo Burger", "description":
+        "5 Oz. buffalo burger on bulkie roll, sauteed mushroom, grilled onions, bacon,
+        lettuce, tomato, pickles and French fries"}, {"price": "9.00", "type": "ITEM",
+        "name": "Double Guacamole Cheeseburger", "description": "Our famous double
+        cheese with guacamole, lettuce, tomato, pickles, chips and salsa"}, {"price":
+        "9.00", "type": "ITEM", "name": "Double Guinness Cheeseburger", "description":
+        "Double cheeseburger made with guinness served with lettuce, tomato, pickle
+        and beer battered steak fries"}, {"price": "8.00", "type": "ITEM", "name":
+        "Chef''s Favorite", "description": "4 Oz. angus beef cheeseburger on grilled
+        bun, lettuce, tomato, pickles, grilled onions, bacon, mayo, ketchup and French
+        fries"}, {"price": "10.00", "type": "ITEM", "name": "Charlie''s Double Mega
+        Cheeseburger", "description": "Two 4 oz angus beef patties on bulkie roll,
+        sauteed mushrooms, grilled onions, bacon, lettuce, tomatoes, pickles and French
+        fries"}, {"price": "9.00", "type": "ITEM", "name": "Double Bacon Blue Cheeseburger",
+        "description": "Our famous double cheese with blue cheese, bacon, lettuce,
+        tomato, pickles and French fries"}, {"price": "9.00", "type": "ITEM", "name":
+        "Double Jalapeno Cheese Burger", "description": "With\u200e waffle fries and
+        salad"}]}], "section_name": "Best of Harvard Square\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "9.00", "type": "ITEM", "name":
+        "Chicken Kebob Served with Rice and Salad"}, {"price": "9.00", "type": "ITEM",
+        "name": "Fried Chicken (4 Pieces) Served with French Fries and Cole Slaw"},
+        {"price": "12.00", "type": "ITEM", "name": "Charlie''s Steak Tip Special with
+        French Fries with a Salad..... You Gotta Try These"}, {"price": "12.00", "type":
+        "ITEM", "name": "rib eye steak served with salad and your choice of rice,
+        French fries or vegetables"}, {"price": "8.00", "type": "ITEM", "name": "Steak
+        and Cheese and French Fries with Sauteed Onions, Peppers and Mushrooms"},
+        {"price": "8.00", "type": "ITEM", "name": "Hot Turkey Sandwich with Vegetables
+        and Mashed Potatoes"}]}], "section_name": "Poultry, Beef & Pork\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "12.00", "type": "ITEM", "name":
+        "Home Battered Fried Shrimp or Scallops Served with French Fries and Cole
+        Slaw"}, {"price": "10.00", "type": "ITEM", "name": "Homemade Fish and Chips
+        Served with Cole Slaw"}, {"price": "10.00", "type": "ITEM", "name": "Homemade
+        Crabcakes with Coleslaw and French Fries"}, {"price": "8.00", "type": "ITEM",
+        "name": "Crabcake Sandwich with Coleslaw and French Fries"}, {"price": "9.00",
+        "type": "ITEM", "name": "Homemade Double Crab Cheese Burger with French Fries
+        and Salad"}, {"price": "8.00", "type": "ITEM", "name": "Homemade Salmon Burger
+        Served with Waffle Fries"}, {"price": "10.00", "type": "ITEM", "name": "Homemade
+        Lobster Burger with Waffle Fries"}, {"price": "Market", "type": "ITEM", "name":
+        "Boiled Fresh 1/4 Lb Lobster Served with with French Fries and Coleslaw"}]}],
+        "section_name": "From the Sea\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "7.00", "type": "ITEM", "name": "Veggie Wrap",
+        "description": "Sprout, pepper, onion, lettuce, hummus carrots, cheese and
+        tomato) served with French fries"}, {"price": "8.00", "type": "ITEM", "name":
+        "Veggie Burger with Grilled Onions and French Fries"}, {"price": "7.00", "type":
+        "ITEM", "name": "Portobello Mushroom and Tomato Sandwich with French Fries"},
+        {"price": "8.00", "type": "ITEM", "name": "Veggie Burger Ruben Served with
+        French Fries"}, {"price": "8.00", "type": "ITEM", "name": "Homemade Black
+        Bean and Vegetable Cheese Burger with Salsa, Guacamole and Chips"}]}], "section_name":
+        "Charlies Vegetarian Square\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE",
+        "options": [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name":
+        "Bulkie roll"}]}], "type": "ITEM", "name": "Grilled Cheese"}, {"price": "7.00",
+        "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name":
+        "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}],
+        "type": "ITEM", "name": "B.B.Q Chicken Breast", "description": "American cheese,
+        tomato and onion"}, {"price": "7.00", "option_groups": [{"text": "Bread",
+        "type": "OPTION_CHOOSE", "options": [{"name": "White"}, {"name": "Wheat"},
+        {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM", "name": "Ruben"},
+        {"price": "7.00", "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE",
+        "options": [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name":
+        "Bulkie roll"}]}], "type": "ITEM", "name": "Chicken Super Melt", "description":
+        "Swiss cheese, dressing, tomato and onion"}, {"price": "7.00", "option_groups":
+        [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name": "White"},
+        {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM",
+        "name": "Turkey Club"}, {"price": "6.00", "option_groups": [{"text": "Bread",
+        "type": "OPTION_CHOOSE", "options": [{"name": "White"}, {"name": "Wheat"},
+        {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM", "name": "Grilled
+        Ham and Cheese"}, {"price": "6.00", "option_groups": [{"text": "Bread", "type":
+        "OPTION_CHOOSE", "options": [{"name": "White"}, {"name": "Wheat"}, {"name":
+        "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM", "name": "Tuna Melt"},
+        {"price": "5.00", "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE",
+        "options": [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name":
+        "Bulkie roll"}]}], "type": "ITEM", "name": "Bacon Lettuce Tomato"}, {"price":
+        "7.00", "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE", "options":
+        [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}],
+        "type": "ITEM", "name": "B.B.Q Pulled Pork"}, {"price": "8.00", "option_groups":
+        [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name": "White"},
+        {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM",
+        "name": "Double Homemade Turkey Burger with Stuffing"}, {"price": "6.00",
+        "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name":
+        "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}],
+        "type": "ITEM", "name": "Hot Pastrami"}, {"price": "4.00", "option_groups":
+        [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name": "White"},
+        {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM",
+        "name": "Large Hot Dog"}, {"price": "7.00", "option_groups": [{"text": "Bread",
+        "type": "OPTION_CHOOSE", "options": [{"name": "White"}, {"name": "Wheat"},
+        {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM", "name": "Double
+        Hot Dog"}, {"price": "8.00", "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE",
+        "options": [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name":
+        "Bulkie roll"}]}], "type": "ITEM", "name": "Single Lobster Roll"}, {"price":
+        "7.00", "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE", "options":
+        [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}],
+        "type": "ITEM", "name": "Cheeseburger Club Sandwich"}, {"price": "4.00", "option_groups":
+        [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name": "White"},
+        {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM",
+        "name": "Cheeseburger"}, {"price": "8.00", "option_groups": [{"text": "Bread",
+        "type": "OPTION_CHOOSE", "options": [{"name": "White"}, {"name": "Wheat"},
+        {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM", "name": "Lobster
+        Melt", "description": "With cheddar and waffle fries"}, {"price": "4.00",
+        "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name":
+        "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}],
+        "type": "ITEM", "name": "Beer Fries / Waffle Fries"}, {"price": "3.00", "option_groups":
+        [{"text": "Bread", "type": "OPTION_CHOOSE", "options": [{"name": "White"},
+        {"name": "Wheat"}, {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM",
+        "name": "French fries"}, {"price": "4.00", "option_groups": [{"text": "Bread",
+        "type": "OPTION_CHOOSE", "options": [{"name": "White"}, {"name": "Wheat"},
+        {"name": "Rye"}, {"name": "Bulkie roll"}]}], "type": "ITEM", "name": "Onion
+        Rings"}, {"price": "4.00", "option_groups": [{"text": "Bread", "type": "OPTION_CHOOSE",
+        "options": [{"name": "White"}, {"name": "Wheat"}, {"name": "Rye"}, {"name":
+        "Bulkie roll"}]}], "type": "ITEM", "name": "Fried Green Beans"}, {"text":
+        "all above sandwiches served with French fries choices of bread: white, wheat,
+        rye or bulkie roll", "type": "SECTION_TEXT"}]}], "section_name": "Burgers,
+        Sandwiches and Side Orders\u200e"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"price": "Market", "type": "ITEM", "name": "Dessert Special"},
+        {"price": "3.00", "option_groups": [{"text": "Flavor", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Chocolate"}, {"name": "Vanilla"}, {"name": "Special"}]}],
+        "type": "ITEM", "name": "Ice Cream"}]}], "section_name": "Desserts\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "2.00", "type":
+        "ITEM", "name": "Coffee or Tea"}, {"price": "2.00", "type": "ITEM", "name":
+        "Soft Drinks/Refill"}, {"price": "2.00", "type": "ITEM", "name": "Milk"},
+        {"type": "ITEM", "name": "Frappes", "description": "Chocolate, vanilla or
+        a special flavor"}]}], "section_name": "Beverages\u200e"}], "currency_symbol":
+        "$"}, {"menu_name": "Beer List", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Chimay"}, {"type": "ITEM", "name":
+        "Blue Moon"}, {"type": "ITEM", "name": "Brooklyn Lager"}, {"type": "ITEM",
+        "name": "Guinness"}, {"type": "ITEM", "name": "Harpoon IPA"}, {"type": "ITEM",
+        "name": "Hoegaarden"}, {"type": "ITEM", "name": "Sam Adams Boston Lager"},
+        {"type": "ITEM", "name": "Sam Adams Seasonal"}, {"type": "ITEM", "name": "Sierra
+        Nevada"}, {"type": "ITEM", "name": "Stella Artois"}, {"text": "Please ask
+        your server about our rotating lines", "type": "SECTION_TEXT"}]}], "section_name":
+        "18 Beers on Draft\u200e"}, {"subsections": [{"subsection_name": "Ales", "contents":
+        [{"type": "ITEM", "name": "American", "description": "Genesee cream, genesee
+        ice"}, {"type": "ITEM", "name": "Belgian Pale Ale", "description": "Chouffe-houblon,
+        duvei"}, {"type": "ITEM", "name": "Indian Pale Ale", "description": "Logunitos"},
+        {"type": "ITEM", "name": "Pale Ale", "description": "Dales pale ale, peak
+        organic"}, {"type": "ITEM", "name": "Brown Ale", "description": "New castle"},
+        {"type": "ITEM", "name": "Porter", "description": "Rogue mocha"}, {"type":
+        "ITEM", "name": "Stouts", "description": "Samuel smith oatmeal, guinness foreign
+        extra"}, {"type": "ITEM", "name": "Abby Style", "description": "Unibroue la
+        fin and monde, chimay (blue, red, white) ommegang abby ale, corsencdonk"},
+        {"type": "ITEM", "name": "Wheat", "description": "Sam adams cherry wheat,
+        wittekerke Belgian"}, {"type": "ITEM", "name": "White", "description": "Hitachino
+        nest"}]}, {"subsection_name": "Lagers", "contents": [{"type": "ITEM", "name":
+        "American Style", "description": "Michultra, rolling rock balantine, narragansett,
+        50 back"}, {"type": "ITEM", "name": "Pilsner Euro Lager", "description": "Grolsch,
+        heineken, fosters, victory primo, samuel smith organic"}, {"type": "ITEM",
+        "name": "Tight Lager", "description": "Amstel light, sam light"}, {"type":
+        "ITEM", "name": "Dark Lager", "description": "Negra\u200e mode/a"}, {"type":
+        "ITEM", "name": "German Lager", "description": "Dab dortmunde, schlenterlo
+        rauchbeir (smoked)"}, {"type": "ITEM", "name": "Jamaican Lager", "description":
+        "Red stripe"}]}, {"subsection_name": "", "contents": [{"type": "ITEM", "name":
+        "Ciders", "description": "Magners, original sin"}, {"type": "ITEM", "name":
+        "Hefe-Weizen", "description": "Poulaner, schneider, sierra nevada, summer
+        sandy"}, {"type": "ITEM", "name": "Lambic Ale", "description": "Lindemans
+        (peach or frambaise)"}, {"type": "ITEM", "name": "Gluten Free", "description":
+        "Red bridge, daura (>6 ppm)"}, {"type": "ITEM", "name": "Non Alcoholic", "description":
+        "Clousthaler"}, {"type": "ITEM", "name": "Saison", "description": "Pretty\u200e
+        things jock d''or"}, {"type": "ITEM", "name": "Mise", "description": "Mikes
+        hard lemonade smirnoff ice"}, {"text": "Please check with server for more
+        domestic and imported beer", "type": "SECTION_TEXT"}]}], "section_name": "Bottled
+        Beers & Can Beers\u200e"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"type": "ITEM", "name": "Chariles''s Creamsicle", "description": "Vanilla
+        vodka, orange vodka, butter schnapps cream and OJ"}, {"type": "ITEM", "name":
+        "Charlie''s Old Fashioned", "description": "Makers mark, cherry, orange, sugar,
+        splash of soda water on ice"}, {"type": "ITEM", "name": "Classic Side Car",
+        "description": "Courvoisier,\u200e cointreau, fresh lemon juice, shaken with
+        ice and served straight up in a sugar-rimmed glass with a lemon twist"}, {"type":
+        "ITEM", "name": "Harlem Shake", "description": "Harlem, bitters, ginger beer
+        and lemon juice"}, {"type": "ITEM", "name": "Mojito", "description": "Muddled
+        mint and lime with 10 cane rum finished with soda raspberry lime rickey"},
+        {"type": "ITEM", "name": "Raspberry Lime Rickey", "description": "Stoli\u200e
+        raz, chambord, fresh lime juice and sprite"}, {"type": "ITEM", "name": "Sucker
+        Punch", "description": "Harlem, cranberry juice, pineapple juice, splash of
+        lime juice and grenadine"}, {"type": "ITEM", "name": "Trago Margarita", "description":
+        "Trago silver, triple sec, sour mix and splash of lime juice"}, {"type": "ITEM",
+        "name": "Sangria (Red or White)", "description": "Charlie\u2019s wine, red
+        apples, asian pear, oranges, cantaloupes, triple"}, {"type": "ITEM", "name":
+        "Sec, Peach Brandy", "description": "Shot of the month"}, {"type": "ITEM",
+        "name": "Charlie''s Bomb", "description": "Stoli orange, triple sec and OJ
+        dropped in red bull"}]}], "section_name": "Cocktail\u200e"}], "currency_symbol":
+        "$"}, {"menu_name": "Specials", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"text": "All macaroni and cheese dishes come with a mixed
+        green salad with croutons, onions and a dressing of your choice", "type":
+        "SECTION_TEXT"}, {"price": "12.00", "type": "ITEM", "name": "Walnut Crusted
+        Stilton Macaroni and Cheese Served with Steak Tips"}, {"price": "8.00", "type":
+        "ITEM", "name": "Spinach and Roasted Red Peppers Macaroni and Cheese"}, {"price":
+        "9.00", "type": "ITEM", "name": "Classic Macaroni and Cheese with Grilled
+        Kielbasa"}, {"price": "12.00", "type": "ITEM", "name": "Lobster Macaroni and
+        Cheese"}, {"price": "10.00", "type": "ITEM", "name": "Buffalo Chicken Macaroni
+        and Cheese"}, {"price": "9.00", "type": "ITEM", "name": "Classic Macaroni
+        and Cheese with Two Hot Dogs"}, {"price": "9.00", "type": "ITEM", "name":
+        "Charlie''s Double Cheeseburger Special Topped with Macaroni and Cheese and
+        Bacon, Served with Salad and Beer Fries"}, {"price": "12.00", "type": "ITEM",
+        "name": "Double Lobster Roll with French Fries"}]}], "section_name": "Mac
+        and Cheese\u200e"}], "currency_symbol": "$"}, {"menu_name": "Food", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"price": "7.00", "type":
+        "ITEM", "name": "Buffalo Wings", "description": "With or Without Buffalo Sauce"},
+        {"price": "5.00", "type": "ITEM", "name": "Homemade Chicken Fingers"}, {"price":
+        "7.00", "type": "ITEM", "name": "Fried Calamari"}, {"price": "5.00", "type":
+        "ITEM", "name": "Mozzarella Sticks"}, {"price": "6.00", "type": "ITEM", "name":
+        "Jalapeno Poppers"}, {"price": "8.00", "type": "ITEM", "name": "Combo Platter",
+        "description": "2 Mozzarella Sticks, 2 Chicken Fingers, 2 Chicken Wings, 2
+        Jalapeno Poppers"}, {"price": "6.00", "type": "ITEM", "name": "Homemade Clam
+        Chowder"}, {"type": "ITEM", "name": "Soup of The Day", "description": "Priced
+        Daily"}, {"price": "4.00", "type": "ITEM", "name": "Tossed Salad"}, {"price":
+        "5.00", "type": "ITEM", "name": "Greek Salad"}, {"price": "6.00", "option_groups":
+        [{"text": "Extra", "type": "OPTION_ADD", "options": [{"price": "+2.00", "name":
+        "Chicken"}]}], "type": "ITEM", "name": "Ceasar Salad"}, {"price": "9.00",
+        "type": "ITEM", "name": "Boneless Buffalo Chicken Wrap", "description": "With
+        Blue Cheese Dressing Waffle Fries"}]}], "section_name": "Appetizers\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "5.25", "type":
+        "ITEM", "name": "Charlie''s Double Cheeseburger", "description": "Lettuce,
+        Tomato, Pickle and French Fries"}, {"price": "8.00", "type": "ITEM", "name":
+        "Charlie''s Trilpe Cheeseburger", "description": "on A Bukle Roll With Lettuce,
+        Tomato, Bacon, Cheese and French Fries"}, {"price": "9.00", "type": "ITEM",
+        "name": "Hawalan Double Cheeseburger", "description": "Our Famous Double Cheese
+        With Grilled Pineapple, Homemade Ginger Dressing, Lettuce, Tomato, Pickles
+        And French Fries"}, {"price": "9.00", "type": "ITEM", "name": "Double Mushroom
+        and Swiss Cheeseburger", "description": "Our Famous Double Swiss Cheese With
+        Mushroom and Onion, Lettuce, Tomato. Pickle And Waffle Fries"}, {"price":
+        "12.00", "type": "ITEM", "name": "Charlie''s Double Lobster Roll Special",
+        "description": "Served With Friench Fries"}, {"price": "10.00", "type": "ITEM",
+        "name": "Charlie''s Buffalo Burger", "description": "5 Oz Buffalo Burgers
+        on Bulkie Roll, Sauteed Mushroom, Grilled Onion, Bacon, Lettuce, Tomatoes,
+        Pickles And French Fries"}, {"price": "9.00", "type": "ITEM", "name": "Double
+        Guacamole Cheeseburger", "description": "Our Famous Double Cheese With Guacamole,
+        Lettuce, Tomato, Pickles, Chips And French Fries"}, {"price": "9.00", "type":
+        "ITEM", "name": "Double Guinness Cheeseburger", "description": "Double Cheeseburger
+        Made With Guinness Served With Lettuce, Tomato, Beer And Buttered Steak Fries"},
+        {"price": "8.00", "type": "ITEM", "name": "Chef''s Favorite", "description":
+        "4 Oz Angus Beef Cheeseburger on Rilled Bun, Lettuce, Tomato, Pickles, Grilled
+        Onions, Bacon, Mayo, Ketchup And French Fries"}, {"price": "10.00", "type":
+        "ITEM", "name": "Charlie''s Double Mega Cheeseburger", "description": "Two\u200e
+        4 Oz Angus Beef Patties on Bulkie Roll, Sauteed Mushroom, Grilled Onions,
+        Bacon, Lettuce, Tomatoes, Pickles And French Fries"}, {"price": "9.00", "type":
+        "ITEM", "name": "Double Bacon Blue Cheeseburger", "description": "Our Famous
+        Double Cheese With Blue Cheese, Bacon, Lettuce, Tomatoes, Pickles And French
+        Fries"}, {"price": "9.00", "type": "ITEM", "name": "Double Jalapeno Cheeseburger",
+        "description": "With Waffle Fries And Salad"}]}], "section_name": "Best of
+        The Harvard Square\u200e"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "9.00", "type": "ITEM", "name": "Chicken Kebob", "description":
+        "Served With Rice and Salad"}, {"price": "9.00", "type": "ITEM", "name": "Fried
+        Chicken", "description": "4 Pieces Served With French Fries and Coleslaw"},
+        {"price": "12.00", "type": "ITEM", "name": "Charlie''s Steak Tip Special",
+        "description": "With French Fries With A Salad. You Gotta Try These"}, {"price":
+        "12.00", "type": "ITEM", "name": "Rib Eye Steak", "description": "Served With
+        Salad And Your Choice of Rice, French Fries or Vegetables"}, {"price": "8.00",
+        "type": "ITEM", "name": "Steak and Cheese", "description": "With Sauteed Onions,
+        Peppers and Mushroom And French Fries"}, {"price": "8.00", "type": "ITEM",
+        "name": "Hot Turkey Sandwich", "description": "With\u200e Vegetables And Mashed
+        Potatoes"}]}], "section_name": "Poultry, Beef & Pork\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "12.00", "type": "ITEM", "name":
+        "Home Battered Ikied Shrimp or Scallops", "description": "Served With French
+        Fries and Coleslaw"}, {"price": "10.00", "type": "ITEM", "name": "Homemade
+        Fish and Chips Served With Coleslaw"}, {"price": "10.00", "type": "ITEM",
+        "name": "Homemade Crabcakes With Coleslaw And French Fries"}, {"price": "8.00",
+        "type": "ITEM", "name": "Crabcake Sandwichi With Coleslaw And French Fries"},
+        {"price": "9.00", "type": "ITEM", "name": "Homemade Double Crab Chese Burger
+        With I Friench Fries And Salad"}, {"price": "8.00", "type": "ITEM", "name":
+        "Homemade Salmonburger Served With Waffle Fries"}, {"price": "10.00", "type":
+        "ITEM", "name": "Homemade Lobsterburger With Waffle Fries"}, {"type": "ITEM",
+        "name": "Boiled Fresh 1 1/4 Lb Lobster Served With French Fries And Coleslaw",
+        "description": "Market Price"}]}], "section_name": "From The Sea\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "7.00", "type":
+        "ITEM", "name": "Veggie Wrap", "description": "Spreats, Peppers, Onions, Lettuce,
+        Hummus Carrots, Cheese And Tomatoes Served With French Fries"}, {"price":
+        "8.00", "type": "ITEM", "name": "Veggie Burger", "description": "With\u200e
+        Grilled Onions And French Fries"}, {"price": "7.00", "type": "ITEM", "name":
+        "Portobello Mushroom And Tomato Sandwich", "description": "With French Fries"},
+        {"price": "8.00", "type": "ITEM", "name": "Veggie Burger Ruben", "description":
+        "Served With French Fries"}, {"price": "8.00", "type": "ITEM", "name": "Home
+        Made Black Bean And Vegetable Cheeseburger", "description": "With\u200e Salsa,
+        Guacamole And Chips"}]}], "section_name": "Charlies Vegetarian Square\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"text": "All Sandwiches
+        Served With French Fries. Choice of Bread: White, Wheat, Rye or Bulkie Roll",
+        "type": "SECTION_TEXT"}, {"price": "4.00", "type": "ITEM", "name": "Rilled
+        Cheese"}, {"price": "7.00", "type": "ITEM", "name": "Bbq Chicken Breast",
+        "description": "American Cheese, Tomato and Onion"}, {"price": "7.00", "type":
+        "ITEM", "name": "Ruben"}, {"price": "7.00", "type": "ITEM", "name": "Chicken
+        Super Melt", "description": "Swiss Cheese, Dressing, Tomato and Onion"}, {"price":
+        "7.00", "type": "ITEM", "name": "Turkey Club"}, {"price": "6.00", "type":
+        "ITEM", "name": "Grilled Ham and Cheese"}, {"price": "6.00", "type": "ITEM",
+        "name": "Tuna Melt"}, {"price": "5.00", "type": "ITEM", "name": "Bacon Lettuce
+        Tomato"}, {"price": "7.00", "type": "ITEM", "name": "Bbq Pulled Pork"}, {"price":
+        "8.00", "type": "ITEM", "name": "Double Homemade Turkey Burger", "description":
+        "With Stuffing"}, {"price": "6.00", "type": "ITEM", "name": "Hot Pastrami"},
+        {"price": "4.00", "type": "ITEM", "name": "Large Hot Dog"}, {"price": "7.00",
+        "type": "ITEM", "name": "Double Hot Dog"}, {"price": "8.00", "type": "ITEM",
+        "name": "Single Lobster Roll"}, {"price": "7.00", "type": "ITEM", "name":
+        "Cheeseburger Club Sandwich"}, {"price": "4.00", "type": "ITEM", "name": "Cheeseburger"},
+        {"price": "8.00", "type": "ITEM", "name": "Lobster Melt", "description": "With
+        Cheddar and Waffle Fries"}, {"price": "4.00", "type": "ITEM", "name": "Beer
+        Fries/ Waffle Fries"}, {"price": "3.00", "type": "ITEM", "name": "French Fries"},
+        {"price": "4.00", "type": "ITEM", "name": "Onion Rings"}, {"price": "4.00",
+        "type": "ITEM", "name": "Fried Green Beans"}]}], "section_name": "Burger,
+        Sandwiches And Side Orders\u200e"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"type": "ITEM", "name": "Dessert Special Ask Your Server", "description":
+        "Priced Daily"}, {"price": "3.00", "type": "ITEM", "name": "Ice Cream", "description":
+        "Chocolate, Vanilla or A Special Flavor"}]}], "section_name": "Desserts\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "2.00", "type":
+        "ITEM", "name": "Coffee or Tea"}, {"price": "2.00", "type": "ITEM", "name":
+        "Soft Drinks/Refili"}, {"price": "2.00", "type": "ITEM", "name": "Milk"},
+        {"price": "4.00", "type": "ITEM", "name": "Frappes", "description": "Chocolate,
+        Vanilla or A Special Flavor"}]}], "section_name": "Beverages\u200e"}], "currency_symbol":
+        "$"}, {"menu_name": "Cocktail", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Charlie''s Creamsicle", "description":
+        "Vanilla vodka. Orange vodka. Butter Schnapps Cream and OJ"}, {"type": "ITEM",
+        "name": "Charlie''s Old Fashioned", "description": "Makers Mark, cherry, orange,
+        sugar, splash of soda water on ice"}, {"type": "ITEM", "name": "Classic Side
+        Car", "description": "Courvoisier, Cointreau, fresh lemon juice, shaken with
+        ice and served straight up in a sugar-rimmed glass with a lemon twist"}, {"type":
+        "ITEM", "name": "Harlem Shake", "description": "Harlem, Bitters, Ginger beer
+        and lemon juice"}, {"type": "ITEM", "name": "Mojito", "description": "Muddled
+        Mint and lime with 10 Cane Rum finished with soda"}, {"type": "ITEM", "name":
+        "Raspberry Lime Rickey", "description": "Stoli Raz, Chambord, fresh lime juice
+        and sprite"}, {"type": "ITEM", "name": "Sucker Punch", "description": "Harlem,
+        Cranberry juice, Pineapple juice. Splash of lime Juice and Grenadine"}, {"type":
+        "ITEM", "name": "Trago Margarita", "description": "Trago Silver, Triple Sec,
+        Sour mix and splash of lime juice"}, {"type": "ITEM", "name": "Sangria Red
+        or White", "description": "Charlie''s Wine, Red apples, Asian pear, Oranges,
+        Cantaloupes, Triple Sec, Peach Brandy"}]}], "section_name": ""}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Charlie''s
+        Bomb", "description": "Stoli Orange, Triple Sec and OJ dropped in Red Bull"}]}],
+        "section_name": "Shot of the Month\u200e"}], "currency_symbol": "$"}, {"menu_name":
+        "Specials", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"price": "8.00", "type": "ITEM", "name": "Soup of the day", "description":
+        "with Charlie''s ultimate grilled cheese"}, {"price": "5.00", "type": "ITEM",
+        "name": "Fried mushrooms", "description": "with Cajun dipping sauce"}, {"price":
+        "9.00", "type": "ITEM", "name": "Charlie''s ultimate grilled cheese sandwich",
+        "description": "with grilled chicken, jalapcnos and French fries"}, {"price":
+        "10.00", "type": "ITEM", "name": "Mixed greens topped", "description": "With
+        steak tips, crumbled blue cheese, almonds, marinated onions and blue cheese
+        dressing"}, {"price": "8.00", "type": "ITEM", "name": "Macaroni and cheese",
+        "description": "With grilled kiclbasa"}, {"price": "9.00", "type": "ITEM",
+        "name": "Double stacked bacon cheeseburger", "description": "On a mac and
+        cheese bun served with ltp, grilled onions and beer fries"}, {"price": "9.00",
+        "type": "ITEM", "name": "Double stacked portabclla mushroom", "description":
+        "Topped with grilled tomato and mozzarella cheese on a mac and cheese bun
+        served with ltp and beer fries"}, {"price": "9.00", "type": "ITEM", "name":
+        "Beer battered deep fried double bacon blue cheeseburger", "description":
+        "served with beer battered fries and ltp, Caution: very hot when you open
+        it"}, {"price": "9.00", "type": "ITEM", "name": "4 Angus beef sliders", "description":
+        "With 4 unique toppings served with beer tries"}, {"price": "13.00", "type":
+        "ITEM", "name": "Double lobster roll", "description": "with French fries"}]}],
+        "section_name": ""}], "currency_symbol": "$"}], "locu_id": "a9e21a7a4505e9e53b5f",
+        "contact": {"phone": "(617) 492-9646"}, "location": {"locality": "Cambridge",
+        "country": "United States", "region": "MA", "postal_code": "02138", "address1":
+        "Charlie''s Kitchen", "geo": {"type": "Point", "coordinates": [-71.121567,
+        42.372521]}}, "website_url": "http://www.charlieskitchen.com"}, {"name": "Cafe
+        Kafofo", "open_hours": {"monday": [["07:00", "17:00"]], "tuesday": [["07:00",
+        "18:00"]], "friday": [["07:00", "18:00"]], "wednesday": [["07:00", "18:00"]],
+        "thursday": [["07:00", "18:00"]], "sunday": [["10:00", "16:00"]], "saturday":
+        [["09:00", "18:00"]]}, "categories": [{"str_id": "cafes", "name": "Cafes"},
+        {"str_id": "restaurants", "name": "Restaurants"}, {"str_id": "coffee", "name":
+        "Coffee & Tea"}, {"str_id": "food", "name": "Food"}], "menus": [{"menu_name":
+        "Menu", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price":
+        "1.75", "name": "Regular 12 oz"}, {"price": "2.15", "name": "Large 16 oz"}]}],
+        "type": "ITEM", "name": "Coffee"}, {"option_groups": [{"text": "Size", "type":
+        "OPTION_CHOOSE", "options": [{"price": "2.00", "name": "Regular 12 oz"}, {"price":
+        "2.30", "name": "Large 16 oz"}]}], "type": "ITEM", "name": "Cafe Au Lait"},
+        {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price":
+        "2.20", "name": "Large 16 oz"}]}], "type": "ITEM", "name": "Tea"}, {"option_groups":
+        [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.45", "name":
+        "Regular 12 oz"}, {"price": "3.80", "name": "Large 16 oz"}]}], "type": "ITEM",
+        "name": "Chai Latte", "description": "The traditional Indian heavy bodied
+        black tea with an exotic spice mix, including cardamom, cinnamon, cloves and
+        ginger with steam milk."}, {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE",
+        "options": [{"price": "2.75", "name": "Large 16 oz"}]}], "type": "ITEM", "name":
+        "Chai or Tea Au Lait", "description": "your favorite tea with steamed milk"},
+        {"option_groups": [{"text": "Quantity", "type": "OPTION_CHOOSE", "options":
+        [{"price": "1.75", "name": "Single"}, {"price": "2.50", "name": "Double"}]},
+        {"text": "Macchiato", "type": "OPTION_ADD", "options": [{"price": "2.00",
+        "name": "single"}, {"price": "2.75", "name": "Double"}]}], "type": "ITEM",
+        "name": "Espresso", "description": "It offers a beautifully even texture with
+        body and dark chocolate taste."}, {"option_groups": [{"text": "Quantity",
+        "type": "OPTION_CHOOSE", "options": [{"price": "2.00", "name": "Single"},
+        {"price": "2.75", "name": "Double"}]}], "type": "ITEM", "name": "Espresso
+        Con Panna", "description": "Espresso with whipped cream"}, {"option_groups":
+        [{"text": "Quantity", "type": "OPTION_CHOOSE", "options": [{"price": "2.00",
+        "name": "Single"}, {"price": "2.75", "name": "Double"}]}], "type": "ITEM",
+        "name": "Americano", "description": "Espresso and hot water"}, {"option_groups":
+        [{"text": "Quantity", "type": "OPTION_CHOOSE", "options": [{"price": "3.30",
+        "name": "Single"}]}], "type": "ITEM", "name": "Cappuccino (8 oz)"}, {"option_groups":
+        [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.30", "name":
+        "Small"}, {"price": "3.80", "name": "Large"}]}], "type": "ITEM", "name": "Latte"},
+        {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price":
+        "3.75", "name": "Small"}, {"price": "4.25", "name": "Large"}]}], "type": "ITEM",
+        "name": "Mocha"}, {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE",
+        "options": [{"price": "3.40", "name": "Small"}, {"price": "3.90", "name":
+        "Large"}]}], "type": "ITEM", "name": "Red Latte", "description": "Rooibos,\u200e
+        Honey & Cinnamon"}]}, {"subsection_name": "Extras", "contents": [{"type":
+        "ITEM", "name": "Whipped Cream", "description": "No charge"}, {"price": "0.50",
+        "type": "ITEM", "name": "Flavor Shots", "description": "Peppermint, caramel,
+        vanilla,\u00a0pumpkin\u00a0spice, hazelnut, coconut and raspberry."}, {"price":
+        "1.25", "type": "ITEM", "name": "Espresso Extra Shot", "description": "For
+        latte,\u00a0cappuccino\u00a0and mocha. Other beverages will be charge a regular
+        espresso price."}]}], "section_name": "Hot Drinks\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"text": "20 Oz", "type": "SECTION_TEXT"},
+        {"price": "2.75", "type": "ITEM", "name": "Iced Coffee", "description": "Our
+        exotic witch coffee in cold process."}, {"price": "3.75", "type": "ITEM",
+        "name": "Iced Latte"}, {"price": "4.00", "type": "ITEM", "name": "Iced Mocha"},
+        {"price": "4.00", "type": "ITEM", "name": "Iced Caramel Latte"}, {"price":
+        "2.30", "type": "ITEM", "name": "Iced Regular Tea", "description": "A blend
+        of South Indian (Nilgiri) and Ceylon full leaf varieties, together with an
+        Indian Assam GFBOPS, yielding a premium, fruity, bright and authentic flavor,
+        with a glowing amber color."}, {"price": "2.75", "type": "ITEM", "name": "Iced
+        Red Zen Tea", "description": "Harmonious, organic herbal blend of hibiscus,
+        orange peel, lemon grass, lavender, cloves, licorice root and stevia (sweet
+        leaf). The red liquor is pleasantly tart, sweet and spicy. No caffeine."},
+        {"price": "2.75", "type": "ITEM", "name": "Iced Golden Green Tea", "description":
+        "This unique blend of green teas, green rooibos, and various exotic herbs
+        and flowers is at once fruity, flowery and herbaceous. The attractive golden
+        peach liquor is cleansing and refreshing. Low caffeine."}, {"price": "3.75",
+        "type": "ITEM", "name": "Iced Chai", "description": "the\u200e traditional
+        Indian heavy bodied black tea with an exotic spice mix over ice and milk of
+        your choice"}, {"price": "2.75", "type": "ITEM", "name": "Iced Rooibos(decorated)",
+        "description": "This\u200e organic red bush herbal tea is blended with blue
+        cornflowers, orange peel and vanilla for a flavor that is smooth and citrusy
+        sweet."}]}], "section_name": "Cold Drinks\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "6.95", "type": "ITEM", "name": "Avocado Melt",
+        "description": "Avocado, tomato, provolone cheese and our nut-free pesto"},
+        {"price": "6.95", "type": "ITEM", "name": "Chicken Salad W/Grapes and Almonds"},
+        {"price": "6.95", "type": "ITEM", "name": "Grilled Veggie", "description":
+        "Eggplant/Zucchini, red pepper, parmesan cheese and greens. Whisked with balsamic
+        and EVOO."}, {"price": "6.95", "type": "ITEM", "name": "Caprese", "description":
+        "Fresh mozzarella, tomato. Drizzled with\u00a0balsamic\u00a0vinegar, our nut-free
+        pesto or fresh basil."}, {"price": "4.95", "type": "ITEM", "name": "Grilled
+        Banana Chocolate", "description": "fresh bananas topped with Belgian dark
+        chocolate"}, {"price": "4.95", "type": "ITEM", "name": "Parmigiano Grilled
+        Cheese"}, {"price": "7.25", "type": "ITEM", "name": "Happy Turkey", "description":
+        "Provolone, sprouts,tomato, brown roasted turkey and yogurt honey mustard"}]}],
+        "section_name": "Sandwiches\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE",
+        "options": [{"price": "3.25", "name": "Cup"}, {"price": "4.50", "name": "Bowl"}]}],
+        "type": "ITEM", "name": "Daily Soup"}]}], "section_name": "Soup\u200e"}],
+        "currency_symbol": "$"}], "locu_id": "44a8d74542cf56fd25af", "contact": {"phone":
+        "(617) 945-0597"}, "location": {"locality": "Cambridge", "country": "United
+        States", "region": "MA", "postal_code": "02141", "address1": "594 Cambridge
+        St.", "geo": {"type": "Point", "coordinates": [-71.086264, 42.371752]}}, "website_url":
+        "http://www.cafekafofo.com/"}, {"name": "McDonald''s", "open_hours": {"monday":
+        [["00:00", "23:59"]], "tuesday": [["00:00", "23:59"]], "friday": [["00:00",
+        "23:59"]], "wednesday": [["00:00", "23:59"]], "thursday": [["00:00", "23:59"]],
+        "sunday": [["00:00", "23:59"]], "saturday": [["00:00", "23:59"]]}, "categories":
+        [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id": "cajun", "name":
+        "Cajun/Creole"}, {"str_id": "breakfast_brunch", "name": "Breakfast & Brunch"}],
+        "menus": [{"menu_name": "McDonalds", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Angus Bacon & Cheese", "description":
+        "A third-pound* 100% Angus beef patty w/ its own special seasoning on a premium
+        bakery style bun, hickory smoked bacon, two slices of melty American cheese
+        & topped off w/ crisp red onions & Crinkle-cut pickles."}, {"type": "ITEM",
+        "name": "Angus Deluxe", "description": "A third-pound* 100% Angus beef patty
+        w/ its own special seasoning on a premium bakery style bun, two slices of
+        melty American cheese & topped off w/ hearty red tomatoes, whole-leaf lettuce,
+        crisp Red onions & crinkle-cut pickles."}, {"type": "ITEM", "name": "Angus
+        Mushroom & Swiss", "description": "A thick & juicy third-pound* 100% Angus
+        beef patty w/ its own special seasoning on a premium bakery style bun, two
+        slices of Swiss cheese & savory saut\u00e9ed mushrooms."}, {"type": "ITEM",
+        "name": "Big Mac", "description": "A double layer of sear-sizzled 100% pure
+        beef mingled w/ special sauce on a sesame seed bun & topped w/ melty American
+        cheese, crisp lettuce, minced onions & tangy pickles."}, {"type": "ITEM",
+        "name": "Quarter Pounder w/ Cheese", "description": "A quarter pound* of 100%
+        pure beef simply seasoned w/ a pinch of salt & pepper, two slices of Melty
+        cheese, slivered onions & tangy pickles all on a sesame seed bun"}, {"type":
+        "ITEM", "name": "Double Quarter Pounder w/ Cheese", "description": "Two\u200b
+        quarter pound* 100% beef patties simply seasoned w/ a pinch of salt & pepper,
+        two slices of Melty cheese, slivered onions & tangy pickles all on sesame
+        seed bun."}, {"type": "ITEM", "name": "Hamburger", "description": "A juicy
+        100% beef patty simply seasoned w/ a pinch of salt & pepper, tangy pickles,
+        minced onions, Ketchup & mustard."}, {"type": "ITEM", "name": "Cheeseburger",
+        "description": "A juicy 100% beef patty simply seasoned w/ a pinch of salt
+        & pepper, melty American cheese, tangy Pickles, minced onions, ketchup & mustard."},
+        {"type": "ITEM", "name": "Double Cheeseburger", "description": "Two 100% beefy
+        patties simply seasoned w/ a pinch of salt & pepper, two slices of melty American
+        Cheese, tangy pickles, minced onions, ketchup & mustard."}, {"type": "ITEM",
+        "name": "McDouble", "description": "Two 100% beef patties simply seasoned
+        w/ a pinch of salt & pepper, a slice of melty American Cheese & topped w/
+        tangy pickles, minced onions, ketchup & mustard."}, {"type": "ITEM", "name":
+        "Filet-O-Fish", "description": "Dive\u200b right in. Don''t hesitate, cuz
+        it''s made w/ light, flaky filet of white fish from the deep, cold waters
+        of the Pacific Ocean & the Bering, Baltic & North Seas. Topped w/ tangy tartar
+        sauce in a lightly steamed bun. Down you go!"}, {"type": "ITEM", "name": "Southern
+        Style Crispy Chicken Sandwich", "description": "All-white meat crispy chicken
+        & zingy pickles on a buttery steamed bun."}, {"type": "ITEM", "name": "Premium
+        Crispy Chicken Classic Sandwich", "description": "White meat crispy chicken
+        breast filet so tender & juicy, we can''t keep it a secret. Served on a bakery-
+        Style bun w/ leafy green lettuce, a slice of tomato & mayonnaise dressing."},
+        {"type": "ITEM", "name": "Premium Grilled Chicken Classic Sandwich", "description":
+        "White meat grilled chicken breast filet so tender & juicy, we can''t keep
+        it a secret. Served on a bakery- Style bun w/ leafy green lettuce, a slice
+        of tomato & mayonnaise dressing."}, {"type": "ITEM", "name": "Premium Crispy
+        Chicken Club Sandwich", "description": "White meat crispy chicken breast filet
+        & hickory smoked bacon make for the most delicious of encounters. The bakery-style
+        bun & Swiss cheese help, too."}, {"type": "ITEM", "name": "Premium Grilled
+        Chicken Club Sandwich", "description": "White meat grilled chicken breast
+        filet & hickory smoked bacon make for the most delicious of encounters. The
+        bakery-style bun & Swiss cheese help, too."}, {"type": "ITEM", "name": "Premium
+        Crispy Chicken Ranch BLT Sandwich", "description": "Juicy white meat crispy
+        chicken breast filet? Check. Hickory smoked bacon? Check. Creamy ranch sauce?
+        Check, & check out the bakery-style bun"}, {"type": "ITEM", "name": "Premium
+        Grilled Chicken Ranch BLT Sandwich", "description": "Juicy white meat grilled
+        chicken breast filet? Check. Hickory smoked bacon? Check. Creamy ranch sauce?
+        Check, & check out the bakery-style bun."}, {"type": "ITEM", "name": "McChicken",
+        "description": "You''ll be dazzled by the golden, crispy chicken housed on
+        a perfectly toasted bun."}, {"type": "ITEM", "name": "Angus Bacon & Cheese
+        Snack Wrap", "description": "100% Angus beef w/ its own special seasoning,
+        hickory smoked bacon, melty American cheese, crinkle- Cut pickles & crisp
+        red onions all wrapped in a soft flour tortilla."}, {"type": "ITEM", "name":
+        "Angus Deluxe Snack Wrap", "description": "100% Angus beef w/ its own special
+        seasoning, hearty tomato slices, melty American cheese, crinkle- Cut pickles,
+        whole-leaf lettuce & crisp red onions wrapped in a soft flour tortilla."},
+        {"type": "ITEM", "name": "Angus Mushroom & Swiss Snack Wrap", "description":
+        "100%\u200b Angus beef w/ its own special seasoning, tasty saut\u00e9ed mushrooms
+        & Swiss cheese in a soft Flour tortilla."}, {"type": "ITEM", "name": "Chipotle
+        BBQ Snack Wrap (Crispy)", "description": "A crispy Chicken Selects Premium
+        breast strip bathed in scandalously sassy chipotle BBQ sauce, wrapped In a
+        flour tortilla."}, {"type": "ITEM", "name": "Chipotle BBQ Snack Wrap (Grilled)",
+        "description": "Plump & juicy grilled chicken, bathed in the deep heat of
+        chipotle BBQ sauce, held in the tight embrace of a flour tortilla. Wait, are
+        you blushing?"}, {"type": "ITEM", "name": "Honey Mustard Snack Wrap (Crispy)",
+        "description": "A crispy Chicken Selects Premium breast strip shines bright
+        w/ the sweet, zippy glow of honey Mustard."}, {"type": "ITEM", "name": "Honey
+        Mustard Snack Wrap (Grilled)", "description": "Get carried away w/ the winning
+        combination of grilled chicken, cheddar & jack cheeses & tangy Honey mustard
+        sauce."}, {"type": "ITEM", "name": "Ranch Snack Wrap (Crispy)", "description":
+        "There''s no messing around here, at the intersection of crispy chicken &
+        creamy, tangy ranch sauce. On Second thought, grab a napkin."}, {"type": "ITEM",
+        "name": "Ranch Snack Wrap (Grilled)", "description": "Feast on this: juicy
+        grilled chicken breast strip plus creamy, tangy ranch sauce wrapped in a tortilla."},
+        {"type": "ITEM", "name": "Mac Snack Wrap", "description": "100% pure beef
+        seasoned w/ a pinch of salt & pepper, one-of-a-kind special sauce, melty American
+        Cheese, crisp lettuce, tangy pickles & minced onions wrapped in a flour tortilla."},
+        {"type": "ITEM", "name": "Join the club. The club who loves the flavorful
+        pork & tangy barbeque sauce of our favorite sandwich.", "description": "We''re
+        a discriminating group who don''t mind getting sticky."}]}], "section_name":
+        "Burger & Sandwiches\u200b"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"type": "ITEM", "name": "Spicy Chicken McBites", "description": "Poppable
+        pieces of tender chicken breast w/ the perfect balance of heat & flavor. Served
+        in three convenient sizes - snack, regular or shareable ? & w/ a variety of
+        dipping sauces. Hurry, they''re only Available for a limited time."}, {"type":
+        "ITEM", "name": "Chicken McNuggets", "description": "Tender, juicy Chicken
+        McNuggets made w/ white meat, wrapped up in a crisp tempura batter. Made For
+        sharing, or, if you want''em all to yourself, then that''s our little secret."},
+        {"type": "ITEM", "name": "Chicken Selects Premium Breast Strips", "description":
+        "Crispy strips of all white chicken breast, premium dipping sauces...this
+        is luxury lunching. Because you Won''t touch anything but the best."}, {"type":
+        "ITEM", "name": "Premium Crispy Chicken Classic Sandwich", "description":
+        "White meat crispy chicken breast filet so tender & juicy, we can''t keep
+        it a secret. Served on a bakery- Style bun w/ leafy green lettuce, a slice
+        of tomato & mayonnaise dressing."}, {"type": "ITEM", "name": "Premium Grilled
+        Chicken Classic Sandwich", "description": "White meat grilled chicken breast
+        filet so tender & juicy, we can''t keep it a secret. Served on a bakery- Style
+        bun w/ leafy green lettuce, a slice of tomato & mayonnaise dressing."}, {"type":
+        "ITEM", "name": "Premium Crispy Chicken Club Sandwich", "description": "White
+        meat crispy chicken breast filet & hickory smoked bacon make for the most
+        delicious of encounters. The bakery-style bun & Swiss cheese help, too."},
+        {"type": "ITEM", "name": "Premium Grilled Chicken Club Sandwich", "description":
+        "White meat grilled chicken breast filet & hickory smoked bacon make for the
+        most delicious of encounters. The bakery-style bun & Swiss cheese help, too."},
+        {"type": "ITEM", "name": "Premium Crispy Chicken Ranch BLT Sandwich", "description":
+        "Juicy white meat crispy chicken breast filet? Check. Hickory smoked bacon?
+        Check. Creamy ranch sauce? Check, & check out the bakery-style bun."}, {"type":
+        "ITEM", "name": "Premium Grilled Chicken Ranch BLT Sandwich", "description":
+        "Juicy white meat grilled chicken breast filet? Check. Hickory smoked bacon?
+        Check. Creamy ranch sauce? Check, & check out the bakery-style bun."}, {"type":
+        "ITEM", "name": "Chipotle BBQ Snack Wrap (Crispy)", "description": "A crispy
+        Chicken Selects Premium breast strip bathed in scandalously sassy chipotle
+        BBQ sauce, wrapped In a flour tortilla."}, {"type": "ITEM", "name": "Chipotle
+        BBQ Snack Wrap (Grilled)", "description": "Plump & juicy grilled chicken,
+        bathed in the deep heat of chipotle BBQ sauce, held in the tight embrace of
+        a flour tortilla. Wait, are you blushing?"}, {"type": "ITEM", "name": "Honey
+        Mustard Snack Wrap (Crispy)", "description": "A crispy Chicken Selects Premium
+        breast strip shines bright w/ the sweet, zippy glow of honey Mustard."}, {"type":
+        "ITEM", "name": "Honey Mustard Snack Wrap (Grilled)", "description": "Get
+        carried away w/ the winning combination of grilled chicken, cheddar & jack
+        cheeses & tangy Honey mustard sauce."}, {"type": "ITEM", "name": "Ranch Snack
+        Wrap (Crispy)", "description": "There''s no messing around here, at the intersection
+        of crispy chicken & creamy, tangy ranch sauce. On Second thought, grab a napkin."},
+        {"type": "ITEM", "name": "Ranch Snack Wrap (Grilled)", "description": "Feast
+        on this: juicy grilled chicken breast strip plus creamy, tangy ranch sauce
+        wrapped in a tortilla."}, {"type": "ITEM", "name": "McChicken", "description":
+        "You''ll be dazzled by the golden, crispy chicken housed on a perfectly toasted
+        bun."}, {"type": "ITEM", "name": "Southern Style Crispy Chicken Sandwich",
+        "description": "All-white meat crispy chicken & zingy pickles on a buttery
+        steamed bun."}, {"type": "ITEM", "name": "Premium Bacon Ranch Salad w/ Crispy
+        Chicken", "description": "Fresh mixed greens tossed w/ sumptuous grape tomatoes,
+        shaved carrots, jack & cheddar cheeses, Hickory-smoked bacon & all-white meat
+        chicken."}, {"type": "ITEM", "name": "Premium Bacon Ranch Salad w/ Grilled
+        Chicken", "description": "We\u200b know you showed up for the bacon. But you''ll
+        stay for the fresh mixed greens, grilled chicken & Creamy ranch dressing."},
+        {"type": "ITEM", "name": "Premium Caesar Salad w/ Crispy Chicken", "description":
+        "Crispy all-white meat chicken, deliciously fresh greens, zingy Parmesan cheese
+        & creamy ranch Dressing."}, {"type": "ITEM", "name": "Premium Caesar Salad
+        w/ Grilled Chicken", "description": "Is it the juicy, freshly grilled all-white
+        meat chicken? Perhaps the zing of Parmesan cheese? Could it be the deliciously
+        fresh greens? Better order one & find out."}, {"type": "ITEM", "name": "Premium
+        Southwest Salad w/ Crispy Chicken", "description": "Our hottest salad yet:
+        crispy chicken, fresh mixed greens, oven-roasted tomatoes, fire-roasted corn,
+        Savory black beans, poblano peppers, shredded cheddar & jack cheeses, chili
+        lime tortilla strips & a Fresh-sliced lime wedge on the side."}, {"type":
+        "ITEM", "name": "Premium Southwest Salad w/ Grilled Chicken", "description":
+        "Our hottest salad yet: fresh-grilled chicken, fresh mixed greens, oven-roasted
+        tomatoes, fire-roasted Corn, savory black beans, poblano peppers, shredded
+        cheddar & jack cheeses, chili lime tortilla strips And a fresh-sliced lime
+        wedge on the side."}]}], "section_name": "Chicken\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Premium Bacon
+        Ranch Salad", "description": "Fresh mixed greens & sumptuous grape tomatoes,
+        getting along brilliantly w/ hickory-smoked bacon"}, {"type": "ITEM", "name":
+        "Premium Bacon Ranch Salad w/ Crispy Chicken", "description": "Fresh mixed
+        greens tossed w/ sumptuous grape tomatoes, shaved carrots, jack & cheddar
+        cheeses, Hickory-smoked bacon & all-white meat chicken."}, {"type": "ITEM",
+        "name": "Premium Bacon Ranch Salad w/ Grilled Chicken", "description": "We\u200b
+        know you showed up for the bacon. But you''ll stay for the fresh mixed greens,
+        grilled chicken & Creamy ranch dressing."}, {"type": "ITEM", "name": "Premium
+        Caesar Salad", "description": "Up to sixteen kinds of fresh mixed greens,
+        sumptuous grape tomatoes, shaved carrots, & grated Parmesan cheese. The Emperor
+        would approve."}, {"type": "ITEM", "name": "Premium Caesar Salad w/ Crispy
+        Chicken", "description": "Crispy all-white meat chicken, deliciously fresh
+        greens, zingy Parmesan cheese & creamy ranch Dressing."}, {"type": "ITEM",
+        "name": "Premium Caesar Salad w/ Grilled Chicken", "description": "Is it the
+        juicy, freshly grilled all-white meat chicken? Perhaps the zing of Parmesan
+        cheese? Could it be the deliciously fresh greens? Better order one & find
+        out."}, {"type": "ITEM", "name": "Premium Southwest Salad", "description":
+        "Premium greens topped w/ a snappy mix of fire-roasted corn, savory black
+        beans, poblano peppers, Chili lime tortilla strips, & squeeze-it-yourself
+        lime wedge on the side."}, {"type": "ITEM", "name": "Premium Southwest Salad
+        w/ Crispy Chicken", "description": "Our hottest salad yet: crispy chicken,
+        fresh mixed greens, oven-roasted tomatoes, fire-roasted corn, Savory black
+        beans, poblano peppers, shredded cheddar & jack cheeses, chili lime tortilla
+        strips & a Fresh-sliced lime wedge on the side."}, {"type": "ITEM", "name":
+        "Premium Southwest Salad w/ Grilled Chicken", "description": "Our hottest
+        salad yet: fresh-grilled chicken, fresh mixed greens, oven-roasted tomatoes,
+        fire-roasted Corn, savory black beans, poblano peppers, shredded cheddar &
+        jack cheeses, chili lime tortilla strips And a fresh-sliced lime wedge on
+        the side."}, {"type": "ITEM", "name": "Side Salad", "description": "Premium
+        mixed greens tossed w/ succulent grape tomatoes & shaved carrots."}, {"type":
+        "ITEM", "name": "Fruit & Walnuts", "description": "Go wild w/ wedges of crisp
+        apples, juicy red grapes, candied walnuts & our low-fat vanilla yogurt."}]}],
+        "section_name": "Salads\u200b"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"type": "ITEM", "name": "World Famous Fries", "description":
+        "Golden on the outside, soft & fluffy on the inside. Made w/ quality potatoes
+        & cooked in our Canola oil blend for zero grams of trans fat per serving.
+        Now that''s an epic bite."}, {"type": "ITEM", "name": "Apple Slices", "description":
+        "Only select varieties of apples meet our high standards for crisp & juicy
+        goodness."}, {"type": "ITEM", "name": "Side Salad", "description": "Premium
+        mixed greens tossed w/ succulent grape tomatoes & shaved carrots."}, {"type":
+        "ITEM", "name": "Fruit ''N Yogurt Parfait", "description": "The wholesome
+        combination: our creamy low-fat vanilla yogurt layered w/ plump blueberries
+        & Sweet strawberries, all topped w/ crunchy granola."}, {"type": "ITEM", "name":
+        "Fruit & Walnuts", "description": "Go wild w/ wedges of crisp apples, juicy
+        red grapes, candied walnuts & our low-fat vanilla yogurt"}, {"type": "ITEM",
+        "name": "Angus Bacon & Cheese Snack Wrap", "description": "100% Angus beef
+        w/ its own special seasoning, hickory smoked bacon, melty American cheese,
+        crinkle- Cut pickles & crisp red onions all wrapped in a soft flour tortilla."},
+        {"type": "ITEM", "name": "Angus Deluxe Snack Wrap", "description": "100%\u200b
+        Angus beef w/ its own special seasoning, hearty tomato slices, melty American
+        cheese, crinkle- Cut pickles, whole-leaf lettuce & crisp red onions wrapped
+        in a soft flour tortilla."}, {"type": "ITEM", "name": "Angus Mushroom & Swiss
+        Snack Wrap", "description": "100% Angus beef w/ its own special seasoning,
+        tasty saut\u00e9ed mushrooms & Swiss cheese in a soft Flour tortilla."}, {"type":
+        "ITEM", "name": "Chipotle BBQ Snack Wrap (Crispy)", "description": "A crispy
+        Chicken Selects Premium breast strip bathed in scandalously sassy chipotle
+        BBQ sauce, wrapped In a flour tortilla."}, {"type": "ITEM", "name": "Chipotle
+        BBQ Snack Wrap (Grilled)", "description": "Plump & juicy grilled chicken,
+        bathed in the deep heat of chipotle BBQ sauce, held in the tight embrace of
+        a flour tortilla. Wait, are you blushing?"}, {"type": "ITEM", "name": "Honey
+        Mustard Snack Wrap (Crispy)", "description": "A crispy Chicken Selects Premium
+        breast strip shines bright w/ the sweet, zippy glow of honey Mustard."}, {"type":
+        "ITEM", "name": "Honey Mustard Snack Wrap (Grilled)", "description": "Get
+        carried away w/ the winning combination of grilled chicken, cheddar & jack
+        cheeses & tangy Honey mustard sauce."}, {"type": "ITEM", "name": "Ranch Snack
+        Wrap (Crispy)", "description": "There''s no messing around here, at the intersection
+        of crispy chicken & creamy, tangy ranch sauce. On Second thought, grab a napkin."},
+        {"type": "ITEM", "name": "Ranch Snack Wrap (Grilled)", "description": "Feast
+        on this: juicy grilled chicken breast strip plus creamy, tangy ranch sauce
+        wrapped in a tortilla."}, {"type": "ITEM", "name": "Mac Snack Wrap", "description":
+        "100% pure beef seasoned w/ a pinch of salt & pepper, one-of-a-kind special
+        sauce, melty American Cheese, crisp lettuce, tangy pickles & minced onions
+        wrapped in a flour tortilla."}, {"type": "ITEM", "name": "Spicy Chicken McBites",
+        "description": "Poppable pieces of tender chicken breast w/ the perfect balance
+        of heat & flavor. Served in three convenient sizes - snack, regular or shareable
+        ? & w/ a variety of dipping sauces. Hurry, they''re only Available for a limited
+        time."}]}], "section_name": "Snack and Sides\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Premium Roast Coffee", "description":
+        "Made w/ 100% Arabica beans & freshly brewed every 30 minutes."}, {"type":
+        "ITEM", "name": "Premium Roast Iced Coffee", "description": "Refreshingly
+        cool & made w/ 100% Arabica beans, cream & your choice of flavored syrups."},
+        {"type": "ITEM", "name": "McCaf\u00e9 Mocha", "description": "Espresso made
+        w/ 100% Arabica beans steamed w/ whole or nonfat milk, chocolate syrup, topped
+        With whipped cream & a chocolate drizzle"}, {"type": "ITEM", "name": "McCaf\u00e9
+        Caramel Mocha", "description": "Espresso made w/ 100% Arabica beans steamed
+        w/ whole or nonfat milk, chocolate & caramel Syrup, topped w/ whipped cream
+        & a caramel drizzle."}, {"type": "ITEM", "name": "McCaf\u00e9 Latte", "description":
+        "Espresso\u200b made from 100% Arabica beans, steamed whole or nonfat milk
+        & your choice of flavored Syrups."}, {"type": "ITEM", "name": "McCaf\u00e9
+        Cappuccino", "description": "Espresso made from 100% Arabica beans, steamed
+        whole or nonfat milk, your choice of flavored syrups, Topped w/ foamed milk."},
+        {"type": "ITEM", "name": "McCaf\u00e9 Hot Chocolate", "description": "Made
+        w/ steamed whole or nonfat milk, rich chocolate syrup & topped w/ whipped
+        cream & a Chocolate drizzle."}, {"type": "ITEM", "name": "McCaf\u00e9 Caramel
+        Hot Chocolate", "description": "Rich caramel & chocolate made w/ steamed whole
+        or nonfat milk & topped w/ whipped cream And chocolate & caramel syrup."},
+        {"type": "ITEM", "name": "McCaf\u00e9 Iced Mocha", "description": "Iced espresso
+        made w/ 100% Arabica beans, whole or nonfat milk & chocolate syrup, topped
+        w/ Whipped cream & a chocolate drizzle."}, {"type": "ITEM", "name": "McCaf\u00e9
+        Iced Caramel Mocha", "description": "Iced espresso made w/ 100% Arabica beans,
+        whole or nonfat milk, chocolate & caramel syrup, Topped w/ whipped cream &
+        a caramel drizzle."}, {"type": "ITEM", "name": "McCaf\u00e9 Iced Latte", "description":
+        "Iced espresso made from 100% Arabica beans, whole or nonfat milk & your choice
+        of flavored syrup."}, {"type": "ITEM", "name": "McCaf\u00e9 Frapp\u00e9 Mocha",
+        "description": "Made w/ irresistibly rich chocolate flavor & a hint of coffee
+        blended w/ ice, topped w/ whipped Cream & a chocolate drizzle."}, {"type":
+        "ITEM", "name": "McCaf\u00e9 Frapp\u00e9 Caramel", "description": "Rich caramel\u2014plus
+        a hint of coffee\u2014blended w/ ice, topped w/ whipped cream & a caramel
+        Flavored drizzle."}, {"type": "ITEM", "name": "McCaf\u00e9 Frapp\u00e9 Chocolate
+        Chip", "description": "An indulgent combination of rich mocha, sweet caramel
+        & a hint of coffee, w/ added chocolate chips, all blended to perfection. Topped
+        w/ whipped cream plus a double drizzle of chocolate & caramel. Available for
+        a limited time."}, {"type": "ITEM", "name": "McCaf\u00e9 Strawberry Banana
+        Real Fruit Smoothie", "description": "The perfect combination of strawberry
+        & banana blended w/ ice & creamy low fat yogurt."}, {"type": "ITEM", "name":
+        "McCaf\u00e9 Wild Berry Real Fruit Smoothie", "description": "A bright mix
+        of strawberry, blackberry & blueberry blended to perfection w/ ice & creamy
+        low fat Yogurt."}, {"type": "ITEM", "name": "McCaf\u00e9 Mango Pineapple Real
+        Fruit Smoothie", "description": "It\u2018s the ultimate cool down: sweet mango
+        & juicy pineapple blended w/ creamy low fat yogurt & Ice."}, {"type": "ITEM",
+        "name": "McCaf\u00e9 Frozen Strawberry Lemonade", "description": "Tangy &
+        sweet come together for an icy refreshment like no other."}, {"type": "ITEM",
+        "name": "McCaf\u00e9 Cherry Berry Chiller", "description": "Made w/ 100% fruit
+        juice w/ natural flavors, it''s a blended-ice drink bursting w/ the sweetness
+        of Cherry & raspberry."}, {"type": "ITEM", "name": "McCaf\u00e9 Chocolate
+        Shake", "description": "Our deliciously creamy reduced fat ice cream, chocolate
+        syrup & topped w/ whipped cream & a Cherry."}, {"type": "ITEM", "name": "McCaf\u00e9
+        Strawberry Shake", "description": "Creamy reduced fat ice cream w/ strawberry
+        flavored deliciousness\u2014topped off w/ whipped cream And a cherry."}, {"type":
+        "ITEM", "name": "McCaf\u00e9 Vanilla Shake", "description": "The classic vanilla
+        shake, made w/ our creamy reduced fat ice cream\u2014topped off w/ whipped
+        cream And a cherry."}]}], "section_name": "Mccafe\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Dipped Cone",
+        "description": "Creamy, reduced-fat vanilla soft serve covered in a rich,
+        chocolate-y hard shell."}, {"type": "ITEM", "name": "Vanilla Cone", "description":
+        "Sweet,\u200b creamy vanilla soft serve in a crispy cone. Because your day
+        deserves a moment of sweetness."}, {"type": "ITEM", "name": "Kiddie Cone",
+        "description": "Creamy reduced fat vanilla ice cream, in a crispy cone that''s
+        just right for little fingers."}, {"type": "ITEM", "name": "Hot Fudge Sundae",
+        "description": "Reduced fat soft serve vanilla ice cream, smothered in chocolatey
+        fudge sauce."}, {"type": "ITEM", "name": "Hot Caramel Sundae", "description":
+        "Cool & creamy reduced fat soft serve ice cream meets warm, rich, buttery
+        caramel"}, {"type": "ITEM", "name": "Strawberry Sundae", "description": "Creamy
+        reduced fat vanilla ice cream, topped w/ sliced strawberries in a sweet &
+        tart strawberry Sauce."}, {"type": "ITEM", "name": "McFlurry w/ Rolo\u00ae",
+        "description": "Way to up the delicious stakes. Creamy reduced fat soft serve
+        vanilla ice cream swirled w/ Rolo Chocolate pieces & caramel."}, {"type":
+        "ITEM", "name": "McFlurry w/ M&M''s\u00ae", "description": "Reduced fat soft
+        serve vanilla ice cream, w/ M&M''s\u00ae candies swirled in. It''s a moo-tiful
+        partnership"}, {"type": "ITEM", "name": "McFlurry w/ OREO\u00ae Cookies",
+        "description": "Can our soft serve reduced fat ice cream get any better? Yes,
+        when we mix in OREO\u00ae Cookies."}, {"type": "ITEM", "name": "McFlurry w/
+        Reese''s\u00ae", "description": "Our creamy vanilla reduced fat ice cream
+        teams up w/ chunks of Reese\u2019s\u00ae Peanut Butter Cups. Get it While
+        it\u2019s... cold!"}, {"type": "ITEM", "name": "S''mores Pie", "description":
+        "Rich chocolate & decadent marshmallow fillings baked side-by-side in a sweet,
+        graham cracker crust."}, {"type": "ITEM", "name": "Baked Apple Pie", "description":
+        "It''s the tradition you love to uphold, w/ delicious apples lightly spiced
+        w/ cinnamon, baked in flaky Pastry."}, {"type": "ITEM", "name": "McCaf\u00e9
+        Chocolate Shake", "description": "Our deliciously creamy reduced fat ice cream,
+        chocolate syrup & topped w/ whipped cream & a Cherry."}, {"type": "ITEM",
+        "name": "McCaf\u00e9 Strawberry Shake", "description": "Creamy reduced fat
+        ice cream w/ strawberry flavored deliciousness\u2014topped off w/ whipped
+        cream And a cherry."}, {"type": "ITEM", "name": "McCaf\u00e9 Vanilla Shake",
+        "description": "The classic vanilla shake, made w/ our creamy reduced fat
+        ice cream\u2014topped off w/ whipped cream And a cherry."}, {"type": "ITEM",
+        "name": "McFlurry w/ Reese''s\u00ae", "description": "Our creamy vanilla reduced
+        fat ice cream teams up w/ chunks of Reese\u2019s\u00ae Peanut Butter Cups.
+        Get it While it\u2019s... cold!"}, {"type": "ITEM", "name": "Soft Baked Chocolate
+        Chip Cookie", "description": "Get that traditional taste w/ our classic cookie,
+        loaded w/ real chocolate chips."}, {"type": "ITEM", "name": "Soft Baked Oatmeal
+        Raisin Cookie", "description": "You''ll want to hug this hearty cookie packed
+        w/ raisins."}, {"type": "ITEM", "name": "Soft Baked Sugar Cookie", "description":
+        "The all-time favorite, yummy vanilla-flavored cookie."}, {"type": "ITEM",
+        "name": "Fruit ''N Yogurt Parfait", "description": "The wholesome combination:
+        our creamy low-fat vanilla yogurt layered w/ plump blueberries & Sweet strawberries,
+        all topped w/ crunchy granola."}]}], "section_name": "Desserts & Shakes\u200b"}],
+        "currency_symbol": "$"}, {"menu_name": "Breakfast", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Fruit & Maple
+        Oatmeal", "description": "We take two full servings of 100% natural whole-grain
+        oats & add a touch of cream. Loaded w/ red & green apples, cranberries & two
+        varieties of raisins. And you can have it just how you like it, w/ Or without
+        brown sugar."}, {"type": "ITEM", "name": "Blueberry Banana Nut Oatmeal", "description":
+        "Made w/ the juicy goodness of fresh blueberries, two full servings of natural
+        whole grain oats, a Satisfying crunch of premium walnuts & a hint of banana,
+        it''s the perfect start for your busy day."}, {"type": "ITEM", "name": "Fruit
+        ''N Yogurt Parfait", "description": "The wholesome combination: our creamy
+        low-fat vanilla yogurt layered w/ plump blueberries & Sweet strawberries,
+        all topped w/ crunchy granola."}, {"type": "ITEM", "name": "Fruit & Walnuts",
+        "description": "Go wild w/ wedges of crisp apples, juicy red grapes, candied
+        walnuts & our low-fat vanilla yogurt."}, {"type": "ITEM", "name": "Egg McMuffin",
+        "description": "Our signature sandwich is made w/ a freshly cracked* Grade
+        A egg w/ extra lean Canadian bacon & a slice of melty American cheese, held
+        together by a freshly toasted English muffin. And all that for 300 Calories.
+        Available in most areas"}, {"type": "ITEM", "name": "Sausage McMuffin", "description":
+        "Wake\u200b up to a freshly toasted English muffin topped w/ savory sausage
+        hot off the griddle & a slice of melty American cheese."}, {"type": "ITEM",
+        "name": "Sausage McMuffin w/ Egg", "description": "Make morning sizzle w/
+        a freshly toasted English muffin, savory sausage hot off the griddle, a slice
+        of melty American cheese & a freshly cracked Grade A egg*. available in most
+        areas"}, {"type": "ITEM", "name": "Bacon, Egg & Cheese Biscuit", "description":
+        "A fresh-baked buttermilk biscuit, two strips of hickory smoked bacon, a fluffy
+        folded egg & a slice of melty American cheese. Is there a tastier combination?"},
+        {"type": "ITEM", "name": "Sausage Biscuit", "description": "Get that good
+        morning taste of a fresh-baked biscuit & sizzly sausage hot off the griddle."},
+        {"type": "ITEM", "name": "Sausage Biscuit w/ Egg", "description": "Start your
+        day w/ fresh-baked buttermilk biscuit, savory sausage hot off the griddle
+        & a fluffy folded Egg."}, {"type": "ITEM", "name": "Bacon, Egg & Cheese McGriddles",
+        "description": "Soft,\u200b warm griddle cakes w/ the sweet taste of maple
+        baked right in, hickory smoked bacon, a fluffy folded egg & melty American
+        cheese. Genius, indeed."}, {"type": "ITEM", "name": "Sausage McGriddles",
+        "description": "Soft, warm griddle cakes w/ the taste of sweet maple baked
+        right in & savory sausage. Your taste Buds will thank you."}, {"type": "ITEM",
+        "name": "Sausage, Egg & Cheese McGriddles", "description": "Soft, warm griddle
+        cakes w/ the sweet taste of maple baked right in, savory sausage, a fluffy
+        folded egg & melty American cheese. What a sweet idea."}, {"type": "ITEM",
+        "name": "Big Breakfast", "description": "Give your taste buds a wakeup call
+        w/ a fresh-baked buttermilk biscuit, fluffy scrambled eggs, savory Sausage
+        hot off the griddle & crispy golden hash browns."}, {"type": "ITEM", "name":
+        "Big Breakfast w/ Hotcakes", "description": "Satisfaction guaranteed w/ a
+        fresh-baked buttermilk biscuit, savory sausage hot off the griddle, fluffy
+        Scrambled eggs, crispy hash browns & golden brown hotcakes."}, {"type": "ITEM",
+        "name": "Cinnamon Melts", "description": "Cuddle up to our warm, mouth-watering
+        cinnamon-spiced centers, topped w/ rich cream-cheese icing. It''s the best
+        part of a cinnamon roll."}, {"type": "ITEM", "name": "Hotcakes", "description":
+        "Three golden brown, melt-in-your-mouth hotcakes, w/ margarine & the sweet
+        flavor of maple. Enjoy."}, {"type": "ITEM", "name": "Hotcakes & Sausage",
+        "description": "Three golden brown, melt-in-your-mouth hotcakes & savory sausage
+        hot off the griddle, w/ margarine & the sweet flavor of maple. Pretty sweet,
+        huh?"}, {"type": "ITEM", "name": "Bacon, Egg & Cheese Bagel", "description":
+        "A freshly toasted bagel, hickory smoked bacon, a fluffy folded egg & two
+        slices of melty American Cheese."}, {"type": "ITEM", "name": "Southern Style
+        Chicken Biscuit", "description": "A fresh-baked buttermilk biscuit w/ juicy
+        white meat chicken that''s crispy on the outside, tender & juicy on the inside.
+        Now that''s style."}, {"type": "ITEM", "name": "Sausage Burrito", "description":
+        "Spice up your morning w/ peppers, onions, fluffy scrambled eggs, sausage
+        & melty cheese all Wrapped in a soft tortilla."}, {"type": "ITEM", "name":
+        "Hash Browns", "description": "Crispy\u200b & toasty on the outside, fluffy
+        Russet potatoes on the inside."}]}], "section_name": ""}], "currency_symbol":
+        "$"}, {"menu_name": "Beverages", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "1% Low Fat Milk Jug", "description":
+        "Wholesome low fat milk, an excellent source of Calcium & Vitamin D."}, {"type":
+        "ITEM", "name": "Fat Free Chocolate Milk Jug", "description": "Chocolate fat
+        free milk that delivers Calcium & Vitamin D."}, {"type": "ITEM", "name": "Minute
+        Maid\u00ae Apple Juice Box", "description": "Pure apple juice, w/ Vitamin
+        C."}, {"type": "ITEM", "name": "Dasani\u00ae Water", "description": "Purified
+        w/ minerals for sheer refreshment."}, {"type": "ITEM", "name": "Coca-Cola\u00ae",
+        "description": "A cold & refreshing complement to all of our menu items."},
+        {"type": "ITEM", "name": "Diet Coke\u00ae", "description": "Icy\u200b cold
+        cola, w/ no calories."}, {"type": "ITEM", "name": "Dr Pepper\u00ae", "description":
+        "Refresh your spirit w/ the unrivaled taste of 23 flavors."}, {"type": "ITEM",
+        "name": "Diet Dr Pepper\u00ae", "description": "Only Diet Dr Pepper\u00ae
+        has the original blend of 23 flavors w/ zero calories."}, {"type": "ITEM",
+        "name": "Sprite", "description": "Delicious lemon & lime taste, w/ no caffeine."},
+        {"type": "ITEM", "name": "Hi-C\u00ae Orange Lavaburst", "description": "Refreshingly
+        delicious orange taste."}, {"type": "ITEM", "name": "POWERade\u00ae Mountain
+        Berry Blast", "description": "It''s\u200b a blast of refreshment."}, {"type":
+        "ITEM", "name": "Iced Tea", "description": "A brisk blend of orange pekoe
+        & pekoe cut black tea, served ice cold."}, {"type": "ITEM", "name": "Premium
+        Roast Coffee", "description": "Made w/ 100% Arabica beans & freshly brewed
+        every 30 minutes."}, {"type": "ITEM", "name": "Premium Roast Iced Coffee",
+        "description": "Refreshingly cool & made w/ 100% Arabica beans, cream & your
+        choice of flavored syrups."}, {"type": "ITEM", "name": "Minute Maid\u00ae
+        Premium Orange Juice", "description": "Pure orange juice, w/ Vitamin C."},
+        {"type": "ITEM", "name": "Sweet Tea", "description": "A briskly refreshing
+        blend of orange pekoe & pekoe cut black tea, sweetened to perfection."}]}],
+        "section_name": ""}], "currency_symbol": "$"}], "locu_id": "3c21b180f8964f40a7a3",
+        "contact": {"phone": "(763) 689-9015"}, "location": {"locality": "Cambridge",
+        "country": "United States", "region": "MN", "postal_code": "55008", "address1":
+        "100 Garfield St. South", "geo": {"type": "Point", "coordinates": [-93.2139482,
+        45.5715616]}}, "website_url": "http://www.mcstate.com/12829"}, {"locu_id":
+        "fed5159c4cb68787d4f8", "contact": {"phone": "(617) 621-8044"}, "name": "Casablanca
+        Floral Design", "categories": [{"str_id": "restaurants", "name": "Restaurants"}],
+        "location": {"locality": "Cambridge", "country": "United States", "region":
+        "MA", "postal_code": "02141", "address1": "100 Cambridgeside Pl.", "geo":
+        {"type": "Point", "coordinates": [-71.07659, 42.367032]}}}, {"locu_id": "458d81dcd34197db64b4",
+        "contact": {"phone": "(740) 439-4991"}, "name": "Great Chinese Buffet Inc",
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id":
+        "chinese", "name": "Chinese"}], "location": {"locality": "Cambridge", "country":
+        "United States", "region": "OH", "postal_code": "43725", "address1": "61259
+        Southgate Rd.", "geo": {"type": "Point", "coordinates": [-81.573821, 39.988435]}}},
+        {"locu_id": "8cf00927c876fc249301", "contact": {"phone": "(617) 868-1899"},
+        "name": "Sweetea Cafe", "categories": [{"str_id": "restaurants", "name": "Restaurants"},
+        {"str_id": "food", "name": "Food"}], "location": {"locality": "Cambridge",
+        "country": "United States", "region": "MA", "postal_code": "02140", "address1":
+        "1796 Massachusetts Ave.", "geo": {"type": "Point", "coordinates": [-71.119463,
+        42.38559]}}}, {"name": "Long John Silver''s", "locu_id": "c198cecc5a106b45deb9",
+        "contact": {"phone": "(740) 439-3716"}, "website_url": "http://www.longjohnsilvers.com",
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id":
+        "hotdogs", "name": "Fast Food"}], "location": {"locality": "Cambridge", "country":
+        "United States", "region": "OH", "postal_code": "43725", "address1": "1821
+        E. Wheeling Ave.", "geo": {"type": "Point", "coordinates": [-81.57361885,
+        40.027313]}}}, {"name": "Wally''s Pizza", "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}, {"str_id": "pizza", "name": "Pizza"}], "menus": [{"menu_name":
+        "Menu", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"option_groups": [{"text": "Topping", "type": "OPTION_ADD", "options": [{"price":
+        "+0.95", "name": "One"}, {"price": "+0.20", "name": "Toppings"}]}], "type":
+        "ITEM", "name": "By The Slice"}, {"price": "3.75", "type": "ITEM", "name":
+        "Every Day Lunch Special!", "description": "4 Slices Of Pizza One Topping
+        and A Can Of Pop"}, {"price": "12.75", "option_groups": [{"text": "Toppings",
+        "type": "OPTION_ADD", "options": [{"name": "+2.00"}]}], "type": "ITEM", "name":
+        "16 Slice Xl Half Tray Pizza", "description": "One\u200e Topping"}, {"price":
+        "18.75", "type": "ITEM", "name": "Supreme"}, {"price": "17.75", "option_groups":
+        [{"text": "Toppings", "type": "OPTION_ADD", "options": [{"name": "+3.00"}]}],
+        "type": "ITEM", "name": "28 Slice Party Tray Pizza", "description": "One Topping"},
+        {"price": "27.75", "type": "ITEM", "name": "Supreme"}]}], "section_name":
+        "Pizza\u200e"}, {"subsections": [{"subsection_name": "Subs", "contents": [{"option_groups":
+        [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.75", "name":
+        "6\u201d"}, {"price": "6.75", "name": "12\u201d"}]}], "type": "ITEM", "name":
+        "Italian", "description": "Ham, Pepperoni, Salami, Provolone Cheese, Lettuce,
+        Tomato, Onions, Hot Peppers, Italian Dressing."}, {"option_groups": [{"text":
+        "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.75", "name": "6\u201d"},
+        {"price": "6.75", "name": "12\u201d"}]}], "type": "ITEM", "name": "Ham and
+        Cheese", "description": "Lettuce, Tomato, Mayo"}, {"option_groups": [{"text":
+        "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.75", "name": "6\u201d"},
+        {"price": "6.75", "name": "12\u201d"}]}], "type": "ITEM", "name": "Pizza Sub",
+        "description": "Pepperoni, Provolone Cheese and Pizza Sauce"}, {"option_groups":
+        [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.75", "name":
+        "6\u201d"}, {"price": "6.75", "name": "12\u201d"}]}], "type": "ITEM", "name":
+        "Blt", "description": "Bacon, Lettuece, Tomato, Mayo and Cheese"}, {"option_groups":
+        [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price": "3.75", "name":
+        "6\u201d"}, {"price": "6.75", "name": "12\u201d"}]}], "type": "ITEM", "name":
+        "Veggie", "description": "Mushroms, Onion, Hot Peppers, Green Peppers, Black
+        Olives, Green Olives, Provolone Cheese, Letuce, Tomato, Italian Dressing."}]},
+        {"subsection_name": "Salads", "contents": [{"price": "4.00", "type": "ITEM",
+        "name": "Garden", "description": "Tomato, Onions, Green Peppers, Hot Peppers,
+        Black Olives, Green Olives, Cheese"}, {"price": "5.00", "type": "ITEM", "name":
+        "Italian", "description": "Tomato, Onions, Green Peppers, Pepperoni, Cheese,
+        Hot Peppers, Salami, Ham"}, {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE",
+        "options": [{"price": "3.00", "name": "Half"}, {"price": "5.50", "name": "Whole"}]}],
+        "type": "ITEM", "name": "Cheesy Bread"}, {"price": "0.75", "type": "ITEM",
+        "name": "Canned Pop"}, {"price": "1.00", "type": "ITEM", "name": "Bottled
+        Water"}]}], "section_name": "Take & Bake Pizzas Available\u200e"}], "currency_symbol":
+        "$"}], "locu_id": "7e9f0c8b3bb252035151", "contact": {"phone": "(740) 432-2917"},
+        "location": {"locality": "Cambridge", "country": "United States", "region":
+        "OH", "postal_code": "43725", "address1": "1860 E. Wheeling Ave.", "geo":
+        {"type": "Point", "coordinates": [-81.57295906, 40.026986]}}, "website_url":
+        "http://www.wallyspizza.com"}, {"name": "BerryLine", "locu_id": "47618dcd116fa04d1f95",
+        "contact": {"phone": "(617) 492-3555"}, "website_url": "http://www.berryline.com/",
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id":
+        "food", "name": "Food"}, {"str_id": "icecream", "name": "Ice Cream & Frozen
+        Yogurt"}], "location": {"locality": "Cambridge", "country": "United States",
+        "region": "MA", "postal_code": "02138", "address1": "1668 Massachusetts Ave.",
+        "geo": {"type": "Point", "coordinates": [-71.119834, 42.3819070104234]}}},
+        {"locu_id": "bf1a3c0525bd0d1feb36", "contact": {"phone": "(617) 496-4658"},
+        "name": "Cafe Gato Rojo", "categories": [{"str_id": "cafes", "name": "Cafes"},
+        {"str_id": "restaurants", "name": "Restaurants"}], "location": {"locality":
+        "Cambridge", "country": "United States", "region": "MA", "postal_code": "02138",
+        "address1": "Harvard Yard", "geo": {"type": "Point", "coordinates": [-71.1183401942253,
+        42.3735944111521]}}}, {"locu_id": "705ff2e73faa52ef5119", "contact": {"phone":
+        "(617) 868-8311"}, "name": "Shalimar Foods And Spices", "categories": [{"str_id":
+        "restaurants", "name": "Restaurants"}, {"str_id": "indpak", "name": "Indian"}],
+        "location": {"locality": "Cambridge", "country": "United States", "region":
+        "MA", "postal_code": "02139", "address1": "571 Massachusetts Ave.", "geo":
+        {"type": "Point", "coordinates": [-71.1025983095169, 42.364769]}}}, {"locu_id":
+        "db76a4dafeaac66c4f61", "name": "A&W", "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}, {"str_id": "hotdogs", "name": "Fast Food"}], "location":
+        {"locality": "Cambridge", "country": "Canada", "region": "ON", "address1":
+        "544 Hespeler Rd.", "geo": {"type": "Point", "coordinates": [-80.3271341764875,
+        43.4033077937655]}}}, {"name": "Casa Greek", "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}, {"str_id": "greek", "name": "Greek"}], "menus": [{"menu_name":
+        "Menu", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"price": "9.49", "type": "ITEM", "name": "Calamari", "description": "Golden
+        brown fried squid rings served on top of our zesty tomato sauce"}, {"price":
+        "9.49", "type": "ITEM", "name": "Saganaki", "description": "A wedge of kefalotyri
+        cheese pan fried and flamed with brandy"}, {"price": "8.99", "type": "ITEM",
+        "name": "Shrimp Saut\u00e9e", "description": "Plump shrimps saut\u00e9ed in
+        white wine and garlic sauce"}, {"price": "6.49", "type": "ITEM", "name": "Spanakopita",
+        "description": "Filo pastry stuffed with spinach and feta cheese"}, {"price":
+        "6.49", "type": "ITEM", "name": "Tyropita", "description": "Delicious cheese
+        pie made with buttered layers of filo and feta"}, {"price": "6.49", "type":
+        "ITEM", "name": "Dolmades", "description": "Vine leaves stuffed with ground
+        meat and rice topped with egg-lemon sauce"}, {"price": "6.49", "type": "ITEM",
+        "name": "Loukaniko", "description": "Homemade wine sausage with fried red
+        peppers"}]}], "section_name": "Hot Appetizers\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "4.69", "type": "ITEM", "name": "Tzatziki Dip",
+        "description": "Yogurt with cucumber and garlic"}, {"price": "4.69", "type":
+        "ITEM", "name": "Taramosalata Dip", "description": "A classic greek caviar
+        dip"}, {"price": "5.99", "type": "ITEM", "name": "Feta Cheese", "description":
+        "Greek\u200b feta topped with olive oil and oregano"}, {"price": "4.69", "type":
+        "ITEM", "name": "Houmos", "description": "A\u200b chick-pea dip with a tangy
+        herbal taste"}]}], "section_name": "Cold Appetizers\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "7.49", "type": "ITEM", "name":
+        "Greek Broschetta Bread", "description": "Garlic bread topped with onions,
+        tomatoes, parsley and feta cheese"}, {"price": "6.49", "type": "ITEM", "name":
+        "Garlic Bread", "description": "Our fresh bread topped with mozzarella and
+        cheddar cheese"}, {"price": "7.49", "type": "ITEM", "name": "Broschetta Bread",
+        "description": "Garlic bread topped with onions, tomatoes, parsley, mozzarella
+        and cheddar cheese"}]}], "section_name": "Breads\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"option_groups": [{"text": "Size",
+        "type": "OPTION_CHOOSE", "options": [{"price": "5.99", "name": "Regular"},
+        {"price": "7.50", "name": "Large"}]}], "type": "ITEM", "name": "Greek Salad",
+        "description": "Lettuce, tomatoes, onions, cucumbers, olives, feta cheese
+        topped with our greek dressing"}, {"option_groups": [{"text": "Size", "type":
+        "OPTION_CHOOSE", "options": [{"price": "6.99", "name": "Regular"}, {"price":
+        "8.50", "name": "Large"}]}], "type": "ITEM", "name": "Village Salad", "description":
+        "Tomatoes,\u200b cucumbers onions, olives and feta cheese in oil and vinegar
+        dressing"}, {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE", "options":
+        [{"price": "5.99", "name": "Regular"}, {"price": "7.50", "name": "Large"}]},
+        {"text": "Chicken", "type": "OPTION_ADD", "options": [{"price": "+3.99", "name":
+        "Chicken"}]}], "type": "ITEM", "name": "Caesar Salad", "description": "The
+        well known salad made with romaine lettuce and our creamy garlic dressing"}]}],
+        "section_name": "Salads\u200b"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"price": "12.99", "type": "ITEM", "name": "Gyro Dinner", "description":
+        "Slices of minced lamb and beef, garnished with tomatoes, onions and tzatziki
+        on top of pita. Served with roast potatoes and greek salad"}, {"price": "13.99",
+        "type": "ITEM", "name": "Mousaka", "description": "A very popular greek dish
+        made with layers of pan fried egg plant, potatoes and ground beef topped with
+        b\u00e9chamel sauce, served with rice and greek salad"}, {"price": "20.99",
+        "type": "ITEM", "name": "Lamb Chops", "description": "Tender lamb chops marinated
+        and char-broiled to perfection, served with potatoes, vegetables and salad"},
+        {"price": "15.99", "type": "ITEM", "name": "Pork Tenderloin", "description":
+        "Cooked to perfection and topped with peppercorn win sauce, served with potatoes,
+        vegetables and salad"}, {"price": "18.99", "type": "ITEM", "name": "N.Y. Steak",
+        "description": "10oz N.Y. steak seasoned and broiled to your expectations
+        topped with mushrooms, served with potatoes, vegetables and salad"}, {"price":
+        "22.99", "type": "ITEM", "name": "Steak and Shrimp", "description": "10oz
+        N.Y. steak and butterfly black tiger shrimp served with potatoes, vegetables
+        and salad"}, {"price": "15.99", "type": "ITEM", "name": "Chicken Breast Fillet",
+        "description": "Marinated chicken breast char-broiled and basted with a delicate
+        mixture of oil-lemon garlic and oregano, served with potatoes, vegetables
+        and salad "}, {"price": "18.99", "type": "ITEM", "name": "B.B.Q. Ribs", "description":
+        "Full\u200b rack of ribs marinated and grilled with our own BBQ sauce, served
+        with potatoes, vegetables and salad"}, {"price": "18.99", "type": "ITEM",
+        "name": "Chicken and Ribs", "description": "Chicken breast and half rack of
+        ribs marinated and grilled with our own BBQ sauce, served with potatoes, vegetables
+        and salad"}]}], "section_name": "House Specialties\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "13.49", "type": "ITEM", "name":
+        "Chicken Souvlaki", "description": "Marinated breast of chicken served on
+        rice, roast potatoes and greek salad"}, {"price": "12.49", "type": "ITEM",
+        "name": "Pork Souvlaki", "description": "Marinated pork served on rice, roast
+        potatoes and greek salad"}, {"price": "15.99", "type": "ITEM", "name": "Beef
+        Souvlaki", "description": "Tender chunks of beef served on rice, roast potatoes
+        and greek salad"}, {"price": "15.99", "type": "ITEM", "name": "Chicken and
+        Shrimp Souvlaki", "description": "Marinated breast of chicken and shrimp served
+        on rice, roast potatoes and greek salad"}]}], "section_name": "Souvlaki\u200b"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "19.99", "type":
+        "ITEM", "name": "Seafood Platter", "description": "A combination of tiger
+        shrimp, bacon wrapped scallops and calamari, served with potatoes, vegetables
+        and salad"}, {"price": "17.99", "type": "ITEM", "name": "Atlantic Salmon",
+        "description": "Broiled fillet and topped with our lemon-oil sauce and served
+        with potatoes, vegetables and salad"}, {"price": "15.99", "type": "ITEM",
+        "name": "Red Snapper Fillet", "description": "Fresh snapper broiled to perfection
+        and smothered in lemon-oil sauce, served with potatoes, vegetables and salad"},
+        {"price": "19.99", "type": "ITEM", "name": "Chef''s Specialty", "description":
+        "Juicy jumbo scallops wrapped in bacon and grilled to perfection, served with
+        potatoes, vegetables and salad"}]}], "section_name": "Seafood\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "18.99", "type": "ITEM", "name":
+        "Seafood Fettuccini Alfredo", "description": "Tender shrimp, scallops and
+        calamari saut\u00e9ed in a creamy garlic parmesan cheese sauce with fettuccini
+        noodles served with salad"}, {"price": "16.99", "type": "ITEM", "name": "Chicken
+        Fettuccini Alfredo", "description": "Tender chicken in a creamy garlic parmesan
+        cheese sauce with fettuccini noodles, served with salad"}, {"price": "15.99",
+        "type": "ITEM", "name": "Chicken Parmesan", "description": "Succulent\u200b
+        chicken baked in a zesty seasoned sauce topped with cheddar and mozzarella
+        cheese served with pasta and salad"}, {"price": "15.99", "type": "ITEM", "name":
+        "Chicken Linguini", "description": "Chicken breast tossed with linguini noodles,
+        mushrooms, peppers, onions and tomato sauce with a hint of tabasco served
+        with salad"}, {"price": "13.99", "type": "ITEM", "name": "Soutzoukakia", "description":
+        "Greek style meatballs dipped in authentic tomato sauce and served with pasta
+        and salad"}]}], "section_name": "Pasta\u200b"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "12.99", "type": "ITEM", "name": "Veggie Pasta",
+        "description": "Linguini noodles tossed with our homemade tomato and basil
+        sauce and seasoned garden vegetables served with salad"}, {"price": "12.99",
+        "type": "ITEM", "name": "Vegetarian Souvlaki X", "description": "Mushrooms,
+        green peppers, red peppers, onions and zucchini served on rice with roast
+        potatoes and greek salad"}, {"price": "10.99", "type": "ITEM", "name": "Spanakopita
+        and Salad", "description": "Fine layers of filo pastry with spinach and feta
+        cheese served with greek salad"}, {"price": "10.99", "type": "ITEM", "name":
+        "Tyropita and Salad", "description": "Delicious cheese pie made with layers
+        of filo and feta cheese served with greek salad"}]}], "section_name": "Vegetarian
+        Dishes\u200b"}, {"subsections": [{"subsection_name": "", "contents": [{"price":
+        "31.99", "type": "ITEM", "name": "Greek Special for Two", "description": "Lamb
+        chops, pork souvlaki, chicken breast, loukaniko, mousaka and soutzoukakia.
+        Served with roast potatoes, rice, greek salad and tzatziki sauce"}]}], "section_name":
+        "Greek Special For Two\u200b"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "7.99", "type": "ITEM", "name": "Gyro on Pita", "description":
+        "Slices\u200b of minced lamb and beef, garnished with tomatoes, onions and
+        tzatziki sauce. Served with potatoes or greek salad"}, {"price": "8.49", "type":
+        "ITEM", "name": "Chicken on Pita", "description": "Marinated chicken, garnished
+        with tomatoes, onions and tzatziki sauce. Served with potatoes or greek salad"},
+        {"price": "7.49", "type": "ITEM", "name": "Pork on Pita", "description": "Marinated
+        pork chunks, garnished with tomatoes, onions and tzatziki sauce. Served with
+        potatoes or greek salad"}, {"price": "7.99", "type": "ITEM", "name": "Greek
+        Omelete", "description": "3 eggs with onions, green peppers, tomatoes, mushrooms
+        and feta cheese. Topped with a light tomato sauce, served with pita bread
+        and potatoes or greek salad "}, {"price": "10.99", "type": "ITEM", "name":
+        "Steak Sandwich", "description": "N.Y. strip loin with mushrooms served with
+        potatoes or salad,"}, {"price": "8.99", "type": "ITEM", "name": "Loukaniko",
+        "description": "Homemade wine sausage served with pita bread, tzatziki sauce
+        and potatoes or greek salad"}, {"price": "8.99", "type": "ITEM", "name": "Casa
+        Greek Burger", "description": "Juicy homemade charbroiled burger on a bun
+        topped with saut\u00e9ed mushrooms, onions and green peppers along with cheddar
+        and mozzarella cheese served with potatoes or greek salad "}, {"price": "7.99",
+        "option_groups": [{"text": "Meat", "type": "OPTION_ADD", "options": [{"price":
+        "+1.69", "name": "Chicken"}, {"price": "+2.29", "name": "Beef"}]}], "type":
+        "ITEM", "name": "Lunch Souvlaki", "description": "One skewer of pork served
+        on rice with roast potatoes and greek salad"}, {"price": "9.99", "type": "ITEM",
+        "name": "Mousaka", "description": "Layers of pan fried egg plant, potatoes
+        and ground beef topped with b\u00e9chamel sauce, served with rice and greek
+        salad"}, {"price": "9.99", "type": "ITEM", "name": "Soutzoukakia", "description":
+        "Greek style meatballs dipped in authentic tomato sauce and served with pasta
+        and salad"}, {"price": "8.49", "type": "ITEM", "name": "Grilled Chicken Sandwich",
+        "description": "Charbroiled chicken breast on a bun, served with potatoes
+        or salad"}]}], "section_name": "Lunch\u200b"}], "currency_symbol": "$"}],
+        "locu_id": "65e15751e640d1387ad3", "contact": {"phone": "(519) 620-1101"},
+        "location": {"locality": "Cambridge", "country": "Canada", "region": "ON",
+        "postal_code": "N1R 7N7", "address1": "350 Hespeler Rd.", "geo": {"type":
+        "Point", "coordinates": [-80.3227905504427, 43.3911006504757]}}, "website_url":
+        "http://casagreek.ca"}, {"name": "Curry In A Hurry", "categories": [{"str_id":
+        "restaurants", "name": "Restaurants"}, {"str_id": "indpak", "name": "Indian"}],
+        "menus": [{"menu_name": "Menu", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"price": "2.25", "type": "ITEM", "name": "Vegetable Samosa",
+        "description": "Potatoes, peas and spices blanketed in a crispy pastry"},
+        {"price": "8.25", "type": "ITEM", "name": "Chicken Tikka", "description":
+        "Chicken marinated for 24 hours and cooked to perfection, served with our
+        fresh house salad or rice"}, {"price": "3.25", "type": "ITEM", "name": "Mullagatawny
+        Soup", "description": "A thick, spicy soup simmered with carrots, celery and
+        lentils"}, {"price": "3.25", "type": "ITEM", "name": "Katchumbar Salad", "description":
+        "Fresh garden salad with our house dressing"}, {"price": "0.75", "type": "ITEM",
+        "name": "Papadum", "description": "A crispy, spicy shell made from lentil
+        flour"}, {"price": "2.50", "type": "ITEM", "name": "Onion Bhaji", "description":
+        "Chopped onions battered with chickpea flour and spices, then deep fried to
+        perfection"}, {"price": "5.25", "type": "ITEM", "name": "Vegetable Pakora",
+        "description": "Slices of\u200f potatoes battered in a spicy chickpea flour
+        and deep fried to perfection"}]}], "section_name": "Appetizer\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "2.50", "type": "ITEM", "name":
+        "Raita", "description": "Yogurt mixed with cucumber and spices"}, {"price":
+        "1.95", "type": "ITEM", "name": "Plain Yogurt"}, {"price": "1.95", "type":
+        "ITEM", "name": "Mango Chutney", "description": "Mango slices in a sweet chutney
+        sauce"}, {"price": "1.75", "type": "ITEM", "name": "Pickles", "description":
+        "Choice of mango, chili or lime"}, {"price": "1.50", "type": "ITEM", "name":
+        "Curry Sauce"}]}], "section_name": "Tid Bits"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"text": "All entr\u00e9es come as a lunch special served
+        over rice, or as a larger dinner portion with your choice of rice, or bread,
+        on the side. Add tomato, green pepper, onion, spinach, coconut, or potato
+        to any entr\u00e9e for an extra 0.50 per item. All entr\u00e9es can be served
+        mild, medium, or hot.", "type": "SECTION_TEXT"}, {"option_groups": [{"text":
+        "Spiciness", "type": "OPTION_CHOOSE", "options": [{"name": "Mild"}, {"name":
+        "Medium"}, {"name": "Hot"}]}, {"text": "Portion", "type": "OPTION_CHOOSE",
+        "options": [{"price": "7.95", "name": "Lunch"}, {"price": "11.50", "name":
+        "Dinner with rice"}, {"price": "11.50", "name": "Diner with bread"}]}], "type":
+        "ITEM", "name": "Curry", "description": "Lamb, beef or chicken in a seasoned
+        curry sauce"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "9.95", "name":
+        "Lunch"}, {"price": "n/a", "name": "Dinner with rice"}, {"price": "n/a", "name":
+        "Diner with bread"}]}], "type": "ITEM", "name": "Curry and Vegetable Combo",
+        "description": "Lamb, beef or chicken curry, served with a portion of aloo
+        gobi"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "8.25", "name":
+        "Lunch"}, {"price": "11.75", "name": "Dinner with rice"}, {"price": "11.75",
+        "name": "Diner with bread"}]}], "type": "ITEM", "name": "Chicken Korma", "description":
+        "Chicken cooked with fresh spices and sour cream"}, {"option_groups": [{"text":
+        "Spiciness", "type": "OPTION_CHOOSE", "options": [{"name": "Mild"}, {"name":
+        "Medium"}, {"name": "Hot"}]}, {"text": "Portion", "type": "OPTION_CHOOSE",
+        "options": [{"price": "7.75", "name": "Lunch"}, {"price": "n/a", "name": "Dinner
+        with rice"}, {"price": "n/a", "name": "Diner with bread"}]}], "type": "ITEM",
+        "name": "Vegetarian Special", "description": "Rajmah and aloo mattar served
+        over rice"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "8.95", "name":
+        "Lunch"}, {"price": "12.25", "name": "Dinner with rice"}, {"price": "12.25",
+        "name": "Diner with bread"}]}], "type": "ITEM", "name": "Butter Chicken",
+        "description": "Chicken, marinated in ginger, garlic and yogurt, cooked with
+        butter and cream"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "8.50", "name":
+        "Lunch"}, {"price": "11.95", "name": "Dinner with rice"}, {"price": "11.95",
+        "name": "Diner with bread"}]}], "type": "ITEM", "name": "Spinach Curry", "description":
+        "Lamb, beef,\u200f chicken or shrimp cooked with shredded spinach in a seasoned
+        curry sauce"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "8.50", "name":
+        "Lunch"}, {"price": "11.95", "name": "Dinner with rice"}, {"price": "11.95",
+        "name": "Diner with bread"}]}], "type": "ITEM", "name": "Vindaloo", "description":
+        "Lamb, beef, chicken or shrimp cooked with potatoes in a seasoned curry sauce"},
+        {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE", "options":
+        [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text": "Portion",
+        "type": "OPTION_CHOOSE", "options": [{"price": "8.50", "name": "Lunch"}, {"price":
+        "11.95", "name": "Dinner with rice"}, {"price": "11.95", "name": "Diner with
+        bread"}]}], "type": "ITEM", "name": "Bhoona", "description": "Lamb, beef,
+        chicken or shrimp cooked with green peppers and onions in a seasoned curry
+        sauce"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "8.50", "name":
+        "Lunch"}, {"price": "11.95", "name": "Dinner with rice"}, {"price": "11.95",
+        "name": "Diner with bread"}]}], "type": "ITEM", "name": "Madras", "description":
+        "Lamb, beef, chicken or shrimp cooked with shredded coconut in a seasoned
+        curry sauces"}, {"option_groups": [{"text": "Spiciness", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Mild"}, {"name": "Medium"}, {"name": "Hot"}]}, {"text":
+        "Portion", "type": "OPTION_CHOOSE", "options": [{"price": "8.25", "name":
+        "Lunch"}, {"price": "8.25", "name": "Dinner with rice"}, {"price": "11.95",
+        "name": "Diner with bread"}]}], "type": "ITEM", "name": "Chicken Jalfrazie",
+        "description": "Chicken marinated with fresh spices, and saut\u00e9ed with
+        tomatoes, onions and green peppers"}]}], "section_name": "Entrees\u200f"},
+        {"subsections": [{"subsection_name": "", "contents": [{"text": "All vegetable
+        dishes come with your choice of rice, or bread, on the side. As well, all
+        vegetable dishes can be served mild, medium, or hot.", "type": "SECTION_TEXT"},
+        {"price": "8.75", "type": "ITEM", "name": "Aloo Gobi", "description": "Cauliflower
+        and potatoes cooked in spices with fresh ginger"}, {"price": "8.95", "type":
+        "ITEM", "name": "Saag Aloo", "description": "Potatoes cooked in curried spinach"},
+        {"price": "8.75", "type": "ITEM", "name": "Channa", "description": "Chickpeas
+        with spices, fresh ginger and dhania"}, {"price": "8.75", "type": "ITEM",
+        "name": "Mixed Vegetable Korma", "description": "Broccoli, cauliflower, carrots,
+        onions, and potatoes cooked in a curry sauce with sour cream and raisins"},
+        {"price": "8.95", "type": "ITEM", "name": "Mattar Paneer", "description":
+        "Peas and\u200f homemade cheese cooked in a curry sauce"}, {"price": "8.75",
+        "type": "ITEM", "name": "Aloo Mattar", "description": "Peas and potatoes cooked
+        with fresh spices in a curry sauce"}, {"price": "8.50", "type": "ITEM", "name":
+        "Rajmah", "description": "Red kidney\u200f beans cooked with tomatoes, onions
+        and fresh spices"}, {"price": "8.75", "type": "ITEM", "name": "Bhartha (Seasonal)",
+        "description": "Eggplant cooked with fresh ginger, tomatoes, onions, peas
+        and spices"}, {"price": "7.50", "type": "ITEM", "name": "Dal", "description":
+        "A spicy blend of lentils"}]}], "section_name": "Vegetable Dishes"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "2.95", "type": "ITEM", "name":
+        "Basmati Rice", "description": "White basmati rice, steamed with a hint of
+        cinnamon"}, {"price": "9.25", "type": "ITEM", "name": "Shahjana Biryani",
+        "description": "Saffron rice cooked with spices and raisins, with choice of
+        lamb, beef or chicken"}, {"price": "7.95", "type": "ITEM", "name": "Vegetarian
+        Biryani", "description": "Saffron rice cooked with spices, raisins, potato,
+        green pepper and onion"}]}], "section_name": "Rice Dishes\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "1.75", "type": "ITEM", "name":
+        "Chapati", "description": "Indian bread made with whole wheat flour"}, {"price":
+        "1.95", "type": "ITEM", "name": "Nan", "description": "Leavened bread made
+        of fine flour"}, {"price": "2.50", "type": "ITEM", "name": "Garlic Nan"}]}],
+        "section_name": "Breads"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "1.25", "type": "ITEM", "name": "Pop or Bottled Water"}, {"price":
+        "1.95", "type": "ITEM", "name": "Juices", "description": "Apple, orange, pineapple,
+        or mango"}, {"price": "3.25", "type": "ITEM", "name": "Lassi", "description":
+        "Sweet or salty"}, {"price": "3.75", "type": "ITEM", "name": "Mango Lassi"},
+        {"price": "3.95", "type": "ITEM", "name": "Matcha (Green Tea Shake)"}]}],
+        "section_name": "Beverages\u200f"}], "currency_symbol": "$"}, {"menu_name":
+        "Value Combos", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"text": "All combos come with raita and mango chutney", "type": "SECTION_TEXT"}]},
+        {"subsection_name": "Dinner for Two", "contents": [{"text": "29.95", "type":
+        "SECTION_TEXT"}, {"type": "ITEM", "name": "2 Papadum"}, {"type": "ITEM", "name":
+        "Onion Bhaaji"}, {"type": "ITEM", "name": "Chicken Korma"}, {"type": "ITEM",
+        "name": "Beef Bhoona"}, {"type": "ITEM", "name": "Aloo Gobi"}, {"type": "ITEM",
+        "name": "Basmati Rice"}, {"type": "ITEM", "name": "Nan Bread"}]}, {"subsection_name":
+        "Vegetarian Feast for Two", "contents": [{"text": "27.95", "type": "SECTION_TEXT"},
+        {"type": "ITEM", "name": "2 Papadum"}, {"type": "ITEM", "name": "Pakoras"},
+        {"type": "ITEM", "name": "Matter Paneer"}, {"type": "ITEM", "name": "Aloo
+        Gobi"}, {"type": "ITEM", "name": "Channa"}, {"type": "ITEM", "name": "Vegetable
+        Biryani"}, {"type": "ITEM", "name": "Basmati Rice"}, {"type": "ITEM", "name":
+        "Nan Bread"}]}, {"subsection_name": "Dinner for 3", "contents": [{"text":
+        "39.95", "type": "SECTION_TEXT"}, {"type": "ITEM", "name": "3 Papadum"}, {"type":
+        "ITEM", "name": "3 Vegetable Samosa"}, {"type": "ITEM", "name": "Pakoras"},
+        {"type": "ITEM", "name": "Beef Spinach"}, {"type": "ITEM", "name": "Chicken
+        Korma"}, {"type": "ITEM", "name": "Vegetable Biryani"}, {"type": "ITEM", "name":
+        "Aloo Gobi"}, {"type": "ITEM", "name": "Basmati Rice"}, {"type": "ITEM", "name":
+        "Nan Bread"}]}, {"subsection_name": "Dinner for 4", "contents": [{"text":
+        "52.95", "type": "SECTION_TEXT"}, {"type": "ITEM", "name": "4 Papadum"}, {"type":
+        "ITEM", "name": "4 Vegetable Samosa"}, {"type": "ITEM", "name": "Pakoras"},
+        {"type": "ITEM", "name": "Beef Spinach"}, {"type": "ITEM", "name": "Butter
+        Chicken"}, {"type": "ITEM", "name": "Vegetable Biryani"}, {"type": "ITEM",
+        "name": "Aloo Gobi"}, {"type": "ITEM", "name": "Channa"}, {"type": "ITEM",
+        "name": "Basmati Rice"}, {"type": "ITEM", "name": "Nan Bread"}]}], "section_name":
+        "Value Priced Family Takeout Combos\u200f"}], "currency_symbol": "$"}], "locu_id":
+        "74b45963d7aa4ef84924", "contact": {"phone": "(519) 267-8100"}, "location":
+        {"locality": "Cambridge", "country": "Canada", "region": "ON", "postal_code":
+        "N1S 1H3", "address1": "14 Queens Sq.", "geo": {"type": "Point", "coordinates":
+        [-80.3170696436483, 43.3588298647076]}}, "website_url": "http://www.kwcurryinahurry.ca/"},
+        {"locu_id": "dd34915b50e89023b6b7", "contact": {"phone": "(617) 491-1187"},
+        "name": "Gargoyles Cafe", "categories": [{"str_id": "restaurants", "name":
+        "Restaurants"}, {"str_id": "food", "name": "Food"}], "location": {"locality":
+        "Cambridge", "country": "United States", "region": "MA", "address1": "1 Alewife
+        Ctr", "geo": {"type": "Point", "coordinates": [-71.13965, 42.398171]}}}, {"locu_id":
+        "e84b1954845df5fbb308", "categories": [{"str_id": "cafes", "name": "Cafes"},
+        {"str_id": "restaurants", "name": "Restaurants"}, {"str_id": "food", "name":
+        "Food"}], "name": "Bosworths", "website_url": "http://www.dineoncampus.com/mit/",
+        "location": {"locality": "Cambridge", "country": "United States", "region":
+        "MA", "postal_code": "02139", "address1": "77 Massachusetts Ave.", "geo":
+        {"type": "Point", "coordinates": [-71.0924686267724, 42.3604054345228]}}},
+        {"name": "Burger King", "locu_id": "87f39ccf1897eb5d3329", "contact": {"phone":
+        "(519) 623-2402"}, "website_url": "http://www.burgerking.ca/", "categories":
+        [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id": "hotdogs", "name":
+        "Fast Food"}], "location": {"locality": "Cambridge", "country": "Canada",
+        "region": "ON", "postal_code": "N1R 6J4", "address1": "561 Hespeler", "geo":
+        {"type": "Point", "coordinates": [-80.326143, 43.402402]}}}, {"locu_id": "f69b9730b1e10152900e",
+        "contact": {"phone": "(519) 267-3634"}, "name": "Mexican Restaurant", "categories":
+        [{"str_id": "restaurants", "name": "Restaurants"}, {"str_id": "latin", "name":
+        "Latin American"}], "location": {"locality": "Cambridge", "country": "Canada",
+        "region": "ON", "address1": "18 Concession St.", "geo": {"type": "Point",
+        "coordinates": [-80.3145498, 43.3536927]}}}, {"locu_id": "6169efa3e8b1e5771179",
+        "name": "The Varsity Hotel Roof Terrace", "categories": [{"str_id": "cafes",
+        "name": "Cafes"}, {"str_id": "restaurants", "name": "Restaurants"}], "location":
+        {"locality": "Cambridge", "country": "United Kingdom", "postal_code": "CB5
+        8AQ", "address1": "Thompson''s Ln.", "geo": {"type": "Point", "coordinates":
+        [0.117952, 52.210276]}}}, {"name": "Wagamama", "locu_id": "d1e3d37caaa2526fec29",
+        "contact": {"phone": "01223 462354"}, "website_url": "http://wagamama.com",
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}], "location":
+        {"locality": "Cambridge", "country": "United Kingdom", "region": "Cambridgeshire",
+        "postal_code": "CB2 3AR", "address1": "36a St. Andrews St.", "geo": {"type":
+        "Point", "coordinates": [0.123776, 52.203289]}}}, {"name": "The Carpenters
+        Arms", "open_hours": {"monday": [["11:00", "01:00"]]}, "categories": [{"str_id":
+        "restaurants", "name": "Restaurants"}], "menus": [{"menu_name": "Bar", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"price": "2.50", "type":
+        "ITEM", "name": "Bowl of Olives"}, {"price": "1.50", "type": "ITEM", "name":
+        "Fresh Bread and Butter"}]}], "section_name": "Appetizers\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "5.95", "type": "ITEM", "name":
+        "Sooup of the Day", "description": "Fresh bread and butter"}, {"price": "8.95",
+        "type": "ITEM", "name": "Polughmans", "description": "Two east Anglian cheese,
+        2 homemade chutney''s sickled onions, salads, tomatoes, corkers, hand cooked
+        Cambridgeshire crisps"}, {"type": "ITEM", "name": "Sandwiches and Baguettes",
+        "description": "Served with salad garnish and corkers hand cooked Cambridgeshire
+        crisps"}, {"price": "6.95", "type": "ITEM", "name": "Granay or White Crusty
+        Bread"}, {"price": "8.50", "type": "ITEM", "name": "Baguette"}, {"price":
+        "7.95", "type": "ITEM", "name": "Toasted Sandwich", "description": "Srved
+        with salad garnish and corkers hand cooked Cnbridgeshire crisps"}, {"price":
+        "2.50", "type": "ITEM", "name": "Portion of Chips"}]}], "section_name": "Bar
+        Snacks\u200e"}], "currency_symbol": "\u00a3"}, {"menu_name": "Lunch", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"price": "5.95", "type":
+        "ITEM", "name": "French onion soup", "description": "Cheese crouton, bread
+        and butter"}, {"price": "6.50", "type": "ITEM", "name": "Home Made Crountry
+        Terrine", "description": "Toast"}]}], "section_name": "Starters\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "9.95", "type": "ITEM", "name":
+        "Beef and Guinness Pie"}, {"price": "9.95", "type": "ITEM", "name": "Chicken
+        and Mushroom Pie"}, {"price": "9.95", "type": "ITEM", "name": "Venison Pie",
+        "description": "All above pies served eith hand cut triple cooked chips and
+        vegetables"}, {"price": "9.95", "type": "ITEM", "name": "Potato Topped Fish
+        Pie", "description": "With vegetables"}, {"price": "9.95", "type": "ITEM",
+        "name": "Tartiflette", "description": "Bacon, potatoes, and onions, baked
+        with reblochon cheese with mixed salad"}, {"price": "9.95", "type": "ITEM",
+        "name": "Pork and Black Pudding Sausages", "description": "Mash and onion
+        gravy"}, {"price": "9.95", "type": "ITEM", "name": "Gammon, Egg, Hand Cut
+        Triple Cooked Chips", "description": "With heathers mudhy peas"}, {"price":
+        "9.95", "type": "ITEM", "name": "Carpenters Cask Ale Battered Cod, Hand Cut
+        Triple Cooked Chips", "description": "With heathers mushy peas"}]}], "section_name":
+        "Main Courses\u200e"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "4.95", "type": "ITEM", "name": "Apple and Mixed Fruit Jalousie",
+        "description": "Apple liqueur sauce"}, {"price": "4.50", "type": "ITEM", "name":
+        "Creme Catalan", "description": "Catalan cream with a caramelised sugar topping"},
+        {"price": "4.95", "type": "ITEM", "name": "Chocolate Sponge Pudding", "description":
+        "Chocolate sauce"}, {"price": "4.95", "type": "ITEM", "name": "Apple Pie",
+        "description": "With cream"}]}], "section_name": "Desserts\u200e"}], "currency_symbol":
+        "\u00a3"}, {"menu_name": "Sample a La Carte", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"price": "9.00", "type": "ITEM", "name":
+        "Seared Scallops, Provencale Tomato Sauce, Lentils"}, {"price": "8.00", "type":
+        "ITEM", "name": "Garlicy Prawns with Granary Bread a Butter"}, {"price": "8.00",
+        "type": "ITEM", "name": "Sirilion Walnut and Celery Tart Lettuce, Baby Waves
+        Grapes"}, {"price": "6.00", "type": "ITEM", "name": "French onion soup, cheese
+        crouton"}, {"price": "7.00", "type": "ITEM", "name": "Country Terrine Salad
+        Leaves Toast and Corvichons"}]}], "section_name": "Starters\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "16.00", "type": "ITEM", "name":
+        "Slow Cooked Belly Pork Sage Onion Mash Vegetables Apple Cinnamon Cream Sauce"},
+        {"price": "23.50", "type": "ITEM", "name": "Fillet Steak Hand Cut Chips Vanilla
+        Scented Beans Spiced Cocoa Sauce"}, {"price": "16.00", "type": "ITEM", "name":
+        "Thai style chicken rice and stir fried greens"}, {"price": "16.00", "type":
+        "ITEM", "name": "Stuffed Quid, Cherry and Cinnamon Sauce, Baby Vegetables"},
+        {"price": "14.50", "type": "ITEM", "name": "Vegetable Shredded, Vegetables,
+        Onions, Gravy"}]}], "section_name": "Mains\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "17.00", "type": "ITEM", "name": "Mixed Fish, Seafood
+        with Baby Vegetables Rice"}]}], "section_name": "Fish\u200e"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "6.00", "type": "ITEM", "name":
+        "Strawberry Meningue", "description": "With strawberry"}, {"price": "7.00",
+        "type": "ITEM", "name": "Sable Breton", "description": "Bretonne shortuake
+        with raspberries and vanilla ice cream"}, {"price": "6.50", "type": "ITEM",
+        "name": "Cranberry, Orange Cointrean Fool with Cinnamon Finges"}, {"price":
+        "6.00", "type": "ITEM", "name": "Apple, Mixed Fruit, Jalavsie Apple Liqueur
+        Sauce"}]}], "section_name": "Desserts\u200e"}], "currency_symbol": "\u00a3"}],
+        "locu_id": "0e82ced1a33a08cebc4f", "contact": {"phone": "01223 882093"}, "location":
+        {"locality": "Cambridge", "country": "United Kingdom", "region": "Cambridgeshire",
+        "postal_code": "CB21 5JD", "geo": {"type": "Point", "coordinates": [0.179018692000454,
+        52.1706682500005]}}, "website_url": "http://carpentersarmsgastropub.co.uk/"}]}'
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 23:31:56 GMT
+recorded_with: VCR 3.0.1
