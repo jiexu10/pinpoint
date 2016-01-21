@@ -66,6 +66,28 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
     expect(restaurantdetail.delivery).to eq("true")
   end
 
+  it 'populates restaurant when there exact name match and some inexact' do
+    makerd = MakeRestaurantDetail.new(rest, 'name' => "Sweet Cupcakes")
+    restaurantdetail = makerd.rd
+    expect(restaurantdetail).to be_a(Restaurantdetail)
+    restaurantdetail.opentimes.each do |time|
+      expect(time).to be_a(Opentime)
+    end
+    restaurantdetail.restaurantcategories.each do |restaurantcategory|
+      expect(restaurantcategory).to be_a(Restaurantcategory)
+    end
+    restaurantdetail.categories.each do |category|
+      expect(category).to be_a(Category)
+    end
+    restaurantdetail.menusections.each do |menusection|
+      expect(menusection).to be_a(Menusection)
+    end
+    expect(restaurantdetail.items.count).to be > 0
+    restaurantdetail.items.each do |item|
+      expect(item).to be_a(Item)
+    end
+  end
+
   it 'raises VenueExistsError when attemptning to add restaurant that exists' do
     MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")
     makerd = MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")

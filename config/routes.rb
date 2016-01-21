@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :restaurants,
     controllers: { registrations: "restaurants/registrations" }
-  root 'home#index'
+  root 'restaurants#index'
 
   devise_for :users
 
-  resources :restaurants, only: [:show]
+  resources :restaurants, only: [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

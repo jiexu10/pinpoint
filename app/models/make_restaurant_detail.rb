@@ -9,8 +9,12 @@ class MakeRestaurantDetail
     @exists_valid = true
     @multiple_valid = true
     @match_valid = true
-    if @data['venues'].count == 1
-      @venue = @data['venues'][0]
+    if @data['venues'].count == 1 || query_name_exact_match?(query)
+      if @data['venues'].count == 1
+        @venue = @data['venues'][0]
+      elsif query_name_exact_match?(query)
+        @venue = @data['venues'].select { |v| v['name'] == query['name'] }[0]
+      end
       if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
         @rd = Restaurantdetail.new
         rd.restaurant = rest
@@ -77,7 +81,7 @@ class MakeRestaurantDetail
           subsection['contents'].each do |it|
             Item.find_or_create_by(restaurantdetail: rd, name: it['name']) do |mi|
               mi.menusection = ms
-              mi.price = it['price']
+              mi.price = it['price'] || "No Price"
               mi.description = it['description'] if it['description']
             end
           end
@@ -88,5 +92,9 @@ class MakeRestaurantDetail
 
   def valid?
     @exists_valid && @multiple_valid && @match_valid
+  end
+
+  def query_name_exact_match?(query)
+    @data['venues'].count { |v| v['name'] == query['name'] } == 1
   end
 end

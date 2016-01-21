@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20160120210723) do
   create_table "items", force: :cascade do |t|
     t.string  "name",                null: false
     t.string  "description"
-    t.string  "price",               null: false
     t.integer "menusection_id"
     t.integer "restaurantdetail_id", null: false
+    t.string  "price",               null: false
   end
 
   create_table "menusections", force: :cascade do |t|
