@@ -1,5 +1,6 @@
 class MakeRestaurantDetail
-  attr_reader :venue, :rd
+  attr_reader :venue
+  attr_accessor :rd
 
   def initialize(rest, query = {})
     locu_data = LocuData.new(query)
@@ -8,12 +9,16 @@ class MakeRestaurantDetail
     @data = JSON.parse(raw_data_body)
     if @data['venues'].count == 1
       @venue = @data['venues'][0]
+      if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
+        @rd = Restaurantdetail.new
+        rd.restaurant = rest
+        make_detail
+      else
+        raise VenueExistsError
+      end
     else
       raise MultipleVenueError
     end
-    @rd = Restaurantdetail.new
-    @rd.restaurant = rest
-    make_detail
   end
 
   def make_detail
@@ -29,7 +34,7 @@ class MakeRestaurantDetail
     rd.zip_code = venue['location']['postal_code']
     rd.coordinates = venue['location']['geo']['coordinates'].to_s
     if venue['delivery']
-      rd.delivery = venue['delivery']['will deliver'].to_s
+      rd.delivery = venue['delivery']['will_deliver'].to_s
     end
     if rd.save
       make_categories(rd) if venue['categories']
@@ -79,4 +84,7 @@ class MakeRestaurantDetail
 end
 
 class MultipleVenueError < StandardError
+end
+
+class VenueExistsError < StandardError
 end
