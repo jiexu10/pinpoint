@@ -1,0 +1,19 @@
+<div class="restaurant-info-<%= restaurant.id %>">
+  Name: <%= restaurant.restaurantdetail.name %>
+  Phone: <%= restaurant.restaurantdetail.phone %>
+  Website: <%= restaurant.restaurantdetail.website_url %>
+  Address:
+  <%= restaurant.restaurantdetail.address_one %>
+  <% if restaurant.restaurantdetail.address_two %>
+  <%= restaurant.restaurantdetail.address_two %>
+  <% end %>
+  <%= restaurant.restaurantdetail.city %>, <%= restaurant.restaurantdetail.state %> <%= restaurant.restaurantdetail.zip_code %>
+  <br>
+  <br>
+  Categories:
+  <% restaurant.categories.each do |category| %>
+    <% unless category.name == "Restaurant" %>
+      <%= category.name %>
+    <% end %>
+  <% end %>
+</div>
