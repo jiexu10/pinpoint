@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MakeRestaurantDetail, type: :model, vcr: true, focus: true do
+RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
   let(:rest) { FactoryGirl.create(:restaurant) }
   it 'populates restaurant details, opentimes, categories, and menues' do
     makerd = MakeRestaurantDetail.new(rest, 'name' => "boston beer garden")
