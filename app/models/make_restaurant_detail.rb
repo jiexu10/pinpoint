@@ -1,11 +1,10 @@
 class MakeRestaurantDetail
   attr_reader :venue, :rd
 
-  def initialize(restaurant, query = {})
+  def initialize(rest, query = {})
     locu_data = LocuData.new(query)
     locu_data.search_function
     raw_data_body = locu_data.data.body
-    @restaurant = restaurant
     @data = JSON.parse(raw_data_body)
     if @data['venues'].count == 1
       @venue = @data['venues'][0]
@@ -13,6 +12,7 @@ class MakeRestaurantDetail
       raise MultipleVenueError
     end
     @rd = Restaurantdetail.new
+    @rd.restaurant = rest
     make_detail
   end
 
@@ -44,7 +44,7 @@ class MakeRestaurantDetail
       cat = Category.find_or_create_by(str_id: category['str_id']) do |new_cat|
         new_cat.name = category['name']
       end
-      Restaurantcategory.create(restaurantdetail: rd, category: cat)
+      Restaurantcategory.find_or_create_by(restaurantdetail: rd, category: cat)
     end
   end
 

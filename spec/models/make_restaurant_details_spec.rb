@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
+RSpec.describe MakeRestaurantDetail, type: :model, vcr: true, focus: true do
   let(:restaurant) { FactoryGirl.create(:restaurant) }
-  it 'populates restaurant details, opentimes, categories, and menues', focus: true do
-    makerestaurantdetail = MakeRestaurantDetail.new('name' => "boston beer garden")
+  it 'populates restaurant details, opentimes, categories, and menues' do
+    makerestaurantdetail = MakeRestaurantDetail.new(restaurant, 'name' => "boston beer garden")
     makerestaurantdetail.make_detail
     restaurantdetail = makerestaurantdetail.rd
     expect(restaurantdetail).to be_a(Restaurantdetail)
@@ -22,5 +22,9 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
     restaurantdetail.items.each do |item|
       expect(item).to be_a(Item)
     end
+  end
+
+  it 'raises MultipleVenueError when the query is too broad' do
+    expect { MakeRestaurantDetail.new('locality' => "Boston") }.to raise_error(MultipleVenueError)
   end
 end
