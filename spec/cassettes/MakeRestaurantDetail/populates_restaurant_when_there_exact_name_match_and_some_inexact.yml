@@ -1,0 +1,633 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.locu.com/v2/venue/search
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"0a617b50e355f12544adc19e76d4714d0d8a6a46","fields":["name","description","website_url","menus","open_hours","categories","location","contact","delivery"],"venue_queries":[{"categories":{"str_id":"restaurants"},"name":"Sweet
+        Cupcake"}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Jan 2016 21:50:33 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status": "success", "http_status": 200, "venues": [{"name": "Sweet
+        Cupcakes", "open_hours": {"monday": [["10:00", "21:00"]], "tuesday": [["10:00",
+        "21:00"]], "friday": [["10:00", "21:00"]], "wednesday": [["10:00", "21:00"]],
+        "thursday": [["10:00", "21:00"]], "sunday": [["10:00", "21:00"]], "saturday":
+        [["10:00", "21:00"]]}, "categories": [{"str_id": "restaurants", "name": "Restaurants"}],
+        "menus": [{"menu_name": "Menu", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "The Sweet Cake", "description":
+        "Creamy madagascar vanilla bean cake with buttercream frosting in vanilla
+        or chocolate"}, {"type": "ITEM", "name": "Dark Chocolate", "description":
+        "Rich chocolate cake baked with dutch cocoa topped with buttercream frosting
+        in vanilla or chocolate"}, {"type": "ITEM", "name": "Organic Karat", "description":
+        "Moist carrot cake with shredded organic carrots and crushed pineapple topped
+        with classic cream cheese frosting and an edible gold leaf petal"}, {"type":
+        "ITEM", "name": "Cappuccino", "description": "Delectable espresso flavored
+        cake baked with callebaut chocolate crowned with signature sweet frosting
+        and a dusting of cinnamon"}, {"type": "ITEM", "name": "Red Velvet", "description":
+        "gentle hint of bensdorp dutch cocoa, a classic shocking red hue and Sweet''s
+        delectable cream cheese frosting"}, {"type": "ITEM", "name": "Boston Cream
+        Pie", "description": "Sweet chiffon cake filled with homemade pastry cream
+        topped with chocolate ganache and a frosting \"cherry\""}, {"type": "ITEM",
+        "name": "Vegan Cupcake (Mondays Only)", "description": "Yummy chocolate cake
+        and delectable frosting that is 100% vegan (dairy and egg free) and cholesterol
+        free"}, {"type": "ITEM", "name": "Pupcakes"}]}], "section_name": "The Daily
+        Sweet\u200e"}, {"subsections": [{"subsection_name": "", "contents": [{"type":
+        "ITEM", "name": "Chocolate Covered Pretzel", "description": "The sweet and
+        savory cupcake just in time for spring! Delectable chocolate cake with homemade
+        chocolate buttercream, dipped in pretzel crumbs and finished with a a miniature
+        chocolate dipped pretzel!"}, {"type": "ITEM", "name": "Lemon", "description":
+        "Delectable fresh lemon cake finished with a pale yellow lemon signature frosting."},
+        {"type": "ITEM", "name": "Chocolate Caramel", "description": "moist Belgian
+        chocolate cake stuffed with homemade chocolate pudding\u2014topped with Sweet''s
+        chocolate buttercream and a melted caramel drizzle."}, {"type": "ITEM", "name":
+        "Peeps - Offered Through Easter", "description": "Sweet''s famous vanilla
+        and chocolate cupcakes and signature handcrafted buttercreams dipped in vibrant
+        colored sanding sugars and topped off with the famous marshmallow candy."},
+        {"type": "ITEM", "name": "Banana Split", "description": "Fluffy chiffon cake
+        stuffed with banana cream, topped with traditional whipping cream, chocolate
+        ganache and a sliver of cherry. Complete with its own little spoon! Add rainbow
+        sprinkles to your taste at the counter (in-store purchases only)."}, {"type":
+        "ITEM", "name": "Not So Rocky Road", "description": "Sweet''s nut-free salute
+        to the ice cream of the same name! Rich chocolate brownie stuffed with sweet
+        and gooey homemade marshmallow, topped with freshly whipped cream and drizzled
+        with chocolate \"syrup. \""}, {"type": "ITEM", "name": "Chocolate Coconut",
+        "description": "Rich dark chocolate cake topped with coconut-infused buttercream
+        frosting and rolled in fresh coconut shavings."}, {"type": "ITEM", "name":
+        "Flourless Chocolate", "description": "Flourless dark chocolate cake with
+        a hint of espresso and a dusting of confectioners\u2019 sugar."}, {"type":
+        "ITEM", "name": "Cheesecake", "description": "Creamy homestyle cheesecake
+        with its own mini graham cracker crust. A dollop of cream cheese frosting
+        inside and atop and finished with a light graham cracker dust."}, {"type":
+        "ITEM", "name": "Cherry Cheesecake", "description": "Cherry\u200e filling
+        stuffed inside our creamy homestyle cheesecake, a crunch of graham cracker
+        crust and finished with a dollop of cream cheese frosting."}, {"type": "ITEM",
+        "name": "Lemon Raspberry", "description": "The\u200e traditional summer favorite
+        stuffed with homemade raspberry preserves and topped with a ripe red raspberry."},
+        {"type": "ITEM", "name": "Mint Chip", "description": "Creamy mint chips baked
+        into a rich, moist dark brownie cupcake. Topped with mint infused buttercream
+        frosting and finished with a dark chocolate ganache drizzle."}]}], "section_name":
+        "Spring\u200e"}, {"subsections": [{"subsection_name": "", "contents": [{"type":
+        "ITEM", "name": "Lemon", "description": "sweet''s refreshing lemon juice infused
+        cake topped with Sweet''s signature frosting and finished with a sugared lemon
+        candy."}, {"type": "ITEM", "name": "Lemon Blueberry New", "description": "The
+        traditional summer favorite lemon juice infused cake with blueberries baked
+        right into the batter! Topped with homemade vanilla bean buttercream frosting
+        infused with blueberry puree."}, {"type": "ITEM", "name": "Honey Lemon New",
+        "description": "light and luscious vanilla bean sweet cake infused with new
+        England''s own carlisle honey. topped with our own signature lemon frosting
+        and finished with a fondant honey bee or hive!"}, {"type": "ITEM", "name":
+        "Honey Nectarine New", "description": "a\u200e fruit filled version of our
+        honey cupcake featuring new England''s own carlisle honey and fresh slices
+        of nectarine baked right into the batter! finished with our classic homemade
+        vanilla buttercream laced with cinnamon."}, {"type": "ITEM", "name": "Pink
+        Lemonade", "description": "A sweeter twist on the summertime classic with
+        a hint of cherry juice and its very own straw."}, {"type": "ITEM", "name":
+        "Pina Colada Filled with Pineapple Preserves!", "description": "Sweet''s virgin
+        version of the classic cocktail. Sweet vanilla bean cake, with a shot of pineapple
+        preserves and topped with coconut infused buttercream frosting. Comes with
+        its own umbrella. Cheers"}, {"type": "ITEM", "name": "Caramel Macchiato Filled
+        with Homemade Vanilla Frosting", "description": "Sweet''s famous espresso
+        flavored cake filled with traditional vanilla buttercream. Topped with cappuccino
+        frosting and drizzled with melted caramel."}, {"type": "ITEM", "name": "Red
+        White and You Filled with Berry Jam", "description": "Maybe the sweetest cupcake
+        ever! The vanilla bean sweet cake filled with berry bash jam and topped with
+        homemade vanilla buttercream. Rolled in festive bright red sanding sugar."},
+        {"type": "ITEM", "name": "Strawberry Shortcake Filled with Strawberry Preserves!",
+        "description": "Madagascar\u200e bourbon vanilla bean sweet cake filled with
+        our own strawberry preserves topped with whipped cream and a sliver of strawberry."},
+        {"type": "ITEM", "name": "Peach Cobbler Peach Preserves Inside!", "description":
+        "Vanilla bean sweet cake filled with handmade peach preserves laced with cinnamon
+        sugar. Topped off with classic vanilla buttercream and a no-nuts streusel
+        crumble."}]}], "section_name": "Summer\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Pumpkin", "description": "Sweet''s
+        fall classic, fresh moist pumpkin cake topped with traditional cream cheese
+        frosting and topped with a cinnamon sugared pumpkin seed."}, {"type": "ITEM",
+        "name": "Pumpkin Pie", "description": "Graham cracker crust, rich pumpkin
+        cake and a dollop of homemade whipped cream topping sprinkled with nutmeg
+        complete the sweet cupcake version of this favorite autumn pie."}, {"type":
+        "ITEM", "name": "S''mores", "description": "Rich callebaut chocolate cake
+        atop a buttery graham cracker crust. Finished with a swirl of marshmallow
+        and a dusting of graham cracker - campfire not included."}, {"type": "ITEM",
+        "name": "Brownie", "description": "a rich and dense version of Sweet''s own
+        chocolate cake - a small dollop of chocolate buttercream atop."}, {"type":
+        "ITEM", "name": "Salted Chocolate", "description": "The\u200e brownie cupcake,
+        unfrosted - topped with a dusting of sea salt for a sweet and salty flavor."},
+        {"type": "ITEM", "name": "Caramel Brownie", "description": "Drizzled caramel
+        adds a sweet and sticky touch to the sweet seasonal brownie cupcake."}, {"type":
+        "ITEM", "name": "Maple Cranberry", "description": "Sweet and tart cranberries
+        baked right into vanilla bean sweet cake, topped with maple infused buttercream
+        and finished with a dried cranberry. A fresh taste of fall in new england!"},
+        {"type": "ITEM", "name": "Chocolate Orange", "description": "Sweet''s signature
+        frosting infused with the fresh sweet citrus flavor of orange tops luscious
+        chocolate cake - finished with a candied orange peel, hand-dipped in rich
+        chocolate ganache."}, {"type": "ITEM", "name": "Caramel Apple", "description":
+        "Seasonal apple preserves fill the sweet vanilla bean cake, caramel buttercream
+        atop and a gooey drizzle. Complete with its own stick."}, {"type": "ITEM",
+        "name": "Apple Pie", "description": "Vanilla bean cake oozing with crisp cinnamon
+        apple preserves, topped with homemade whipped cream and finished with a sliver
+        of cinnamon stick."}, {"type": "ITEM", "name": "French Toast Cupcake", "description":
+        "have a sweet breakfast treat anytime with fall''s French toast cupcake! vanilla
+        bean sweet cake laced with ground cinnamon, maple and extra fresh farm eggs.
+        top it all off with new Hampshire''s own mcclure''s maple syrup infused into
+        our homemade buttercream frosting - sprinkled"}]}], "section_name": "Fall\u200e"}],
+        "currency_symbol": "$"}, {"menu_name": "2013 Winter Flavors at Sweet", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"text": "Available
+        january 11th through march 31st to order online click here", "type": "SECTION_TEXT"}]}],
+        "section_name": ""}, {"subsections": [{"subsection_name": "", "contents":
+        [{"type": "ITEM", "name": "Buttermilk Pancake", "description": "Breakfast
+        all day long with delectable light buttermilk cake topped with maple-infused
+        frosting. Help yourself to extra maple syrup (in-store only)."}, {"type":
+        "ITEM", "name": "Blueberry Buttermilk Pancake", "description": "Sweet\u2019s
+        ultimate comfort food stuffed with blueberry preserves, finished with a maple-infused
+        buttercream and topped with a fresh blueberry."}, {"type": "ITEM", "name":
+        "Mocha Mint Chip", "description": "Sweet\u2019s dense cappuccino cake topped
+        with fresh mint buttercream and rolled in mini-chocolate chips."}, {"type":
+        "ITEM", "name": "Hot Cocoa", "description": "come in from the cold to Sweet''s
+        rich, dark chocolate cake with homemade chocolate mousse inside, finished
+        with a dollop of whipped cream, a dusting of cocoa and its own stirrer."}]}],
+        "section_name": "Winter Comforts:\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Snickerdoodle", "description":
+        "A sweet take on the famous sugar cookie. Cinnamon-infused cake and frosting
+        rolled in homemade sugar crystals."}, {"type": "ITEM", "name": "Cookies and
+        Cream", "description": "Vanilla bean cupcake topped with cookie-infused frosting
+        and finished in sandwich cookie fashion."}, {"type": "ITEM", "name": "The
+        Macaroon", "description": "Vanilla bean sweet cake with coconut baked in for
+        a crisp macaroon cookie-like top, dipped in our own callebaut chocolate ganache."},
+        {"type": "ITEM", "name": "Half-Baked Chocolate Chip Cookie Dough Cupcake",
+        "description": "Madagascar vanilla bean sweet cake with half-baked, homemade
+        chocolate chip cookie dough inside. Topped with a dollop of buttercream and
+        finished with mini chocolate chips!"}]}], "section_name": "Sweet Cookies:\u200e"},
+        {"subsections": [{"subsection_name": "", "contents": [{"type": "ITEM", "name":
+        "Angel Food", "description": "Have your cake and eat it too with sweet''s
+        cupcake version of the famous sponge cake. Topped with your choice of homemade
+        whipped cream and fresh berries or a maple glaze drizzle with a spun sugar
+        topping. Either way it is heavenly!"}, {"type": "ITEM", "name": "Bananas Foster",
+        "description": "Sweet\u2019s non-alcoholic version of the mardi gras tradition.
+        Vanilla bean cake filled with fresh banana cream, topped with a caramel drizzle
+        and a dusting of cinnamon sugar."}, {"type": "ITEM", "name": "Key Lime", "description":
+        "Vanilla sweet cake bursting with fresh key lime filling, finished with a
+        dollop of whipped cream and a sprinkling of graham cracker."}, {"type": "ITEM",
+        "name": "Coconut"}]}], "section_name": "Sweet Escapes:\u200e"}], "currency_symbol":
+        "$"}], "locu_id": "bdfc1520572e2344cf0a", "contact": {"phone": "(617) 227-2253"},
+        "location": {"locality": "Boston", "country": "United States", "region": "MA",
+        "postal_code": "02108", "address1": "11 School St.", "geo": {"type": "Point",
+        "coordinates": [-71.058821, 42.357689]}}, "website_url": "http://www.sweetcupcakes.com/"},
+        {"name": "Sweet Retreat Cupcake Boutique", "open_hours": {"tuesday": [["10:00",
+        "17:00"]], "friday": [["10:00", "17:00"]], "wednesday": [["10:00", "17:00"]],
+        "thursday": [["10:00", "17:00"]]}, "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}], "menus": [{"menu_name": "Menu", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Kevin''s Vanilla
+        Princess"}, {"type": "ITEM", "name": "Mocha"}, {"type": "ITEM", "name": "Robin''s
+        Red Velvet"}, {"type": "ITEM", "name": "Cynthia''s Chocolate on Chocolate"},
+        {"type": "ITEM", "name": "Peanut Butter Cup"}, {"type": "ITEM", "name": "Choczilla"},
+        {"type": "ITEM", "name": "Vanilla w/ Chocolate"}, {"type": "ITEM", "name":
+        "Coo Coo for Coconut"}, {"type": "ITEM", "name": "Cookies-N-Cream"}, {"type":
+        "ITEM", "name": "Salted Caramel Dream"}, {"type": "ITEM", "name": "Butter
+        Finger"}, {"type": "ITEM", "name": "S''mores"}, {"type": "ITEM", "name": "White
+        Chocolate Raspberry"}]}], "section_name": "Cupcake\u200b"}], "currency_symbol":
+        "$"}, {"menu_name": "Cupcakes", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Cynthia''s Chocolate on Chocolate",
+        "description": "Rich chocolate cake topped w/ chocolate butter cream frosting"},
+        {"type": "ITEM", "name": "Choczilla", "description": "Rich\u200b chocolate
+        cake w/ chocolate chips topped w/ vanilla butter cream frosting & sprinkles"},
+        {"type": "ITEM", "name": "Coo Coo for Coconut", "description": "Coconut\u200b
+        infused vanilla cake topped w/ coconut butter cream frosting & fresh coconut"},
+        {"type": "ITEM", "name": "Mocha", "description": "Chocolate cake infused w/
+        coffee & topped w/ our espresso butter cream frosting & an espresso bean"},
+        {"type": "ITEM", "name": "Kevin''s Vanilla Princess", "description": "Moist
+        rich vanilla cake w/ vanilla butter cream frosting perfect"}, {"type": "ITEM",
+        "name": "Cookies-N-Cream", "description": "Vanilla cake w/ a cookie baked
+        into the bottom topped w/ cookies & cream butter cream frosting & a mini cookie"},
+        {"type": "ITEM", "name": "Robin''s Red Velvet", "description": "Rich moist
+        red cake topped w/ luscious vanilla bean cream cheese frosting"}, {"type":
+        "ITEM", "name": "Peanut Butter Cup", "description": "Chocolate cake filled
+        w/ little peanut butter cups & topped w/ peanut butter butter cream frosting"},
+        {"type": "ITEM", "name": "Salted Caramel Dream", "description": "Our homemade
+        caramel is swirles w/ our vanilla batter lightly touched w/ fleur de sel &
+        topped w/ whipped white chocolate icing"}, {"type": "ITEM", "name": "Monkey
+        Business", "description": "Our delicious banana cake topped w/ our delicious
+        chocolate butter cream frosting brings out the happy monkey in all of us"},
+        {"type": "ITEM", "name": "Doodle", "description": "Our take on a childhood
+        favorite chocolate cake w/ a creamy filling topped w/ chocolate ganache &
+        white swirls"}, {"type": "ITEM", "name": "Lemon", "description": "Moist &
+        flavorful our lemon cake is made w/ fresh lemon zest & topped w/ a refreshing
+        lemon butter cream pucker up"}, {"type": "ITEM", "name": "Key Lime", "description":
+        "Fresh limes are zested to infuse this cake w/ a delightful refreshing flavor
+        this cup cake has a graham cracker crust & is topped w/ whipped mascarpone"},
+        {"type": "ITEM", "name": "Carrot", "description": "This moist & delicious
+        cake has hints of nutmeg cinnamon no raisins just teeny pineapple bits it
+        is topped w/ a delicate vanilla bean cream cheese frosting"}, {"type": "ITEM",
+        "name": "White Chocolate Raspberry", "description": "Delicious\u200b vanilla
+        cake combined w/ white chocolate & raspberries topped w/ raspberry cream cheese
+        frosting & a fresh raspberry"}, {"type": "ITEM", "name": "Pumpkin", "description":
+        "Fragrant\u200b spices such as cloves nutmeg & ginger are lightly incorporated
+        in to this delicious pumpkin cupcake finished w/ a vanilla bean cream cheese
+        frosting w/ a dusting of cinnamon"}, {"type": "ITEM", "name": "S''mores",
+        "description": "A\u200b gooey marshmallow topping covers our rich chocolate
+        cake w/ a graham crust let''s go camping"}, {"type": "ITEM", "name": "Snickerdoodle",
+        "description": "A lightly spiced vanilla cake topped w/ cinnamon butter cream
+        & a dusting of cinnamon sugar tastes just like your favorite snickerdoodle
+        cookie"}, {"type": "ITEM", "name": "Turtle", "description": "Our delicious
+        chocolate cake is filled w/ home made caramel & pecans topped w/ ganache caramel
+        & more pecans"}, {"type": "ITEM", "name": "Butterfinger", "description": "Peanut
+        butter cake mixed w/ butterfinger bits topped w/ a milk chocolate butter cream
+        & rolled in crushed butterfinger yum"}, {"type": "ITEM", "name": "Strawberry
+        Balsamic", "description": "This cupcake has a moist vanilla base it is filled
+        w/ a homemade strawberry balsamic jam & iced w/ a whipped mascarpone topping
+        it is then drizzled w/ a balsamic reduction & topped w/ a fresh strawberry"},
+        {"type": "ITEM", "name": "Vanilla w/ Chocolate", "description": "Rich vanilla
+        cake topped w/ chocolate buttercream frosting"}, {"type": "ITEM", "name":
+        "Gingerbread", "description": "A\u200b moistspice cake w/ a delicious holiday
+        blend of ginger & molasses topped w/ our vanilla bean cream cheese frosting"},
+        {"type": "ITEM", "name": "Chocolate Reppermint", "description": "Our\u200b
+        classic chocolate cake infused w/ a hint of peppermint topped w/ a vanilla
+        peppermint buttercream frosting & rolled in crushed candy canes"}, {"type":
+        "ITEM", "name": "Winter Spice Pear", "description": "A lightly spiced cake
+        w/ fresh pears baked in topped w/ a honey kissed whipped topping"}, {"type":
+        "ITEM", "name": "German Chocolate", "description": "Moist chocolate cake topped
+        w/ a traditional coconut caramel & pecan icing"}]}], "section_name": ""}],
+        "currency_symbol": "$"}, {"menu_name": "Sweet Treats", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Red Velvet",
+        "description": "Our red velvet cake is combined w/ vanilla bean cream cheese
+        icing & dipped in white chocolate"}, {"type": "ITEM", "name": "Cookies & Cream",
+        "description": "Our\u200b chocolate cake is mixed w/ chocolate buttercream
+        frosting it is then dipped in white chocolate w/ cookies & cream then topped
+        w/ cookies bits"}, {"type": "ITEM", "name": "Cookie Dough", "description":
+        "Vanilla\u200b cake is combined w/ vanilla buttercream frosting & chocolate
+        chips it is then dipped in chocolate w/ chocolate drizzle on top"}, {"type":
+        "ITEM", "name": "Chocolate", "description": "Our chocolate cake is mixed w/
+        our chocolate butter cream frosting & then dipped in chocolate"}, {"type":
+        "ITEM", "name": "Butterfinger", "description": "Vanilla cake is combined w/
+        peanut butter frosting then dipped in chocolate & rolled in crushed butterfingers"},
+        {"type": "ITEM", "name": "Coconut", "description": "Our coconut cake is mixed
+        w/ coconut buttercream then dipped in chocolate & rolled in toasted coconut"},
+        {"type": "ITEM", "name": "Gluten Free"}]}], "section_name": ""}], "currency_symbol":
+        "$"}, {"menu_name": "Prices", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"price": "4.00", "type": "ITEM", "name": "Buttercream Cake
+        Base Pricing Starts At"}, {"text": "Per slice.", "type": "SECTION_TEXT"},
+        {"price": "6.00", "type": "ITEM", "name": "Fondant Cake Base Pricing Starts
+        At"}, {"text": "Per slice.", "type": "SECTION_TEXT"}]}], "section_name": "Wedding
+        Cake Prices\u200b"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "30.00", "type": "ITEM", "name": "Quarter Sheet", "description":
+        "Serves up to 24."}, {"price": "50.00", "type": "ITEM", "name": "Half Sheet",
+        "description": "Serves\u200b up to 48."}, {"price": "90.00", "type": "ITEM",
+        "name": "Full Sheet", "description": "Serves\u200b up to 96."}, {"price":
+        "22.95", "type": "ITEM", "name": "6\" Round", "description": "Serves 6-8."},
+        {"price": "31.95", "type": "ITEM", "name": "8\" Round", "description": "Serves
+        10-14"}, {"price": "45.95", "type": "ITEM", "name": "10\" Round", "description":
+        "Serves 16-22."}]}], "section_name": "Cake Prices\u200b"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "3.00", "type": "ITEM", "name":
+        "Single"}, {"price": "33.00", "type": "ITEM", "name": "Dozen & Multiples Of"},
+        {"price": "17.00", "type": "ITEM", "name": "Mini Cupcakes Special Order"},
+        {"text": "Per dozen.", "type": "SECTION_TEXT"}, {"text": "We do photo cakes
+        & logo duplications on cupcakes.", "type": "SECTION_TEXT"}]}], "section_name":
+        "Cupcake Prices\u200b"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "1.75", "type": "ITEM", "name": "Single"}, {"price": "21.00", "type":
+        "ITEM", "name": "Dozen"}]}], "section_name": "Cake Ball Prices\u200b"}], "currency_symbol":
+        "$"}], "locu_id": "b2b7533c9efb3d860dcf", "contact": {"phone": "(612) 353-6230"},
+        "location": {"locality": "Minneapolis", "country": "United States", "region":
+        "MN", "postal_code": "55410", "address1": "5013 France Ave. South", "geo":
+        {"type": "Point", "coordinates": [-93.328905, 44.91209]}}, "website_url":
+        "http://thesweetretreatmn.com/"}, {"name": "Sweet Devotions Cupcake & Creperie
+        Cafe", "categories": [{"str_id": "restaurants", "name": "Restaurants"}], "menus":
+        [{"menu_name": "Bakery", "sections": [{"subsections": [{"subsection_name":
+        "Monday", "contents": [{"type": "ITEM", "name": "White Chocolate Raspberry",
+        "description": "Vanilla cake with raspberry filling and topped with fresh
+        raspberry buttercream."}, {"type": "ITEM", "name": "High Hat"}, {"type": "ITEM",
+        "name": "Tiramisu", "description": "Our rendition of tiramisu cake. Vanilla
+        cake dipped in a marsala espresso syrup topped with a mascarpone vanilla buttercream
+        and sprinkled with cinnamon.Emon meringue - mon and sat"}, {"type": "ITEM",
+        "name": "Lemon Cake Filled", "description": "With lemon filling and topped
+        with fresh toasted marshmallow meringue."}, {"type": "ITEM", "name": "Cookies
+        and Cream", "description": "Chocolate cake with chopped oreos in the batter,
+        topped with oreo vanilla buttercream, and finished with a mini oreo on top."},
+        {"type": "ITEM", "name": "Chocolate Covered Strawberry", "description": "Chocolate
+        cake filled with strawberry filling topped with strawberry buttercream and
+        garnished with a chocolate covered strawberry"}, {"type": "ITEM", "name":
+        "Boston Cream", "description": "Vanilla cake with bavarian cream filling and
+        dipped in chocolate ganache."}]}, {"subsection_name": "Tuesday", "contents":
+        [{"type": "ITEM", "name": "Fresh Squeeze", "description": "Think orange creamsicle!
+        Vanilla orange cake topped with orange buttercream and finished with a dollop
+        of vanilla buttercream."}, {"type": "ITEM", "name": "Cherry Cheesecake", "description":
+        "Vanilla cupcake filled with a cherry fruit filling topped with cream cheese
+        icing and crushed graham crackers."}, {"type": "ITEM", "name": "Banana Split",
+        "description": "Banana cake with our classic buttercream frosting drizzled
+        with chocolate, rainbow sprinkles, and topped with a stemmed cherry."}, {"type":
+        "ITEM", "name": "Banana Cream", "description": "Banana cake topped with banana
+        cream buttercream and garnished with a dried banana slice."}, {"type": "ITEM",
+        "name": "Kahlua and Cream", "description": "Chocolate cake frosted with kahlua
+        buttercream, topped with our signature buttercream then accented with a swirled
+        chocolate straw."}, {"type": "ITEM", "name": "Chunkey Monkey"}, {"type": "ITEM",
+        "name": "Chocolate Crazy", "description": "Hocolate cake\u200f with chocolate
+        chips baked in, topped with chocolate buttercream, rolled in chocolate sprinkles,
+        drizzled with chocolate, and topped with mini chocolate chips."}]}, {"subsection_name":
+        "= Wednesday", "contents": [{"type": "ITEM", "name": "Black Bottoms", "description":
+        "Chocolate cake filled with chocolate chip cream cheese baked, topped with
+        cream cheese icing, and garnished with mini chocolate chips."}, {"type": "ITEM",
+        "name": "Snickerdoodle"}, {"type": "ITEM", "name": "Coconut Fantasy", "description":
+        "Coconut cake filled with a rich coconut cream, topped with our classic coconut
+        buttercream and covered in coconut flakes"}, {"type": "ITEM", "name": "Tandy
+        Kandy", "description": "Vanilla cake dipped in melted peanut butter and dipped
+        again in chocolate genache finished with a drizzle of peanut butter chocolate."},
+        {"type": "ITEM", "name": "Hot Fudge Sundae", "description": "Our delicious
+        chocolate cupcake is filled with fudge sauce topped with our dreamy vanilla
+        buttercream and topped off with chocolate drizzle, walnuts, and a cherry!"},
+        {"type": "ITEM", "name": "Almond Joy", "description": "Almond cake filled
+        with coconut filling, topped with chocolate buttercream, and topped with sliced
+        almonds and coconut flakes"}, {"type": "ITEM", "name": "Chocolate Raspberry",
+        "description": "Chocolate cake with raspberry filling topped with raspberry
+        buttercream and garnished with a raspberry and chocolate drizzle"}]}, {"subsection_name":
+        "Thursday", "contents": [{"type": "ITEM", "name": "Chocolate Caramel", "description":
+        "Chocolate cake filled with caramel sauce topped with our signature caramel
+        buttercream and topped with a rolo candy"}, {"type": "ITEM", "name": "Strawberries
+        and Cream", "description": "Vanilla cupcake filled with strawberry filling
+        topped with strawberry buttercream, topped with a strawberry and finished
+        with chocolate drizzle"}, {"type": "ITEM", "name": "Mount Felix Mint", "description":
+        "Chocolate cake with mint chocolate chips folded in the batter topped with
+        cream de menthe buttercream rolled in chocolate sprinkles and topped with
+        a chocolate andes."}, {"type": "ITEM", "name": "White Chocolate Almond", "description":
+        "Yellow cake topped with buttercream frosting, rolled in crushed almond, drizzled
+        with white chocolate and accented with an almond."}, {"type": "ITEM", "name":
+        "Mounds", "description": "Chocolate cake filled with coconut cream topped
+        with coconut buttercream and rolled in coconut flakes"}, {"type": "ITEM",
+        "name": "Pbj", "description": "Vanilla cake\u200f filled with grape jelly
+        topped with peanut butter icing and a dollop of grape jelly."}]}, {"subsection_name":
+        "Friday", "contents": [{"type": "ITEM", "name": "Drumstick"}, {"type": "ITEM",
+        "name": "Black Forest", "description": "Chocolate cake filled with cherry
+        filling, dipped in cherry brandy, topped with our signature buttercream, and
+        garnished with a cherry and chocolate curls."}, {"type": "ITEM", "name": "Butter
+        Pecan", "description": "Butter pecan cake topped with a rich pecan buttercream
+        coated and garnished with a whole pecan"}, {"type": "ITEM", "name": "Cookie
+        Dough", "description": "Vanilla brown sugar cake filled and baked with real
+        cough dough, topped with a brown sugar butter cream, and garnished with a
+        mini chocolate chip cookie."}, {"type": "ITEM", "name": "Chocolate Turtle
+        Crunch", "description": "Chocolate cake with caramel filling topped with chocolate
+        buttercream, dipped in chopped pecans, drizzled with chocolate and finished
+        with more caramel sauce and chopped pecans."}, {"type": "ITEM", "name": "Marshmallow
+        Cream", "description": "Chocolate cake filled with marshmallow fluff topped
+        with chocolate genache and finished with a white chocolate drizzle"}]}, {"subsection_name":
+        "Saturday", "contents": [{"type": "ITEM", "name": "Chocolate Covered Pretzel",
+        "description": "Chocolate cake with a chocolate covered pretzel in the center
+        topped with chocolate buttercream icing and crushed chocolate covered pretzels."},
+        {"type": "ITEM", "name": "Maple Bacon", "description": "Maple cake dipped
+        in chocolate ganache and topped with real bacon."}, {"type": "ITEM", "name":
+        "Smores", "description": "Chocolate cake filled and baked with a buttery graham
+        cracker filling topped with toasted marshmallow meringue and garnished with
+        a chocolate covered graham cracker."}, {"type": "ITEM", "name": "Lava Lava",
+        "description": "Decadent chocolate cupcake with a rich fudge core topped with
+        vanilla buttercream and a drizzle of fudge."}, {"type": "ITEM", "name": "Pistachio",
+        "description": "Pistachio pound cake topped with a rich pistachio buttercream
+        and garnished with whole pistachios"}, {"type": "ITEM", "name": "French Toast",
+        "description": "A cinnamon vanilla cake dipped in melted butter, rolled in
+        cinnamon sugar, stuffed and topped with our sweetened cream cheese."}]}, {"subsection_name":
+        "Available Daily", "contents": [{"type": "ITEM", "name": "Lemon Sunshine",
+        "description": "Lemon caked filled with filling, frosted with real lemon buttercream
+        and garnished with a lemon wedge."}, {"type": "ITEM", "name": "Chocolate/Chocolate",
+        "description": "Chocolate cake with our signature chocolate buttercream frosting."},
+        {"type": "ITEM", "name": "Vanilla/Vanilla", "description": "Vanilla cake with
+        our signature buttercream frosting."}, {"type": "ITEM", "name": "Carrot Cake",
+        "description": "Classic carrot cake with walnuts, frosted with real cream
+        cheese frosting, topped with chopped walnuts."}, {"type": "ITEM", "name":
+        "Chocolate/Vanilla", "description": "Vanilla cake with our signature chocolate
+        buttercream frosting."}, {"type": "ITEM", "name": "Salted Caramel", "description":
+        "Caramel cake with a rich caramel core finished with our heavenly caramal
+        icing, topped with sea salt and a caramel candy."}, {"type": "ITEM", "name":
+        "Red Velvet", "description": "A true southern red velvet cake topped with
+        real cream cheese frosting."}, {"type": "ITEM", "name": "Vanilla/Chocolate",
+        "description": "Vanilla cake with our signature chocolate buttercream frosting."}]}],
+        "section_name": "Daily Cupcakes\u200f"}], "currency_symbol": "$"}, {"menu_name":
+        "Cafe", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"price": "5.00", "option_groups": [{"text": "Side", "type": "OPTION_ADD",
+        "options": [{"price": "+1.00", "name": "Strawberries"}, {"price": "+1.00",
+        "name": "Bananas"}]}], "type": "ITEM", "name": "Nutella Classic"}, {"price":
+        "5.50", "type": "ITEM", "name": "Bananas Foster", "description": "Butter,
+        brown sugar, bananas and pecans"}, {"price": "5.25", "type": "ITEM", "name":
+        "Elvis", "description": "Peanut butter, bananas, and chocolate chips"}, {"price":
+        "5.25", "type": "ITEM", "name": "Smores", "description": "Marshmallow fluff,
+        chocolate chips, graham cracker"}, {"price": "4.50", "type": "ITEM", "name":
+        "Citron Crepe", "description": "Melted butter and sugar splashed with fresh
+        lemon juice"}, {"price": "5.00", "type": "ITEM", "name": "Caramel"}, {"price":
+        "6.00", "type": "ITEM", "name": "Crepe De Fruit", "description": "Filled with
+        assorted fruit and topped with cr\u00e8me fraiche"}]}], "section_name": "Sweet
+        Crepes\u200f"}, {"subsections": [{"subsection_name": "", "contents": [{"price":
+        "7.00", "type": "ITEM", "name": "Classic", "description": "Ham, swiss cheese,
+        mornay sauce"}, {"price": "9.00", "type": "ITEM", "name": "Italian", "description":
+        "Prosciutto, basil, mozzarella, tomatoes"}, {"price": "12.00", "type": "ITEM",
+        "name": "Norwegian", "description": "Smoked salmon, herbed boursin cheese,
+        tomatoes and capers"}, {"price": "7.00", "type": "ITEM", "name": "Vegetarian",
+        "description": "Spring mix, mushrooms, carrots, red onion, tomatoes, swiss
+        cheese, and seasonings"}, {"price": "9.00", "type": "ITEM", "name": "Chicken
+        Cordon Bleu", "description": "Grilled chicken, ham, swiss cheese, mornay sauce"},
+        {"price": "8.00", "type": "ITEM", "name": "Portabella", "description": "Portabella
+        mushrooms, roasted red peppers, balsamic vinaigrette, crumbled bleu cheese"},
+        {"price": "8.00", "type": "ITEM", "name": "Caprese", "description": "Tomato,
+        fresh\u200f mozzarella, basil, balsamic vinaigrette"}, {"price": "10.00",
+        "type": "ITEM", "name": "Shrimp Salad", "description": "Shrimp, mayo, old
+        bay, celery, onion"}, {"price": "9.00", "type": "ITEM", "name": "Buffalo",
+        "description": "Grilled chicken, celery, bleu cheese, buffalo sauce"}]}],
+        "section_name": "Savory Crepes"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"price": "9.00", "type": "ITEM", "name": "Caf\u00e9 Salad",
+        "description": "Mixed greens, cucumber, tomato, carrots, mushrooms, red onion,
+        turkey and ham."}, {"price": "6.00", "type": "ITEM", "name": "Garden Salad",
+        "description": "Mixed greens, cucumber, tomato, carrots, mushrooms, red onion"},
+        {"price": "8.00", "type": "ITEM", "name": "Sonoma Salad", "description": "Mixed
+        greens, walnuts, dried cranberries, red onion, tomatoes and raspberry vinaigrette"},
+        {"price": "8.00", "type": "ITEM", "name": "Spinach Salad", "description":
+        "Spinach, egg, bacon, mushroom, red onion, honey lemon dressing"}]}], "section_name":
+        "Salads\u200f"}, {"subsections": [{"subsection_name": "", "contents": [{"text":
+        "Sandwiches served on your choice of kaiser, pretzel or ciabatta bread! !",
+        "type": "SECTION_TEXT"}, {"price": "8.00", "option_groups": [{"text": "Side",
+        "type": "OPTION_CHOOSE", "options": [{"name": "Kaiser"}, {"name": "Pretzel"},
+        {"name": "Ciabatta bread! !"}]}], "type": "ITEM", "name": "Smokehouse", "description":
+        "Sliced turkey, crisp bacon, provolone, lettuce, tomato, red onion, dijon
+        mustard"}, {"price": "9.00", "option_groups": [{"text": "Side", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Kaiser"}, {"name": "Pretzel"}, {"name": "Ciabatta bread!
+        !"}]}], "type": "ITEM", "name": "Swiss Philly", "description": "Thinly sliced
+        roast beef, bacon, swiss, red onion, creole mayo"}, {"price": "9.00", "option_groups":
+        [{"text": "Side", "type": "OPTION_CHOOSE", "options": [{"name": "Kaiser"},
+        {"name": "Pretzel"}, {"name": "Ciabatta bread! !"}]}], "type": "ITEM", "name":
+        "Classic Ham, Turkey or Roast Beefx", "description": "Your meat choice, lettuce,
+        tomato, provolone, cheddar, swiss, mayo or mustard"}, {"price": "9.00", "option_groups":
+        [{"text": "Side", "type": "OPTION_CHOOSE", "options": [{"name": "Kaiser"},
+        {"name": "Pretzel"}, {"name": "Ciabatta bread! !"}]}], "type": "ITEM", "name":
+        "Tuscan Chicken", "description": "Chicken breast, topped with roasted peppers
+        and fresh mozzarella"}, {"price": "8.00", "option_groups": [{"text": "Side",
+        "type": "OPTION_CHOOSE", "options": [{"name": "Kaiser"}, {"name": "Pretzel"},
+        {"name": "Ciabatta bread! !"}]}], "type": "ITEM", "name": "Sonoma", "description":
+        "Cranberry-walnut chicken salad topped with tomato and lettuce."}, {"price":
+        "10.00", "option_groups": [{"text": "Side", "type": "OPTION_CHOOSE", "options":
+        [{"name": "Kaiser"}, {"name": "Pretzel"}, {"name": "Ciabatta bread! !"}]}],
+        "type": "ITEM", "name": "Shrimp", "description": "Shrimp salad\u200f topped
+        with tomatoes and lettuce"}]}], "section_name": "Signature Sandwiches"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "10.00", "type": "ITEM", "name":
+        "Crab Mardela", "description": "Crab salad with ham and swiss"}, {"price":
+        "9.00", "type": "ITEM", "name": "Villa", "description": "Prosciutto, fresh
+        mozzarella, tomato and olive tapenade"}, {"price": "9.00", "type": "ITEM",
+        "name": "Caf\u00e9 Club", "description": "Turkey, ham, swiss, lettuce, tomato,
+        roasted red pepper coulis"}, {"price": "8.00", "type": "ITEM", "name": "Turkey,
+        Bacon and Ranch", "description": "Turkey, bacon, tomato, cucumber, cheddar,
+        and ranch dressing"}, {"price": "8.00", "type": "ITEM", "name": "Farmers Harvest",
+        "description": "Fresh salad greens, garden veggies, swiss, seasonings, topped
+        with our signature honey lemon dressing"}]}], "section_name": "Ciabattas\u200f"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "8.00", "type":
+        "ITEM", "name": "Roast Beef Wrap", "description": "Roast beef. Lettuce, onions
+        and a creamy horseradish spread"}, {"price": "8.00", "type": "ITEM", "name":
+        "Turkey Wrap", "description": "Turkey, spinach, red onion, tomato and lettuce"},
+        {"price": "8.00", "type": "ITEM", "name": "Club Wrap", "description": "Ham,
+        turkey, swiss cheese, lettuce, tomato, roasted red pepper coulis"}, {"price":
+        "9.00", "type": "ITEM", "name": "Sonoma Chicken Wrap", "description": "Cranberry-walnut
+        chicken salad topped with lettuce"}, {"price": "8.00", "type": "ITEM", "name":
+        "Buffalo Wrap", "description": "Buffalo chicken, diced celery, lettuce and
+        crumbled blue cheese dressing"}, {"price": "9.00", "type": "ITEM", "name":
+        "Shrimp Salad", "description": "Shrimp, mayonnaise, \u201cold bay\u201d, celery
+        and onions"}, {"price": "12.00", "type": "ITEM", "name": "Crab Salad", "description":
+        "Crabmeat, mayonnaise, \u201cold bay\u201d, celery and onions"}]}], "section_name":
+        "Wraps"}], "currency_symbol": "$"}, {"menu_name": "Brunch", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"price": "5.00", "type": "ITEM", "name":
+        "Plain Belgian Waffle", "description": "Sprinkled with powdered sugar"}, {"price":
+        "5.25", "type": "ITEM", "name": "Cinnamon and Sugar", "description": "Our
+        classic belgian waffle sprinked with a mixture of cinnamon and sugar"}, {"price":
+        "6.25", "type": "ITEM", "name": "Fruit Belgian Waffle", "description": "Served
+        with your choice of bannana, strawberry, raspberry, or blueberries.Topped
+        with whipped cream"}, {"price": "6.25", "type": "ITEM", "name": "Pecan Waffle",
+        "description": "Fresh pecan pieces added to the batter and cooked in the waffle
+        topped with whipped cream"}, {"price": "6.25", "type": "ITEM", "name": "Chocolate
+        Chip Waffle", "description": "Semi sweet mini chips added to the batter and
+        cooked in the waffle.Topped with whipped cream"}, {"price": "6.25", "type":
+        "ITEM", "name": "Bananas Foster", "description": "Butter, brown sugar, bananas
+        and pecans"}]}], "section_name": "Belgian Waffles\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "9.00", "type": "ITEM", "name":
+        "Southwestern Omlet", "description": "Eggs, tomatoes, peppers, onions, mushrooms,
+        and chedddar cheese"}, {"price": "12.00", "type": "ITEM", "name": "Cambridge
+        Crepe", "description": "Eggs, tomatoes, ham, md crabmeat topped with hollandaise"},
+        {"price": "8.00", "type": "ITEM", "name": "Crepe Forester", "description":
+        "Eggs, mushroom, ham, tomatoes, and swiss cheese"}]}], "section_name": "Breakfast
+        Crepes"}], "currency_symbol": "$"}], "locu_id": "0c6aac96e847348ff9e3", "contact":
+        {"phone": "(410) 306-6610"}, "location": {"locality": "Havre De Grace", "country":
+        "United States", "region": "MD", "postal_code": "21078", "address1": "1834
+        Pulaski Hwy, Ste C", "geo": {"type": "Point", "coordinates": [-76.124936944097,
+        39.5304269879663]}}, "website_url": "http://www.sweetdevotioncupcakes.com"},
+        {"name": "Sweets & Eats Famous Cupcakes", "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}], "menus": [{"menu_name": "Cupcakes", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"type": "ITEM", "name": "Every Day
+        Flavors"}, {"type": "ITEM", "name": "Wedding Cake"}, {"type": "ITEM", "name":
+        "Sweet Praline"}, {"type": "ITEM", "name": "Red Velvet"}, {"type": "ITEM",
+        "name": "Its Your Birthday"}, {"type": "ITEM", "name": "Strawberry"}, {"type":
+        "ITEM", "name": "Banana\u2019s Baby"}, {"type": "ITEM", "name": "Chocolate
+        Fudge"}, {"type": "ITEM", "name": "Strawberry Cheesecake"}]}], "section_name":
+        ""}], "currency_symbol": "$"}], "locu_id": "e1ae3afe0b6c6607477c", "contact":
+        {"phone": "(504) 241-8899"}, "location": {"locality": "New Orleans", "country":
+        "United States", "region": "LA", "postal_code": "70128", "address1": "5951
+        Bullard Ave.", "geo": {"type": "Point", "coordinates": [-89.958239, 30.04289]}},
+        "website_url": "http://sweetsandeatscupcakes.com/"}, {"name": "Sweetest Thing
+        Cupcakes", "menus": [{"menu_name": "Menu", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Tuxedo", "description": "Chocolate
+        cake / vanilla buttercream"}, {"type": "ITEM", "name": "Blondie", "description":
+        "Vanilla cake / vanilla buttercream"}, {"type": "ITEM", "name": "Marble",
+        "description": "Chocolate-vanilla cake/ cream cheese-chocolate buttercream
+        swirl"}, {"type": "ITEM", "name": "Happy Day", "description": "Chocolate cake
+        / chocolate buttercream"}, {"type": "ITEM", "name": "Lady in Red", "description":
+        "Southern red velvet cake / cream cheese frosting"}, {"type": "ITEM", "name":
+        "Wedding Cake", "description": "Almond cake / almond buttercream"}, {"type":
+        "ITEM", "name": "Gluten-Free Lady in Red", "description": "Gluten free version
+        of our southern red velvet with cream cheese"}, {"type": "ITEM", "name": "Baker''s
+        Choice Baked Weekly"}, {"price": "3.00", "type": "ITEM", "name": "Regular
+        or Filled", "description": "Cheaper by the dozen"}, {"price": "3.50", "type":
+        "ITEM", "name": "Gluten Free", "description": "Cheaper by the dozen"}, {"type":
+        "ITEM", "name": "Minis and Cake Pops", "description": "Cookies \u2013 scones
+        - muffins priced individually"}]}], "section_name": "Daily Cupcake Flavors\u200b"},
+        {"subsections": [{"subsection_name": "Monday - Wednesday, Friday - Sunday",
+        "contents": [{"type": "ITEM", "name": "Raspberry Kiss", "description": "Exactly\u200b
+        what lovers need! A red velvet cake with ganache filling and a raspberry sweet
+        cream."}, {"type": "ITEM", "name": "Turtle Cheesecake", "description": "Wow!
+        Try this one for sure! It\u2019s a chocolate cake with caramel filling and
+        topped with cream cheese frosting and a scattering of pecan slices."}]}, {"subsection_name":
+        "Tuesday - Thursday - Saturday", "contents": [{"type": "ITEM", "name": "Snickerdoodle",
+        "description": "Everyone\u2019s favorite any time and any day! A vanilla cake
+        with cinnamon sweet cream and a cookie on top."}, {"type": "ITEM", "name":
+        "Chocolate Covered Strawberry", "description": "Yes! You will love this addition!
+        It is a chocolate cake with a strawberry sweet cream and sprinkled with chocolate
+        shavings."}]}, {"subsection_name": "Every Day in February", "contents": [{"type":
+        "ITEM", "name": "Red Hot Love", "description": "Get ready for a good one!
+        Celebrate valentine\u2019s day all month. It\u2019s vanilla cake with red
+        hot\u2019s baked inside. Then we top it with a hot cinnamon buttercream!"}]}],
+        "section_name": "February Selections\u200b"}], "currency_symbol": "$"}], "locu_id":
+        "bb0b2425da1294146541", "website_url": "http://www.sweetestthingcupcakes.com/",
+        "categories": [{"str_id": "restaurants", "name": "Restaurants"}], "location":
+        {"locality": "Tigard", "country": "United States", "region": "OR", "address1":
+        "7401 S.W. Bridgeport Rd.", "geo": {"type": "Point", "coordinates": [-122.754783,
+        45.393498]}}}, {"name": "Sweet Carolina Cupcakes", "open_hours": {"monday":
+        [["11:00", "17:00"]], "tuesday": [["11:00", "17:00"]], "friday": [["11:00",
+        "21:00"]], "wednesday": [["11:00", "17:00"]], "thursday": [["11:00", "21:00"]],
+        "sunday": [["12:00", "17:00"]], "saturday": [["11:00", "21:00"]]}, "categories":
+        [{"str_id": "restaurants", "name": "Restaurants"}], "menus": [{"menu_name":
+        "Menu", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"type": "ITEM", "name": "Wedding Cake"}, {"type": "ITEM", "name": "Sweet
+        Georgia Brown"}, {"type": "ITEM", "name": "Darling Clementine"}, {"type":
+        "ITEM", "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"},
+        {"type": "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic
+        Vanilla"}]}], "section_name": "Monday\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Hot Chocolate"}, {"type": "ITEM",
+        "name": "Eclair"}, {"type": "ITEM", "name": "Carrot Cake"}, {"type": "ITEM",
+        "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"}, {"type":
+        "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic Vanilla"}]}],
+        "section_name": "Tuesday\u200e"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"type": "ITEM", "name": "Coconut Fudge"}, {"type": "ITEM", "name":
+        "After Dinner Mint"}, {"type": "ITEM", "name": "Mocha Latte"}, {"type": "ITEM",
+        "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"}, {"type":
+        "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic Vanilla"}]}],
+        "section_name": "Wednesday\u200e"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"type": "ITEM", "name": "Carrot Cake"}, {"type": "ITEM", "name":
+        "Gluten-Free"}, {"type": "ITEM", "name": "Coconut Cream"}, {"type": "ITEM",
+        "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"}, {"type":
+        "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic Vanilla"}]}],
+        "section_name": "Thursday\u200e"}, {"subsections": [{"subsection_name": "",
+        "contents": [{"type": "ITEM", "name": "Rocky Road"}, {"type": "ITEM", "name":
+        "Choco Chip Cheesecake"}, {"type": "ITEM", "name": "Darling Clementine"},
+        {"type": "ITEM", "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"},
+        {"type": "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic
+        Vanilla"}]}], "section_name": "Friday\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Cookies & Cream"}, {"type": "ITEM",
+        "name": "Hot Chocolate"}, {"type": "ITEM", "name": "Sweet Georgia Brown"},
+        {"type": "ITEM", "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"},
+        {"type": "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic
+        Vanilla"}]}], "section_name": "Saturday\u200e"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"type": "ITEM", "name": "Peanut Butter Cup"}, {"type": "ITEM",
+        "name": "After Dinner Mint"}, {"type": "ITEM", "name": "Almond Joy"}, {"type":
+        "ITEM", "name": "Red Velvet"}, {"type": "ITEM", "name": "Sweet Carolina"},
+        {"type": "ITEM", "name": "Classic Chocolate"}, {"type": "ITEM", "name": "Classic
+        Vanilla"}]}], "section_name": "Sunday *\u200e"}], "currency_symbol": "$"}],
+        "locu_id": "ca8939b1d1c930935b74", "contact": {"phone": "(912) 234-6380"},
+        "location": {"locality": "Savannah", "country": "United States", "region":
+        "GA", "postal_code": "31401", "address1": "38 Whitaker St.", "geo": {"type":
+        "Point", "coordinates": [-81.092780828476, 32.079656505565]}}, "website_url":
+        "http://sweetcarolinacupcakes.com"}]}'
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 21:50:33 GMT
+recorded_with: VCR 3.0.1

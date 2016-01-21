@@ -9,8 +9,12 @@ class MakeRestaurantDetail
     @exists_valid = true
     @multiple_valid = true
     @match_valid = true
-    if @data['venues'].count == 1
-      @venue = @data['venues'][0]
+    if @data['venues'].count == 1 || query_name_exact_match?(query)
+      if @data['venues'].count == 1
+        @venue = @data['venues'][0]
+      elsif query_name_exact_match?(query)
+        @venue = @data['venues'].select { |place| place['name'] == query['name'] }[0]
+      end
       if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
         @rd = Restaurantdetail.new
         rd.restaurant = rest
@@ -18,22 +22,6 @@ class MakeRestaurantDetail
       else
         @exists_valid = false
       end
-    # binding.pry
-    # if @data['venues'].count == 1 || query_name_exact_match?(query)
-    #   binding.pry
-    #   if @data['venues'].count == 1
-    #     @venue = @data['venues'][0]
-    #   elsif query_name_exact_match?(query)
-    #     binding.pry
-    #     @venue = @data['venues'].select { |place| place['name'] == query['name'] }
-    #   end
-    #   if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
-    #     @rd = Restaurantdetail.new
-    #     rd.restaurant = rest
-    #     make_detail
-    #   else
-    #     @exists_valid = false
-    #   end
     elsif @data['venues'].empty?
       @match_valid = false
     else
@@ -106,7 +94,7 @@ class MakeRestaurantDetail
     @exists_valid && @multiple_valid && @match_valid
   end
 
-  # def query_name_exact_match?(query)
-  #   @data['venues'].select { |place| place['name'] == query['name'] }.count == 1
-  # end
+  def query_name_exact_match?(query)
+    @data['venues'].select { |place| place['name'] == query['name'] }.count == 1
+  end
 end
