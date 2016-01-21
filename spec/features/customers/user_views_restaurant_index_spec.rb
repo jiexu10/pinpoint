@@ -7,9 +7,9 @@ feature 'user sees restaurant index', %{
 }, vcr: true do
 
   # Acceptance Criteria:
-  # - [ ] I should see a list of restaurants on the root page
-  # - [ ] I should see what kind of food each restaurant serves
-  # - [ ] I should see the address of the restaurant
+  # - [x] I should see a list of restaurants on the root page
+  # - [x] I should see what kind of food each restaurant serves
+  # - [x] I should see the address of the restaurant
 
   let (:user) { FactoryGirl.create(:user) }
 
