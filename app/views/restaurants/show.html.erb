@@ -2,4 +2,36 @@ restaurant show page
 
 First Name: <%= @restaurant.first_name %>
 Last Name: <%= @restaurant.last_name %>
-Company Name: <%= @restaurant.company_name %>
+Company Name: <%= @restaurant.restaurantdetail.name %>
+Phone: <%= @restaurant.restaurantdetail.phone %>
+Website: <%= @restaurant.restaurantdetail.website_url %>
+Address:
+<%= @restaurant.restaurantdetail.address_one %>
+<% if @restaurant.restaurantdetail.address_two %>
+<%= @restaurant.restaurantdetail.address_two %>
+<% end %>
+<%= @restaurant.restaurantdetail.city %>, <%= @restaurant.restaurantdetail.state %> <%= @restaurant.restaurantdetail.zip_code %>
+<br>
+<br>
+Categories:
+<% @restaurant.categories.each do |category| %>
+  <% unless category.name == "Restaurant" %>
+    <%= category.name %>
+  <% end %>
+<% end %>
+<br>
+<br>
+<% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
+Menu
+<% @restaurant.menusections.each do |section| %>
+  <% unless section.name.blank? %>
+    <%= section.name %>
+    <br>
+  <% end %>
+  <% section.items.each do |item| %>
+    <%= item.name %>
+    <%= item.description %>
+    <%= item.price %>
+    <br>
+  <% end %>
+<% end %>
