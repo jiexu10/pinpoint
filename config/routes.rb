@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :restaurants
+  devise_for :restaurants,
+    controllers: { registrations: "restaurants/registrations" }
   root 'home#index'
 
   devise_for :users

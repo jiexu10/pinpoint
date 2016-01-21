@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe LocuData, type: :model, vcr: true do
-  it 'successfully receives json data from locu with default parameters' do
+  it 'receives json data from locu with default parameters', pending: true do
     locu_data = LocuData.new
     locu_data.search_function
     expect(locu_data.data['status']).to eq('success')

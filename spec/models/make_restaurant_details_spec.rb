@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
   let(:rest) { FactoryGirl.create(:restaurant) }
-  it 'populates restaurant details, opentimes, categories, and menues' do
+  it 'populates restaurant details, opentimes, categories, and menues'do
     makerd = MakeRestaurantDetail.new(rest, 'name' => "boston beer garden")
-    makerd.make_detail
     restaurantdetail = makerd.rd
     expect(restaurantdetail).to be_a(Restaurantdetail)
     restaurantdetail.opentimes.each do |time|
@@ -26,7 +25,6 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
 
   it 'make restaurant details, hours, categories, and menus with sections' do
     makerd = MakeRestaurantDetail.new(rest, 'name' => "Betty's Wok & Noodle Diner")
-    makerd.make_detail
     restaurantdetail = makerd.rd
     expect(restaurantdetail).to be_a(Restaurantdetail)
     restaurantdetail.opentimes.each do |time|
@@ -48,7 +46,6 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
 
   it 'make restaurant details with delivery data' do
     makerd = MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")
-    makerd.make_detail
     restaurantdetail = makerd.rd
     expect(restaurantdetail).to be_a(Restaurantdetail)
     restaurantdetail.opentimes.each do |time|
@@ -70,13 +67,14 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
   end
 
   it 'raises VenueExistsError when attemptning to add restaurant that exists' do
+    MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")
     makerd = MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")
-    makerd.make_detail
-    expect { MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro") }.to raise_error(VenueExistsError)
+    expect(makerd.valid?).to eq(false)
 
   end
 
   it 'raises MultipleVenueError when the query is too broad' do
-    expect { MakeRestaurantDetail.new(rest, 'locality' => "Boston") }.to raise_error(MultipleVenueError)
+    makerd = MakeRestaurantDetail.new(rest, 'locality' => "Boston")
+    expect(makerd.valid?).to eq(false)
   end
 end

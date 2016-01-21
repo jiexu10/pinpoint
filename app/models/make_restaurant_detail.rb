@@ -1,12 +1,14 @@
 class MakeRestaurantDetail
-  attr_reader :venue
-  attr_accessor :rd
+  attr_reader :venue, :rd, :exists_valid, :multiple_valid, :match_valid
 
   def initialize(rest, query = {})
     locu_data = LocuData.new(query)
     locu_data.search_function
     raw_data_body = locu_data.data.body
     @data = JSON.parse(raw_data_body)
+    @exists_valid = true
+    @multiple_valid = true
+    @match_valid = true
     if @data['venues'].count == 1
       @venue = @data['venues'][0]
       if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
@@ -14,10 +16,12 @@ class MakeRestaurantDetail
         rd.restaurant = rest
         make_detail
       else
-        raise VenueExistsError
+        @exists_valid = false
       end
+    elsif @data['venues'].empty?
+      @match_valid = false
     else
-      raise MultipleVenueError
+      @multiple_valid = false
     end
   end
 
@@ -81,10 +85,8 @@ class MakeRestaurantDetail
       end
     end
   end
-end
 
-class MultipleVenueError < StandardError
-end
-
-class VenueExistsError < StandardError
+  def valid?
+    @exists_valid && @multiple_valid && @match_valid
+  end
 end
