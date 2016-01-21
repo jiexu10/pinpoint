@@ -29,16 +29,6 @@ class Restaurants::RegistrationsController < Devise::RegistrationsController
       end
       clean_up_passwords resource
       set_minimum_password_length
-      respond_with resource
-    end
-    if resource.save && rd.valid?
-      flash[:notice] = 'Account Created!'
-    else
-      if !rd.exists_valid
-        flash.now[:error] = 'This venue already exists!'
-      elsif !rd.multiple_valid
-        flash.now[:error] = 'Multiple venues from this company name!'
-      end
       render :new
     end
   end
