@@ -68,11 +68,13 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
 
   it 'raises VenueExistsError when attemptning to add restaurant that exists' do
     MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")
-    expect { MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro") }.to raise_error(VenueExistsError)
+    makerd = MakeRestaurantDetail.new(rest, 'name' => "Siam Bistro")
+    expect(makerd.valid?).to eq(false)
 
   end
 
   it 'raises MultipleVenueError when the query is too broad' do
-    expect { MakeRestaurantDetail.new(rest, 'locality' => "Boston") }.to raise_error(MultipleVenueError)
+    makerd = MakeRestaurantDetail.new(rest, 'locality' => "Boston")
+    expect(makerd.valid?).to eq(false)
   end
 end
