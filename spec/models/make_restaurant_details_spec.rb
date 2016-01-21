@@ -66,7 +66,7 @@ RSpec.describe MakeRestaurantDetail, type: :model, vcr: true do
     expect(restaurantdetail.delivery).to eq("true")
   end
 
-  it 'populates restaurant when there exact name match and some inexact', focus: true do
+  it 'populates restaurant when there exact name match and some inexact' do
     makerd = MakeRestaurantDetail.new(rest, 'name' => "Sweet Cupcakes")
     restaurantdetail = makerd.rd
     expect(restaurantdetail).to be_a(Restaurantdetail)

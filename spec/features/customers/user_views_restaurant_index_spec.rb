@@ -13,7 +13,7 @@ feature 'user sees restaurant index', %{
 
   let (:user) { FactoryGirl.create(:user) }
 
-  scenario 'logged out user views the home page and sees required information' do
+  scenario 'logged out user views the home page and sees required info' do
     restaurant1 = create_restaurant("Boston Beer Garden")
     restaurant2 = create_restaurant("Morse Fish Company")
     visit root_path

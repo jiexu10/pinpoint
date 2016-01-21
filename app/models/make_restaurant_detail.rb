@@ -13,7 +13,7 @@ class MakeRestaurantDetail
       if @data['venues'].count == 1
         @venue = @data['venues'][0]
       elsif query_name_exact_match?(query)
-        @venue = @data['venues'].select { |place| place['name'] == query['name'] }[0]
+        @venue = @data['venues'].select { |v| v['name'] == query['name'] }[0]
       end
       if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
         @rd = Restaurantdetail.new
@@ -81,7 +81,7 @@ class MakeRestaurantDetail
           subsection['contents'].each do |it|
             Item.find_or_create_by(restaurantdetail: rd, name: it['name']) do |mi|
               mi.menusection = ms
-              it['price'] ? mi.price = it['price'] : mi.price = "No Price"
+              mi.price = it['price'] || "No Price"
               mi.description = it['description'] if it['description']
             end
           end
@@ -95,6 +95,6 @@ class MakeRestaurantDetail
   end
 
   def query_name_exact_match?(query)
-    @data['venues'].select { |place| place['name'] == query['name'] }.count == 1
+    @data['venues'].count { |v| v['name'] == query['name'] } == 1
   end
 end
