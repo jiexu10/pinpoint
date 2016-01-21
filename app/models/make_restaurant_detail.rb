@@ -81,7 +81,7 @@ class MakeRestaurantDetail
           subsection['contents'].each do |it|
             Item.find_or_create_by(restaurantdetail: rd, name: it['name']) do |mi|
               mi.menusection = ms
-              mi.price = it['price'] if it['price']
+              it['price'] ? mi.price = it['price'] : mi.price = "No Price"
               mi.description = it['description'] if it['description']
             end
           end

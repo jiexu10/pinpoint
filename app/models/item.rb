@@ -4,5 +4,6 @@ class Item < ActiveRecord::Base
   has_one :restaurant, through: :restaurantdetail
 
   validates :name, presence: true
+  validates :price, presence: true
   validates :restaurantdetail, presence: true
 end
