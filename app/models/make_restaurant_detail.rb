@@ -35,7 +35,6 @@ class MakeRestaurantDetail
       make_categories(rd) if venue['categories']
       make_opentimes(rd) if venue['open_hours']
       make_menu(rd) if venue['menus']
-    else
     end
   end
 
@@ -59,16 +58,19 @@ class MakeRestaurantDetail
   end
 
   def make_menu(rd)
-    venue['menus'].first['sections'].each do |subsec|
-      subsec['subsections'].each do |subsection|
-        ms = nil
-        if !subsection['subsection_name'].blank?
-          ms = Menusection.find_or_create_by(restaurantdetail: rd, name: subsection['subsection_name'])
-        end
-        subsection['contents'].each do |it|
-          Item.find_or_create_by(restaurantdetail: rd, name: it['name']) do |mi|
-            mi.price = it['price']
-            mi.description = it['description'] if it['description']
+    venue['menus'].each do |menu|
+      ms = nil
+      if !menu['menu_name'].blank?
+        ms = Menusection.find_or_create_by(restaurantdetail: rd, name: menu['menu_name'])
+      end
+      menu['sections'].each do |subsec|
+        subsec['subsections'].each do |subsection|
+          subsection['contents'].each do |it|
+            Item.find_or_create_by(restaurantdetail: rd, name: it['name']) do |mi|
+              mi.menusection = ms
+              mi.price = it['price']
+              mi.description = it['description'] if it['description']
+            end
           end
         end
       end

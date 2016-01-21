@@ -1,0 +1,532 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ip-api.com/json/?fields=24816
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - ip-api.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 21 Jan 2016 01:17:54 GMT
+      Content-Length:
+      - '104'
+    body:
+      encoding: UTF-8
+      string: '{"city":"Boston","lat":42.3571,"lon":-71.0655,"query":"50.241.127.209","status":"success","zip":"02108"}'
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 01:17:54 GMT
+- request:
+    method: post
+    uri: https://api.locu.com/v2/venue/search
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"0a617b50e355f12544adc19e76d4714d0d8a6a46","fields":["name","description","website_url","menus","open_hours","categories","location","contact","delivery"],"venue_queries":[{"categories":{"str_id":"restaurants"},"name":"Betty''s
+        Wok \u0026 Noodle Diner","location":{"locality":"Boston"}}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Jan 2016 01:17:55 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status": "success", "http_status": 200, "venues": [{"name": "Betty''s
+        Wok & Noodle Diner", "open_hours": {"monday": [["11:30", "09:00"]], "tuesday":
+        [["11:30", "22:00"]], "friday": [["11:30", "23:00"]], "wednesday": [["11:30",
+        "22:00"]], "thursday": [["11:30", "22:00"]], "sunday": [["11:30", "09:00"]],
+        "saturday": [["11:30", "23:00"]]}, "categories": [{"str_id": "restaurants",
+        "name": "Restaurants"}], "menus": [{"menu_name": "All Day Menu", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"price": "6.00", "type":
+        "ITEM", "name": "Chopped Salad", "description": "Mixed seasonal greens w/
+        cucumber, carrots, bean sprouts, & scallions. Dressing choices: hot & sour
+        chipotle, sesame-ginger, wasabi-ginger, or creamy peanut"}, {"price": "6.00",
+        "type": "ITEM", "name": "Sweet Heat Cuban Cole Slaw", "description": "Shredded
+        napa & red cabbages w/ carrots & scallions in a snappy hot & sour chipotle
+        dressing"}, {"price": "12.00", "type": "ITEM", "name": "Cool Cuc''s & Weed",
+        "description": "Shredded cucumbers & green seaweed in a sweet & creamy ginger-wasabi
+        dressing"}, {"price": "8.00", "type": "ITEM", "name": "Good Luck Luna", "description":
+        "Light & crunchy rangoon stuffed w/ mushrooms, cream cheese, ginger & scallions,
+        served w/ red-chili jamarama"}, {"price": "12.00", "type": "ITEM", "name":
+        "Shu-Shumai", "description": "Steamed shrimp shumai w/ chinese mustard dip"},
+        {"price": "6.00", "type": "ITEM", "name": "Mu-Shu Firecrackers", "description":
+        "Vegetable-stuffed egg rolls w/ tamarind sweet & sour dip"}, {"price": "7.00",
+        "type": "ITEM", "name": "Crispy Cabana ''Juan-Tons''", "description": "Chili-spiced
+        beef won-tons w/ cuban-citrus drip"}, {"price": "8.00", "type": "ITEM", "name":
+        "Golden Shrimp Rangoon", "description": "Light & crunchy rangoon stuffed w/
+        shrimp, cream cheese, ginger & scallions w/ red-chili jamarama"}, {"price":
+        "12.00", "type": "ITEM", "name": "Dim-Sum Empanadas", "description": "Crispy
+        pork or vegetable empanadas (house-made) w/ ginger-garlic soy sauce dip"},
+        {"price": "12.00", "type": "ITEM", "name": "Hoisin Pork Lettuce Wraps", "description":
+        "With pickled carrots & sesame seeds, chillis & sesame oil w/ a half-wedge
+        of iceberg lettuce"}, {"price": "24.00", "type": "ITEM", "name": "Mondo Bongo
+        Combo Sampler", "description": "2 firecrackers/5\u200f juan-tons/5 shrimp
+        rangoon, lots of dips & great for sharing"}, {"price": "24.00", "type": "ITEM",
+        "name": "Create Your Own Mondo Bongo", "description": "Choose three items
+        from the following: 2 firecrackers/5 juan-tons/5 plantains/5 vegetarian or
+        shrimp ragoons/3 vegetarian or pork empanadas/edamame"}, {"price": "14.00",
+        "type": "ITEM", "name": "Asian-Style Sake Glazed Ribs", "description": "Slow-cooked
+        pork ribs w/ sticky-sweet plum sake-hoisin glaze"}, {"price": "8.00", "type":
+        "ITEM", "name": "Sweet Fried Plantains", "description": "Golden-fried plantains
+        w/ tomatillo-lime mojo"}, {"price": "12.00", "type": "ITEM", "name": "Dim-Sum
+        Dumplings", "description": "Steamed pork or vegetable dumplings w/ chili-orange-black
+        bean dip"}, {"price": "7.00", "type": "ITEM", "name": "Edamame", "description":
+        "Lightly salted steamed soybeans in the shell"}, {"price": "14.00", "type":
+        "ITEM", "name": "Curried Rodeo Rings", "description": "Crispy, crunchy,\u200f
+        & curried onion rings (we make our own curry powder) served w/ smoky chipotle-ketchup"}]}],
+        "section_name": "Dim Sum Dee Lites\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "15.00", "type": "ITEM", "name": "Chinese Thunderbird
+        Salad", "description": "Romaine lettuce & asian cabbage w/ peppered chicken
+        breast, carrots, red onion & crunchy won-ton strips tossed in w/ sesame-ginger
+        dressing w/ a side of peanut sauce"}, {"price": "15.00", "option_groups":
+        [{"text": "Extra", "type": "OPTION_ADD", "options": [{"price": "+4.00", "name":
+        "Wok-tossed shrimp to a salad"}]}], "type": "ITEM", "name": "Cuban Cobb Salad",
+        "description": "Romaine lettuce & asian cabbages tossed w/ ham, chicken, swiss
+        cheese, green peas & corn in our hot & sour chipotle dressing"}, {"text":
+        "How to dine at betty''s", "type": "SECTION_TEXT"}, {"text": "Welcome to betty''s
+        where you decide how you''d like to order. Either choose a''betty-licious
+        combo'', or make your own''customized dish''.", "type": "SECTION_TEXT"}]}],
+        "section_name": "Cool Salads"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "12.00", "type": "ITEM", "name": "Latino Chicken Fried Rice", "description":
+        "Wok-tossed chicken, rice & black beans w/ peppers, onions & garlic & a drizzle
+        of hot & sour sauce"}, {"option_groups": [{"text": "Side", "type": "OPTION_CHOOSE",
+        "options": [{"price": "12.00", "name": "Brown"}, {"price": "12.00", "name":
+        "Jasmine rice"}]}], "type": "ITEM", "name": "Hoisin Glazed Bok Choy & Tofu
+        Topped w/ Sesame Seeds", "description": "Choice of brown or jasmine rice 12"},
+        {"price": "14.00", "type": "ITEM", "name": "Szechuan Eggplant", "description":
+        "With choice of jasmine or brown rice & a side of cuban coleslaw salad"},
+        {"price": "15.00", "type": "ITEM", "name": "Va-Va-Vegan", "description": "Slow-cooked
+        zucchini, yellow squash, eggplant, diced tomatoes, served w/ rice & black
+        beans drizzled w/ our hot & sour sauce"}, {"price": "15.00", "type": "ITEM",
+        "name": "Bongo Beef", "description": "Ground beef tossed w/ tomatoes, garlic,
+        onions & carrots served w/ rice & black beans drizzled w/ our hot & sour sauce
+        & topped w/ cheddar cheese"}, {"price": "16.00", "type": "ITEM", "name": "Won-Ton
+        Pollo Taco", "description": "Chicken cooked w/ red pepper, onions & garlic
+        served w/ brown or jasmine rice w/ black beans drizzled w/ our hot & sour
+        sauce & topped w/ cheddar cheese, tomatoes & lettuce $"}, {"price": "16.00",
+        "type": "ITEM", "name": "Crispy Tropical Chicken", "description": "Crispy
+        fried rice noodles topped w/ brocolli, carrots & pineapple in a sweet tamarind
+        sauce"}, {"price": "16.00", "type": "ITEM", "name": "Crispy Chicken Casanova",
+        "description": "Crispy rice noodles topped w/ broccoli, asian cabbages, bok
+        choy in a dark & spicy sweet sauce"}, {"option_groups": [{"text": "Side",
+        "type": "OPTION_CHOOSE", "options": [{"price": "+14.00", "name": "Chicken"},
+        {"price": "+14.00", "name": "Beef"}, {"price": "+14.00", "name": "Tofu"},
+        {"price": "+16.00", "name": "Shrimp"}]}], "type": "ITEM", "name": "Light &
+        Spicy Lo Mein", "description": "Chinese egg\u200f noodles w/ asian cabbages
+        & carrots in a light & spicy ginger-garlic sauce w/ chicken/beef/tofu 14,
+        or shrimp 16"}, {"price": "16.00", "type": "ITEM", "name": "Arroz Con Carne",
+        "description": "Wok-tossed beef cooked w/ onions & peppers in a dark, spicy
+        sauce w/ a choice of jasmine or brown rice & black beans drizzled w/ hot &
+        sour sauce & cheddar cheese"}, {"price": "18.00", "type": "ITEM", "name":
+        "Asian-Style Sake Glazed Ribs", "description": "Slow cooked pork ribs w/ sticky
+        dark hoisin & plum wine sake sauce served w/ jasmine or brown rice & a side
+        of cuban coleslaw"}, {"type": "ITEM", "name": "Sweet N'' Salty Peanut Noodle",
+        "description": "Chinese egg noodles w/ sliced red peppers, snow peas, diced
+        pineapples, crushed peanuts in a velvety sweet & salty peanut sauce w/ chicken/beef/tofu
+        16, or shrimp 18"}, {"type": "ITEM", "name": "Pad Thai", "description": "Flat
+        rice noodles beansprouts, egg, asian cabbages & peanuts 12 w/ chicken 14,
+        shrimp 15 or shrimp/chicken combo 16"}, {"type": "ITEM", "name": "Marco Polo",
+        "description": "Shanghai noodles w/ broccoli, peas & red onions w/ a splash
+        of pinot grigio white wine. Chicken/beef/tofu 16, or shrimp 18"}, {"type":
+        "ITEM", "name": "Sparkling Shaghai", "description": "Shanghai noodles, broccoli,
+        zucchini & carrots, wok-tossed in a fragrant & fresh lime-herb sauce with"},
+        {"type": "ITEM", "name": "Open Sesame", "description": "Flat rice noodles
+        w/ broccoli & water chestnuts in a sweet sesame hoisin suace with"}, {"type":
+        "ITEM", "name": "Sweet N'' Sour Bang Baang", "description": "Red & green peppers,
+        pineapple w/ brown or jasmine rice in a tangy, citrus-chili sauce w/ chicken/beef/tofu
+        16, or shrimp 18."}]}], "section_name": "Betty-Licious Combos\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "14.00", "type": "ITEM", "name":
+        "Half Pressed Sandwich w/ Diner Salad", "description": "Your choice of salad
+        dressings: hot & sour chipotle, sesame-ginger, wasabi-ginger or peanut"},
+        {"price": "16.00", "type": "ITEM", "name": "Pollo", "description": "Roasted
+        chicken breast w/ swiss cheese, ham, pickles, lettuce, wok-tossed green peppers
+        & onions. Side of cuban coleslaw"}, {"price": "16.00", "type": "ITEM", "name":
+        "Casino", "description": "Ham & swiss cheese w/ pickles, lettuce, wok-tossed
+        green peppers & onions. Side of cuban coleslaw"}, {"price": "16.00", "type":
+        "ITEM", "name": "Kung Pao", "description": "Wok-tossed beef\u200f in a delicious
+        spicy kung pao sauce w/ swiss cheese, lettuce, ham, wok-tossed green peppers
+        & onions. Side of cuban coleslaw"}, {"text": "No substitutions please. Look
+        to''customized dishes'' if you would like to play.", "type": "SECTION_TEXT"}]}],
+        "section_name": "Betty''s Pressed Sandwiches"}, {"subsections": [{"subsection_name":
+        "1 Step", "contents": [{"text": "Choose your dish as listed in the following
+        menu:", "type": "SECTION_TEXT"}, {"option_groups": [{"text": "Side", "type":
+        "OPTION_CHOOSE", "options": [{"name": "Shanghai wheat flour"}, {"name": "Flat
+        rice"}, {"name": "Whole wheat"}, {"name": "Chinese egg"}]}], "type": "ITEM",
+        "name": "Noodles"}, {"type": "ITEM", "name": "Broth", "description": "Choose
+        any rice or noodle, no sauce"}, {"type": "ITEM", "name": "Rice", "description":
+        "Jasmine, brown, or latino fried"}, {"type": "ITEM", "name": "Meats", "description":
+        "Lo-carb option"}]}, {"subsection_name": "Step 2", "contents": [{"text": "(Asian
+        cabbages are available if you don''t want all the veggies)", "type": "SECTION_TEXT"},
+        {"type": "ITEM", "name": "Vegetables"}, {"type": "ITEM", "name": "Either",
+        "description": "Get up & go to the fresh vegetable bar--select & load up your
+        own choices."}, {"type": "ITEM", "name": "Or", "description": "Stay seated
+        & have your dish prepared w/ our choice of seasonal vegetables"}]}, {"subsection_name":
+        "Step 3", "contents": [{"text": "Add a delicious sauce.", "type": "SECTION_TEXT"}]}],
+        "section_name": "Customized Dishes\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"text": "(Choose one)", "type": "SECTION_TEXT"}, {"type":
+        "ITEM", "name": "Fiery Kung Pao", "description": "Devilishly good,\u200f ancho-chili-based
+        sauce w/ dried cayenne peppers"}, {"type": "ITEM", "name": "Cantonese Hoisin",
+        "description": "Dark, rich, & velvety sweet"}, {"type": "ITEM", "name": "Asian
+        Pesto", "description": "A fragrant & bright blend of mint, basil, cilantro,
+        & peanuts"}, {"type": "ITEM", "name": "Red Thai Coconut", "description": "An
+        aromatic coconut sauce w/ red thai curry & fresh lime"}, {"type": "ITEM",
+        "name": "Madras-Curry", "description": "A heavenly curry sauce w/ our special
+        spices peanuts, garlic & ginger"}, {"type": "ITEM", "name": "Cuban Chipotle-Citrus",
+        "description": "A swinging & spicy sauce w/ hints of orange & chili"}, {"type":
+        "ITEM", "name": "Thai-Tiki", "description": "Our sweet\u200f & sour sauce"}]}],
+        "section_name": "Lucky 7 - Sauces"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"text": "We take what you''ve already chosen & wok-toss
+        it all w/ any of these selections. Asian cabbage dish - $2 off", "type": "SECTION_TEXT"},
+        {"price": "14.00", "type": "ITEM", "name": "Veggies"}, {"price": "16.00",
+        "type": "ITEM", "name": "Chicken/Beef/Tofu"}, {"price": "18.00", "type": "ITEM",
+        "name": "Shrimp"}, {"price": "18.00", "type": "ITEM", "name": "Two Meat Combo"},
+        {"price": "20.00", "type": "ITEM", "name": "Three Meat Combo"}]}], "section_name":
+        "Dish Choices\u200f"}], "currency_symbol": "$"}, {"menu_name": "Lunch", "sections":
+        [{"subsections": [{"subsection_name": "", "contents": [{"text": "Betty likes
+        it fast & so good!", "type": "SECTION_TEXT"}, {"option_groups": [{"text":
+        "Side", "type": "OPTION_CHOOSE", "options": [{"price": "20.00", "name": "Cheap
+        eats for under"}, {"price": "10.00", "name": "Even under"}]}], "type": "ITEM",
+        "name": "Betty''s Lunch", "description": "Betty\u2019s wok & noodle, highly
+        regarded for its innovative food & exotic sake cocktails before & after the
+        shows at symphony hall, huntington theatre & the new england conservatory
+        announces a fresh, brand new & downright cheap expanded line-up for lunch.
+        \u201cWhere else can you go for a three course meal, made to order, fast,
+        delicious & for under $20. You can actually have a great lunch for even under
+        10\u201d says junior portal, chef at betty\u2019s."}]}], "section_name": ""},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "7.00", "type":
+        "ITEM", "name": "Good Luck Luna", "description": "Light & crunchy rangoon
+        stuffed w/ mushrooms, cream cheese, ginger & scallions, served w/ red-chili
+        jamarama"}, {"price": "5.00", "type": "ITEM", "name": "Mu-Shu Firecrackers",
+        "description": "Vegetable-stuffed egg rolls w/ tamarind sweet & sour dip"},
+        {"price": "6.00", "type": "ITEM", "name": "Crispy Cabana ''Juan-Tons''", "description":
+        "Chili-spiced beef won-tons w/ cuban-citrus drip"}, {"price": "7.00", "type":
+        "ITEM", "name": "Golden Shrimp Rangoon", "description": "Light & crunchy rangoon
+        stuffed w/ shrimp, cream cheese, ginger & scallions w/ red-chili jamarama"},
+        {"price": "8.00", "type": "ITEM", "name": "Dim-Sum Empanadas", "description":
+        "Crispy pork or vegetable empanadas (house-made) w/ ginger-garlic soy sauce
+        dip"}, {"price": "8.00", "type": "ITEM", "name": "Dim-Sum Dumplings", "description":
+        "Steamed pork or vegetable dumplings w/ chili-orange-black bean dip"}, {"price":
+        "5.00", "type": "ITEM", "name": "Edamame", "description": "Lightly salted
+        steamed soybeans in the shell"}, {"price": "8.00", "type": "ITEM", "name":
+        "Curried Rodeo Rings", "description": "Crispy, crunchy, & curried onion rings
+        (we make our own curry powder) served w/ smoky chipotle-ketchup"}]}], "section_name":
+        "Hot Dee Lites\u200f"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "5.00", "type": "ITEM", "name": "Chopped Salad", "description":
+        "Mixed seasonal greens w/ cucumber, carrots, bean sprouts, & scallions. Dressing
+        choices: hot & sour chipotle, sesame-ginger, wasabi-ginger, or creamy peanut"},
+        {"price": "4.00", "type": "ITEM", "name": "Sweet Heat Cuban Cole Slaw", "description":
+        "Shredded napa\u200f & red cabbages w/ carrots & scallions in a snappy hot
+        & sour chipotle dressing"}, {"price": "8.00", "type": "ITEM", "name": "Chinese
+        Egg Noodle", "description": "Chinese egg noodles tossed w/ mint, basil, cilantro,
+        roasted peanuts & a wedge of lime (served cold)"}, {"price": "10.00", "type":
+        "ITEM", "name": "Chinese Thunderbird Salad", "description": "Romaine lettuce
+        & asian cabbage w/ peppered chicken breast, carrots, red onion & crunchy won-ton
+        strips tossed in w/ sesame-ginger dressing w/ a side of peanut sauce"}, {"price":
+        "10.00", "type": "ITEM", "name": "Cuban Cobb Salad", "description": "Romaine
+        lettuce & asian cabbages tossed w/ ham, chicken, swiss cheese, green peas
+        & corn in our hot & sour chipotle dressing"}, {"price": "8.00", "type": "ITEM",
+        "name": "Cool ''Cucs'' & Weed", "description": "Shredded cucumbers & green
+        seaweed in a sweet & creamy ginger-wasabi dressing"}]}], "section_name": "Cool
+        Salads"}, {"subsections": [{"subsection_name": "", "contents": [{"price":
+        "10.00", "type": "ITEM", "name": "Casino", "description": "Ham & wiss cheese
+        w/ lettuce, pickles & wok-tossed green peppers & onions"}, {"price": "10.00",
+        "type": "ITEM", "name": "Half-Pressed Sandwich w/ Soup or Chopped Salad",
+        "description": "Your choice\u200f of dressings:hot & sour chipotle, creamy
+        peanut, sesame-ginger, or wasabi-ginger"}, {"price": "12.00", "type": "ITEM",
+        "name": "Pollo", "description": "Roasted chicken w/ lettuce, ham, swiss cheese,
+        pickles & wok-tossed peppers & onions"}, {"price": "12.00", "type": "ITEM",
+        "name": "Kung Pao", "description": "Seared beef in a spicy kung pao sauce
+        w/ ham, swiss cheese & wok-tossed peppers & onions"}, {"price": "12.00", "type":
+        "ITEM", "name": "Porky", "description": "Housin & plum win-glazed pork w/
+        lettuce, ham, swiss cheese & wok-tossed peppers & onions"}]}], "section_name":
+        "Betty''s Pressed Sandwhiches\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "8.00", "type": "ITEM", "name": "Szechuan Eggplant",
+        "description": "With a choice of jasmine or brown rice & a side of cuban coleslaw
+        salad"}, {"price": "10.00", "type": "ITEM", "name": "Hoisin Pork Lettuce Wraps",
+        "description": "With pickled carrots in sesame seeds, chillis & sesame oil,
+        served w/ a half wedge of iceberg lettuce"}, {"price": "12.00", "type": "ITEM",
+        "name": "Won-Ton Pollo Taco", "description": "Chicken cooked w/ red pepper,
+        onions & garlic. Served w/ black beans drizzled w/ our hot & sour sace topped
+        w/ cheddar cheese & garnished w/ lettuce & diced tomatoes"}, {"price": "12.00",
+        "type": "ITEM", "name": "Crispy Chicken Tropical", "description": "Crispy
+        rice noodles topped w/ pineapple, carrots & broccoli in a sweet tamarind sauce"},
+        {"price": "12.00", "type": "ITEM", "name": "Crispy Chicken Casanova", "description":
+        "Crispy rice noodles topped w/ broccoli, asian cabbages, bok choy in a sweet
+        & spicy sauce"}, {"price": "10.00", "type": "ITEM", "name": "Va-Va-Vegan",
+        "description": "Zucchini, yellow squash, eggplant & diced tomatoes served
+        w/ jasmine or brown rice & black beans drizzled w/ our hot & sour sauce"},
+        {"price": "10.00", "type": "ITEM", "name": "Bongo Beef", "description": "Ground,''bongoed''
+        beef tossed w/ tomatoes, garlic, onions & served w/ jasmine or brown rice
+        & black beans drizzled w/ hot & sour sauce & topped w/ cheddar cheese"}, {"price":
+        "12.00", "type": "ITEM", "name": "Arroz Con Carne", "description": "Wok-tossed
+        beef\u200f cooked w/ onions & peppers in a dark, spicy sauce w/ a choice or
+        jasmine or brown rice & black beans drizzled w/ our hot & sour sauce & cheddar
+        cheese"}]}], "section_name": "House Specials"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"option_groups": [{"text": "Side", "type": "OPTION_CHOOSE",
+        "options": [{"price": "8.00", "name": "Chicken"}, {"price": "8.00", "name":
+        "Beef"}, {"price": "8.00", "name": "Tofu"}, {"price": "10.00", "name": "Shrimp"}]}],
+        "type": "ITEM", "name": "Lite & Spicy Lomein", "description": "Chinese egg
+        noodles w/ asian cabbages, carrots, bean sprouts, garlic & ginger"}, {"option_groups":
+        [{"text": "Side", "type": "OPTION_CHOOSE", "options": [{"price": "8.00", "name":
+        "Chicken"}, {"price": "8.00", "name": "Beef"}, {"price": "8.00", "name": "Tofu"},
+        {"price": "10.00", "name": "Shrimp"}]}], "type": "ITEM", "name": "Ba-Ba-Lu
+        Noodles", "description": "Chinese egg noodles w/ asian cabbages, bean sprouts
+        & pineapple in a garlic-citrus sauce"}, {"option_groups": [{"text": "Side",
+        "type": "OPTION_CHOOSE", "options": [{"price": "10.00", "name": "Chicken"},
+        {"price": "10.00", "name": "Beef"}, {"price": "10.00", "name": "Tofu"}, {"price":
+        "12.00", "name": "Shrimp"}]}], "type": "ITEM", "name": "Spicy Sesame Noodle",
+        "description": "Shanghai noodles w/ broccoli, red onions, bean sprouts, sesame
+        seeds & crushed red peppers"}, {"option_groups": [{"text": "Side", "type":
+        "OPTION_CHOOSE", "options": [{"price": "10.00", "name": "Chicken"}, {"price":
+        "10.00", "name": "Beef"}, {"price": "10.00", "name": "Tofu"}, {"price": "12.00",
+        "name": "Shrimp"}]}], "type": "ITEM", "name": "Sweet & Salty Peanut Noodle",
+        "description": "Chinese egg noodles w/ asian cabbages, sliced peppers, snow
+        peas, pineapple & crushed peanuts"}, {"option_groups": [{"text": "Side", "type":
+        "OPTION_CHOOSE", "options": [{"price": "10.00", "name": "Chicken"}, {"price":
+        "10.00", "name": "Beef"}, {"price": "10.00", "name": "Tofu"}, {"price": "12.00",
+        "name": "Shrimp"}]}], "type": "ITEM", "name": "Marco Polo", "description":
+        "Shanghai noodles w/ broccoli, peas, red onions w/ a splash of pinot grigio
+        white wine"}, {"option_groups": [{"text": "Side", "type": "OPTION_CHOOSE",
+        "options": [{"price": "10.00", "name": "Chicken"}, {"price": "10.00", "name":
+        "Beef"}, {"price": "10.00", "name": "Tofu"}, {"price": "12.00", "name": "Shrimp"}]}],
+        "type": "ITEM", "name": "Sparkling Shangai", "description": "Shanghai noodles,
+        broccoli, zucchini & carrots, wok-tossed in a fragrant & fresh lime-herb sauce"}]}],
+        "section_name": "Noodle Specials\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"text": "Choice of jasmine or brown rice", "type": "SECTION_TEXT"},
+        {"option_groups": [{"text": "Side", "type": "OPTION_CHOOSE", "options": [{"price":
+        "8.00", "name": "Chicken"}, {"price": "8.00", "name": "Beef"}, {"price": "8.00",
+        "name": "Tofu"}, {"price": "10.00", "name": "Shrimp"}]}], "type": "ITEM",
+        "name": "Chop Suey", "description": "Wok-tossed asian cabbages, carrots, bean
+        sprouts in a light soy sauce w/ garlic & ginger"}, {"option_groups": [{"text":
+        "Side", "type": "OPTION_CHOOSE", "options": [{"price": "8.00", "name": "Chicken"},
+        {"price": "8.00", "name": "Beef"}, {"price": "8.00", "name": "Tofu"}, {"price":
+        "10.00", "name": "Shrimp"}]}], "type": "ITEM", "name": "Latino Fried Rice",
+        "description": "Wok-tossed w/ jasmine rice, black beans, garlic, onions &
+        cumin"}, {"option_groups": [{"text": "Side", "type": "OPTION_CHOOSE", "options":
+        [{"price": "10.00", "name": "Chicken"}, {"price": "10.00", "name": "Beef"},
+        {"price": "10.00", "name": "Tofu"}, {"price": "12.00", "name": "Shrimp"}]}],
+        "type": "ITEM", "name": "Sweet Sesame", "description": "Wok-tossed broccoli
+        & crispy water chestnuts in a sweet sesame sauce"}, {"option_groups": [{"text":
+        "Side", "type": "OPTION_CHOOSE", "options": [{"price": "10.00", "name": "Chicken"},
+        {"price": "10.00", "name": "Beef"}, {"price": "10.00", "name": "Tofu"}, {"price":
+        "12.00", "name": "Shrimp"}]}], "type": "ITEM", "name": "Orange Picante", "description":
+        "Wok-tossed broccoli & carrots in a spicy sauce w/ hints of tangy orange"},
+        {"option_groups": [{"text": "Side", "type": "OPTION_CHOOSE", "options": [{"price":
+        "10.00", "name": "Chicken"}, {"price": "10.00", "name": "Beef"}, {"price":
+        "10.00", "name": "Tofu"}, {"price": "12.00", "name": "Shrimp"}]}], "type":
+        "ITEM", "name": "Bang Baang", "description": "Wok-tossed w/ pineapple, sliced
+        red & green peppers in a chili-orange sauce"}]}], "section_name": "Rice Specials"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "12.00", "type":
+        "ITEM", "name": "Whole Wheat Tortilla", "description": "Served stuffed\u200f
+        w/ wok-tossed onions, green peppers & served w/ black beans topped w/ hot
+        & sour sauce, cheddar cheese & your choice of either jasmine or brown rice.
+        Comes w/ pico de gallo & sour cream on the side w/ your choice of chicken
+        or veggies"}]}], "section_name": "Betty''s Quesadillas\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "3.00", "type": "ITEM", "name":
+        "Ice Cream or Sorbet Scoop", "description": "Vanilla bean, chocolate, or coconut
+        ice cream. Passion fruit, pineapple, or raspberry sorbet."}, {"price": "5.00",
+        "type": "ITEM", "name": "Betty''s So Saucy Sundae", "description": "Two scoops
+        of ice cream or sorbet w/ hot fudge sauce or dark cherry plum wine sauce"},
+        {"price": "5.00", "type": "ITEM", "name": "Coconut Custard Quesillo", "description":
+        "Betty''s famous slice of heaven"}, {"price": "6.00", "type": "ITEM", "name":
+        "Chocolate Cake", "description": "A really good piece of chocolate frosted
+        layer cake. A la mode-add 2"}, {"price": "6.00", "type": "ITEM", "name": "Betty-Licious
+        Cheesecake", "description": "Silky & sinful w/ a choice of hot fudge or dark
+        cherry plum wine sauce"}, {"price": "8.00", "type": "ITEM", "name": "Banana
+        Bomba", "description": "Golden fried\u200f plantain won-tons w/ roasted coconut
+        ice cream & hot chocolate fudge sauce"}]}], "section_name": "Desserts"}],
+        "currency_symbol": "$"}, {"menu_name": "Desserts", "sections": [{"subsections":
+        [{"subsection_name": "", "contents": [{"text": "Visit betty\u2019s after the
+        show for delectable & delightful desserts. We stay open late so you can extend
+        your evening out just a bit more! Betty\u2019s coconut custard quesillo has
+        earned rave reviews, including the boston globe, who wrote this signature
+        dessert is \u201cjust like mom used to make.\u201d", "type": "SECTION_TEXT"},
+        {"price": "7.00", "type": "ITEM", "name": "Coconut Custard Quesillo", "description":
+        "Betty\u2019s famous creamy slice of heaven"}, {"option_groups": [{"text":
+        "Extra", "type": "OPTION_CHOOSE", "options": [{"price": "8.00", "name": "Choice
+        of cherry - sake sauce"}, {"price": "8.00", "name": "Hot chocolate fudge"}]}],
+        "type": "ITEM", "name": "Betty-Licious Cheesecake", "description": "Silky
+        & sinful, this homemade dessert is too good to be true w/ a"}, {"price": "10.00",
+        "type": "ITEM", "name": "Banana Bomba", "description": "Golden-fried plantain
+        won-tons w/ roasted coconut ice cream & chocolate fudge sauce -"}, {"price":
+        "6.00", "type": "ITEM", "name": "Betty''s Sundae Royale", "description": "Decadent
+        scoops of either ice cream or sorbet, w/ silky hot chocolate fudge sauce"},
+        {"price": "8.00", "type": "ITEM", "name": "Chocolate Cake", "description":
+        "A really good piece of chocolate frosted layer cake"}, {"price": "10.00",
+        "type": "ITEM", "name": "Chocolate Cake a La Modee", "description": "Even
+        better w/ a scoop of ice cream or sorbet"}, {"price": "10.00", "type": "ITEM",
+        "name": "Choco Cherry Coco Cake", "description": "A chocolate gastro-bash
+        w/ chocolate cake, cherries, coconut, crushed peanuts & chocolate sauce"},
+        {"price": "12.00", "type": "ITEM", "name": "Choco Cherry Coco Cake a La Mode"},
+        {"price": "3.00", "type": "ITEM", "name": "Ice Cream or Sorbet", "description":
+        "Luscious & creamy flavors"}]}], "section_name": ""}], "currency_symbol":
+        "$"}, {"menu_name": "Specialty Drinks", "sections": [{"subsections": [{"subsection_name":
+        "", "contents": [{"price": "10.00", "type": "ITEM", "name": "Tokyo Manhattan",
+        "description": "Sake, plum wine sake, maraschino cherry"}, {"price": "10.00",
+        "type": "ITEM", "name": "Bettypolitan", "description": "Sake, cranberry juice,
+        lime juice, homemade triple sec"}, {"price": "10.00", "type": "ITEM", "name":
+        "Sapple", "description": "Sake, sour apple fusion"}, {"price": "10.00", "type":
+        "ITEM", "name": "Hey Dog", "description": "Sake, grapefruit juice, sugared
+        rim"}, {"price": "10.00", "type": "ITEM", "name": "Loca-Motion", "description":
+        "Sake, passion fruit, coconut, grenadine-sugared rim"}, {"price": "10.00",
+        "type": "ITEM", "name": "Saketini", "description": "Sake, olive juice, olives"},
+        {"price": "10.00", "type": "ITEM", "name": "The Mota", "description": "Sake,
+        tamarind juice, fresh ginger fusion, lime juice"}, {"price": "10.00", "type":
+        "ITEM", "name": "Tropical Kiss", "description": "Sake, vanilla, pineapple
+        juice, sugared pineapples"}]}], "section_name": "Sake Martinis\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "10.00", "type": "ITEM", "name":
+        "Sake Mojito", "description": "Sake, fresh mint, fresh limes, sugar"}, {"price":
+        "10.00", "type": "ITEM", "name": "Sake Rojito", "description": "Plum sake,
+        cranberry juice, fresh limes, sugar"}, {"price": "10.00", "type": "ITEM",
+        "name": "Sake Rita", "description": "Sake, sugar,\u200f fresh limes, a splash
+        of homemade triple sec, salt rim"}, {"price": "10.00", "type": "ITEM", "name":
+        "Betty Lemon Drop", "description": "Sake, fresh lemons, sugared rim"}, {"price":
+        "10.00", "type": "ITEM", "name": "Stormy Weather", "description": "Sake, tamarind
+        juice, fresh limes, brown sugar, brown sugared rim"}, {"price": "10.00", "type":
+        "ITEM", "name": "Satea", "description": "Sake, fresh limes, raw sugar, black
+        currant, ice tea, brown sugared rim"}, {"price": "7.00", "type": "ITEM", "name":
+        "Sahara Sunset", "description": "Sake, orange juice, grenadine"}, {"price":
+        "7.00", "type": "ITEM", "name": "Sak-It-to-Me Punch", "description": "Sake,
+        fresh citrus fruits"}, {"price": "10.00", "type": "ITEM", "name": "Pinky",
+        "description": "Sake, guava\u200f lemondade, lime juice"}, {"price": "10.00",
+        "type": "ITEM", "name": "Tha Bomb", "description": "Sake shot dropped in a
+        pint of kirin beer"}]}], "section_name": "Sake Cocktails"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "10.00", "type": "ITEM", "name":
+        "Flamingo", "description": "Sparkling wine, pineapple, oranges, black currant
+        syrup"}, {"price": "10.00", "type": "ITEM", "name": "Pino Fizz", "description":
+        "Sparkling wine, pineapple juice & sugared pineapples w/ a splash of vanilla"},
+        {"price": "10.00", "type": "ITEM", "name": "Mambo Mimosa", "description":
+        "Sparking wine, orange juice"}, {"price": "10.00", "type": "ITEM", "name":
+        "Kimono", "description": "Sparking wine, plum wine sake"}]}], "section_name":
+        "Smashing Sparklers (Sparkinling Wine Cocktails)\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "10.00", "type": "ITEM", "name":
+        "Champassion", "description": "Sparkling wine, passion fruit sorbet"}, {"price":
+        "10.00", "type": "ITEM", "name": "Red Velvet", "description": "Sparkling wine,
+        raspberry sorbet"}, {"price": "10.00", "type": "ITEM", "name": "Golden Temple",
+        "description": "Sparkling wine, pineapple sorbet"}, {"price": "10.00", "type":
+        "ITEM", "name": "Kyoto Colada", "description": "Sake, pineapple juice, cream,
+        coconut"}, {"price": "10.00", "type": "ITEM", "name": "Cherry Bomb", "description":
+        "Sake, maraschino cherry, grenadine"}, {"price": "10.00", "type": "ITEM",
+        "name": "Chocolate Rocket", "description": "Sake, cocoa\u200f powder, sugar"}]}],
+        "section_name": "Sensational Slurpees & Frozen Drinks"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "4.00", "type": "ITEM", "name": "Sam Adams Boston
+        Ale", "description": "Boston, ma"}, {"price": "5.00", "type": "ITEM", "name":
+        "Sierra Nevada Pale Ale"}, {"price": "5.00", "type": "ITEM", "name": "Kirin
+        - Japan"}, {"price": "5.00", "type": "ITEM", "name": "Hoegaarden", "description":
+        "Wheat beer"}, {"price": "5.00", "type": "ITEM", "name": "Corona"}, {"price":
+        "5.00", "type": "ITEM", "name": "Corona Light"}]}], "section_name": "Bottled
+        Beers\u200f"}, {"subsections": [{"subsection_name": "", "contents": [{"option_groups":
+        [{"text": "Price", "type": "OPTION_CHOOSE", "options": [{"price": "7.00",
+        "name": ""}, {"price": "21.00", "name": ""}]}], "type": "ITEM", "name": "Pinot
+        Grigio, Cavit (Trentino, Italy)", "description": "Light clean & refreshing
+        w/ flavors of citrus fruits & a toasty finish"}, {"option_groups": [{"text":
+        "Price", "type": "OPTION_CHOOSE", "options": [{"price": "9.00", "name": ""},
+        {"price": "27.00", "name": ""}]}], "type": "ITEM", "name": "Pinot Grigio,
+        Borgo M (Friuli, Italy)", "description": "Clean & light bodied w/ flavors
+        of citrus & minerals."}, {"option_groups": [{"text": "Price", "type": "OPTION_CHOOSE",
+        "options": [{"price": "8.00", "name": ""}, {"price": "24.00", "name": ""}]}],
+        "type": "ITEM", "name": "Sauvignon Blanc, Pomelo (Napa, California)", "description":
+        "Clean & refreshing w/ vibrant fruit flavors, lemon & lime."}, {"option_groups":
+        [{"text": "Price", "type": "OPTION_CHOOSE", "options": [{"price": "6.00",
+        "name": ""}, {"price": "18.00", "name": ""}]}], "type": "ITEM", "name": "Riesling,
+        Blue Fish (Pfalz, Germany)", "description": "Soft yellow w/ a glint of green;
+        apricots & peaches on the nose."}, {"option_groups": [{"text": "Price", "type":
+        "OPTION_CHOOSE", "options": [{"price": "8.00", "name": ""}, {"price": "24.00",
+        "name": ""}]}], "type": "ITEM", "name": "Chardonnay, ''Riversone'' J. Lohr
+        (Monterey, California)", "description": "Lush tropical flavors of mango &
+        pineapple w/ a creamy & oaky texture."}, {"option_groups": [{"text": "Price",
+        "type": "OPTION_CHOOSE", "options": [{"price": "9.00", "name": ""}, {"price":
+        "27.00", "name": ""}]}], "type": "ITEM", "name": "Sparkling Wine, Casteller
+        Cava", "description": "Light & delicate w/ hints of lime & citrus."}]}], "section_name":
+        "White Wines"}, {"subsections": [{"subsection_name": "", "contents": [{"option_groups":
+        [{"text": "Price", "type": "OPTION_CHOOSE", "options": [{"price": "7.00",
+        "name": ""}, {"price": "21.00", "name": ""}]}], "type": "ITEM", "name": "Cotes
+        Du Rhone, Jean-Luc Colombo", "description": "(Rhone valley, france) lively
+        bright berry & fruit flavors. Balanced w/ a soft white pepper finish."}, {"option_groups":
+        [{"text": "Price", "type": "OPTION_CHOOSE", "options": [{"price": "8.00",
+        "name": ""}, {"price": "24.00", "name": ""}]}], "type": "ITEM", "name": "Syrah,
+        Hahn Estates (Monterey, California)", "description": "Lush, ripe raspberry
+        & blackberry flavors on the palate. Very fragrant."}, {"option_groups": [{"text":
+        "Price", "type": "OPTION_CHOOSE", "options": [{"price": "6.00", "name": ""},
+        {"price": "18.00", "name": ""}]}], "type": "ITEM", "name": "Pinot Noir, Rex
+        Goliath (Vin De Pays D''Oc)", "description": "Flavors of bing cherry & raspberry
+        w/ a hint of spice on the finish."}, {"option_groups": [{"text": "Price",
+        "type": "OPTION_CHOOSE", "options": [{"price": "6.00", "name": ""}, {"price":
+        "18.00", "name": ""}]}], "type": "ITEM", "name": "Merlot, Rex Goliath (California)",
+        "description": "A fruity\u200f yet balanced style w/ flavors of black & red
+        berry fruits."}, {"option_groups": [{"text": "Price", "type": "OPTION_CHOOSE",
+        "options": [{"price": "8.00", "name": ""}, {"price": "24.00", "name": ""}]}],
+        "type": "ITEM", "name": "Cabernet Sauvignon, Wolf Blass (South Eastern, Australia)",
+        "description": "Bold blackberry & lush vanilla flavors w/ a silky texture
+        & lingering finish."}, {"option_groups": [{"text": "Price", "type": "OPTION_CHOOSE",
+        "options": [{"price": "7.00", "name": ""}, {"price": "21.00", "name": ""}]}],
+        "type": "ITEM", "name": "Malbec, Budini (Mendoza, Argentina)", "description":
+        "Perfumed aromas of ripe black cherries w/ a full & fleshy mouthfull & a long
+        finish."}]}], "section_name": "Red Wines\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"option_groups": [{"text": "Price", "type": "OPTION_CHOOSE",
+        "options": [{"price": "3.00", "name": ""}, {"price": "6.00", "name": "Shot"},
+        {"price": "12.00", "name": "Half carafe"}]}], "type": "ITEM", "name": "Gekkeikan
+        (Napa, U.S)", "description": "Very refreshing & fruity w/ a hint of sweetness."},
+        {"option_groups": [{"text": "Price", "type": "OPTION_CHOOSE", "options": [{"price":
+        "3.00", "name": ""}, {"price": "6.00", "name": ""}, {"price": "12.00", "name":
+        ""}]}], "type": "ITEM", "name": "Kobai Plum Sake (Japan)", "description":
+        "Subtle plum flavor, made w/ choice plums."}, {"option_groups": [{"text":
+        "Price", "type": "OPTION_CHOOSE", "options": [{"price": "5.00", "name": ""},
+        {"price": "10.00", "name": ""}, {"name": "n/a"}]}], "type": "ITEM", "name":
+        "Gekkekian Draft (187 Ml. And 375 Ml.)"}]}], "section_name": "Sake"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "7.00", "type": "ITEM", "name":
+        "White Wine or Red Wine"}, {"price": "8.00", "type": "ITEM", "name": "Kobai
+        Plum Sake"}]}], "section_name": "Spritzers\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"option_groups": [{"text": "Price", "type": "OPTION_CHOOSE",
+        "options": [{"price": "8.00", "name": ""}, {"price": "22.00", "name": ""}]}],
+        "type": "ITEM", "name": "Red Wine Sangria", "description": "Red & plum wine
+        sake, passion fruit, & fresh fruits"}, {"option_groups": [{"text": "Price",
+        "type": "OPTION_CHOOSE", "options": [{"price": "8.00", "name": ""}, {"price":
+        "22.00", "name": ""}]}], "type": "ITEM", "name": "White Wine Sangria", "description":
+        "White &\u200f plum wine sake, pineapple juice, & fresh fruits"}, {"price":
+        "22.00", "type": "ITEM", "name": "Buddha Bowl", "description": "Sake, plum
+        wine sake, fresh fruits & their juices"}]}], "section_name": "Sangrias and
+        More"}], "currency_symbol": "$"}], "locu_id": "32e1122bdbf13f935bb6", "contact":
+        {"phone": "(617) 424-1950"}, "location": {"locality": "Boston", "country":
+        "United States", "region": "MA", "postal_code": "02115", "address1": "250
+        Huntington Ave.", "geo": {"type": "Point", "coordinates": [-71.085188, 42.342319]}},
+        "website_url": "http://bettyswokandnoodle.com/"}]}'
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 01:17:55 GMT
+recorded_with: VCR 3.0.1
