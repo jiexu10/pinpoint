@@ -4,7 +4,7 @@ feature 'restaurant signs up', %{
   As a restaurant
   I want to create an account
   So that I can have my restaurant on the site with all details
-}, vcr: true, focus: true do
+}, vcr: true do
 
   # Acceptance Criteria:
   # - [x] I must specify a company name
