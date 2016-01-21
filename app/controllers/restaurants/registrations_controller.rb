@@ -25,7 +25,9 @@ class Restaurants::RegistrationsController < Devise::RegistrationsController
       if !rd.exists_valid
         flash.now[:error] = 'This venue already exists!'
       elsif !rd.multiple_valid
-        flash.now[:error] = 'Multiple venues from this company name!'
+        flash.now[:error] = 'Multiple venues with this company name!'
+      elsif !rd.match_valid
+        flash.now[:error] = "Company name doesn't exist!"
       end
       clean_up_passwords resource
       set_minimum_password_length

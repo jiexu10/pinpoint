@@ -19,10 +19,6 @@ class LocuData
     venue_queries['open_hours'] = open_hours if open_hours
     venue_queries['categories']['str_id'] = categories if categories
     build_location_query
-    unless venue_queries['location']
-      venue_queries['location'] = {}
-      venue_queries['location']['locality'] = IpApi.new.data['city']
-    end
     venue_queries
   end
 

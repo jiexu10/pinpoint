@@ -101,7 +101,25 @@ feature 'restaurant signs up', %{
     fill_in 'Password Confirmation', with: 'password'
     click_button 'Sign Up'
 
-    expect(page).to have_content('Multiple venues from this company name!')
+    expect(page).to have_content('Multiple venues with this company name!')
+    expect(page).to_not have_content('Sign Out')
+  end
+
+  scenario 'company name does not exist' do
+    visit root_path
+    click_link 'Sign Up'
+
+    click_link 'Restaurant Sign Up'
+
+    fill_in 'First Name', with: 'firstname'
+    fill_in 'Last Name', with: 'lastname'
+    fill_in 'Company Name', with: 'somethingfakethatisreallyfake'
+    fill_in 'Email', with: 'fake@email.com'
+    fill_in 'Password', with: 'password'
+    fill_in 'Password Confirmation', with: 'password'
+    click_button 'Sign Up'
+
+    expect(page).to have_content("Company name doesn't exist!")
     expect(page).to_not have_content('Sign Out')
   end
 end

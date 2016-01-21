@@ -1,5 +1,5 @@
 class MakeRestaurantDetail
-  attr_reader :venue, :rd, :exists_valid, :multiple_valid
+  attr_reader :venue, :rd, :exists_valid, :multiple_valid, :match_valid
 
   def initialize(rest, query = {})
     locu_data = LocuData.new(query)
@@ -8,6 +8,7 @@ class MakeRestaurantDetail
     @data = JSON.parse(raw_data_body)
     @exists_valid = true
     @multiple_valid = true
+    @match_valid = true
     if @data['venues'].count == 1
       @venue = @data['venues'][0]
       if Restaurantdetail.find_by(locuid: venue['locu_id']).nil?
@@ -17,6 +18,8 @@ class MakeRestaurantDetail
       else
         @exists_valid = false
       end
+    elsif @data['venues'].empty?
+      @match_valid = false
     else
       @multiple_valid = false
     end
@@ -84,6 +87,6 @@ class MakeRestaurantDetail
   end
 
   def valid?
-    @exists_valid && @multiple_valid
+    @exists_valid && @multiple_valid && @match_valid
   end
 end
