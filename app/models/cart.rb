@@ -2,6 +2,7 @@ class Cart < ActiveRecord::Base
   has_many :cartitems
   has_many :items, through: :cartitems
   belongs_to :user
+  belongs_to :restaurant
   belongs_to :order
 
   validates :user, presence: true
@@ -15,6 +16,10 @@ class Cart < ActiveRecord::Base
   end
 
   def find_total
+    total_price = 0.00
     cartitems.each do |cartitem|
-      cartitem.item.price.to_f * cartitem.quantity
+      total_price += cartitem.item.price.to_f * cartitem.quantity
+    end
+    total_price
+  end
 end
