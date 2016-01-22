@@ -21,7 +21,7 @@ feature 'user creates an order via cart', %{
     rest1 = create_restaurant("Boston Beer Garden")
     user_sign_in(user)
     visit root_path
-    click_link rest1.restauarntdetail.name
+    click_link rest1.restaurantdetail.name
 
     price = 0.00
     rest1.items.each do |item|

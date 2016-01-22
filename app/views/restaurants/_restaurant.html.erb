@@ -1,5 +1,5 @@
 <div class="restaurant-info-<%= restaurant.id %>">
-  Name: <%= restaurant.restaurantdetail.name %>
+  Name: <%= link_to restaurant.restaurantdetail.name, restaurant_path(restaurant) %>
   Phone: <%= restaurant.restaurantdetail.phone %>
   Website: <%= restaurant.restaurantdetail.website_url %>
   Address:

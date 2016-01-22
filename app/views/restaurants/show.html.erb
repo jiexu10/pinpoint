@@ -28,10 +28,5 @@ Menu
     <%= section.name %>
     <br>
   <% end %>
-  <% section.items.each do |item| %>
-    <%= item.name %>
-    <%= item.description %>
-    <%= item.price %>
-    <br>
-  <% end %>
+  <%= render partial: 'item', collection: section.items, as: :item %>
 <% end %>

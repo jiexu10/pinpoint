@@ -35,7 +35,7 @@ feature 'restaurant signs up', %{
     expect(page).to have_content('Sign Out')
 
     expect(page).to have_content('Boston Beer Garden')
-    expect(page).to have_content('Phone: (617) 269-0990')
+    expect(page).to have_content('(617) 269-0990')
     expect(page).to have_content('Boston')
     expect(page).to have_content('MA')
     expect(page).to have_content('02127')

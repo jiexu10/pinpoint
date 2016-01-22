@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cart, type: :model, vcr: true, focus: true do
+RSpec.describe Cart, type: :model, vcr: true do
   let(:user) { FactoryGirl.create(:user) }
   let(:rest1) { create_restaurant("Boston Beer Garden") }
   let(:cart) { FactoryGirl.create(:cart, user: user, restaurant: rest1) }
