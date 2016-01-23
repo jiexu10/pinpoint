@@ -7,10 +7,10 @@ feature 'restaurant signs in', %{
 }, vcr: true do
 
   # Acceptance Criteria:
-  # - [ ] If I specify a valid, previous registered email and password,
+  # - [x] If I specify a valid, previous registered email and password,
   #   I am authenticated and I am directed to my restaurant show page
-  # - [ ] If I specify an invalid email and password, I remain unauthenticated
-  # - [ ] If I am already signed in, I can't sign in again
+  # - [x] If I specify an invalid email and password, I remain unauthenticated
+  # - [x] If I am already signed in, I can't sign in again
 
   let(:rest) { create_restaurant('Boston Beer Garden') }
 

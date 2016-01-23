@@ -2,18 +2,17 @@ require 'rails_helper'
 
 feature 'user creates an order via cart', %{
   As a customer
-  I want to add items to a cart
-  So that I can order food from a restaurant
+  I want to view the menu and add items to a cart
+  So that I can pick what I want from a restaurant
 }, vcr: true do
 
   # Acceptance Criteria:
-  # - [ ] I can create a cart from the restaurant page by selecting a menu items
-  # - [ ] I should see a list of items and quantities in my cart
-  # - [ ] I should see a total price of my cart
-  # - [ ] I should see a link to place the order
-  # - [ ] I should have a confirmation to place the order
-  # - [ ] If an order is not confirmed, it should not be completed
-  # - [ ] An cart that is not ordered is still accessible by the customer
+  # - [x] On the restaurant page, I should see a list of items on the menu
+  # - [x] Each item should have a price displayed
+  # - [x] I can create a cart from the restaurant page by selecting menu items
+  # - [x] I should see a list of items and quantities in my cart
+  # - [x] I should see a total price of my cart
+  # - [x] A cart that is not ordered is still accessible by the customer
 
   let(:user) { FactoryGirl.create(:user) }
   let!(:rest1) { create_restaurant('Boston Beer Garden') }
