@@ -4,6 +4,7 @@ class Cart < ActiveRecord::Base
   belongs_to :user
   belongs_to :restaurant
   belongs_to :order
+  accepts_nested_attributes_for :cartitems
 
   validates :user, presence: true
   validates :restaurant, presence: true

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :restaurants, only: [:index, :show]
+
+  resources :carts, only: [:create, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

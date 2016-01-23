@@ -4,7 +4,7 @@ feature 'user creates an order via cart', %{
   As a customer
   I want to add items to a cart
   So that I can order food from a restaurant
-}, vcr: true do
+}, vcr: true, focus: true do
 
   # Acceptance Criteria:
   # - [ ] I can create an order from the restaurant page by selecting a menu items
@@ -28,7 +28,7 @@ feature 'user creates an order via cart', %{
       price += item.price.to_f
       within(".item-#{item.id}") do
         fill_in('Quantity', with: 1)
-        click_button 'Add'
+        click_button 'Add to Cart'
         within('.cart') do
           expect(page).to have_content("#{item.name} (#{user.find_cart(rest1).find_quantity(item)})")
           expect(page).to have_content(item.price)

@@ -23,10 +23,26 @@ Categories:
 <br>
 <% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
 Menu
-<% @restaurant.menusections.each do |section| %>
-  <% unless section.name.blank? %>
-    <%= section.name %>
-    <br>
+<% if user_signed_in? %>
+  <%= form_for(@cart) do |f| %>
+    <% @cartitems.each do |cartitem| %>
+      <%= f.fields_for :cartitems, cartitem do |ff| %>
+        <div class="item-<%= cartitem.item.id %>">
+          <%= ff.label :quantity, "#{cartitem.item.name} - #{cartitem.item.description} - #{cartitem.item.price}" %>
+          <%= ff.text_field :quantity %>
+        </div>
+      <% end %>
+    <% end %>
+    <div class='actions'>
+      <%= f.submit 'Add to Cart' %>
+    </div>
   <% end %>
-  <%= render partial: 'item', collection: section.items, as: :item %>
+<% else %>
+  <% @restaurant.menusections.each do |section| %>
+    <% unless section.name.blank? %>
+      <%= section.name %>
+      <br>
+    <% end %>
+    <%= render partial: 'item', collection: section.items, as: :item %>
+  <% end %>
 <% end %>
