@@ -1,0 +1,32 @@
+.top-bar {
+  background-color: $primary-color;
+}
+
+.top-bar-title {
+  float: left;
+  padding: 0.2rem;
+
+  h5 {
+    margin: 0;
+  }
+}
+
+.top-bar a {
+  color: white;
+  background-color: $primary-color;
+  text-align: right;
+}
+
+.has-submenu > a {
+  border-left: 1px solid white;
+}
+
+.top-bar-title a {
+  font-family: $title-font-family;
+  color: white;
+  font-weight: bold;
+}
+
+.spacer {
+  margin-bottom: rem-calc(50);
+}
