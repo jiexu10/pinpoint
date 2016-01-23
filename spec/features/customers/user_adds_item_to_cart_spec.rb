@@ -7,13 +7,13 @@ feature 'user creates an order via cart', %{
 }, vcr: true do
 
   # Acceptance Criteria:
-  # - [ ] I can create an order from the restaurant page by selecting a menu items
-  # - [ ] I should see a list of items and quantities in my order
-  # - [ ] I should see a total price of my order
+  # - [ ] I can create a cart from the restaurant page by selecting a menu items
+  # - [ ] I should see a list of items and quantities in my cart
+  # - [ ] I should see a total price of my cart
   # - [ ] I should see a link to place the order
   # - [ ] I should have a confirmation to place the order
   # - [ ] If an order is not confirmed, it should not be completed
-  # - [ ] An order that is not confirmed is still accessible by the customer
+  # - [ ] An cart that is not ordered is still accessible by the customer
 
   let(:user) { FactoryGirl.create(:user) }
   let!(:rest1) { create_restaurant('Boston Beer Garden') }
@@ -35,7 +35,7 @@ feature 'user creates an order via cart', %{
     within('.cart') do
       cart = user.find_cart(rest1)
       cart.items.each do |item|
-        expect(page).to have_content("#{item.name}, #{item.price} each (#{user.find_cart(rest1).find_quantity(item)})")
+        expect(page).to have_content("#{item.name}, #{item.price} each (#{cart.find_quantity(item)})")
         expect(page).to have_content(user.find_cart(rest1).find_total)
         expect(price.round(2)).to eq(user.find_cart(rest1).find_total)
       end

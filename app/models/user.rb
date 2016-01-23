@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable
 
   def find_cart(restaurant)
-    carts.find { |cart| cart.restaurant == restaurant }
+    carts.detect { |cart| cart.restaurant == restaurant }
   end
 end

@@ -49,7 +49,7 @@ Categories:
     <h2>Cart</h2>
     <% unless @cart.cartitems.empty? %>
       <% @cart.cartitems.each do |ci| %>
-        <%= ci.pretty_print %>
+        <%= ci.pp %>
         <br>
       <% end %>
       Total: <%= @cart.find_total %>
