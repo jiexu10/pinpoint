@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
       @restaurant.items.each do |item|
         @cartitems << Cartitem.find_or_initialize_by(item: item, cart: @cart)
       end
+      @order = Order.new(restaurant: @restaurant, cart: @cart)
     end
   end
 end

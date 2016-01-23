@@ -1,0 +1,9 @@
+<div class="order-form">
+  <%= form_for (order) do |f| %>
+    <%= f.hidden_field :cart_id, value: "#{order.cart.id}" %>
+    <%= f.hidden_field :restaurant_id, value: "#{order.restaurant.id}" %>
+    <div class='actions'>
+      <%= f.submit 'Place Order' %>
+    </div>
+  <% end %>
+</div>

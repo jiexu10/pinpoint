@@ -15,6 +15,7 @@ feature 'restaurant signs up', %{
   # - [x] If I specify valid information, register my account and authenticate
 
   let(:rest) { create_restaurant('Boston Beer Garden') }
+  let(:makerd) { MakeRestaurantDetail.new(rest, 'name' => rest.company_name) }
 
   scenario 'restaurant specifies valid and required information' do
     visit root_path
