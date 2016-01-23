@@ -22,19 +22,23 @@ feature 'user creates an order via cart', %{
     user_sign_in(user)
     visit root_path
     click_link rest1.restaurantdetail.name
-
     price = 0.00
+    n = 0
     rest1.items.each do |item|
       price += item.price.to_f
       within(".item-#{item.id}") do
-        fill_in('Quantity', with: 1)
-        click_button 'Add to Cart'
-        within('.cart') do
-          expect(page).to have_content("#{item.name} (#{user.find_cart(rest1).find_quantity(item)})")
-          expect(page).to have_content(item.price)
-          expect(page).to have_content(user.find_cart(rest1).find_total)
-          expect(price).to eq(user.find_cart(rest1).find_total)
-        end
+        fill_in("cart_cartitems_attributes_#{n}_quantity", with: 1)
+      end
+      n += 1
+    end
+    click_button 'Add to Cart'
+
+    within('.cart') do
+      cart = user.find_cart(rest1)
+      cart.items.each do |item|
+        expect(page).to have_content("#{item.name}, #{item.price} each (#{user.find_cart(rest1).find_quantity(item)})")
+        expect(page).to have_content(user.find_cart(rest1).find_total)
+        expect(price.round(2)).to eq(user.find_cart(rest1).find_total)
       end
     end
   end

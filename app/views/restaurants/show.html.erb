@@ -1,8 +1,6 @@
 restaurant show page
 
-First Name: <%= @restaurant.first_name %>
-Last Name: <%= @restaurant.last_name %>
-Company Name: <%= @restaurant.restaurantdetail.name %>
+<h1><%= @restaurant.restaurantdetail.name %></h1>
 Phone: <%= @restaurant.restaurantdetail.phone %>
 Website: <%= @restaurant.restaurantdetail.website_url %>
 Address:
@@ -22,14 +20,21 @@ Categories:
 <br>
 <br>
 <% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
-Menu
+<h2>Menu</h2>
 <% if user_signed_in? %>
   <%= form_for(@cart) do |f| %>
     <% @cartitems.each do |cartitem| %>
-      <%= f.fields_for :cartitems, cartitem do |ff| %>
+      <%= f.fields_for :cartitems, cartitem, include_id: true do |ff| %>
         <div class="item-<%= cartitem.item.id %>">
-          <%= ff.label :quantity, "#{cartitem.item.name} - #{cartitem.item.description} - #{cartitem.item.price}" %>
+          <%= ff.label :quantity, "#{cartitem.item.name} - #{cartitem.item.price}" %>
           <%= ff.text_field :quantity %>
+          <%= ff.hidden_field :item_id, value: "#{cartitem.item.id}" %>
+          <%= ff.hidden_field :cart_id, value: "#{@cart.id}" %>
+          <% if cartitem.id %>
+            <%= ff.hidden_field :id, value: "#{cartitem.id}" %>
+          <% end %>
+          <br />
+          <%= cartitem.item.description %>
         </div>
       <% end %>
     <% end %>
@@ -37,6 +42,19 @@ Menu
       <%= f.submit 'Add to Cart' %>
     </div>
   <% end %>
+  <br>
+  <hr>
+  <br>
+  <div class="cart">
+    <h2>Cart</h2>
+    <% unless @cart.cartitems.empty? %>
+      <% @cart.cartitems.each do |ci| %>
+        <%= ci.pretty_print %>
+        <br>
+      <% end %>
+      Total: <%= @cart.find_total %>
+    <% end %>
+  </div>
 <% else %>
   <% @restaurant.menusections.each do |section| %>
     <% unless section.name.blank? %>

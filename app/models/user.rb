@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
+
+  def find_cart(restaurant)
+    carts.find { |cart| cart.restaurant == restaurant }
+  end
 end

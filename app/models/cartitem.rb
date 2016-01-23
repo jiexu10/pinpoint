@@ -7,6 +7,6 @@ class Cartitem < ActiveRecord::Base
   validates :quantity, presence: true, numericality: { only_integer: true }
 
   def pretty_print
-    "#{item.name} (#{quantity})"
+    "#{item.name}, #{item.price} each (#{quantity})"
   end
 end
