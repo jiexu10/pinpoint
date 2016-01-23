@@ -15,23 +15,22 @@ feature 'user creates an order via cart', %{
   # - [ ] If an order is not confirmed, it should not be completed
   # - [ ] An order that is not confirmed is still accessible by the customer
 
-  let (:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryGirl.create(:user) }
+  let!(:rest1) { create_restaurant('Boston Beer Garden') }
+  let!(:cart) { FactoryGirl.create(:cart, user: user, restaurant: rest1) }
 
   scenario 'user views restaurant page and adds items to cart' do
-    rest1 = create_restaurant("Boston Beer Garden")
     user_sign_in(user)
     visit root_path
     click_link rest1.restaurantdetail.name
     price = 0.00
-    n = 0
-    rest1.items.each do |item|
+    rest1.items.each_with_index do |item, index|
       price += item.price.to_f
       within(".item-#{item.id}") do
-        fill_in("cart_cartitems_attributes_#{n}_quantity", with: 1)
+        fill_in("cart_cartitems_attributes_#{index}_quantity", with: 1)
       end
-      n += 1
     end
-    click_button 'Add to Cart'
+    click_button 'Update Cart'
 
     within('.cart') do
       cart = user.find_cart(rest1)
@@ -43,5 +42,44 @@ feature 'user creates an order via cart', %{
     end
   end
 
-  scenario 'logged out user cannot add items to cart'
+  scenario 'user updates quantities of items in cart' do
+    rest1.items.each do |item|
+      Cart.add_item(cart, item, '5')
+    end
+    user_sign_in(user)
+    visit restaurant_path(rest1)
+
+    rest1.items.each_with_index do |item, index|
+      within(".item-#{item.id}") do
+        if index.even?
+          fill_in("cart_cartitems_attributes_#{index}_quantity", with: 1)
+        else
+          fill_in("cart_cartitems_attributes_#{index}_quantity", with: 0)
+        end
+      end
+    end
+    click_button 'Update Cart'
+
+    within('.cart') do
+      rest1.items.each_with_index do |item, index|
+        if index.even?
+          expect(page).to have_content("#{item.name}, #{item.price} each (1)")
+        else
+          expect(page).to_not have_content("#{item.name}, #{item.price} each")
+        end
+      end
+      expect(page).to have_content(user.find_cart(rest1).find_total)
+    end
+  end
+
+  scenario 'logged out user cannot add items to cart' do
+    visit restaurant_path(rest1)
+
+    rest1.items.each_with_index do |item, index|
+      within(".item-#{item.id}") do
+        expect(page).to_not have_field("cart_cartitems_attributes_#{index}_quantity")
+      end
+    end
+    expect(page).to_not have_selector('div.actions input')
+  end
 end

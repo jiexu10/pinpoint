@@ -4,10 +4,10 @@ RSpec.describe Cartitem, type: :model, vcr: true do
   let(:user) { FactoryGirl.create(:user) }
   let(:rest1) { create_restaurant("Boston Beer Garden") }
   let(:cart) { FactoryGirl.create(:cart, user: user, restaurant: rest1) }
-  let(:items) { FactoryGirl.create_list(:item, 2, restaurantdetail: rest1.restaurantdetail)}
+  let(:item) { FactoryGirl.create(:item, restaurantdetail: rest1.restaurantdetail)}
 
   it 'can pretty print an entry in the list' do
-    Cart.add_item(cart, items[0], 1)
-    expect(cart.cartitems[0].pretty_print).to eq("#{items[0].name} (1)")
+    Cart.add_item(cart, item, 1)
+    expect(cart.cartitems[0].pretty_print).to eq("#{item.name}, #{item.price} each (1)")
   end
 end
