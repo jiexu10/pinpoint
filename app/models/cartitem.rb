@@ -5,6 +5,7 @@ class Cartitem < ActiveRecord::Base
   validates :item, presence: true
   validates :cart, presence: true
   validates :quantity, presence: true, numericality: { only_integer: true }
+  validates :item, uniqueness: { scope: :cart }
 
   def pretty_print
     "#{item.name}, #{item.price} each (#{quantity})"

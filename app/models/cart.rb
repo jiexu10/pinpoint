@@ -9,6 +9,7 @@ class Cart < ActiveRecord::Base
   validates :user, presence: true
   validates :restaurant, presence: true
   validates :status, presence: true
+  validates :user, uniqueness: { scope: [:restaurant, :status] }
 
   def find_quantity(item)
     target_item = cartitems.find { |ci| ci.item == item }

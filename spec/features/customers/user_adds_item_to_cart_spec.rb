@@ -4,7 +4,7 @@ feature 'user creates an order via cart', %{
   As a customer
   I want to add items to a cart
   So that I can order food from a restaurant
-}, vcr: true, focus: true do
+}, vcr: true do
 
   # Acceptance Criteria:
   # - [ ] I can create an order from the restaurant page by selecting a menu items
