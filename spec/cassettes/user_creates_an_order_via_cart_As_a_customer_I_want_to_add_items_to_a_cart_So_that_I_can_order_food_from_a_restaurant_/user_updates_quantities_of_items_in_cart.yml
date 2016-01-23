@@ -1,0 +1,243 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.locu.com/v2/venue/search
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"0a617b50e355f12544adc19e76d4714d0d8a6a46","fields":["name","description","website_url","menus","open_hours","categories","location","contact","delivery"],"venue_queries":[{"categories":{"str_id":"restaurants"},"name":"Boston
+        Beer Garden"}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 23 Jan 2016 17:46:31 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '16020'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status": "success", "http_status": 200, "venues": [{"name": "Boston
+        Beer Garden", "open_hours": {"monday": [["23:30", "01:00"]], "tuesday": [["23:30",
+        "01:00"]], "friday": [["23:30", "01:00"]], "wednesday": [["23:30", "01:00"]],
+        "thursday": [["23:30", "01:00"]], "sunday": [["10:00", "11:00"]], "saturday":
+        [["10:00", "11:00"]]}, "categories": [{"str_id": "restaurants", "name": "Restaurants"},
+        {"str_id": "tradamerican", "name": "Traditional American"}], "menus": [{"menu_name":
+        "Menu", "sections": [{"subsections": [{"subsection_name": "", "contents":
+        [{"price": "9.99", "type": "ITEM", "name": "Spinach and Artichoke Dip", "description":
+        "Baby spinach, artichoke hearts, roasted red peppers, parmesan, mozzarella
+        and cream cheeses, topped with herb breadcrumbs then baked. Served with carrots,
+        celery and flour tortilla chips"}, {"price": "10.99", "type": "ITEM", "name":
+        "Thai Lettuce Wraps", "description": "Your choice of chicken or vegetable
+        sauteed in a zesty szechwan sauce with water chestnuts and scallions. Served
+        over crispy rice noodles with sides of ice berg lettuce wraps, shredded carrots,
+        sweet chili and Thai peanut sauces"}, {"price": "9.99", "type": "ITEM", "name":
+        "Buffalo Chicken Dip", "description": "Shredded chicken blended with fiery
+        buffalo sauce, cream cheese and cool ranch dressing. Topped with bleu cheese
+        crumbles, sweet corn and crispy carrots. Served with warm tortilla chips and
+        a side of celery and carrot sticks"}, {"price": "9.99", "type": "ITEM", "name":
+        "Risotto Fritters", "description": "Parmesan risotto stuffed with pesto and
+        mozzarella lightly breaded and fried. Served with tomato cream sauce and baby
+        arugula"}, {"price": "9.99", "type": "ITEM", "name": "Buffalo Skewers", "description":
+        "Fresh chicken tenderloins lightly breaded and fried, tossed in buffalo sauce.
+        Served with bleu cheese, celery and carrots"}, {"price": "11.99", "type":
+        "ITEM", "name": "Ultimate Nachos", "description": "Classic nachos topped with
+        shredded lettuce, jalapenos, pico de gallo, sour cream and your choice of
+        chili or chicken"}, {"price": "9.99", "type": "ITEM", "name": "Chicken Quesadilla",
+        "description": "Shredded chicken, cilantro, red onion, salsa, monterey jack
+        and cheddar cheeses, grilled in a flour tortilla and served with a side of
+        sour cream"}, {"price": "9.99", "type": "ITEM", "name": "California Egg Rolls",
+        "description": "Chicken, tomato, monterey jack cheese, bacon and avocado wrapped
+        in an egg roll and flash fried. Served with ranch dressing"}, {"price": "9.99",
+        "option_groups": [{"text": "Extra", "type": "OPTION_ADD", "options": [{"price":
+        "+2.99", "name": "Chilli"}]}], "type": "ITEM", "name": "Big Dig Fries", "description":
+        "A giant stack of our waffle fries topped with monterey jack and cheddar cheeses,
+        bacon, scallions and sour cream"}, {"price": "8.99", "type": "ITEM", "name":
+        "Soft Pretzels", "description": "Salted pretzel bites served with cheese and
+        honey mustard dipping sauce"}, {"price": "9.99", "type": "ITEM", "name": "Mini
+        Sliders", "description": "A trio of classic mini burgers served on fresh rolls.
+        Topped with lettuce, tomato and onion. Served with a side of bistro sauce"},
+        {"price": "8.99", "type": "ITEM", "name": "Chicken Skewers", "description":
+        "Marinated grilled chicken, red and yellow peppers, mushrooms and red onions.
+        Served with ranch dressing"}, {"price": "7.99", "type": "ITEM", "name": "Bacon
+        and Cheddar Skins", "description": "Crisp potato skins baked with smoked bacon,
+        monterey jack and cheddar cheeses. Served with sour cream"}, {"price": "9.99",
+        "type": "ITEM", "name": "Tacos", "description": "Three soft flour tortillas
+        filled with your choice of sweet and spicy pulled pork or shredded chicken.
+        Topped with lettuce, monterey jack, cheddar cheese and pico de gallo"}, {"price":
+        "9.99", "type": "ITEM", "name": "Margherita Pizza", "description": "Tomato
+        sauce, mozzarella, oregano, basil and shaved parmesan"}, {"price": "10.99",
+        "type": "ITEM", "name": "Buffalo Chicken Pizza", "description": "Shredded
+        chicken tossed in our spicy buffalo sauce with mozzarella and blue cheese"}]}],
+        "section_name": "Appetizers\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE",
+        "options": [{"price": "8.99", "name": "Single order"}, {"price": "15.99",
+        "name": "Double order"}]}, {"text": "Style", "type": "OPTION_CHOOSE", "options":
+        [{"name": "Plain"}, {"name": "BBQ"}, {"name": "Jamaican jerk"}, {"name": "Buffalo"}]}],
+        "type": "ITEM", "name": "Regular or Boneless", "description": "All served
+        with celery and carrot sticks"}]}], "section_name": "Wings"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"option_groups": [{"text": "Size",
+        "type": "OPTION_CHOOSE", "options": [{"price": "4.99", "name": "Cup"}, {"price":
+        "5.99", "name": "Bowl"}]}], "type": "ITEM", "name": "French Onion", "description":
+        "Caramelized onions simmered in a rich beef broth, topped with croutons and
+        provolone cheese"}, {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE",
+        "options": [{"price": "4.99", "name": "Cup"}, {"price": "5.99", "name": "Bowl"}]}],
+        "type": "ITEM", "name": "New England Clam Chowder", "description": "New England\u2019s\u200f
+        classic creamy chowddah topped with bacon. served with oyster crackers"},
+        {"option_groups": [{"text": "Size", "type": "OPTION_CHOOSE", "options": [{"price":
+        "4.99", "name": "Cup"}, {"price": "5.99", "name": "Bowl"}]}], "type": "ITEM",
+        "name": "Firehouse Chili", "description": "Our famous chili, house made with
+        the finest ground beef, topped with monterey jack and cheddar cheeses and
+        green onion"}]}], "section_name": "Soups\u200f"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "6.99", "type": "ITEM", "name": "House", "description":
+        "Mixed field greens, carrots, cherry tomatoes, cucumbers and bermuda onions
+        topped with garlic croutons. Served with your choice of dressing"}, {"price":
+        "7.99", "type": "ITEM", "name": "Caesar", "description": "Crisp romaine leaves
+        tossed in a classic caesar dressing topped with parmesan cheese and croutons"},
+        {"price": "9.99", "option_groups": [{"text": "Extra", "type": "OPTION_ADD",
+        "options": [{"price": "+2.99", "name": "Grilled chicken"}]}], "type": "ITEM",
+        "name": "Apple and Goat Cheese", "description": "Apples, walnuts, dried cranberries
+        and vermont goat cheese piled on a bed of mixed field greens, served with
+        chardonnay vinaigrette"}, {"price": "11.99", "type": "ITEM", "name": "Buffalo
+        Chicken", "description": "Iceberg and romaine lettuce tossed with sweet corn,
+        red onions, carrots and bleu cheese crumbles, topped with buffalo chicken
+        tenders. Served with bleu cheese dressing"}, {"price": "11.99", "type": "ITEM",
+        "name": "Cobb", "description": "Grilled chicken, avocado, bleu cheese, bacon,
+        tomato, black olives and egg over a bed of iceberg lettuce. Served in a crispy
+        tortilla shell with Italian dressing"}, {"price": "9.99", "option_groups":
+        [{"text": "Extra", "type": "OPTION_ADD", "options": [{"price": "+2.99", "name":
+        "Grilled chicken"}]}], "type": "ITEM", "name": "Caprese", "description": "Mixed
+        field greens tossed in a balsamic reduction with fresh mozzarella, tomatoes,
+        red onions, and fresh basil"}, {"price": "8.99", "option_groups": [{"text":
+        "Extra", "type": "OPTION_ADD", "options": [{"price": "+2.99", "name": "Grilled
+        chicken"}]}], "type": "ITEM", "name": "Greek", "description": "Romaine lettuce
+        tossed with tomatoes, feta cheese, red onion and kalamata olives. Served with
+        greek dressing"}, {"price": "13.99", "type": "ITEM", "name": "Pistachio Encrusted
+        Tuna Salad", "description": "Pan seared tuna with pistachios, cooked medium
+        rare, served over mixed greens with wasabi peas, crispy wontons, shaved cucumber
+        and citrus vinaigrette"}]}], "section_name": "Salads"}, {"subsections": [{"subsection_name":
+        "", "contents": [{"price": "9.99", "type": "ITEM", "name": "Philly Cheese
+        Steak", "description": "Thinly sliced steak topped with American cheese, sauteed
+        onions and peppers on French bread"}, {"price": "9.99", "type": "ITEM", "name":
+        "French Dip", "description": "Thinly sliced roast beef served on French bread
+        with provolone cheese and a side of au jus"}, {"price": "8.99", "type": "ITEM",
+        "name": "Chili Lime Chicken", "description": "Grilled chicken breast lightly
+        seasoned with chili spices, topped with shredded lettuce, sliced tomato and
+        drizzled with a cilantro-lime aioli"}, {"price": "9.99", "type": "ITEM", "name":
+        "Turkey Wrap", "description": "Sliced white turkey, crisp apple wood smoked
+        bacon, scallions and harvari cheese, served warm with a side of cranberry
+        chipotle and sour cream"}, {"option_groups": [{"text": "Item", "type": "OPTION_CHOOSE",
+        "options": [{"price": "9.99", "name": "Hamburger"}, {"price": "9.99", "name":
+        "Turkey burger"}, {"price": "9.99", "name": "Vegetable burger"}, {"price":
+        "9.99", "name": "Grilled chicken"}]}, {"text": "Sauce", "type": "OPTION_CHOOSE",
+        "options": [{"name": "Cajun seasoning"}, {"name": "BBQ sauce"}, {"name": "Buffalo
+        sauce"}]}], "type": "ITEM", "name": "Build Your Own"}, {"price": "12.99",
+        "type": "ITEM", "name": "Seared Tuna", "description": "Pan seared\u200f ahi
+        tuna cooked medium rare. Served on a gourmet bun with zesty cajun remoulade,
+        lettuce, tomato and onion"}, {"price": "9.99", "type": "ITEM", "name": "Cape
+        Codder", "description": "Crispy beer battered cod fillet served on a gourmet
+        sub roll with lettuce, tomato, onion, pickle and a zesty tater sauce"}, {"price":
+        "9.99", "type": "ITEM", "name": "Chicken Parmesan", "description": "Tender
+        chicken breast lightly breaded, deep fried and topped with marinara sauce,
+        provolone and parmesan cheeses, served on a gourmet sub roll"}, {"price":
+        "9.99", "type": "ITEM", "name": "Pulled Pork", "description": "Slowly smoked\u200f
+        pulled pork with a homemade sweet and sour rub, melted pepper jack cheese,
+        shredded lettuce and jicama slaw"}]}], "section_name": "Sandwiches & Burgers\u200f"},
+        {"subsections": [{"subsection_name": "", "contents": [{"price": "14.99", "type":
+        "ITEM", "name": "Turkey Tips", "description": "Marinated and grilled turkey
+        tenderloins glazed with a tangy BBQ sauce. Served with your choice of two
+        sides"}, {"price": "13.99", "type": "ITEM", "name": "Fish N\u2019 Chips",
+        "description": "Beer battered atlantic cod deep fried until golden brown.
+        Served with cole slaw, fries and tarter sauce"}, {"price": "16.99", "type":
+        "ITEM", "name": "BBQ Steak Tips", "description": "Marinated and\u200f grilled
+        tips glazed with BBQ sauce and served with your choice of two sides"}, {"price":
+        "13.99", "option_groups": [{"text": "Extra", "type": "OPTION_ADD", "options":
+        [{"price": "+2.99", "name": "Ground beef"}, {"price": "+2.99", "name": "Grilled
+        chicken"}]}], "type": "ITEM", "name": "White Truffle Mac and Cheese", "description":
+        "Cavatappi pasta in a creamy four cheese sauce drizzles with white truffle
+        oil and baked with seasoned breadcrumbs."}, {"option_groups": [{"text": "Item",
+        "type": "OPTION_CHOOSE", "options": [{"price": "11.99", "name": "Grilled chicken"},
+        {"price": "13.99", "name": "Steak"}, {"price": "10.99", "name": "Grilled vegetables"}]}],
+        "type": "ITEM", "name": "Fajita\u2019s", "description": "Four warm flour tortillas,
+        sauteed onions, tri-colored peppers, shredded lettuce, pico de gallo, monterey
+        jack cheese and sour cream. Served with Mexican rice and black beans"}, {"price":
+        "12.99", "type": "ITEM", "name": "Burrito", "description": "Your choice of
+        chicken or ground sirloin baked in a flour tortilla with black beans, shredded
+        cheese and pico de gallo, topped with more cheese and salsa. Served with a
+        side of black beans, Mexican rice and sour cream"}, {"price": "13.99", "type":
+        "ITEM", "name": "Broiled Haddock", "description": "A fresh flaky haddock fillet
+        topped with herb bread crumbs and butter. Served with your choice of two sides"},
+        {"price": "14.99", "type": "ITEM", "name": "Blackened Chicken Alfredo", "description":
+        "Spicy blackened chicken served over fettuccine, tossed with tomatoes and
+        scallions in a garlic parmesan cream sauce"}, {"price": "18.99", "type": "ITEM",
+        "name": "Sesame Salmon", "description": "Fresh atlantic salmon pan seared
+        with sesame seeds and drizzled with a soy citrus reduction. Served with your
+        choice of two sides"}, {"price": "14.99", "type": "ITEM", "name": "Chicken
+        Parmesan", "description": "Lightly breaded chicken breast smothered in marinara
+        with melted provolone and parmesan cheeses over a bed of fettuccine"}]}],
+        "section_name": "Entrees"}, {"subsections": [{"subsection_name": "", "contents":
+        [{"price": "3.99", "type": "ITEM", "name": "Sauteed Broccoli"}, {"price":
+        "3.99", "type": "ITEM", "name": "Sweet Corn"}, {"price": "3.99", "type": "ITEM",
+        "name": "French Fries"}, {"price": "3.99", "type": "ITEM", "name": "Waffle
+        Fries"}, {"price": "3.99", "type": "ITEM", "name": "Sweet Fries"}, {"price":
+        "3.99", "type": "ITEM", "name": "Onion Rings"}, {"price": "3.99", "type":
+        "ITEM", "name": "Cole Slaw"}, {"price": "3.99", "type": "ITEM", "name": "Mac
+        and Cheese"}, {"price": "3.99", "type": "ITEM", "name": "Rice Pilaf"}, {"price":
+        "3.99", "type": "ITEM", "name": "Garlic Mashed Potatoes"}, {"price": "3.99",
+        "type": "ITEM", "name": "Black Beans"}, {"price": "3.99", "type": "ITEM",
+        "name": "Mexican Rice"}]}], "section_name": "Sides\u200f"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"price": "6.99", "type": "ITEM", "name":
+        "Chocolate Lava Divine", "description": "Rich chocolate cake with a warm,
+        velvety center, served with vanilla ice cream and topped with hot fudge"},
+        {"price": "6.99", "type": "ITEM", "name": "Fried Snickers", "description":
+        "Two snickers bar wrapped in a crispy shell, deep fried and topped with chocolate
+        sauce. Served with vanilla ice cream"}, {"price": "5.99", "type": "ITEM",
+        "name": "Ice Cream Sandwich", "description": "A large scoop of vanilla ice
+        cream sandwiched between two freshly baked chocolate chip cookies and served
+        with warm chocolate sauce"}]}], "section_name": "Dessert"}, {"subsections":
+        [{"subsection_name": "", "contents": [{"text": "Served Saturday and Sunday
+        until 3:00pm", "type": "SECTION_TEXT"}, {"price": "6.99", "type": "ITEM",
+        "name": "Three Eggs", "description": "Three eggs any style with homes fries,
+        choice of bacon or sausage and toast"}, {"price": "8.99", "type": "ITEM",
+        "name": "Eggs Benedict", "description": "Three poached eggs and canadian bacon
+        on an English muffin, topped with fresh hollandaise sauce. Served with home
+        fries"}, {"price": "6.99", "type": "ITEM", "name": "Berries and Yogurt (Low-Fat)",
+        "description": "Fresh mixed berries, granola and vanilla yogurt"}, {"price":
+        "9.99", "type": "ITEM", "name": "Breakfast Sandwich", "description": "Scrambled
+        eggs,\u200f applewood smoked bacon, home fries and cheddar cheese on a gourmet
+        sub roll, served with a side of fresh fruit"}, {"price": "6.99", "type": "ITEM",
+        "name": "Build Your Own Omelet", "description": "Served with home fries and
+        toast"}, {"price": "8.99", "type": "ITEM", "name": "Irish Breakfast", "description":
+        "Two eggs served with corn beef hash and a side of toast"}, {"price": "7.99",
+        "type": "ITEM", "name": "Ultimate French Toast", "description": "Thick cut
+        brioche soaked with cinnamon and vanilla, then crusted with corn flakes. Drizzled
+        with white chocolate and served with warm, maple syrup"}, {"price": "7.99",
+        "option_groups": [{"text": "Extra", "type": "OPTION_ADD", "options": [{"price":
+        "+1.05", "name": "Strawberries"}, {"price": "+1.05", "name": "Chocolate chips"}]}],
+        "type": "ITEM", "name": "Old Fashioned Buttermilk Pancakes", "description":
+        "Served with warm maple syrup, butter and powered sugar"}]}], "section_name":
+        "Saturday Breakfast\u200f"}], "currency_symbol": "$"}], "locu_id": "ac1cda48ff99d7b543fe",
+        "contact": {"phone": "(617) 269-0990"}, "location": {"locality": "Boston",
+        "country": "United States", "region": "MA", "postal_code": "02127", "address1":
+        "734 E. Broadway", "geo": {"type": "Point", "coordinates": [-71.0359436971925,
+        42.335774239595]}}, "website_url": "http://bostonbeergarden.com"}]}'
+    http_version: 
+  recorded_at: Sat, 23 Jan 2016 17:46:31 GMT
+recorded_with: VCR 3.0.1

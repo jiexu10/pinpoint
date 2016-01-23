@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120210723) do
+ActiveRecord::Schema.define(version: 20160123055332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cartitems", force: :cascade do |t|
+    t.integer  "cart_id",    null: false
+    t.integer  "item_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "quantity",   null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer  "user_id",                           null: false
+    t.integer  "restaurant_id",                     null: false
+    t.integer  "order_id"
+    t.string   "status",        default: "pending", null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       null: false
@@ -24,11 +41,13 @@ ActiveRecord::Schema.define(version: 20160120210723) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string  "name",                null: false
-    t.string  "description"
-    t.integer "menusection_id"
-    t.integer "restaurantdetail_id", null: false
-    t.string  "price",               null: false
+    t.string   "name",                null: false
+    t.string   "description"
+    t.integer  "menusection_id"
+    t.integer  "restaurantdetail_id", null: false
+    t.string   "price",               null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "menusections", force: :cascade do |t|
@@ -45,6 +64,14 @@ ActiveRecord::Schema.define(version: 20160120210723) do
     t.datetime "updated_at",          null: false
     t.string   "open_hour"
     t.string   "close_hour"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id",                           null: false
+    t.integer  "restaurant_id",                     null: false
+    t.string   "order_status",  default: "pending", null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "restaurantcategories", force: :cascade do |t|

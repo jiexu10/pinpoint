@@ -12,8 +12,7 @@ feature 'restaurant signs in', %{
   # - [ ] If I specify an invalid email and password, I remain unauthenticated
   # - [ ] If I am already signed in, I can't sign in again
 
-  let(:rest) { FactoryGirl.create(:restaurant, :beergard) }
-  let!(:makerd) { MakeRestaurantDetail.new(rest, 'name' => rest.company_name) }
+  let(:rest) { create_restaurant('Boston Beer Garden') }
 
   scenario 'an existing restaurant specifies a valid email and password' do
     visit root_path
@@ -25,8 +24,6 @@ feature 'restaurant signs in', %{
     expect(current_path).to eq(restaurant_path(rest))
     expect(page).to have_content('Welcome back!')
     expect(page).to have_content('Sign Out')
-    expect(page).to have_content("First Name: #{rest.first_name}")
-    expect(page).to have_content("Last Name: #{rest.last_name}")
-    expect(page).to have_content("Company Name: #{rest.company_name}")
+    expect(page).to have_content(rest.company_name)
   end
 end
