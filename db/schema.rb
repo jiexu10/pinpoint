@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123055332) do
+ActiveRecord::Schema.define(version: 20160123201819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20160123055332) do
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id",                           null: false
     t.integer  "restaurant_id",                     null: false
-    t.integer  "order_id"
     t.string   "status",        default: "pending", null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
@@ -69,10 +68,13 @@ ActiveRecord::Schema.define(version: 20160123055332) do
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id",                           null: false
     t.integer  "restaurant_id",                     null: false
-    t.string   "order_status",  default: "pending", null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+    t.integer  "cart_id",                           null: false
+    t.string   "order_status",  default: "Pending", null: false
   end
+
+  add_index "orders", ["cart_id"], name: "index_orders_on_cart_id", unique: true, using: :btree
 
   create_table "restaurantcategories", force: :cascade do |t|
     t.integer  "restaurantdetail_id", null: false

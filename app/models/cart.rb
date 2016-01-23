@@ -3,7 +3,7 @@ class Cart < ActiveRecord::Base
   has_many :items, through: :cartitems
   belongs_to :user
   belongs_to :restaurant
-  belongs_to :order
+  has_one :order
   accepts_nested_attributes_for :cartitems, reject_if: :reject_cartitems?
 
   validates :user, presence: true
