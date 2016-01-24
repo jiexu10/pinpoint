@@ -1,0 +1,46 @@
+div.divider {
+  margin: 1.6rem;
+}
+
+.info-description {
+  border-top: 2px dotted $primary-color;
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.info-name {
+  float: left;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.info-price {
+  float: right;
+  font-weight: bold;
+}
+
+.menu-title {
+  text-align: center;
+}
+
+section.block-list ul {
+  margin: 1em;
+  border: 1px solid $secondary-color;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  list-style-position: outside;
+  margin-bottom: 15px;
+}
+
+section.block-list ul li {
+  display: block;
+  border-bottom: 1px solid $secondary-color;
+  padding: 0.5em;
+  margin: 0;
+}
+
+section.block-list ul li:last-child {
+    border-bottom: 0;
+}

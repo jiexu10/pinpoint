@@ -6,7 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-working_restaurants = [
-  "Boston Beer Garden",
-  "Betty's Wok & Noodle Diner"
-]
+Seeder.seed_restaurants

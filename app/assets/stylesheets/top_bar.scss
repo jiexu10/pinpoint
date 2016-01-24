@@ -1,5 +1,25 @@
+.has-submenu > a {
+  border-left: 1px solid white;
+  margin-left: 1rem;
+}
+
+.spacer {
+  margin-bottom: rem-calc(50);
+}
+
 .top-bar {
   background-color: $primary-color;
+}
+
+.top-bar a {
+  color: white;
+  background-color: $primary-color;
+  text-align: right;
+}
+
+.top-bar-right ul li {
+  background-color: $primary-color;
+  color : white;
 }
 
 .top-bar-title {
@@ -11,22 +31,8 @@
   }
 }
 
-.top-bar a {
-  color: white;
-  background-color: $primary-color;
-  text-align: right;
-}
-
-.has-submenu > a {
-  border-left: 1px solid white;
-}
-
 .top-bar-title a {
   font-family: $title-font-family;
   color: white;
   font-weight: bold;
-}
-
-.spacer {
-  margin-bottom: rem-calc(50);
 }

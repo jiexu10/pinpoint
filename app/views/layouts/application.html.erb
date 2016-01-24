@@ -22,16 +22,14 @@
         </div>
         <div id="responsive-menu">
           <div class="top-bar-right">
-            <% if user_signed_in? || restaurant_signed_in? %>
-              <ul>
-                <% if user_signed_in? %>
-                  <li>Welcome, <%= current_user.first_name %>!</li>
-                <% elsif restaurant_signed_in? %>
-                  <li>Welcome, <%= current_restaurant.first_name %>!</li>
-                <% end %>
-              </ul>
-            <% end %>
             <ul class="dropdown menu" data-dropdown-menu>
+              <% if user_signed_in? || restaurant_signed_in? %>
+                  <% if user_signed_in? %>
+                    <li><%= link_to "Welcome, #{current_user.first_name}!", '#' %></li>
+                  <% elsif restaurant_signed_in? %>
+                    <li><%= link_to "Welcome, #{current_restaurant.first_name}!", '#' %></li>
+                  <% end %>
+              <% end %>
               <li>
                 <a href="#">Account</a>
                 <ul class="menu vertical">

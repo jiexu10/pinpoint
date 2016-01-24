@@ -1,23 +1,21 @@
-<div class="row">
-  <div class="small-12 medium-4 columns">
-    <div class="restaurant-info-<%= restaurant.id %>">
-      <%= link_to restaurant.restaurantdetail.name, restaurant_path(restaurant) %>
-      Phone: <%= restaurant.restaurantdetail.phone %>
-      Website: <%= restaurant.restaurantdetail.website_url %>
-      Address:
+<div class="small-12 medium-6 large-4 columns">
+  <div class="callout clearfix restaurant-info-<%= restaurant.id %>">
+    <div data-equalizer-watch>
+      <h5><%= link_to restaurant.restaurantdetail.name, restaurant %></h5>
       <%= restaurant.restaurantdetail.address_one %>
       <% if restaurant.restaurantdetail.address_two %>
-      <%= restaurant.restaurantdetail.address_two %>
+        <%= restaurant.restaurantdetail.address_two %>
       <% end %>
-      <%= restaurant.restaurantdetail.city %>, <%= restaurant.restaurantdetail.state %> <%= restaurant.restaurantdetail.zip_code %>
-      <br>
-      <br>
-      Categories:
+      <%= restaurant.restaurantdetail.city %>, <%= restaurant.restaurantdetail.state %> <%= restaurant.restaurantdetail.zip_code %><br />
+      <%= restaurant.restaurantdetail.phone %><br />
+      <%= link_to 'Website', restaurant.restaurantdetail.website_url %><br />
+      <%= "Categories: " unless restaurant.categories.count == 1 %>
       <% restaurant.categories.each do |category| %>
-        <% unless category.name == "Restaurant" %>
+        <% unless category.name == "Restaurants" %>
           <%= category.name %>
         <% end %>
       <% end %>
+      <br />
     </div>
   </div>
 </div>
