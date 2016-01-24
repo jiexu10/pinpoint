@@ -16,13 +16,13 @@
 .info-name {
   color: $primary-color;
   float: left;
-  font-weight: bold;
   font-size: 1.1rem;
+  font-weight: bold;
 
-  & label {
+  label {
     color: $primary-color;
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
   }
 }
 
@@ -50,7 +50,7 @@
   text-align: center;
 }
 
-.block-list ul {
+.item-list {
   border: 1px solid $secondary-color;
   font-size: 0.875rem;
   line-height: 1.6;

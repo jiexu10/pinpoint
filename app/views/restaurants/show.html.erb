@@ -68,12 +68,11 @@
           <%= f.submit 'Update Cart' %>
         </div>
       <% end %>
-      <br>
       <hr>
-      <br>
       <%= render @cart %>
       <%= render partial: 'orders/form',
         locals: { order: @order } %>
+      <br>
     <% else %>
       <% @restaurant.menusections.each do |section| %>
         <section class="block-list">
