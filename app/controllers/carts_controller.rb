@@ -10,7 +10,7 @@ class CartsController < ApplicationController
           ci.update_attributes(value)
         end
       end
-      redirect_to restaurant_path(@cart.restaurant)
+      redirect_to @cart.restaurant.restaurantdetail
     end
   end
 

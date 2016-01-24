@@ -19,7 +19,7 @@ feature 'user creates an order via cart', %{
       Cart.add_item(cart, item, '5')
     end
     user_sign_in(user)
-    visit restaurant_path(rest1)
+    visit restaurantdetail_path(rest1.restaurantdetail)
     click_button 'Place Order'
 
     expect(page).to have_content('Order Placed!')

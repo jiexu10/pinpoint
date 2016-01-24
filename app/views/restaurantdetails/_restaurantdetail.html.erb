@@ -1,0 +1,21 @@
+<div class="small-12 medium-6 large-4 columns">
+  <div class="callout clearfix restaurant-info-<%= restaurantdetail.id %>">
+    <div data-equalizer-watch>
+      <h5><%= link_to restaurantdetail.name, restaurantdetail %></h5>
+      <%= restaurantdetail.address_one %>
+      <% if restaurantdetail.address_two %>
+        <%= restaurantdetail.address_two %>
+      <% end %>
+      <%= restaurantdetail.city %>, <%= restaurantdetail.state %> <%= restaurantdetail.zip_code %><br />
+      <%= restaurantdetail.phone %><br />
+      <%= link_to 'Website', restaurantdetail.website_url %><br />
+      <%= "Categories: " unless restaurantdetail.categories.count == 1 %>
+      <% restaurantdetail.categories.each do |category| %>
+        <% unless category.name == "Restaurants" %>
+          <%= category.name %>
+        <% end %>
+      <% end %>
+      <br />
+    </div>
+  </div>
+</div>
