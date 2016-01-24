@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
       redirect_to order_path(order)
     else
       flash[:error] = 'Error in order'
-      redirect_to restaurant_path(restaurant)
+      redirect_to restaurant.restaurantdetail
     end
   end
 

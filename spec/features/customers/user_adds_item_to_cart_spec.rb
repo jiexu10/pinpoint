@@ -46,7 +46,7 @@ feature 'user creates an order via cart', %{
       Cart.add_item(cart, item, '5')
     end
     user_sign_in(user)
-    visit restaurant_path(rest1)
+    visit restaurantdetail_path(rest1.restaurantdetail)
 
     rest1.items.each_with_index do |item, index|
       within(".item-#{item.id}") do
@@ -72,7 +72,7 @@ feature 'user creates an order via cart', %{
   end
 
   scenario 'logged out user cannot add items to cart' do
-    visit restaurant_path(rest1)
+    visit restaurantdetail_path(rest1.restaurantdetail)
 
     rest1.items.each_with_index do |item, index|
       within(".item-#{item.id}") do

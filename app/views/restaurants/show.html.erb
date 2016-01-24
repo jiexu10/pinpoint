@@ -1,3 +1,5 @@
+sample show page
+
 <div class="small-10 small-centered columns">
   <div class="row">
     <h1><%= @restaurant.restaurantdetail.name %></h1>
@@ -18,69 +20,5 @@
       <% end %>
     <% end %>
     <% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
-  </div>
-  <br>
-  <br>
-  <div class="row">
-    <div class="menu-title">
-      <h2>Menu</h2>
-    </div>
-    <% if user_signed_in? %>
-      <%= form_for(@cart) do |f| %>
-        <section class="block-list">
-          <ul class="item-list">
-            <% @cartitems.each do |cartitem| %>
-              <%= f.fields_for :cartitems, cartitem, include_id: true do |ff| %>
-                <li>
-                  <div class="item-<%= cartitem.item.id %>">
-                    <div class="info-name">
-                      <%= ff.label :quantity, cartitem.item.name %>
-                    </div>
-                    <div class="info-quantity">
-                      <%= ff.text_field :quantity, class: "quantity" %>
-                    </div>
-                    <div class="info-price">
-                      <%= cartitem.item.price %>
-                    </div>
-                    <%= ff.hidden_field :item_id, value: "#{cartitem.item.id}" %>
-                    <%= ff.hidden_field :cart_id, value: "#{@cart.id}" %>
-                    <% if cartitem.id %>
-                      <%= ff.hidden_field :id, value: "#{cartitem.id}" %>
-                    <% end %>
-                    <% if cartitem.item.description.blank? %>
-                      <br />
-                      <div class="form-divider">
-                      </div>
-                    <% else %>
-                      <br />
-                      <div class="info-description">
-                        <%= cartitem.item.description %>
-                        <br />
-                      </div>
-                    <% end %>
-                  </div>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </section>
-        <div class='actions'>
-          <%= f.submit 'Update Cart' %>
-        </div>
-      <% end %>
-      <hr>
-      <%= render @cart %>
-      <%= render partial: 'orders/form',
-        locals: { order: @order } %>
-      <br>
-    <% else %>
-      <% @restaurant.menusections.each do |section| %>
-        <section class="block-list">
-          <ul class="item-list">
-            <%= render partial: 'item', collection: section.items, as: :item %>
-          </ul>
-        </section>
-      <% end %>
-    <% end %>
   </div>
 </div>

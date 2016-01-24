@@ -42,13 +42,6 @@ feature 'restaurant signs up', %{
     expect(page).to have_content('734 E. Broadway')
     expect(page).to have_content('Traditional American')
     expect(page).to have_content('http://bostonbeergarden.com')
-    expect(page).to have_content('Menu')
-    expect(page).to have_content('Spinach and Artichoke Dip')
-    expect(page).to have_content('9.99')
-    expect(page).to have_content('Baby spinach, artichoke hearts, roasted red')
-    expect(page).to have_content('Old Fashioned Buttermilk Pancakes')
-    expect(page).to have_content('7.99')
-    expect(page).to have_content('Served with warm maple syrup, butter and')
   end
 
   scenario 'required information of company name is not supplied' do

@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   devise_for :restaurants,
     controllers: { registrations: "restaurants/registrations" }
-  root 'restaurants#index'
+  root 'restaurantdetails#index'
 
   devise_for :users
 
-  resources :restaurants, only: [:index, :show]
+  resources :restaurants, only: [:show]
+
+  resources :restaurantdetails, only: [:index, :show]
 
   resources :carts, only: [:create, :update]
 
