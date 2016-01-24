@@ -1,3 +1,19 @@
-restaurant index page
-
-<%= render @restaurants %>
+<div class="small-12 columns">
+  <div class="row">
+    <div class="overlay">
+      <div class="search-bar small-6 small-centered columns">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="spacer">
+    </div>
+  </div>
+  <div class="restaurant-container row" data-equalizer data-equalize-by-row="true">
+    <div class="small-11 small-centered columns">
+      <%= render @restaurants %>
+    </div>
+  </div>
+</div>

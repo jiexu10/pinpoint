@@ -1,6 +1,20 @@
-<div class="item-<%= item.id %>">
-  <%= item.name %> - <%= item.price %>
-  <br />
-  <%= item.description %>
-  <br />
+<div class="item item-<%= item.id %>">
+  <li>
+    <div class="info-name">
+      <%= item.name %>
+    </div>
+    <div class="info-price">
+      <%= item.price %>
+    </div>
+    <% if item.description.blank? %>
+      <div class="divider">
+      </div>
+    <% else %>
+      <br />
+      <div class="info-description">
+        <%= item.description %>
+        <br />
+      </div>
+    <% end %>
+  </li>
 <div>

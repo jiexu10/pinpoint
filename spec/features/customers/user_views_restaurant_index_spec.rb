@@ -27,7 +27,9 @@ feature 'user sees restaurant index', %{
         expect(page).to have_content(restaurant.restaurantdetail.zip_code)
         expect(page).to have_content(restaurant.restaurantdetail.phone)
         restaurant.categories.each do |category|
-          expect(page).to have_content(category.name)
+          unless category.name == "Restaurants"
+            expect(page).to have_content(category.name)
+          end
         end
       end
     end

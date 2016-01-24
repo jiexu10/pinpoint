@@ -1,0 +1,72 @@
+.divider {
+  margin: 1.6rem;
+}
+
+.form-divider {
+  margin: 0;
+}
+
+.info-description {
+  border-top: 2px dotted $primary-color;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+}
+
+.info-name {
+  color: $primary-color;
+  float: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  label {
+    color: $primary-color;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
+
+.info-price {
+  float: right;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.info-quantity {
+  float: right;
+
+  [type="text"],
+  textarea {
+    height: 1.75rem;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: -0.2rem;
+    padding: 0;
+    width: 2rem;
+  }
+}
+
+.menu-title {
+  text-align: center;
+}
+
+.item-list {
+  border: 1px solid $secondary-color;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  list-style-position: outside;
+  margin: 1em;
+  margin-bottom: 15px;
+
+  li {
+    border-bottom: 1px solid $secondary-color;
+    display: block;
+    margin: 0;
+    padding: 0.5em;
+  }
+}
+
+
+.block-list li:last-child {
+  border-bottom: 0;
+}

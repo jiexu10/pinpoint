@@ -1,0 +1,38 @@
+.has-submenu > a {
+  border-left: 1px solid $white;
+}
+
+.spacer {
+  margin-bottom: rem-calc(50);
+}
+
+.top-bar {
+  background-color: $primary-color;
+
+  a {
+    background-color: $primary-color;
+    color: $white;
+    text-align: right;
+  }
+}
+
+
+.top-bar-right li {
+  background-color: $primary-color;
+  color: $white;
+}
+
+.top-bar-title {
+  float: left;
+  padding: 0.2rem;
+
+  a {
+    color: $white;
+    font-family: $title-font-family;
+    font-weight: bold;
+  }
+
+  h5 {
+    margin: 0;
+  }
+}
