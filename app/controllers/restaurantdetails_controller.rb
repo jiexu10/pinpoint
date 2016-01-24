@@ -2,6 +2,7 @@ class RestaurantdetailsController < ApplicationController
   def index
     @restaurantdetails = Restaurantdetail.all
   end
+
   def show
     @restaurantdetail = Restaurantdetail.find(params[:id])
     @restaurant = @restaurantdetail.restaurant
