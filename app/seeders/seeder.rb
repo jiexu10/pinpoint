@@ -8,7 +8,7 @@ class Seeder
     "Papagayo",
     "Morse Fish Company",
     "The Wholy Grain"
-  ]
+  ].freeze
 
   def self.seed_restaurants
     WORKING_RESTAURANTS.each do |restaurant|

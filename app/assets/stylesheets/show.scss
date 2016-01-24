@@ -1,8 +1,8 @@
-div.divider {
+.divider {
   margin: 1.6rem;
 }
 
-div.form-divider {
+.form-divider {
   margin: 0;
 }
 
@@ -29,11 +29,12 @@ div.form-divider {
 .info-quantity {
   float: right;
 
-  [type="text"], textarea {
+  [type="text"],
+  textarea {
     width: 2rem;
     height: 1.75rem;
     margin-top: -0.2rem;
-    margin-right: 0rem;
+    margin-right: 0;
     margin-bottom: 0;
     padding: 0;
   }
@@ -43,7 +44,7 @@ div.form-divider {
   text-align: center;
 }
 
-section.block-list ul {
+.block-list ul {
   margin: 1em;
   border: 1px solid $secondary-color;
   font-size: 0.875rem;
@@ -52,11 +53,11 @@ section.block-list ul {
   margin-bottom: 15px;
 }
 
-section.block-list ul li {
-  display: block;
+.block-list ul li {
   border-bottom: 1px solid $secondary-color;
-  padding: 0.5em;
+  display: block;
   margin: 0;
+  padding: 0.5em;
 }
 
 section.block-list ul li:last-child {

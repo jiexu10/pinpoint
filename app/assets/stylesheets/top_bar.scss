@@ -1,6 +1,5 @@
 .has-submenu > a {
-  border-left: 1px solid white;
-  margin-left: 1rem;
+  border-left: 1px solid $white;
 }
 
 .spacer {
@@ -9,30 +8,31 @@
 
 .top-bar {
   background-color: $primary-color;
+
+  a {
+    color: $white;
+    background-color: $primary-color;
+    text-align: right;
+  }
 }
 
-.top-bar a {
-  color: white;
-  background-color: $primary-color;
-  text-align: right;
-}
 
-.top-bar-right ul li {
+.top-bar-right li {
   background-color: $primary-color;
-  color : white;
+  color: $white;
 }
 
 .top-bar-title {
   float: left;
   padding: 0.2rem;
 
+  a {
+    color: $white;
+    font-family: $title-font-family;
+    font-weight: bold;
+  }
+
   h5 {
     margin: 0;
   }
-}
-
-.top-bar-title a {
-  font-family: $title-font-family;
-  color: white;
-  font-weight: bold;
 }
