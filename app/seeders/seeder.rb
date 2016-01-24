@@ -1,4 +1,5 @@
 require_relative '../../spec/support/restaurant_helper'
+require 'factory_girl_rails'
 
 class Seeder
   WORKING_RESTAURANTS = [
