@@ -27,29 +27,43 @@
     </div>
     <% if user_signed_in? %>
       <%= form_for(@cart) do |f| %>
-        <% @cartitems.each do |cartitem| %>
-          <section class="block-list">
-            <ul class="item-list">
+        <section class="block-list">
+          <ul class="item-list">
+            <% @cartitems.each do |cartitem| %>
               <%= f.fields_for :cartitems, cartitem, include_id: true do |ff| %>
-                <div class="item-<%= cartitem.item.id %>">
-                  <li>
+                <li>
+                  <div class="item-<%= cartitem.item.id %>">
                     <div class="info-name">
-                      <%= ff.label :quantity, "#{cartitem.item.name} - #{cartitem.item.price}" %>
+                      <%= ff.label :quantity, cartitem.item.name %>
                     </div>
-                    <%= ff.text_field :quantity %>
+                    <div class="info-quantity">
+                      <%= ff.text_field :quantity, class: "quantity" %>
+                    </div>
+                    <div class="info-price">
+                      <%= cartitem.item.price %>
+                    </div>
                     <%= ff.hidden_field :item_id, value: "#{cartitem.item.id}" %>
                     <%= ff.hidden_field :cart_id, value: "#{@cart.id}" %>
                     <% if cartitem.id %>
                       <%= ff.hidden_field :id, value: "#{cartitem.id}" %>
                     <% end %>
-                    <br />
-                    <%= cartitem.item.description %>
-                  </li>
-                </div>
+                    <% if cartitem.item.description.blank? %>
+                      <br />
+                      <div class="form-divider">
+                      </div>
+                    <% else %>
+                      <br />
+                      <div class="info-description">
+                        <%= cartitem.item.description %>
+                        <br />
+                      </div>
+                    <% end %>
+                  </div>
+                </li>
               <% end %>
-            </ul>
-          </section>
-        <% end %>
+            <% end %>
+          </ul>
+        </section>
         <div class='actions'>
           <%= f.submit 'Update Cart' %>
         </div>

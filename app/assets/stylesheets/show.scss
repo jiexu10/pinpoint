@@ -2,6 +2,10 @@ div.divider {
   margin: 1.6rem;
 }
 
+div.form-divider {
+  margin: 0;
+}
+
 .info-description {
   border-top: 2px dotted $primary-color;
   margin-top: 0.3rem;
@@ -19,6 +23,20 @@ div.divider {
 .info-price {
   float: right;
   font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.info-quantity {
+  float: right;
+
+  [type="text"], textarea {
+    width: 2rem;
+    height: 1.75rem;
+    margin-top: -0.2rem;
+    margin-right: 0rem;
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 
 .menu-title {
