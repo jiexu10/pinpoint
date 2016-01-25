@@ -12,7 +12,8 @@ feature 'user creates an order via cart', %{
 
   let(:user) { FactoryGirl.create(:user) }
   let!(:rest1) { create_restaurant('Boston Beer Garden') }
-  let!(:cart) { FactoryGirl.create(:cart, user: user, restaurant: rest1) }
+  let(:cart) { FactoryGirl.create(:cart, user: user, restaurant: rest1) }
+  let!(:statuses) { create_statuses }
 
   scenario 'user has a cart and places an order' do
     rest1.items.each do |item|

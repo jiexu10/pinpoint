@@ -12,7 +12,7 @@ RSpec.describe Seeder, type: :model, vcr: true do
   it 'can seed the database with status info' do
     Seeder.seed_statuses
     expect(Status.all.count).to eq(4)
-    Seeder::STATUS_NAMES.each do |status_name|
+    Seeder::STATUSES.each do |status_name|
       expect(Status.find_by(name: status_name)).to be_a(Status)
     end
   end

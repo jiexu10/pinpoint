@@ -4,7 +4,7 @@ feature 'restaurant changes orders from show page', %{
   As a restaurant
   I want to be able to change the status on orders
   So I can keep track of what is done and what orders need to be filled
-}, vcr: true, focus: true do
+}, vcr: true do
 
   # Acceptance Criteria:
   # - [x] On the order index page, I should see a button to change order status
