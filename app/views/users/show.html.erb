@@ -6,8 +6,8 @@ Company Name: <%= @user.company_name %>
 
 Pending Orders
 <div class="pending-order-list">
-  <% if @pend_orders.any? %>
-    <%= render partial: 'orders/order', collection: @pend_orders, as: :order %>
+  <% if @pending_orders.any? %>
+    <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
   <% else %>
     No pending orders!
   <% end %>

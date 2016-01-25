@@ -4,7 +4,7 @@ feature 'restaurant views orders on show page', %{
   As a restaurant
   I want to see all open orders
   So that I know food to make
-}, vcr: true, focus: true do
+}, vcr: true do
 
   # Acceptance Criteria:
   # - [x] On login as a restaurant, I should be brought to an order index page
