@@ -22,3 +22,21 @@ sample show page
     <% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
   </div>
 </div>
+
+Pending Orders
+<div class="pending-order-column">
+  <% if @pend_orders.any? %>
+    <%= render partial: 'orders/order', collection: @pend_orders, as: :order %>
+  <% else %>
+    No pending orders!
+  <% end %>
+</div>
+
+Completed Orders:
+<div class="completed-order-column">
+  <% if @comp_orders.any? %>
+    <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
+  <% else %>
+    No completed orders yet!
+  <% end %>
+</div>

@@ -4,18 +4,20 @@ First Name: <%= @user.first_name %>
 Last Name: <%= @user.last_name %>
 Company Name: <%= @user.company_name %>
 
-<% if @orders.any? %>
 Pending Orders
-  <div class="pending-order-list">
-    <%= render @orders %>
-  </div>
-<% end %>
+<div class="pending-order-list">
+  <% if @pending_orders.any? %>
+    <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
+  <% else %>
+    No pending orders!
+  <% end %>
+</div>
 
-<% if @comp_orders.any? %>
 Completed Orders:
-  <div class="completed-order-list">
+<div class="completed-order-list">
+  <% if @comp_orders.any? %>
     <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
-  </div>
-<% else %>
-  No completed orders yet!
-<% end %>
+  <% else %>
+    No completed orders yet!
+  <% end %>
+</div>
