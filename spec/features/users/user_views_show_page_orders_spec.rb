@@ -44,11 +44,13 @@ feature 'user views orders on user show page', %{
       expect(page).to have_content(orders.last.user.full_name)
       expect(page).to have_content(orders.last.restaurant.company_name)
       expect(page).to have_content(orders.last.id)
+      expect(page).to have_content(orders.last.order_status)
     end
     within('.completed-order-list') do
       expect(page).to have_content(orders.first.user.full_name)
       expect(page).to have_content(orders.first.restaurant.company_name)
       expect(page).to have_content(orders.first.id)
+      expect(page).to have_content(orders.first.order_status)
     end
     expect(orders.last.restaurant.company_name).to appear_before(orders.first.restaurant.company_name)
     expect(orders[1].restaurant.company_name).to appear_before(orders.first.restaurant.company_name)
@@ -59,6 +61,6 @@ feature 'user views orders on user show page', %{
 
     expect(page).to have_content("You need to sign in before continuing!")
     expect(page).to_not have_css('.pending-order-list')
-    expect(page).to_not have_css('.order-list')
+    expect(page).to_not have_css('.completed-order-list')
   end
 end

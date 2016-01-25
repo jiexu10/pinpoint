@@ -5,12 +5,14 @@ Last Name: <%= @user.last_name %>
 Company Name: <%= @user.company_name %>
 
 <% if @orders.any? %>
+Pending Orders
   <div class="pending-order-list">
     <%= render @orders %>
   </div>
 <% end %>
 
 <% if @comp_orders.any? %>
+Completed Orders:
   <div class="completed-order-list">
     <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
   </div>
