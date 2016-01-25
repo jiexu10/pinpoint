@@ -20,12 +20,12 @@ feature 'restaurant views orders on show page', %{
   scenario 'restaurant logs in and sees pending and completed orders' do
     create_orders_from_carts(carts)
 
-    pend_status = Status.find_by(name: 'Pending')
-    comp_status = Status.find_by(name: 'Complete')
+    pending = Status.find_by(name: 'Pending')
+    complete = Status.find_by(name: 'Complete')
     rest_orders = Order.where(restaurant: rest).order(created_at: :asc)
     comp_orders = [rest_orders.first, rest_orders.last]
-    comp_orders.each { |ord| ord.update_attributes(status: comp_status) }
-    pend_orders = Order.where(restaurant: rest, status: pend_status).order(created_at: :asc)
+    comp_orders.each { |ord| ord.update_attributes(status: complete) }
+    pend_orders = Order.where(restaurant: rest, status: pending).order(created_at: :asc)
 
     restaurant_sign_in(rest)
 

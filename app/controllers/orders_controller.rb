@@ -12,8 +12,8 @@ class OrdersController < ApplicationController
   def create
     cart = Cart.find(order_params[:cart_id])
     restaurant = Restaurant.find(order_params[:restaurant_id])
-    pending_status = Status.find_by(name: 'Pending')
-    order = Order.new(cart: cart, restaurant: restaurant, status: pending_status, user: current_user)
+    pending = Status.find_by(name: 'Pending')
+    order = Order.new(cart: cart, restaurant: restaurant, status: pending, user: current_user)
     if order.save && cart.update_attributes(status: 'ordered')
       flash[:notice] = 'Order Placed!'
       redirect_to order_path(order)
@@ -36,6 +36,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:cart_id, :restaurant_id, :id, :sequence, :new_sequence)
+    params.require(:order).permit(:cart_id, :restaurant_id, :id, :new_sequence)
   end
 end
