@@ -1,6 +1,5 @@
 class Seeder
   WORKING_RESTAURANTS = [
-    "Boston Beer Garden",
     "Betty's Wok & Noodle Diner",
     "Siam Bistro",
     "Papagayo",
