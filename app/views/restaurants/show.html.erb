@@ -33,7 +33,7 @@ Pending Orders
 </div>
 
 Confirmed Orders
-<div class="confirm-order-column">
+<div class="confirmed-order-column">
   <% if @confirm_orders.any? %>
     <%= render partial: 'orders/order', collection: @confirm_orders, as: :order %>
   <% else %>

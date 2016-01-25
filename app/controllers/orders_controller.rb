@@ -16,11 +16,21 @@ class OrdersController < ApplicationController
   end
 
   def update
-    binding.pry
+    order = Order.find(params[:id])
+    if current_restaurant == order.restaurant
+      new_status = Status.find_by(sequence: order_params[:new_sequence])
+      if order.update_attributes(status: new_status)
+        flash[:notice] = 'Order Updated!'
+        redirect_to restaurant_path(current_restaurant)
+      end
+    else
+      flash[:notice] = 'Action not permitted.'
+      redirect_to root_path
+    end
   end
   private
 
   def order_params
-    params.require(:order).permit(:cart_id, :restaurant_id)
+    params.require(:order).permit(:cart_id, :restaurant_id, :sequence, :new_sequence)
   end
 end

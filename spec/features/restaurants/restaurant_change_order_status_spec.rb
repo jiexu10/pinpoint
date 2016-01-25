@@ -12,21 +12,23 @@ feature 'restaurant changes orders from show page', %{
   # - [ ] When clicking on one order, other orders should not change
 
   let(:rest) { create_restaurant('Boston Beer Garden') }
-  let(:carts) { FactoryGirl.create_list(:cart, 4, restaurant: rest) }
+  let(:carts) { FactoryGirl.create_list(:cart, 2, restaurant: rest) }
   let!(:statuses) { create_statuses }
 
   scenario 'restaurant can change order status on their orders' do
     create_orders_from_carts(carts)
     orders = Order.all
 
+    restaurant_sign_in(rest)
     visit restaurant_path(rest)
-    expect(orders.count).to eq(4)
+    expect(orders.count).to eq(2)
     orders.each do |order|
       within('.pending-order-column') do
         within(".order-id-#{order.id}") do
           click_button 'Move Right'
         end
       end
+      expect(page).to have_content('Order Updated!')
       within('.confirmed-order-column') do
         within(".order-id-#{order.id}") do
           expect(page).to have_content("Order ID: ##{order.id}")
