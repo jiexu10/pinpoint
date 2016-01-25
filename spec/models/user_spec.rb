@@ -21,6 +21,11 @@ RSpec.describe User, type: :model, vcr: true do
     expect(user.errors[:password_confirmation]).to_not be_blank
   end
 
+  it 'can display full name' do
+    user = FactoryGirl.create(:user)
+    expect(user.full_name).to eq("#{user.first_name} #{user.last_name}")
+  end
+
   it 'finds the right cart for a user' do
     rest = create_restaurant("Boston Beer Garden")
     carts = FactoryGirl.create_list(:cart, 2, restaurant: rest)

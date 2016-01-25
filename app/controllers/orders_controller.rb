@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class Or<% <%  %> %>dersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @cart = @order.cart if @order.cart.status == 'ordered'
