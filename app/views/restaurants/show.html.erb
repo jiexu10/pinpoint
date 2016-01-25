@@ -42,9 +42,9 @@ Confirmed Orders
 </div>
 
 Delivery Orders
-<div class="deliver-order-column">
-  <% if @deliver_orders.any? %>
-    <%= render partial: 'orders/order', collection: @deliver_orders, as: :order %>
+<div class="delivery-order-column">
+  <% if @delivery_orders.any? %>
+    <%= render partial: 'orders/order', collection: @delivery_orders, as: :order %>
   <% else %>
     No delivery orders!
   <% end %>

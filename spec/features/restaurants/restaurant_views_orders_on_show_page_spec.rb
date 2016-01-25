@@ -11,7 +11,9 @@ feature 'restaurant views orders on show page', %{
   # - [x] Orders should be sorted by status
   # - [x] Orders should be sorted by time
 
+  let(:user) { FactoryGirl.create(:user) }
   let(:rest) { create_restaurant('Boston Beer Garden') }
+  let(:rest2) { create_restaurant('Siam Bistro') }
   let(:carts) { FactoryGirl.create_list(:cart, 4, restaurant: rest) }
   let!(:statuses) { create_statuses }
 
@@ -29,11 +31,7 @@ feature 'restaurant views orders on show page', %{
 
     within('.pending-order-column') do
       pend_orders.each do |order|
-        expect(page).to have_content("Order ID: ##{order.id}")
-        order.items.each do |item|
-          expect(page).to have_content(item.name)
-          expect(page).to have_content(order.cart.find_quantity(item))
-        end
+        verify_order(order)
       end
 
       comp_orders.each do |order|
@@ -45,11 +43,7 @@ feature 'restaurant views orders on show page', %{
 
     within('.complete-order-column') do
       comp_orders.each do |order|
-        expect(page).to have_content("Order ID: ##{order.id}")
-        order.items.each do |item|
-          expect(page).to have_content(item.name)
-          expect(page).to have_content(order.cart.find_quantity(item))
-        end
+        verify_order(order)
       end
 
       pend_orders.each do |order|
@@ -58,5 +52,25 @@ feature 'restaurant views orders on show page', %{
 
       expect("Order ID: ##{comp_orders.last.id}").to appear_before("Order ID: ##{comp_orders.first.id}")
     end
+  end
+
+  scenario 'restaurant cannot view other restaurant show page' do
+    restaurant_sign_in(rest2)
+    visit restaurant_path(rest)
+
+    expect(page).to have_content('Action not permitted.')
+  end
+
+  scenario 'user cannot view other restaurant show page' do
+    user_sign_in(user)
+    visit restaurant_path(rest)
+
+    expect(page).to have_content('Action not permitted.')
+  end
+
+  scenario 'logged out user cannot view restaurant show page' do
+    visit restaurant_path(rest)
+
+    expect(page).to have_content('Action not permitted.')
   end
 end

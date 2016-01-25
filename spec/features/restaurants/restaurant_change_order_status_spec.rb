@@ -7,9 +7,9 @@ feature 'restaurant changes orders from show page', %{
 }, vcr: true, focus: true do
 
   # Acceptance Criteria:
-  # - [ ] On the order index page, I should see a button to change order status
-  # - [ ] When I click the button to change order status, it should change
-  # - [ ] When clicking on one order, other orders should not change
+  # - [x] On the order index page, I should see a button to change order status
+  # - [x] When I click the button to change order status, it should change
+  # - [x] When clicking on one order, other orders should not change
 
   let(:rest) { create_restaurant('Boston Beer Garden') }
   let(:carts) { FactoryGirl.create_list(:cart, 2, restaurant: rest) }
@@ -22,22 +22,50 @@ feature 'restaurant changes orders from show page', %{
     restaurant_sign_in(rest)
     visit restaurant_path(rest)
     expect(orders.count).to eq(2)
+
+    columns = [
+      '.pending-order-column',
+      '.confirmed-order-column',
+      '.delivery-order-column',
+      '.complete-order-column'
+    ]
     orders.each do |order|
-      within('.pending-order-column') do
-        within(".order-id-#{order.id}") do
-          click_button 'Move Right'
+      first_three_columns = columns[0..2]
+      first_three_columns.each do |column|
+        within(column) do
+          within(".order-id-#{order.id}") do
+            verify_order(order)
+            click_button 'Move Right'
+          end
         end
       end
+
       expect(page).to have_content('Order Updated!')
-      within('.confirmed-order-column') do
+      within('.complete-order-column') do
         within(".order-id-#{order.id}") do
-          expect(page).to have_content("Order ID: ##{order.id}")
-          order.items.each do |item|
-            expect(page).to have_content(item.name)
-            expect(page).to have_content(order.cart.find_quantity(item))
+          verify_order(order)
+        end
+      end
+    end
+
+    orders.each do |order|
+      last_three_columns = columns[1..3].reverse
+      last_three_columns.each do |column|
+        within(column) do
+          within(".order-id-#{order.id}") do
+            verify_order(order)
+            click_button 'Move Left'
           end
+        end
+      end
+
+      expect(page).to have_content('Order Updated!')
+      within('.pending-order-column') do
+        within(".order-id-#{order.id}") do
+          verify_order(order)
         end
       end
     end
   end
+
 end

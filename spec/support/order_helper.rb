@@ -13,3 +13,11 @@ def create_orders_from_carts(carts)
     create_order(cart, cart.restaurant, status, cart.user)
   end
 end
+
+def verify_order(order)
+  expect(page).to have_content("Order ID: ##{order.id}")
+  order.items.each do |item|
+    expect(page).to have_content(item.name)
+    expect(page).to have_content(order.cart.find_quantity(item))
+  end
+end

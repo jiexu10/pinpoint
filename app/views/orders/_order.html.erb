@@ -10,6 +10,7 @@
   <% unless order.status.name == 'Pending' %>
     <div class="order-form-move-left">
       <%= form_for (order), url: { controller: 'orders', action: 'update' } do |f| %>
+        <%= f.hidden_field :id, value: "#{order.id}" %>
         <%= f.hidden_field :sequence, value: "#{order.status.sequence}" %>
         <%= f.hidden_field :new_sequence, value: "#{order.status.sequence - 1}" %>
         <div class='actions'>
@@ -21,6 +22,7 @@
   <% unless order.status.name == 'Complete' %>
     <div class="order-for-move-right">
       <%= form_for (order), url: { controller: 'orders', action: 'update' } do |f| %>
+        <%= f.hidden_field :id, value: "#{order.id}" %>
         <%= f.hidden_field :sequence, value: "#{order.status.sequence}" %>
         <%= f.hidden_field :new_sequence, value: "#{order.status.sequence + 1}" %>
         <div class='actions'>

@@ -1,7 +1,12 @@
 class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
-    @cart = @order.cart if @order.cart.status == 'ordered'
+    if current_user == @order.user
+      @cart = @order.cart if @order.cart.status == 'ordered'
+    else
+      flash[:notice] = 'Action not permitted.'
+      redirect_to root_path
+    end
   end
 
   def create
@@ -16,7 +21,7 @@ class OrdersController < ApplicationController
   end
 
   def update
-    order = Order.find(params[:id])
+    order = Order.find(order_params[:id]) if order_params[:id]
     if current_restaurant == order.restaurant
       new_status = Status.find_by(sequence: order_params[:new_sequence])
       if order.update_attributes(status: new_status)
@@ -31,6 +36,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:cart_id, :restaurant_id, :sequence, :new_sequence)
+    params.require(:order).permit(:cart_id, :restaurant_id, :id, :sequence, :new_sequence)
   end
 end
