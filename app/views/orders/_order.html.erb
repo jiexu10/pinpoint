@@ -1,7 +1,34 @@
-User: <%= order.user.full_name %>
-Restaurant: <%= order.restaurant.company_name %>
-<%= link_to "Order ID: ##{order.id}", order %>
-Order Status: <%= order.order_status %>
-<br />
+<div class="order-id-<%= order.id %>">
+  User: <%= order.user.full_name %>
+  Restaurant: <%= order.restaurant.company_name %>
+  <%= link_to "Order ID: ##{order.id}", order %>
+  Order Status: <%= order.status.name %>
+  <br />
 
-<%= render partial: 'carts/cart', locals: { cart: order.cart } %>
+  <%= render partial: 'carts/cart', locals: { cart: order.cart } %>
+
+  <% unless order.status.name == 'Pending' %>
+    <div class="order-form move-left">
+      <%= form_for (order), url: { controller: 'orders', action: 'update' } do |f| %>
+        <%= f.hidden_field :status_id, value: "#{order.status.id}" %>
+        <%= f.hidden_field :new_status_id, value: "#{order.status.id - 1}" %>
+        <div class='actions'>
+          <%= f.submit 'Move Left' %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <% unless order.status.name == 'Complete' %>
+    <div class="order-form move-right">
+      <%= form_for (order), url: { controller: 'orders', action: 'update' } do |f| %>
+        <%= f.hidden_field :status_id, value: "#{order.status.id}" %>
+        <%= f.hidden_field :new_status_id, value: "#{order.status.id + 1}" %>
+        <div class='actions'>
+          <%= f.submit 'Move Right' %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+
+</div>

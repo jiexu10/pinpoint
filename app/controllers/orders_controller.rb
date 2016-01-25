@@ -7,16 +7,17 @@ class OrdersController < ApplicationController
   def create
     cart = Cart.find(order_params[:cart_id])
     restaurant = Restaurant.find(order_params[:restaurant_id])
-    order = Order.new(cart: cart, restaurant: restaurant, user: current_user)
+    pending_status = Status.find_by(name: 'Pending')
+    order = Order.new(cart: cart, restaurant: restaurant, status: pending_status, user: current_user)
     if order.save && cart.update_attributes(status: 'ordered')
       flash[:notice] = 'Order Placed!'
       redirect_to order_path(order)
-    else
-      flash[:error] = 'Error in order'
-      redirect_to restaurant.restaurantdetail
     end
   end
 
+  def update
+    binding.pry
+  end
   private
 
   def order_params
