@@ -32,8 +32,26 @@ Pending Orders
   <% end %>
 </div>
 
+Confirmed Orders
+<div class="confirmed-order-column">
+  <% if @confirm_orders.any? %>
+    <%= render partial: 'orders/order', collection: @confirm_orders, as: :order %>
+  <% else %>
+    No confirmed orders!
+  <% end %>
+</div>
+
+Delivery Orders
+<div class="delivery-order-column">
+  <% if @delivery_orders.any? %>
+    <%= render partial: 'orders/order', collection: @delivery_orders, as: :order %>
+  <% else %>
+    No delivery orders!
+  <% end %>
+</div>
+
 Completed Orders:
-<div class="completed-order-column">
+<div class="complete-order-column">
   <% if @comp_orders.any? %>
     <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
   <% else %>

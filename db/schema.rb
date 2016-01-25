@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123201819) do
+ActiveRecord::Schema.define(version: 20160125171857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,12 +66,12 @@ ActiveRecord::Schema.define(version: 20160123201819) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer  "user_id",                           null: false
-    t.integer  "restaurant_id",                     null: false
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.integer  "cart_id",                           null: false
-    t.string   "order_status",  default: "Pending", null: false
+    t.integer  "user_id",       null: false
+    t.integer  "restaurant_id", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "cart_id",       null: false
+    t.integer  "status_id",     null: false
   end
 
   add_index "orders", ["cart_id"], name: "index_orders_on_cart_id", unique: true, using: :btree
@@ -121,6 +121,13 @@ ActiveRecord::Schema.define(version: 20160123201819) do
 
   add_index "restaurants", ["email"], name: "index_restaurants_on_email", unique: true, using: :btree
   add_index "restaurants", ["reset_password_token"], name: "index_restaurants_on_reset_password_token", unique: true, using: :btree
+
+  create_table "statuses", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "sequence",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                          null: false

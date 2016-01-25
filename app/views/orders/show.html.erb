@@ -3,7 +3,7 @@ order show page
 Order ID: <%= @order.id %>
 Customer: <%= @order.user.full_name %>
 Restaurant: <%= @order.restaurant.company_name %>
-Order Status: <%= @order.order_status %>
+Order Status: <%= @order.status.name %>
 
 <h2>Order Details:</h2>
 <%= render @cart %>

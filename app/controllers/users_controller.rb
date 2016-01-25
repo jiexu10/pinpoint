@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @user = current_user
     orders = @user.orders.order(created_at: :desc)
 
-    @comp_orders = orders.select { |order| order.order_status == 'Completed' }
+    @comp_orders = orders.select { |order| order.status.name == 'Complete' }
     @pending_orders = orders - @comp_orders
   end
 end
