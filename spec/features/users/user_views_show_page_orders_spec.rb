@@ -4,7 +4,7 @@ feature 'user views orders on user show page', %{
   As a customer
   I want to see all my orders
   So I can view my history
-}, vcr: true, focus: true do
+}, vcr: true do
 
   # Acceptance Criteria:
   # - [x] I can navigate to an index of orders from the root page
@@ -34,7 +34,7 @@ feature 'user views orders on user show page', %{
       create_order(cart2, rest2, user),
       create_order(cart3, rest3, user)
     ]
-    orders.first.update_attributes(order_status: 'Completed')
+    orders[0].update_attributes(order_status: 'Completed')
     orders[1].update_attributes(order_status: 'Completed')
     user_sign_in(user)
     click_link "Welcome, #{user.first_name}!"
@@ -52,8 +52,8 @@ feature 'user views orders on user show page', %{
       expect(page).to have_content(orders.first.id)
       expect(page).to have_content(orders.first.order_status)
     end
-    expect(orders.last.restaurant.company_name).to appear_before(orders.first.restaurant.company_name)
-    expect(orders[1].restaurant.company_name).to appear_before(orders.first.restaurant.company_name)
+    expect(rest3.company_name).to appear_before(rest1.company_name)
+    expect(rest2.company_name).to appear_before(rest1.company_name)
   end
 
   scenario 'logged out user cannot view show page' do
