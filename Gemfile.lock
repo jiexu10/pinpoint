@@ -117,6 +117,9 @@ GEM
     netrc (0.11.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    orderly (0.0.3)
+      capybara (>= 1.1)
+      rspec (>= 2.14)
     orm_adapter (0.5.0)
     pg (0.18.4)
     pry (0.10.3)
@@ -166,6 +169,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
     rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -250,6 +257,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  orderly
   pg (~> 0.15)
   pry-rails
   rails (= 4.2.5)

@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   def find_cart(restaurant)
     carts.detect { |cart| cart.restaurant == restaurant }
   end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

@@ -11,6 +11,7 @@ feature 'restaurant signs in', %{
   #   I am authenticated and I am directed to my restaurant show page
   # - [x] If I specify an invalid email and password, I remain unauthenticated
   # - [x] If I am already signed in, I can't sign in again
+  # - [ ] Can navigate to restaurant show page from navigation bar
 
   let(:rest) { create_restaurant('Boston Beer Garden') }
 
@@ -25,5 +26,13 @@ feature 'restaurant signs in', %{
     expect(page).to have_content('Welcome back!')
     expect(page).to have_content('Sign Out')
     expect(page).to have_content(rest.company_name)
+  end
+
+  scenario 'use navigation bar to get to show page' do
+    restaurant_sign_in(rest)
+    visit root_path
+    click_link "Welcome, #{rest.first_name}!"
+
+    expect(current_path).to eq(restaurant_path(rest))
   end
 end

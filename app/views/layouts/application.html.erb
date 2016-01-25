@@ -25,9 +25,9 @@
             <ul class="dropdown menu" data-dropdown-menu>
               <% if user_signed_in? || restaurant_signed_in? %>
                   <% if user_signed_in? %>
-                    <li><%= link_to "Welcome, #{current_user.first_name}!", '#' %></li>
+                    <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
                   <% elsif restaurant_signed_in? %>
-                    <li><%= link_to "Welcome, #{current_restaurant.first_name}!", '#' %></li>
+                    <li><%= link_to "Welcome, #{current_restaurant.first_name}!", restaurant_path(current_restaurant) %></li>
                   <% end %>
               <% end %>
               <li>
