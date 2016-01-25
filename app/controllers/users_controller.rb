@@ -6,6 +6,6 @@ class UsersController < ApplicationController
     orders = @user.orders.order(created_at: :desc)
 
     @comp_orders = orders.select { |order| order.order_status == 'Completed' }
-    @orders = orders - @comp_orders
+    @pending_orders = orders - @comp_orders
   end
 end
