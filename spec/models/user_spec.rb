@@ -34,4 +34,24 @@ RSpec.describe User, type: :model, vcr: true do
       expect(cart.user.find_cart(rest)).to eq(cart)
     end
   end
+
+  it 'can have a role of driver' do
+    driver = FactoryGirl.create(:user, :driver)
+    expect(driver).to be_a(User)
+    expect(driver.role).to eq('driver')
+  end
+
+  it 'driver can have orders' do
+    restaurant = create_restaurant('Boston Beer Garden')
+    cart = FactoryGirl.create(:cart, restaurant: restaurant)
+    create_statuses
+    create_orders_from_carts([cart])
+
+    driver = FactoryGirl.create(:user, :driver)
+    order = Order.first
+    order.driver = driver
+
+    expect(order.save).to eq(true)
+    expect(order.driver).to eq(driver)
+  end
 end

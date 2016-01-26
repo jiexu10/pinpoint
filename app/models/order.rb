@@ -4,6 +4,7 @@ class Order < ActiveRecord::Base
   belongs_to :cart
   has_many :items, through: :cart
   belongs_to :status
+  belongs_to :driver, class_name: 'User'
 
   validates :user, presence: true
   validates :restaurant, presence: true
