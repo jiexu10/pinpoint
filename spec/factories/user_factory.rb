@@ -4,5 +4,10 @@ FactoryGirl.define do
     last_name "User"
     sequence(:email) { |n| "user#{n}@test.com" }
     password "password"
+    role "user"
+
+    trait :driver do
+      role "driver"
+    end
   end
 end
