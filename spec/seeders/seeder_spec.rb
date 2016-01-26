@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Seeder, type: :model, vcr: true, focus: true do
+RSpec.describe Seeder, type: :model, vcr: true do
   it 'can seed the database with the expected restaurants' do
     Seeder.seed_restaurants
     expect(Restaurant.all.count).to eq(5)
