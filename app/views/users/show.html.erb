@@ -4,6 +4,12 @@ First Name: <%= @user.first_name %>
 Last Name: <%= @user.last_name %>
 Company Name: <%= @user.company_name %>
 
+<% if @user.role == 'driver' %>
+  <div id='driver-location'>
+    <%= link_to 'Show My Location', '#' %>
+  </div>
+<% end %>
+
 Pending Orders
 <div class="pending-order-list">
   <% if @pending_orders.any? %>

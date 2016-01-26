@@ -35,4 +35,25 @@ class Seeder
       end
     end
   end
+
+  def self.seed_user
+    user = User.new
+    user.first_name = 'Test'
+    user.last_name = 'User'
+    user.email = 'user@example.com'
+    user.password = 'password'
+    user.password_confirmation = 'password'
+    user.save
+  end
+
+  def self.seed_driver
+    driver = User.new
+    driver.first_name = 'Test'
+    driver.last_name = 'Driver'
+    driver.email = 'driver@example.com'
+    driver.password = 'password'
+    driver.password_confirmation = 'password'
+    driver.role = 'driver'
+    driver.save
+  end
 end

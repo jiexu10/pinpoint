@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    orders = @user.orders.order(created_at: :desc)
+    if @user.role == 'user'
+      orders = @user.orders.order(created_at: :desc)
+    elsif @user.role == 'driver'
+      orders = Order.where(driver: @user).order(created_at: :desc)
+    end
 
     @comp_orders = orders.select { |order| order.status.name == 'Complete' }
     @pending_orders = orders - @comp_orders

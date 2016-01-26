@@ -16,4 +16,17 @@ RSpec.describe Seeder, type: :model, vcr: true do
       expect(Status.find_by(name: status_name)).to be_a(Status)
     end
   end
+
+  it 'can seed the database with a test user' do
+    Seeder.seed_user
+    expect(User.all.count).to eq(1)
+    expect(User.first).to be_a(User)
+  end
+
+  it 'can seed the database with a test driver' do
+    Seeder.seed_driver
+    expect(User.all.count).to eq(1)
+    expect(User.first).to be_a(User)
+    expect(User.first.role).to eq('driver')
+  end
 end
