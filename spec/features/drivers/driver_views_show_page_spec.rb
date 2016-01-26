@@ -7,9 +7,9 @@ feature 'user views orders on user show page', %{
 }, vcr: true do
 
   # Acceptance Criteria:
-  # - [ ] On login as a driver, I should be brought to an order index page
-  # - [ ] Orders should be sorted by status
-  # - [ ] Orders should be sorted by time, oldest first
+  # - [x] On login as a driver, I should be brought to an order index page
+  # - [x] Orders should be sorted by status
+  # - [x] Orders should be sorted by time, oldest first
 
   let(:driver) { FactoryGirl.create(:user, :driver) }
   let(:rest) { create_restaurant('Boston Beer Garden') }
@@ -37,7 +37,8 @@ feature 'user views orders on user show page', %{
         expect(page).to have_content(order.status.name)
       end
       expect(page).to_not have_content(orders.last.user.full_name)
-      expect(pending_orders.last.user.full_name).to appear_before(pending_orders.first.user.full_name)
+      expect(pending_orders.last.user.full_name).to appear_before(
+        pending_orders.first.user.full_name)
     end
     within('.completed-order-list') do
       expect(page).to have_content(orders.first.user.full_name)
