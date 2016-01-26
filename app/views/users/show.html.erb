@@ -6,7 +6,7 @@ Company Name: <%= @user.company_name %>
 
 <% if @user.role == 'driver' %>
   <div id='driver-location'>
-    <%= link_to 'Show My Location', '#' %>
+    <%= link_to 'Show My Location', '#', id: "#{@user.id}" %>
   </div>
 <% end %>
 
