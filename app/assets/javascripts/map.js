@@ -5,7 +5,7 @@ $(window).load(function() {
 var latLng, map;
 function initMap() {
   navigator.geolocation.getCurrentPosition(function (position) {
-    latLng   = new google.maps.LatLng(
+    latLng = new google.maps.LatLng(
         position.coords.latitude, position.coords.longitude);
 
     map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -22,7 +22,7 @@ function initMap() {
     marker.setMap(map)
   });
 
-}
+};
 
 function loadScript() {
 	console.log("map loading ...");
@@ -33,7 +33,7 @@ function loadScript() {
     '&libraries=drawing'+
     '&callback=initMap';
   document.body.appendChild(script);
-}
+};
 
 function getLatLng(result) {
   userLoc = {lat: result.lat, lng: result.lon}
