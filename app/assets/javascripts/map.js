@@ -2,26 +2,37 @@ $(window).load(function() {
   loadScript();
 });
 
-var latLng, map;
+var latLng, map, userMarker, restLatLng;
 function initMap(restaurantLoc) {
+  restLatLng = restaurantLoc
+
   navigator.geolocation.getCurrentPosition(function (position) {
     latLng = new google.maps.LatLng(
         position.coords.latitude, position.coords.longitude);
 
     map = new google.maps.Map(document.getElementById('map-canvas'), {
       center: latLng,
-      zoom: 15
+      zoom: 14
     });
 
-    marker = new google.maps.Marker({
+    userMarker = new google.maps.Marker({
       position: latLng,
       map: map,
       title: "User Location"
     });
-    debugger;
-    marker.setMap(map)
+
+    addRestMarker();
+  });
+};
+
+var addRestMarker = function() {
+  restMarker = new google.maps.Marker({
+    position: restLatLng,
+    map: map,
+    title: "Restaurant Location"
   });
 
+  restMarker.setMap(map)
 };
 
 function loadScript() {
@@ -31,13 +42,14 @@ function loadScript() {
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
     '&key=AIzaSyAb8CnEhJE0HkNTD0YYGRmQBtpkEN9Aux8'+
     '&libraries=drawing'+
-    '&callback=makeAjaxRequestRestaurant';
+    '&callback=getRestData';
   document.body.appendChild(script);
 };
 
-var getRestLatLng = function(data) {
-  debugger;  
-}
+var getRestData = function() {
+  makeAjaxRequestRestaurant(initMap);
+};
+
 var makeAjaxRequestRestaurant = function(getRestLatLng) {
   var pathname = window.location.pathname;
   orderId = pathname.match(/\/orders\/(\d+)/)[1];
@@ -47,7 +59,7 @@ var makeAjaxRequestRestaurant = function(getRestLatLng) {
   });
 
   request.success(function(data) {
-    getRestLatLng(data);
+    initMap(data);
   });
 
   request.error(function(data) {
