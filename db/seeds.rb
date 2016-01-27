@@ -8,3 +8,5 @@
 
 Seeder.seed_statuses
 Seeder.seed_restaurants
+Seeder.seed_user
+Seeder.seed_driver

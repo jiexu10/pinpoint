@@ -5,5 +5,9 @@ Customer: <%= @order.user.full_name %>
 Restaurant: <%= @order.restaurant.company_name %>
 Order Status: <%= @order.status.name %>
 
+<div id="map-container">
+  <div id="map-canvas"></div>
+</div>
+
 <h2>Order Details:</h2>
 <%= render @cart %>

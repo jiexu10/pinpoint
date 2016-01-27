@@ -14,6 +14,13 @@ Rails.application.routes.draw do
   resources :carts, only: [:create, :update]
 
   resources :orders, only: [:show, :create, :update]
+
+  namespace :api do
+    namespace :v1 do
+      resources :orders, only: [:show]
+      resources :users, only: [:update]
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
