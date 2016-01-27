@@ -66,9 +66,9 @@ var pollDriverLoc = function() {
 
 var drawMapLine = function(data) {
   if (driverPathLine) {
-    driverPathLine.setMap(null)
+    driverPathLine.setMap(null);
   }
-  driverPathArray.push(data)
+  driverPathArray.push(data);
   driverPathLine = new google.maps.Polyline({
     path: driverPathArray,
     geodesic: true,
@@ -91,10 +91,6 @@ function loadScript() {
   document.body.appendChild(script);
 };
 
-var getRestData = function() {
-  ajaxRequestRestaurant(initMap);
-};
-
 var ajaxRequestRestaurant = function(getRestLatLng) {
   var pathname = window.location.pathname;
   var orderId = pathname.match(/\/orders\/(\d+)/)[1];
@@ -111,4 +107,8 @@ var ajaxRequestRestaurant = function(getRestLatLng) {
   request.error(function() {
     console.log("rest didn't work");
   });
+};
+
+var getRestData = function() {
+  ajaxRequestRestaurant(initMap);
 };
