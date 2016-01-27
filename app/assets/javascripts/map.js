@@ -78,7 +78,7 @@ var getRestData = function() {
 
 var ajaxRequestRestaurant = function(getRestLatLng) {
   var pathname = window.location.pathname;
-  orderId = pathname.match(/\/orders\/(\d+)/)[1];
+  var orderId = pathname.match(/\/orders\/(\d+)/)[1];
   var request = $.ajax({
     method: 'GET',
     data: { request: 'restaurant' },
@@ -89,14 +89,14 @@ var ajaxRequestRestaurant = function(getRestLatLng) {
     initMap(data);
   });
 
-  request.error(function(data) {
+  request.error(function() {
     console.log("rest didn't work");
   });
 };
 
 var ajaxRequestDriver = function(drawMapLine) {
   var pathname = window.location.pathname;
-  orderId = pathname.match(/\/orders\/(\d+)/)[1];
+  var orderId = pathname.match(/\/orders\/(\d+)/)[1];
   var request = $.ajax({
     method: 'GET',
     data: {request: 'driver'},
@@ -108,7 +108,7 @@ var ajaxRequestDriver = function(drawMapLine) {
     drawMapLine(data)
   });
 
-  request.error(function(data) {
+  request.error(function() {
     console.log("driver didn't work");
   });
 };
