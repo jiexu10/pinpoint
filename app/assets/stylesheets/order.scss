@@ -1,0 +1,48 @@
+.order-row {
+  margin-top: 2rem;
+}
+
+.order-summary header {
+  border-bottom: $callout-border;
+  color: $primary-color;
+  padding-bottom: 0.25rem;
+}
+.order-info-list {
+  font-size: 0.875rem;
+  line-height: 0.6;
+  list-style-position: outside;
+  margin: 1em;
+  margin-bottom: 15px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    padding: 0.5em;
+    padding-left: 0;
+  }
+}
+
+.order-status {
+  color: $secondary-color;
+  font-weight: bold;
+}
+
+a.accordion-title {
+  padding: 0 1rem;
+}
+
+.accordion-content {
+  border-bottom: none;
+}
+
+.cart hr {
+  margin: .25rem;
+}
+
+.block-list li:last-child {
+  border-bottom: 0;
+}

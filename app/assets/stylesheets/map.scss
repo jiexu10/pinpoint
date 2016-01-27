@@ -1,9 +1,13 @@
+.row .map-row {
+  margin-left: 0;
+}
+
 #map-container {
-  height: 400px;
+  height: 40vh;
   margin-top: 25px;
 }
 
 #map-canvas {
   height: 100%;
-  width: 75%;
+  width: 100%;
 }

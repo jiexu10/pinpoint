@@ -10,7 +10,7 @@ RSpec.describe Cart, type: :model, vcr: true do
     Cart.add_item(cart, items[0], '1')
     expect(cart.cartitems.count).to eq(1)
     expect(cart.items.count).to eq(1)
-    expect(cart.find_total).to eq(items[0].price.to_f)
+    expect(cart.find_total).to eq(items[0].price)
   end
 
   it 'can calculate the total price correctly' do
@@ -18,7 +18,7 @@ RSpec.describe Cart, type: :model, vcr: true do
     Cart.add_item(cart, items[1], '2')
     expect(cart.cartitems.count).to eq(2)
     expect(cart.items.count).to eq(2)
-    expect(cart.find_total).to eq(items[0].price.to_f + items[1].price.to_f * 2)
+    expect(cart.find_total).to eq((items[0].price.to_f + items[1].price.to_f * 2).to_s)
   end
 
   it 'can find the quantity of an item' do

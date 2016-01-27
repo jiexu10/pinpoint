@@ -1,13 +1,33 @@
-order show page
-
-Order ID: <%= @order.id %>
-Customer: <%= @order.user.full_name %>
-Restaurant: <%= @order.restaurant.company_name %>
-Order Status: <%= @order.status.name %>
-
-<div id="map-container">
-  <div id="map-canvas"></div>
+<div class="map-row row">
+  <div class="small-10 small-centered columns" id="map-container">
+    <div id="map-canvas"></div>
+  </div>
 </div>
 
-<h2>Order Details:</h2>
-<%= render @cart %>
+<div class="order-row row">
+  <div class="order-summary small-6 small-centered columns">
+    <div class="callout">
+      <section class="block-list">
+        <header>Order Details:</header>
+        <ul class="order-info-list">
+          <li>Order ID: <%= @order.id %></li>
+          <li>Customer: <%= link_to @order.user.full_name, user_path(@order.user) %></li>
+          <li>Restaurant: <%= link_to @order.restaurant.company_name, restaurantdetail_path(@order.restaurant.restaurantdetail) %></li>
+          <li>
+            Order Status: <span class="order-status"><%= @order.status.name %></span>
+          </li>
+          <li class="acc-container">
+            <ul class="accordion" data-accordion data-allow-all-closed="true">
+              <li class="accordion-item" data-accordion-item>
+                <a class="accordion-title">Order Items</a>
+                <div class="accordion-content" data-tab-content>
+                  <%= render @cart %>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

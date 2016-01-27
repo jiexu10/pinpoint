@@ -21,7 +21,7 @@ class Cart < ActiveRecord::Base
     cartitems.each do |cartitem|
       total_price += cartitem.item.price.to_f * cartitem.quantity.to_f
     end
-    total_price.round(2)
+    sprintf "%.2f", total_price
   end
 
   def reject_cartitems?(attributed)
