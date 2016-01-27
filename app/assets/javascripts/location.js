@@ -9,8 +9,8 @@ $(document).ready(function() {
 var createInterval = function(locationFunc, driverId, interval) {
   setInterval(function() {
     locationFunc(driverId);
-  }, interval)
-}
+  }, interval);
+};
 
 var startPolling = function(driverId) {
   setInterval(findLoc(driverId), 5000);

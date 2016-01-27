@@ -2,7 +2,9 @@ $(window).load(function() {
   loadScript();
 });
 
-var latLng, map, userMarker, restLatLng;
+var latLng, map, userMarker, restLatLng, driverPathLine;
+var driverPathArray = [];
+
 function initMap(restaurantLoc) {
   restLatLng = restaurantLoc
 
@@ -22,6 +24,10 @@ function initMap(restaurantLoc) {
     });
 
     addRestMarker();
+
+    setInterval(function() {
+      pollDriverLoc();
+    }, 15000);
   });
 };
 
@@ -35,27 +41,48 @@ var addRestMarker = function() {
   restMarker.setMap(map)
 };
 
+var pollDriverLoc = function() {
+  ajaxRequestDriver(drawMapLine)
+};
+
+var drawMapLine = function(data) {
+  if (driverPathLine) {
+    driverPathLine.setMap(null)
+  }
+  driverPathArray.push(data)
+  driverPathLine = new google.maps.Polyline({
+    path: driverPathArray,
+    geodesic: true,
+    strokeColor: '#0000FF',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  driverPathLine.setMap(map);
+};
+
 function loadScript() {
 	console.log("map loading ...");
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
     '&key=AIzaSyAb8CnEhJE0HkNTD0YYGRmQBtpkEN9Aux8'+
-    '&libraries=drawing'+
+    '&libraries=drawing' +
     '&callback=getRestData';
   document.body.appendChild(script);
 };
 
 var getRestData = function() {
-  makeAjaxRequestRestaurant(initMap);
+  ajaxRequestRestaurant(initMap);
 };
 
-var makeAjaxRequestRestaurant = function(getRestLatLng) {
+var ajaxRequestRestaurant = function(getRestLatLng) {
   var pathname = window.location.pathname;
   orderId = pathname.match(/\/orders\/(\d+)/)[1];
   var request = $.ajax({
     method: 'GET',
-    url: '/api/v1/restaurants/' + orderId
+    data: { request: 'restaurant' },
+    url: '/api/v1/orders/' + orderId
   });
 
   request.success(function(data) {
@@ -63,6 +90,25 @@ var makeAjaxRequestRestaurant = function(getRestLatLng) {
   });
 
   request.error(function(data) {
-    console.log("didn't work");
+    console.log("rest didn't work");
+  });
+};
+
+var ajaxRequestDriver = function(drawMapLine) {
+  var pathname = window.location.pathname;
+  orderId = pathname.match(/\/orders\/(\d+)/)[1];
+  var request = $.ajax({
+    method: 'GET',
+    data: {request: 'driver'},
+    url: '/api/v1/orders/' + orderId
+  });
+
+  request.success(function(data) {
+    console.log("driver location received");
+    drawMapLine(data)
+  });
+
+  request.error(function(data) {
+    console.log("driver didn't work");
   });
 };
