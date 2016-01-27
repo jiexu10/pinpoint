@@ -41,6 +41,10 @@ var addRestMarker = function() {
   restMarker.setMap(map)
 };
 
+var pollDriverLoc = function() {
+  ajaxRequestDriver(drawMapLine);
+};
+
 var ajaxRequestDriver = function(drawMapLine) {
   var pathname = window.location.pathname;
   var orderId = pathname.match(/\/orders\/(\d+)/)[1];
@@ -58,10 +62,6 @@ var ajaxRequestDriver = function(drawMapLine) {
   request.error(function() {
     console.log("driver didn't work");
   });
-};
-
-var pollDriverLoc = function() {
-  ajaxRequestDriver(drawMapLine)
 };
 
 var drawMapLine = function(data) {
@@ -91,7 +91,11 @@ function loadScript() {
   document.body.appendChild(script);
 };
 
-var ajaxRequestRestaurant = function(getRestLatLng) {
+var getRestData = function() {
+  ajaxRequestRestaurant(initMap);
+};
+
+var ajaxRequestRestaurant = function(initMap) {
   var pathname = window.location.pathname;
   var orderId = pathname.match(/\/orders\/(\d+)/)[1];
   var request = $.ajax({
@@ -107,8 +111,4 @@ var ajaxRequestRestaurant = function(getRestLatLng) {
   request.error(function() {
     console.log("rest didn't work");
   });
-};
-
-var getRestData = function() {
-  ajaxRequestRestaurant(initMap);
 };
