@@ -32,13 +32,32 @@ function initMap(restaurantLoc) {
 };
 
 var addRestMarker = function() {
-  restMarker = new google.maps.Marker({
+  var restMarker = new google.maps.Marker({
     position: restLatLng,
     map: map,
     title: "Restaurant Location"
   });
 
   restMarker.setMap(map)
+};
+
+var ajaxRequestDriver = function(drawMapLine) {
+  var pathname = window.location.pathname;
+  var orderId = pathname.match(/\/orders\/(\d+)/)[1];
+  var request = $.ajax({
+    method: 'GET',
+    data: {request: 'driver'},
+    url: '/api/v1/orders/' + orderId
+  });
+
+  request.success(function(data) {
+    console.log("driver location received");
+    drawMapLine(data);
+  });
+
+  request.error(function() {
+    console.log("driver didn't work");
+  });
 };
 
 var pollDriverLoc = function() {
@@ -91,24 +110,5 @@ var ajaxRequestRestaurant = function(getRestLatLng) {
 
   request.error(function() {
     console.log("rest didn't work");
-  });
-};
-
-var ajaxRequestDriver = function(drawMapLine) {
-  var pathname = window.location.pathname;
-  var orderId = pathname.match(/\/orders\/(\d+)/)[1];
-  var request = $.ajax({
-    method: 'GET',
-    data: {request: 'driver'},
-    url: '/api/v1/orders/' + orderId
-  });
-
-  request.success(function(data) {
-    console.log("driver location received");
-    drawMapLine(data)
-  });
-
-  request.error(function() {
-    console.log("driver didn't work");
   });
 };

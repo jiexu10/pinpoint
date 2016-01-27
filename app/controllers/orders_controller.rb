@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
     pending = Status.find_by(name: 'Pending')
     driver = User.find_by(role: 'driver')
     order = Order.new(cart: cart, driver: driver, restaurant: restaurant,
-      status: pending, user: current_user)
+                        status: pending, user: current_user)
     if order.save && cart.update_attributes(status: 'ordered')
       flash[:notice] = 'Order Placed!'
       redirect_to order_path(order)

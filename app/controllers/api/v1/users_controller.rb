@@ -7,6 +7,7 @@ class Api::V1::UsersController < Api::V1::BaseController
       render json: { lat: latitude, lng: longitude }
     end
   end
+  
   def update
     @user = User.find(user_params[:id])
     if @user.role == 'driver'
