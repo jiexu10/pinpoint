@@ -7,6 +7,13 @@
   color: $primary-color;
   padding-bottom: 0.25rem;
 }
+
+.order-status {
+  color: $success-color;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
 .order-info-list {
   font-size: 0.875rem;
   line-height: 0.6;
@@ -26,21 +33,16 @@
   }
 }
 
-.order-status {
-  color: $secondary-color;
-  font-weight: bold;
-}
-
-a.accordion-title {
+.accordion-title {
   padding: 0 1rem;
 }
 
 .accordion-content {
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .cart hr {
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
 .block-list li:last-child {
