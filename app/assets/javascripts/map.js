@@ -14,7 +14,7 @@ function initMap(restaurantLoc) {
 
     map = new google.maps.Map(document.getElementById('map-canvas'), {
       center: latLng,
-      zoom: 14
+      zoom: 15
     });
 
     userMarker = new google.maps.Marker({

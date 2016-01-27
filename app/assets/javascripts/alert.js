@@ -1,4 +1,4 @@
-$(document).on('click', '.alert-box a.close', function() {
-  $('.alert-box').remove();
+$(document).on('click', '.alert button.close-button', function() {
+  $('.alert').remove();
   $('.messages').append('<div class="spacer"></div>');
 });

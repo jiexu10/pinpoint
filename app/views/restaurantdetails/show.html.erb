@@ -40,7 +40,7 @@
                       <%= ff.text_field :quantity, class: "quantity" %>
                     </div>
                     <div class="info-price">
-                      <%= cartitem.item.price %>
+                      $<%= cartitem.item.price %>
                     </div>
                     <%= ff.hidden_field :item_id, value: "#{cartitem.item.id}" %>
                     <%= ff.hidden_field :cart_id, value: "#{@cart.id}" %>
@@ -69,6 +69,7 @@
         </div>
       <% end %>
       <hr>
+      <h2>Cart</h2>
       <%= render @cart %>
       <%= render partial: 'orders/form',
         locals: { order: @order } %>

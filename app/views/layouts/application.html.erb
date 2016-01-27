@@ -12,42 +12,40 @@
   </head>
 
   <body>
-    <div class="row">
-      <div class="top-bar">
-        <div class="top-bar-title">
-          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-            <span class="menu-icon dark" data-toggle></span>
-          </span>
-          <h5><%= link_to 'PinPoint', root_path %></h5>
-        </div>
-        <div id="responsive-menu">
-          <div class="top-bar-right">
-            <ul class="dropdown menu" data-dropdown-menu>
-              <% if user_signed_in? || restaurant_signed_in? %>
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <span class="menu-icon dark" data-toggle></span>
+        </span>
+        <h5><%= link_to 'PinPoint', root_path %></h5>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <% if user_signed_in? || restaurant_signed_in? %>
+                <% if user_signed_in? %>
+                  <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
+                <% elsif restaurant_signed_in? %>
+                  <li><%= link_to "Welcome, #{current_restaurant.first_name}!", restaurant_path(current_restaurant) %></li>
+                <% end %>
+            <% end %>
+            <li>
+              <a href="#">Account</a>
+              <ul class="menu vertical">
+                <% if user_signed_in? || restaurant_signed_in? %>
                   <% if user_signed_in? %>
-                    <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
+                    <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
                   <% elsif restaurant_signed_in? %>
-                    <li><%= link_to "Welcome, #{current_restaurant.first_name}!", restaurant_path(current_restaurant) %></li>
+                    <li><%= link_to 'Sign Out', destroy_restaurant_session_path, method: :delete %></li>
                   <% end %>
-              <% end %>
-              <li>
-                <a href="#">Account</a>
-                <ul class="menu vertical">
-                  <% if user_signed_in? || restaurant_signed_in? %>
-                    <% if user_signed_in? %>
-                      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-                    <% elsif restaurant_signed_in? %>
-                      <li><%= link_to 'Sign Out', destroy_restaurant_session_path, method: :delete %></li>
-                    <% end %>
-                  <% else %>
-                    <li><%= link_to 'Sign In', new_user_session_path %></li>
-                    <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-                    <li><%= link_to 'Restaurant Sign In', new_restaurant_session_path %></li>
-                  <% end %>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                <% else %>
+                  <li><%= link_to 'Sign In', new_user_session_path %></li>
+                  <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                  <li><%= link_to 'Restaurant Sign In', new_restaurant_session_path %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -55,9 +53,11 @@
     <div class="messages">
       <% unless flash.empty? %>
         <% flash.each do |type, message| %>
-          <div data-alert class="alert-box info radius flash">
+          <div class="alert callout flash" data-closable>
             <%= message %>
-            <a href="#" class="close">&times;</a>
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
         <% end %>
       <% else %>
@@ -66,7 +66,7 @@
       <% end %>
     </div>
 
-    <div class="row">
+    <div class="app-row">
       <%= yield %>
     </div>
 
