@@ -11,12 +11,13 @@ feature 'restaurant changes orders from show page', %{
   # - [x] When I click the button to change order status, it should change
   # - [x] When clicking on one order, other orders should not change
 
+  let(:driver) { FactoryGirl.create(:user, :driver) }
   let(:rest) { create_restaurant('Boston Beer Garden') }
   let(:carts) { FactoryGirl.create_list(:cart, 2, restaurant: rest) }
   let!(:statuses) { create_statuses }
 
   scenario 'restaurant can change order status on their orders' do
-    create_orders_from_carts(carts)
+    create_orders_from_carts(carts, driver)
     orders = Order.all
 
     restaurant_sign_in(rest)

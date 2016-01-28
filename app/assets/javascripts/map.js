@@ -97,18 +97,24 @@ var getRestData = function() {
 
 var ajaxRequestRestaurant = function(initMap) {
   var pathname = window.location.pathname;
-  var orderId = pathname.match(/\/orders\/(\d+)/)[1];
-  var request = $.ajax({
-    method: 'GET',
-    data: { request: 'restaurant' },
-    url: '/api/v1/orders/' + orderId
-  });
+  var orderId;
+  if (pathname.match(/\/orders\/(\d+)/)) {
+    orderId = pathname.match(/\/orders\/(\d+)/)[1];
+  };
 
-  request.success(function(data) {
-    initMap(data);
-  });
+  if (orderId) {
+    var request = $.ajax({
+      method: 'GET',
+      data: { request: 'restaurant' },
+      url: '/api/v1/orders/' + orderId
+    });
 
-  request.error(function() {
-    console.log("rest didn't work");
-  });
+    request.success(function(data) {
+      initMap(data);
+    });
+
+    request.error(function() {
+      console.log("rest didn't work");
+    });
+  };
 };

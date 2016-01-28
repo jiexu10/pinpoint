@@ -11,6 +11,7 @@ feature 'user views orders on user show page', %{
   # - [x] The orders should be sorted by date
   # - [x] Orders that are pending should appear first in the list
 
+  let(:driver) { FactoryGirl.create(:user, :driver) }
   let(:user) { FactoryGirl.create(:user) }
   let(:rest1) { create_restaurant('Boston Beer Garden') }
   let(:rest2) { create_restaurant('Morse Fish Company') }
@@ -22,7 +23,7 @@ feature 'user views orders on user show page', %{
 
   scenario 'user views the order list' do
     carts = [cart1, cart2, cart3]
-    create_orders_from_carts(carts)
+    create_orders_from_carts(carts, driver)
     orders = Order.all
     completed_status = Status.find_by(name: 'Complete')
     orders[0].update_attributes(status: completed_status)
@@ -48,7 +49,7 @@ feature 'user views orders on user show page', %{
   end
 
   scenario 'logged out user cannot view the order show page' do
-    create_orders_from_carts([cart1])
+    create_orders_from_carts([cart1], driver)
     order = Order.first
     visit order_path(order)
 

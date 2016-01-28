@@ -18,7 +18,7 @@ var startPolling = function(driverId) {
 
 var findLoc = function(driverId) {
   navigator.geolocation.getCurrentPosition(function (position) {
-    var driverLoc = {lat: position.coords.latitude, lon: position.coords.longitude}
+    var driverLoc = {lat: position.coords.latitude, lng: position.coords.longitude};
     makeAjaxRequestLoc(driverId, driverLoc)
   });
 };
