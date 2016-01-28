@@ -11,6 +11,7 @@ feature 'restaurant views orders on show page', %{
   # - [x] Orders should be sorted by status
   # - [x] Orders should be sorted by time
 
+  let(:driver) { FactoryGirl.create(:user, :driver) }
   let(:user) { FactoryGirl.create(:user) }
   let(:rest) { create_restaurant('Boston Beer Garden') }
   let(:rest2) { create_restaurant('Siam Bistro') }
@@ -18,7 +19,7 @@ feature 'restaurant views orders on show page', %{
   let!(:statuses) { create_statuses }
 
   scenario 'restaurant logs in and sees pending and completed orders' do
-    create_orders_from_carts(carts)
+    create_orders_from_carts(carts, driver)
 
     pending = Status.find_by(name: 'Pending')
     complete = Status.find_by(name: 'Complete')

@@ -12,17 +12,19 @@ feature 'user views orders on user show page', %{
   # - [x] Orders should be sorted by time, oldest first
 
   let(:driver) { FactoryGirl.create(:user, :driver) }
+  let(:driver2) { FactoryGirl.create(:user, :driver) }
   let(:rest) { create_restaurant('Boston Beer Garden') }
   let!(:carts) { FactoryGirl.create_list(:cart, 4, restaurant: rest) }
   let!(:statuses) { create_statuses }
 
   scenario 'driver views the order list on user show page' do
-    create_orders_from_carts(carts)
+    create_orders_from_carts(carts, driver)
     orders = Order.all
     completed_status = Status.find_by(name: 'Complete')
     orders[0].update_attributes(driver: driver, status: completed_status)
     orders[1].update_attributes(driver: driver)
     orders[2].update_attributes(driver: driver)
+    orders[3].update_attributes(driver: driver2)
     pending_orders = orders[1..2]
     user_sign_in(driver)
     click_link "Welcome, #{driver.first_name}!"

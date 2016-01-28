@@ -42,10 +42,11 @@ RSpec.describe User, type: :model, vcr: true do
   end
 
   it 'driver can have orders' do
+    driver = FactoryGirl.create(:user, :driver)
     restaurant = create_restaurant('Boston Beer Garden')
     cart = FactoryGirl.create(:cart, restaurant: restaurant)
     create_statuses
-    create_orders_from_carts([cart])
+    create_orders_from_carts([cart], driver)
 
     driver = FactoryGirl.create(:user, :driver)
     order = Order.first
