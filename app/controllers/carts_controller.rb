@@ -1,6 +1,8 @@
 class CartsController < ApplicationController
   def update
     @cart = Cart.find(params[:id])
+    @user = @cart.user
+    if @user.carts.any? { |cart| cart.status == 'pending' } 
     if @cart.update_attributes(cart_params)
       cart_params['cartitems_attributes'].each do |_key, value|
         ci = Cartitem.find_or_initialize_by(id: value['id'])

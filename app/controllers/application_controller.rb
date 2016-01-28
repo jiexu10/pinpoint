@@ -4,7 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :find_cart, if: user_signed_in?
 
+  def find_cart
+    @cart = current_user.cart
+  end
+  
   protected
 
   def after_sign_in_path_for(resource)

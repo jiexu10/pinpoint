@@ -1,19 +1,18 @@
 <div class="small-10 small-centered columns">
   <div class="row">
     <h1><%= @restaurantdetail.name %></h1>
-    Phone: <%= @restaurantdetail.phone %>
-    Website: <%= @restaurantdetail.website_url %>
-    Address:
     <%= @restaurantdetail.address_one %>
     <% if @restaurantdetail.address_two %>
-    <%= @restaurantdetail.address_two %>
+      <%= @restaurantdetail.address_two %>
     <% end %>
-    <%= @restaurantdetail.city %>, <%= @restaurantdetail.state %> <%= @restaurantdetail.zip_code %>
+    <%= @restaurantdetail.city %>, <%= @restaurantdetail.state %> <%= @restaurantdetail.zip_code %><br />
+    <%= @restaurantdetail.phone %><br />
+    <%= link_to 'Website', @restaurantdetail.website_url %><br />
     <br>
     <br>
-    Categories:
+    <%= "Categories: " unless @restaurantdetail.categories.count == 1 %>
     <% @restaurantdetail.categories.each do |category| %>
-      <% unless category.name == "Restaurant" %>
+      <% unless category.name == "Restaurants" %>
         <%= category.name %>
       <% end %>
     <% end %>
