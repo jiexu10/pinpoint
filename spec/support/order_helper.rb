@@ -1,5 +1,6 @@
 def create_order(cart, driver, restaurant, status, user)
-  order = Order.new(cart: cart, driver: driver, restaurant: restaurant, status: status, user: user)
+  order = Order.new(cart: cart, driver: driver, restaurant: restaurant,
+                    status: status, user: user)
   order.save && cart.update_attributes(status: 'ordered')
   order
 end

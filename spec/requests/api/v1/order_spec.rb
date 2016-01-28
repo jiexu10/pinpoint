@@ -9,7 +9,7 @@ RSpec.describe Api::V1::OrdersController, vcr: true do
   let!(:order) { Order.first }
 
   it 'can retrieve restaurant latitude and longitude data from an order' do
-    params = { :id => order.id, :request => 'restaurant' }
+    params = { id: order.id, request: 'restaurant' }
     get "/api/v1/orders/#{order.id}", params, format: :json
 
     json = JSON.parse(response.body)
@@ -23,7 +23,7 @@ RSpec.describe Api::V1::OrdersController, vcr: true do
     driver.update_attributes(latitude: 12.3456789, longitude: 23.4567891)
     expect(driver.valid?).to eq(true)
 
-    params = { :id => order.id, :request => 'driver' }
+    params = { id: order.id, request: 'driver' }
     get "/api/v1/orders/#{order.id}", params, format: :json
 
     json = JSON.parse(response.body)

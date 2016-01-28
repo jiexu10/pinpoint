@@ -9,7 +9,7 @@ RSpec.describe Api::V1::UsersController, vcr: true do
 
     new_lat = "12.3456789"
     new_lng = "23.4567891"
-    params = { :id => driver.id, :lat => new_lat, :lng => new_lng }
+    params = { id: driver.id, lat: new_lat, lng: new_lng }
     patch "/api/v1/users/#{driver.id}", params, format: :json
 
     json = JSON.parse(response.body)
