@@ -7,7 +7,7 @@ var checkOrderPage = function() {
     if ($("span.order-status").length) {
       makeAjaxRequestStatus();
     };
-  }, 15000);
+  }, 10000);
 };
 
 var makeAjaxRequestStatus = function() {
