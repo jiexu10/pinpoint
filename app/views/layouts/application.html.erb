@@ -67,7 +67,7 @@
     <div class="messages">
       <% unless flash.empty? %>
         <% flash.each do |type, message| %>
-          <div class="alert callout flash" data-closable>
+          <div class="warning callout flash" data-closable>
             <%= message %>
             <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
               <span aria-hidden="true">&times;</span>

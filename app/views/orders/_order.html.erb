@@ -1,21 +1,28 @@
 <div class="order-info order-id-<%= order.id %>">
+  <% if restaurant_signed_in? %>
+    <li><%= "Order ID: ##{order.id}" %></li>
+  <% else %>
+    <li><%= link_to "Order ID: ##{order.id}", order %></li>
+  <% end %>
   <li>Name: <%= order.user.full_name %></li>
   <li>Restaurant: <%= order.restaurant.company_name %></li>
-  <li><%= link_to "Order ID: ##{order.id}", order %></li>
   <br />
 
   <% if restaurant_signed_in? %>
-    <%= render partial: 'carts/cart', locals: { cart: order.cart } %>
+    <div class="rest-order-info small-12 small-centered columns">
+      <%= render partial: 'carts/cart', locals: { cart: order.cart } %>
+    </div>
   <% end %>
 
   <% if restaurant_signed_in? %>
+    <br>
     <% unless order.status.name == 'Pending' %>
       <div class="order-form-move-left">
         <%= form_for (order), url: { controller: 'orders', action: 'update' } do |f| %>
           <%= f.hidden_field :id, value: "#{order.id}" %>
           <%= f.hidden_field :new_sequence, value: "#{order.status.sequence - 1}" %>
           <div class='actions'>
-            <%= f.submit 'Move Left' %>
+            <%= f.submit 'Move Left', class: 'button' %>
           </div>
         <% end %>
       </div>
@@ -26,7 +33,7 @@
           <%= f.hidden_field :id, value: "#{order.id}" %>
           <%= f.hidden_field :new_sequence, value: "#{order.status.sequence + 1}" %>
           <div class='actions'>
-            <%= f.submit 'Move Right' %>
+            <%= f.submit 'Move Right', class: 'button' %>
           </div>
         <% end %>
       </div>

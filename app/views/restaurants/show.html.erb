@@ -1,60 +1,94 @@
-sample show page
-
 <div class="small-10 small-centered columns">
   <div class="row">
-    <h1><%= @restaurant.restaurantdetail.name %></h1>
-    Phone: <%= @restaurant.restaurantdetail.phone %>
-    Website: <%= @restaurant.restaurantdetail.website_url %>
-    Address:
-    <%= @restaurant.restaurantdetail.address_one %>
-    <% if @restaurant.restaurantdetail.address_two %>
-    <%= @restaurant.restaurantdetail.address_two %>
-    <% end %>
-    <%= @restaurant.restaurantdetail.city %>, <%= @restaurant.restaurantdetail.state %> <%= @restaurant.restaurantdetail.zip_code %>
-    <br>
-    <br>
-    Categories:
-    <% @restaurant.categories.each do |category| %>
-      <% unless category.name == "Restaurant" %>
-        <%= category.name %>
+    <div class="rest-info small-12 medium-10 medium-offset-1 columns">
+      <h3><%= @restaurant.restaurantdetail.name %></h3>
+      <%= @restaurant.restaurantdetail.address_one %>
+      <% if @restaurant.restaurantdetail.address_two %>
+        <%= @restaurant.restaurantdetail.address_two %>
       <% end %>
-    <% end %>
-    <% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
+      <%= @restaurant.restaurantdetail.city %>, <%= @restaurant.restaurantdetail.state %> <%= @restaurant.restaurantdetail.zip_code %><br />
+      <%= @restaurant.restaurantdetail.phone %><br />
+      <%= link_to 'Website', @restaurant.restaurantdetail.website_url %><br />
+      <%= "Categories: " unless @restaurant.restaurantdetail.categories.count == 1 %>
+      <% @restaurant.restaurantdetail.categories.each do |category| %>
+        <% unless category.name == "Restaurants" %>
+          <%= category.name %>
+        <% end %>
+      <% end %>
+      <br>
+      <% @restaurant.restaurantdetail.description if @restaurant.restaurantdetail.description %>
+    </div>
   </div>
 </div>
 
-Pending Orders
-<div class="pending-order-column">
-  <% if @pend_orders.any? %>
-    <%= render partial: 'orders/order', collection: @pend_orders, as: :order %>
-  <% else %>
-    No pending orders!
-  <% end %>
-</div>
+<div class="order-row row" data-equalizer data-equalize-by-row="true">
+  <div class="small-11 small-centered columns">
+    <div class="order-summary small-6 columns">
+      <div class="callout clearfix">
+        <div class="pending-order-list" data-equalizer-watch>
+          <section class="block-list">
+            <header>Pending Orders:</header>
+            <ul class="order-info-list">
+              <% if @pending_orders.any? %>
+                <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
+              <% else %>
+                <li>No pending orders!</li>
+              <% end %>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
 
-Confirmed Orders
-<div class="confirmed-order-column">
-  <% if @confirm_orders.any? %>
-    <%= render partial: 'orders/order', collection: @confirm_orders, as: :order %>
-  <% else %>
-    No confirmed orders!
-  <% end %>
-</div>
+    <div class="order-summary small-6 columns">
+      <div class="callout clearfix">
+        <div class="confirmed-order-list" data-equalizer-watch>
+          <section class="block-list">
+            <header>Confirmed Orders:</header>
+            <ul class="order-info-list">
+              <% if @confirmed_orders.any? %>
+                <%= render partial: 'orders/order', collection: @confirmed_orders, as: :order %>
+              <% else %>
+                <li>No confirmed orders!</li>
+              <% end %>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
 
-Delivery Orders
-<div class="delivery-order-column">
-  <% if @delivery_orders.any? %>
-    <%= render partial: 'orders/order', collection: @delivery_orders, as: :order %>
-  <% else %>
-    No delivery orders!
-  <% end %>
-</div>
+    <div class="order-summary small-6 columns">
+      <div class="callout clearfix">
+        <div class="delivery-order-list" data-equalizer-watch>
+          <section class="block-list">
+            <header>Delivery Orders:</header>
+            <ul class="order-info-list">
+              <% if @delivery_orders.any? %>
+                <%= render partial: 'orders/order', collection: @delivery_orders, as: :order %>
+              <% else %>
+                <li>No delivery orders!</li>
+              <% end %>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
 
-Completed Orders:
-<div class="complete-order-column">
-  <% if @comp_orders.any? %>
-    <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
-  <% else %>
-    No completed orders yet!
-  <% end %>
+    <div class="order-summary small-6 columns">
+      <div class="callout clearfix">
+        <div class="complete-order-list" data-equalizer-watch>
+          <section class="block-list">
+            <header>Completed Orders:</header>
+            <ul class="order-info-list">
+              <% if @complete_orders.any? %>
+                <%= render partial: 'orders/order', collection: @complete_orders, as: :order %>
+              <% else %>
+                <li>No completed orders yet!</li>
+              <% end %>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
