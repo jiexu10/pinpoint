@@ -1,4 +1,4 @@
-$(document).on("mouseover", function() {
+$(document).on('mouseover', function() {
   $('li#cart').off();
   // $('li#account').off();
 });
