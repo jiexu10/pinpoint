@@ -32,7 +32,7 @@ feature 'user creates an order via cart', %{
       rest1.items.each do |item|
         unless item.price == 'No Price'
           expect(page).to have_content(
-          "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
+            "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
         end
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)
@@ -63,7 +63,7 @@ feature 'user creates an order via cart', %{
       rest1.items.each do |item|
         unless item.price == 'No Price'
           expect(page).to have_content(
-          "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
+            "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
         end
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)
@@ -72,7 +72,7 @@ feature 'user creates an order via cart', %{
 
   scenario 'user adds invalid items to order' do
     rest1.items.each do |item|
-        Cart.add_item(cart, item, '5')
+      Cart.add_item(cart, item, '5')
     end
     user_sign_in(user)
     visit restaurantdetail_path(rest1.restaurantdetail)

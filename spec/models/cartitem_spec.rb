@@ -5,8 +5,7 @@ RSpec.describe Cartitem, type: :model, vcr: true do
   let(:r) { create_restaurant("Boston Beer Garden") }
   let(:cart) { FactoryGirl.create(:cart, user: user, restaurant: r) }
   let(:item) { FactoryGirl.create(:item, restaurantdetail: r.restaurantdetail) }
-  let(:longnameitem) { FactoryGirl.create(:item, :longname,
-                        restaurantdetail: r.restaurantdetail) }
+  let(:longnameitem) { FactoryGirl.create(:item, :longname, restaurantdetail: r.restaurantdetail) }
 
   it 'can pretty print an entry in the list' do
     Cart.add_item(cart, item, 1)

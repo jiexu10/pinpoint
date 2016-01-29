@@ -35,7 +35,7 @@ feature 'user creates an order via cart', %{
       cart = user.find_cart(rest1)
       cart.items.each do |item|
         expect(page).to have_content(
-        "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
+          "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)
       expect(price.round(2).to_s).to eq(user.find_cart(rest1).find_total)
