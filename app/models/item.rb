@@ -8,4 +8,8 @@ class Item < ActiveRecord::Base
   validates :name, presence: true
   validates :price, presence: true
   validates :restaurantdetail, presence: true
+
+  def truncate
+    name.length > 20 ? name[0..20] + '...' : name
+  end
 end

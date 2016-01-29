@@ -16,6 +16,11 @@ class OrdersController < ApplicationController
     driver = User.find_by(role: 'driver')
     order = Order.new(cart: cart, driver: driver, restaurant: restaurant,
                         status: pending, user: current_user)
+    if cart.items.any? { |item| item.price == 'No Price' }
+      flash[:error] = 'Please remove items with no price.'
+      redirect_to restaurant.restaurantdetail
+      return
+    end
     if order.save && cart.update_attributes(status: 'ordered')
       flash[:notice] = 'Order Placed!'
       redirect_to order_path(order)

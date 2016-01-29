@@ -1,5 +1,6 @@
 .has-submenu > a {
   border-left: 1px solid $white;
+  padding-left: 2.5rem;
 }
 
 .spacer {
@@ -14,6 +15,15 @@
     color: $white;
     text-align: right;
   }
+
+  ul {
+    background-color: $primary-color;
+  }
+
+  input.button {
+    text-align: center;
+    width: 200px;
+  }
 }
 
 .top-bar-right li {
@@ -24,14 +34,35 @@
 .top-bar-title {
   float: left;
   padding: 0.2rem;
+  width: 10rem;
 
   a {
     color: $white;
+    float: left;
     font-family: $title-font-family;
     font-weight: bold;
   }
 
   h5 {
     margin: 0;
+  }
+
+  span {
+    float: left;
+    margin-right: 0.2rem;
+  }
+}
+
+.menu > li:not(.menu-text) > a {
+  display: block;
+  line-height: 1;
+  padding: 0.7rem 1.4rem;
+}
+
+ul.submenu {
+  border: 1px solid $black;
+
+  .cart {
+    font-size: 0.7rem;
   }
 }

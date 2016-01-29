@@ -41,7 +41,7 @@ feature 'restaurant signs up', %{
     expect(page).to have_content('02127')
     expect(page).to have_content('734 E. Broadway')
     expect(page).to have_content('Traditional American')
-    expect(page).to have_content('http://bostonbeergarden.com')
+    expect(page).to have_link('Website')
   end
 
   scenario 'required information of company name is not supplied' do

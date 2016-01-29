@@ -4,6 +4,23 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :find_cart
+
+  def find_cart
+    if user_signed_in? && restaurantdetails_show?
+      restaurant = Restaurant.find(params[:id])
+      @cart = Cart.find_or_create_by(
+        user: current_user, restaurant: restaurant, status: "pending")
+      @order = Order.new(restaurant: restaurant, cart: @cart)
+    else
+      @cart = nil
+      @order = nil
+    end
+  end
+
+  def restaurantdetails_show?
+    params['controller'] == 'restaurantdetails' && params['action'] == 'show'
+  end
 
   protected
 

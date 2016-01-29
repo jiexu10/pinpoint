@@ -1,23 +1,23 @@
 <div class="small-10 small-centered columns">
   <div class="row">
-    <h1><%= @restaurantdetail.name %></h1>
-    Phone: <%= @restaurantdetail.phone %>
-    Website: <%= @restaurantdetail.website_url %>
-    Address:
-    <%= @restaurantdetail.address_one %>
-    <% if @restaurantdetail.address_two %>
-    <%= @restaurantdetail.address_two %>
-    <% end %>
-    <%= @restaurantdetail.city %>, <%= @restaurantdetail.state %> <%= @restaurantdetail.zip_code %>
-    <br>
-    <br>
-    Categories:
-    <% @restaurantdetail.categories.each do |category| %>
-      <% unless category.name == "Restaurant" %>
-        <%= category.name %>
+    <div class="rest-info small-12 medium-10 medium-offset-1 columns">
+      <h3><%= @restaurantdetail.name %></h3>
+      <%= @restaurantdetail.address_one %>
+      <% if @restaurantdetail.address_two %>
+        <%= @restaurantdetail.address_two %>
       <% end %>
-    <% end %>
-    <% @restaurantdetail.description if @restaurantdetail.description %>
+      <%= @restaurantdetail.city %>, <%= @restaurantdetail.state %> <%= @restaurantdetail.zip_code %><br />
+      <%= @restaurantdetail.phone %><br />
+      <%= link_to 'Website', @restaurantdetail.website_url %><br />
+      <%= "Categories: " unless @restaurantdetail.categories.count == 1 %>
+      <% @restaurantdetail.categories.each do |category| %>
+        <% unless category.name == "Restaurants" %>
+          <%= category.name %>
+        <% end %>
+      <% end %>
+      <br>
+      <% @restaurantdetail.description if @restaurantdetail.description %>
+    </div>
   </div>
   <br>
   <br>
@@ -68,11 +68,6 @@
           <%= f.submit 'Update Cart' %>
         </div>
       <% end %>
-      <hr>
-      <h2>Cart</h2>
-      <%= render @cart %>
-      <%= render partial: 'orders/form',
-        locals: { order: @order } %>
       <br>
     <% else %>
       <% @restaurantdetail.menusections.each do |section| %>

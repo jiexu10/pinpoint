@@ -25,11 +25,25 @@
             <% if user_signed_in? || restaurant_signed_in? %>
                 <% if user_signed_in? %>
                   <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
+                  <% if @cart && @cart.status == 'pending' %>
+                    <li id="cart">
+                      <a href="#">Cart</a>
+                      <ul class="menu">
+                        <% unless @cart.cartitems.empty? %>
+                          <%= render @cart %>
+                          <%= render partial: 'orders/form',
+                            locals: { order: @order } %>
+                        <% else %>
+                          No items in cart.
+                        <% end %>
+                      </ul>
+                    </li>
+                  <% end %>
                 <% elsif restaurant_signed_in? %>
                   <li><%= link_to "Welcome, #{current_restaurant.first_name}!", restaurant_path(current_restaurant) %></li>
                 <% end %>
             <% end %>
-            <li>
+            <li id="account">
               <a href="#">Account</a>
               <ul class="menu vertical">
                 <% if user_signed_in? || restaurant_signed_in? %>

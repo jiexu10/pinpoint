@@ -1,10 +1,11 @@
 <div class="cart">
   <% unless cart.cartitems.empty? %>
     <% cart.cartitems.each do |ci| %>
-      <%= ci.pp %>
-      <br>
+      <li>
+        <%= ci.pp %>
+      </li>
     <% end %>
-    <hr>  
-    Total: $<%= cart.find_total %>
+    <hr>
+    <b>Total: $<%= cart.find_total %></b>
   <% end %>
 </div>

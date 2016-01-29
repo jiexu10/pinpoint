@@ -7,7 +7,8 @@ class CartsController < ApplicationController
         if value['quantity'] == "0"
           ci.destroy
         else
-          ci.update_attributes(value)
+          ci.assign_attributes(value)
+          ci.save
         end
       end
       redirect_to @cart.restaurant.restaurantdetail

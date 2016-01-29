@@ -3,7 +3,7 @@
     <%= f.hidden_field :cart_id, value: "#{order.cart.id}" %>
     <%= f.hidden_field :restaurant_id, value: "#{order.restaurant.id}" %>
     <div class='actions'>
-      <%= f.submit 'Place Order' %>
+      <%= f.submit 'Place Order', class: "small button" %>
     </div>
   <% end %>
 </div>
