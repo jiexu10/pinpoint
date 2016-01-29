@@ -25,10 +25,10 @@ feature 'restaurant changes orders from show page', %{
     expect(orders.count).to eq(2)
 
     columns = [
-      '.pending-order-column',
-      '.confirmed-order-column',
-      '.delivery-order-column',
-      '.complete-order-column'
+      '.pending-order-list',
+      '.confirmed-order-list',
+      '.delivery-order-list',
+      '.complete-order-list'
     ]
     orders.each do |order|
       first_three_columns = columns[0..2]
@@ -42,7 +42,7 @@ feature 'restaurant changes orders from show page', %{
       end
 
       expect(page).to have_content('Order Updated!')
-      within('.complete-order-column') do
+      within('.complete-order-list') do
         within(".order-id-#{order.id}") do
           verify_order(order)
         end
@@ -61,12 +61,11 @@ feature 'restaurant changes orders from show page', %{
       end
 
       expect(page).to have_content('Order Updated!')
-      within('.pending-order-column') do
+      within('.pending-order-list') do
         within(".order-id-#{order.id}") do
           verify_order(order)
         end
       end
     end
   end
-
 end

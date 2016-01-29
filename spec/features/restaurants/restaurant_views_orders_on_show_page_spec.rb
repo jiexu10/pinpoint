@@ -30,7 +30,7 @@ feature 'restaurant views orders on show page', %{
 
     restaurant_sign_in(rest)
 
-    within('.pending-order-column') do
+    within('.pending-order-list') do
       pend_orders.each do |order|
         verify_order(order)
       end
@@ -42,7 +42,7 @@ feature 'restaurant views orders on show page', %{
       expect("Order ID: ##{pend_orders.first.id}").to appear_before("Order ID: ##{pend_orders.last.id}")
     end
 
-    within('.complete-order-column') do
+    within('.complete-order-list') do
       comp_orders.each do |order|
         verify_order(order)
       end

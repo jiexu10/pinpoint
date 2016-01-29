@@ -24,7 +24,7 @@ var makeAjaxRequestStatus = function() {
     $("span.order-status").text(data.status_name);
   });
 
-  request.error(function(data) {
+  request.error(function() {
     console.log("status didn't work");
   });
 };
