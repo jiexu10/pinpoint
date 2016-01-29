@@ -18,7 +18,8 @@ class OrdersController < ApplicationController
                         status: pending, user: current_user)
     if cart.items.any? { |item| item.price == 'No Price' }
       flash[:error] = 'Please remove items with no price.'
-      redirect_to restaurant.restaurantdetail and return
+      redirect_to restaurant.restaurantdetail
+      return
     end
     if order.save && cart.update_attributes(status: 'ordered')
       flash[:notice] = 'Order Placed!'

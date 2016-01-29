@@ -19,11 +19,11 @@
   ul {
     background-color: $primary-color;
   }
-}
 
-.top-bar input.button {
-  text-align: center;
-  width: 200px;
+  input.button {
+    text-align: center;
+    width: 200px;
+  }
 }
 
 .top-bar-right li {
@@ -55,17 +55,14 @@
 
 .menu > li:not(.menu-text) > a {
   display: block;
-  padding: 0.7rem 1.4rem;
   line-height: 1;
+  padding: 0.7rem 1.4rem;
 }
 
 ul.submenu {
   border: 1px solid $black;
-}
 
-ul.submenu .cart {
-  font-size: 0.7rem;
-}
-
-.cart li {
+  .cart {
+    font-size: 0.7rem;
+  }
 }

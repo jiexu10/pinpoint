@@ -31,7 +31,8 @@ feature 'user creates an order via cart', %{
     within('.cart') do
       rest1.items.each do |item|
         unless item.price == 'No Price'
-          expect(page).to have_content("#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
+          expect(page).to have_content(
+          "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
         end
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)
@@ -61,11 +62,23 @@ feature 'user creates an order via cart', %{
     within('.cart') do
       rest1.items.each do |item|
         unless item.price == 'No Price'
-          expect(page).to have_content("#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
+          expect(page).to have_content(
+          "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
         end
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)
     end
   end
 
+  scenario 'user adds invalid items to order' do
+    rest1.items.each do |item|
+        Cart.add_item(cart, item, '5')
+    end
+    user_sign_in(user)
+    visit restaurantdetail_path(rest1.restaurantdetail)
+    click_button 'Place Order'
+
+    expect(page).to have_content('Please remove items with no price.')
+    expect(page).to have_content(rest1.restaurantdetail.name)
+  end
 end

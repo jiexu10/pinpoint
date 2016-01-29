@@ -10,7 +10,6 @@ class Item < ActiveRecord::Base
   validates :restaurantdetail, presence: true
 
   def truncate
-    name.length > 20 ? trunc = name[0..20] + '...' : trunc = name
-    trunc
+    trunc = name.length > 20 ? name[0..20] + '...' : name
   end
 end

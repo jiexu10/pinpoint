@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
   def find_cart
     if user_signed_in? && restaurantdetails_show?
       restaurant = Restaurant.find(params[:id])
-      @cart = Cart.find_or_create_by(user: current_user, restaurant: restaurant, status: "pending")
+      @cart = Cart.find_or_create_by(
+        user: current_user, restaurant: restaurant, status: "pending")
       @order = Order.new(restaurant: restaurant, cart: @cart)
     else
       @cart = nil
