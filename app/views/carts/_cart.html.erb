@@ -1,9 +1,7 @@
 <div class="cart">
   <% unless cart.cartitems.empty? %>
     <% cart.cartitems.each do |ci| %>
-      <li>
-        <%= ci.pp %>
-      </li>
+        <%= ci.pp %><br>
     <% end %>
     <hr>
     <b>Total: $<%= cart.find_total %></b>

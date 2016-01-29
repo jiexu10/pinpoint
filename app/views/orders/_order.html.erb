@@ -1,7 +1,7 @@
 <div class="order-info order-id-<%= order.id %>">
+  <li><%= link_to "Order ID: ##{order.id}", order %></li>
   <li>Name: <%= order.user.full_name %></li>
   <li>Restaurant: <%= order.restaurant.company_name %></li>
-  <li><%= link_to "Order ID: ##{order.id}", order %></li>
   <br />
 
   <% if restaurant_signed_in? %>

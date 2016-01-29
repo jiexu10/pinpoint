@@ -13,6 +13,8 @@ class Api::V1::OrdersController < Api::V1::BaseController
       latitude = driver.latitude.to_f
       longitude = driver.longitude.to_f
       render json: { lat: latitude, lng: longitude }
+    elsif order_params[:request] == 'user'
+      render json: { status_name: order.status.name }
     end
   end
 
