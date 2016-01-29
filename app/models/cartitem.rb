@@ -8,6 +8,6 @@ class Cartitem < ActiveRecord::Base
   validates :item, uniqueness: { scope: :cart }
 
   def pp
-    "#{item.name}, #{item.price} each (#{quantity})"
+    "#{item.truncate}, #{item.price} each (#{quantity})"
   end
 end

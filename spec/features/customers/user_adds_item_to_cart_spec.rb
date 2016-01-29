@@ -34,7 +34,7 @@ feature 'user creates an order via cart', %{
     within('.cart') do
       cart = user.find_cart(rest1)
       cart.items.each do |item|
-        expect(page).to have_content("#{item.name}, #{item.price} each (#{cart.find_quantity(item)})")
+        expect(page).to have_content("#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)
       expect(price.round(2).to_s).to eq(user.find_cart(rest1).find_total)
@@ -62,9 +62,9 @@ feature 'user creates an order via cart', %{
     within('.cart') do
       rest1.items.each_with_index do |item, index|
         if index.even?
-          expect(page).to have_content("#{item.name}, #{item.price} each (1)")
+          expect(page).to have_content("#{item.truncate}, #{item.price} each (1)")
         else
-          expect(page).to_not have_content("#{item.name}, #{item.price} each")
+          expect(page).to_not have_content("#{item.truncate}, #{item.price} each")
         end
       end
       expect(page).to have_content(user.find_cart(rest1).find_total)

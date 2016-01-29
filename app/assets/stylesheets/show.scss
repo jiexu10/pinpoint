@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+h3 {
+  color: $secondary-color;
+}
+
 .info-description {
   border-top: 2px dotted $primary-color;
   font-size: 0.8rem;

@@ -1,29 +1,37 @@
-<div class="row">
-  First Name: <%= @user.first_name %>
-  Last Name: <%= @user.last_name %>
-  Company Name: <%= @user.company_name %>
+<div class="small-10 small-centered columns">
+  <div class="row">
+    <div class="rest-info small-12 medium-10 medium-offset-1 columns">
+      <h3>Name: <%= @user.full_name %></h3>
+      <% unless @user.company_name.blank? %>
+        Company Name: <%= @user.company_name %>
+      <% end %>
 
-  <% if @user.role == 'driver' %>
-    <div id='driver-location'>
-      <%= link_to 'Show My Location', '#', id: "#{@user.id}" %>
+      <br>
+      <% if @user.role == 'driver' %>
+        <div id='driver-location'>
+          <%= link_to 'Show My Location', '#', id: "#{@user.id}" %>
+        </div>
+      <% end %>
+
+      <br>
+
+      Pending Orders
+      <div class="pending-order-list">
+        <% if @pending_orders.any? %>
+          <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
+        <% else %>
+          No pending orders!
+        <% end %>
+      </div>
+
+      Completed Orders:
+      <div class="completed-order-list">
+        <% if @comp_orders.any? %>
+          <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
+        <% else %>
+          No completed orders yet!
+        <% end %>
+      </div>
     </div>
-  <% end %>
-
-  Pending Orders
-  <div class="pending-order-list">
-    <% if @pending_orders.any? %>
-      <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
-    <% else %>
-      No pending orders!
-    <% end %>
-  </div>
-
-  Completed Orders:
-  <div class="completed-order-list">
-    <% if @comp_orders.any? %>
-      <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
-    <% else %>
-      No completed orders yet!
-    <% end %>
   </div>
 </div>
