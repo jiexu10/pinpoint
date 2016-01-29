@@ -1,12 +1,11 @@
 <div class="small-10 small-centered columns">
   <div class="row">
     <div class="rest-info small-12 medium-10 medium-offset-1 columns">
-      <h3>Name: <%= @user.full_name %></h3>
+      <h3><%= @user.full_name %></h3>
       <% unless @user.company_name.blank? %>
         Company Name: <%= @user.company_name %>
       <% end %>
 
-      <br>
       <% if @user.role == 'driver' %>
         <div id='driver-location'>
           <%= link_to 'Show My Location', '#', id: "#{@user.id}" %>
@@ -15,22 +14,35 @@
 
       <br>
 
-      Pending Orders
+<div class="order-row row">
+  <div class="order-summary small-10 small-centered columns">
+    <div class="callout">
       <div class="pending-order-list">
-        <% if @pending_orders.any? %>
-          <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
-        <% else %>
-          No pending orders!
-        <% end %>
+        <section class="block-list">
+          <header>Pending Orders:</header>
+          <ul class="order-info-list">
+            <% if @pending_orders.any? %>
+              <%= render partial: 'orders/order', collection: @pending_orders, as: :order %>
+            <% else %>
+              <li>No pending orders!</li>
+            <% end %>
+          </ul>
+        </section>
       </div>
+    </div>
 
-      Completed Orders:
+    <div class="callout">
       <div class="completed-order-list">
-        <% if @comp_orders.any? %>
-          <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
-        <% else %>
-          No completed orders yet!
-        <% end %>
+        <section class="block-list">
+          <header>Completed Orders:</header>
+          <ul class="order-info-list">
+            <% if @comp_orders.any? %>
+              <%= render partial: 'orders/order', collection: @comp_orders, as: :order %>
+            <% else %>
+              <li>No completed orders yet!</li>
+            <% end %>
+          </ul>
+        </section>
       </div>
     </div>
   </div>

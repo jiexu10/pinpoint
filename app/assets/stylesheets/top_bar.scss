@@ -22,7 +22,7 @@
 
   input.button {
     text-align: center;
-    width: 200px;
+    width: 190px;
   }
 }
 
@@ -59,10 +59,19 @@
   padding: 0.7rem 1.4rem;
 }
 
+.submenu a:hover {
+  color: lighten($black, 75%);
+}
+
 ul.submenu {
   border: 1px solid $black;
+  font-size: 0.7rem;
 
   .cart {
     font-size: 0.7rem;
+  }
+
+  hr {
+    margin: 2px 0;
   }
 }

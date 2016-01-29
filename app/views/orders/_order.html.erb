@@ -1,11 +1,12 @@
-<div class="order-id-<%= order.id %>">
-  User: <%= order.user.full_name %>
-  Restaurant: <%= order.restaurant.company_name %>
-  <%= link_to "Order ID: ##{order.id}", order %>
-  Order Status: <%= order.status.name %>
+<div class="order-info order-id-<%= order.id %>">
+  <li>Name: <%= order.user.full_name %></li>
+  <li>Restaurant: <%= order.restaurant.company_name %></li>
+  <li><%= link_to "Order ID: ##{order.id}", order %></li>
   <br />
 
-  <%= render partial: 'carts/cart', locals: { cart: order.cart } %>
+  <% if restaurant_signed_in? %>
+    <%= render partial: 'carts/cart', locals: { cart: order.cart } %>
+  <% end %>
 
   <% if restaurant_signed_in? %>
     <% unless order.status.name == 'Pending' %>
@@ -31,6 +32,5 @@
       </div>
     <% end %>
   <% end %>
-
 
 </div>
