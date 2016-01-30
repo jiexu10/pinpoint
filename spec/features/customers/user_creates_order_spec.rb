@@ -18,7 +18,7 @@ feature 'user creates an order via cart', %{
 
   scenario 'user has a cart and places an order' do
     rest1.items.each do |item|
-      if item.price.match(/^\d+\.?\d{0,2}$/)
+      if item.price =~ /^\d+\.?\d{0,2}$/
         Cart.add_item(cart, item, '5')
       end
     end
@@ -30,7 +30,7 @@ feature 'user creates an order via cart', %{
     expect(page).to have_content('Order Status: Pending')
     within('.cart') do
       rest1.items.each do |item|
-      if item.price.match(/^\d+\.?\d{0,2}$/)
+        if item.price =~ /^\d+\.?\d{0,2}$/
           expect(page).to have_content(
             "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
         end
@@ -41,7 +41,7 @@ feature 'user creates an order via cart', %{
 
   scenario 'user places an order, then later places order at same place' do
     rest1.items.each do |item|
-      if item.price.match(/^\d+\.?\d{0,2}$/)
+      if item.price =~ /^\d+\.?\d{0,2}$/
         Cart.add_item(cart, item, '5')
       end
     end
@@ -50,7 +50,7 @@ feature 'user creates an order via cart', %{
 
     cart2 = FactoryGirl.create(:cart, user: user, restaurant: rest1)
     rest1.items.each do |item|
-      if item.price.match(/^\d+\.?\d{0,2}$/)
+      if item.price =~ /^\d+\.?\d{0,2}$/
         Cart.add_item(cart2, item, '5')
       end
     end
@@ -61,7 +61,7 @@ feature 'user creates an order via cart', %{
     expect(page).to have_content('Order Status: Pending')
     within('.cart') do
       rest1.items.each do |item|
-        if item.price.match(/^\d+\.?\d{0,2}$/)
+        if item.price =~ /^\d+\.?\d{0,2}$/
           expect(page).to have_content(
             "#{item.truncate}, #{item.price} each (#{cart.find_quantity(item)})")
         end
