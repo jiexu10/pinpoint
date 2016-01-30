@@ -5,7 +5,8 @@ class Api::V1::UsersController < Api::V1::BaseController
       @user.latitude = nil
       @user.longitude = nil
       if @user.save
-        render json: { result: 'cleared' } and return
+        render json: { result: 'cleared' }
+        return
       end
     end
     if @user.role == 'driver'
