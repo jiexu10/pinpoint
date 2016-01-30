@@ -30,4 +30,22 @@ RSpec.describe Api::V1::OrdersController, vcr: true do
     expect(json['lat']).to eq(driver.latitude.to_f)
     expect(json['lng']).to eq(driver.longitude.to_f)
   end
+
+  it 'can retrieve status from an order' do
+    params = { request: 'user' }
+    get "/api/v1/orders/#{order.id}", params, format: :json
+
+    json = JSON.parse(response.body)
+    expect(json['status_name']).to eq('Pending')
+
+    confirmed_status = Status.find_by(name: 'Confirmed')
+    order.status = confirmed_status
+    order.save
+
+    params = { request: 'user' }
+    get "/api/v1/orders/#{order.id}", params, format: :json
+
+    json = JSON.parse(response.body)
+    expect(json['status_name']).to eq('Confirmed')
+  end
 end
