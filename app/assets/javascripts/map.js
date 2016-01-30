@@ -68,7 +68,9 @@ var drawMapLine = function(data) {
   if (driverPathLine) {
     driverPathLine.setMap(null);
   }
-  driverPathArray.push(data);
+  if (!(data.lat === 0 && data.lng === 0)) {
+    driverPathArray.push(data);
+  };
   driverPathLine = new google.maps.Polyline({
     path: driverPathArray,
     geodesic: true,
