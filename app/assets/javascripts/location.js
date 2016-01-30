@@ -4,16 +4,21 @@ $(document).ready(function() {
     var driverId = event.target.id
     createInterval(findLoc, driverId, 15000);
   });
+  $("#clear-location").click(function(event) {
+    event.preventDefault();
+    var driverId = event.target.id
+    if (intervalFunc) {
+      clearInterval(intervalFunc);
+    };
+    ajaxClearLoc(driverId);
+  });
 });
 
+var intervalFunc;
 var createInterval = function(locationFunc, driverId, interval) {
-  setInterval(function() {
+  intervalFunc = setInterval(function() {
     locationFunc(driverId);
   }, interval);
-};
-
-var startPolling = function(driverId) {
-  setInterval(findLoc(driverId), 5000);
 };
 
 var findLoc = function(driverId) {
@@ -32,9 +37,30 @@ var makeAjaxRequestLoc = function(driverId, driverLoc) {
 
   request.success(function(data) {
     console.log("driver location sent");
+    $('.spacer').remove();
+    $('.messages').html(
+      '<div class="warning callout flash">Sending Location...</div>');
   });
 
   request.error(function(data) {
-    console.log("didn't work");
+    console.log("driver location send didn't work");
+  });
+};
+
+var ajaxClearLoc = function(driverId) {
+  var request = $.ajax({
+    method: 'PATCH',
+    data: { request: 'clear' },
+    url: '/api/v1/users/' + driverId
+  });
+
+  request.success(function() {
+    console.log("driver location cleared");
+    $('.flash').remove();
+    $('.messages').append('<div class="spacer"></div>');
+  });
+
+  request.error(function() {
+    console.log("clear didn't work");
   });
 };
