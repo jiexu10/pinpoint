@@ -1,3 +1,5 @@
+
+
 .has-submenu > a {
   border-left: 1px solid $white;
   padding-left: 2.5rem;
@@ -44,12 +46,16 @@
   a {
     color: $white;
     float: left;
-    font-family: $title-font-family;
-    font-weight: bold;
   }
 
   h5 {
     margin: 0;
+  }
+
+  img {
+    height: auto;
+    width: auto;
+    max-height: 36px;
   }
 
   span {
