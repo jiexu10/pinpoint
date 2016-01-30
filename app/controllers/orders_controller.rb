@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
     driver = User.find_by(role: 'driver')
     order = Order.new(cart: cart, driver: driver, restaurant: restaurant,
                         status: pending, user: current_user)
-    if cart.items.any? { |item| item.price == 'No Price' }
+    if cart.items.any? { |item| item.price.match(/^\d+\.?\d{0,2}$/).nil? }
       flash[:error] = 'Please remove items with no price.'
       redirect_to restaurant.restaurantdetail
       return

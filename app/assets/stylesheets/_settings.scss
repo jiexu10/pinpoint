@@ -60,7 +60,7 @@ $white: #fefefe;
 $body-background: #fffaf0;
 $body-font-color: $black;
 $font-family: 'Source Sans Pro', sans-serif;
-$title-font-family: 'Satisfy', cursive;
+$title-font-family: $font-family;
 $body-font-family: $font-family;
 $body-antialiased: true;
 $global-margin: 1rem;

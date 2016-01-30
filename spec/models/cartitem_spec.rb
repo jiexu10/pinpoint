@@ -13,6 +13,6 @@ RSpec.describe Cartitem, type: :model, vcr: true do
 
     expect(cart.cartitems[0].pp).to eq("#{item.name}, #{item.price} each (1)")
     expect(cart.cartitems[1].pp).to eq(
-      "#{longnameitem.name[0..20] + '...'}, #{longnameitem.price} each (1)")
+      "#{longnameitem.name[0..15] + '...'}, #{longnameitem.price} each (1)")
   end
 end

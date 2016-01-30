@@ -44,12 +44,16 @@
   a {
     color: $white;
     float: left;
-    font-family: $title-font-family;
-    font-weight: bold;
   }
 
   h5 {
     margin: 0;
+  }
+
+  img {
+    height: auto;
+    max-height: 36px;
+    width: auto;
   }
 
   span {
