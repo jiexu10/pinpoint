@@ -1,9 +1,9 @@
 class Seeder
   WORKING_RESTAURANTS = [
     "Betty's Wok & Noodle Diner",
-    "Siam Bistro",
-    "Papagayo",
     "Morse Fish Company",
+    "Papagayo",
+    "Siam Bistro",
     "The Wholy Grain"
   ].freeze
 
@@ -17,9 +17,9 @@ class Seeder
   def self.seed_restaurants
     WORKING_RESTAURANTS.each_with_index do |restaurant_name, index|
       attributes = {
-        first_name: 'Fakefirst',
-        last_name: 'Fakelast',
-        email: "fake#{index}@fake.com",
+        first_name: 'Restaurant',
+        last_name: 'Example',
+        email: "restaurant#{index + 1}@example.com",
         company_name: restaurant_name,
         password: 'password'
       }
