@@ -12,6 +12,10 @@
   color: $success-color;
   font-weight: bold;
   padding-left: 1rem;
+  transition: color 2s ease-in-out;
+  // &.blink {
+  //   color: $primary-color;
+  // }
 }
 
 .order-info-list {
