@@ -112,8 +112,7 @@ var ajaxRequestRestaurant = function(initMap) {
     });
 
     request.success(function(data) {
-      var marketBasketLoc = { lat: 42.380510, lng: -71.101612 };
-      initMap(marketBasketLoc);
+      initMap(data);
     });
 
     request.error(function() {
