@@ -11,7 +11,7 @@ Online food delivery apps often suffer from a void of information from the custo
 
 Project ER Diagram
 
-![ER Diagram](https://www.dropbox.com/s/8ul3ss1v5vkmfeu/ER%20Diagram%28PinPoint%29.png?dl=0)
+![ER Diagram](docs/ER-Diagram(PinPoint).png)
 
 **All test accounts are created with a password of 'password'.**
 
