@@ -11,7 +11,7 @@ Online food delivery apps often suffer from a void of information from the custo
 
 Project ER Diagram
 
-![Alt text](https://www.dropbox.com/s/8ul3ss1v5vkmfeu/ER%20Diagram%28PinPoint%29.png?dl=0 " ER Diagram")
+![Alt text](https://www.dropbox.com/s/8ul3ss1v5vkmfeu/ER%20Diagram%28PinPoint%29.png?dl=0 "ER Diagram")
 
 **All test accounts are created with a password of 'password'.**
 
@@ -39,7 +39,7 @@ This app uses the Locu API to populate the database with restaurant location det
 
 Currently, hours are not being used in this application, although the data is stored in the database.  Menu items with complex options are also mostly ignored; they do appear on the menu, but you cannot place an order with those items in the cart.
 
-auto-pop-gif
+![Alt text](https://www.dropbox.com/s/wz4q6q4d2kywbed/rest-auto-pop.gif?dl=0 "Restaurant Auto-Population")
 
 *Order Status Changes*
 
