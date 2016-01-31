@@ -9,11 +9,11 @@ This app provides a centralized food delivery ecosystem for customers, restauran
 
 Online food delivery apps often suffer from a void of information from the customer perspective due to the lack of updates on their order, making it more difficult for them to plan their time.  PinPoint provides the ability to track the location of your food throughout the delivery process, from the restaurant to your front door.
 
+**All test accounts are created with a password of 'password'.**
+
 Project ER Diagram
 
 ![ER Diagram](docs/ER-Diagram(PinPoint).png)
-
-**All test accounts are created with a password of 'password'.**
 
 #### **User Information**
 (Test Account: user@example.com)
