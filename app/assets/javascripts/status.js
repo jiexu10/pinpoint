@@ -21,7 +21,13 @@ var makeAjaxRequestStatus = function() {
 
   request.success(function(data) {
     console.log("status sent" + data.status_name);
-    $("span.order-status").text(data.status_name);
+    if ($("span.order-status").text() != data.status_name) {
+      $("span.order-status").css("color","#cf2f00");
+      $("span.order-status").text(data.status_name);
+      var timeoutTextColor = setTimeout(function() {
+        $("span.order-status").css("color","#3adb76");
+      }, 2000);
+    }
   });
 
   request.error(function() {
