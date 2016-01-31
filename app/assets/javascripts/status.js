@@ -24,7 +24,7 @@ var makeAjaxRequestStatus = function() {
     if ($("span.order-status").text() != data.status_name) {
       $("span.order-status").css("color","#cf2f00");
       $("span.order-status").text(data.status_name);
-      var timeoutTextColor = setTimeout(function() {
+      setTimeout(function() {
         $("span.order-status").css("color","#3adb76");
       }, 2000);
     }
