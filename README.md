@@ -28,7 +28,7 @@ On the order show page, the status will update via AJAX to allow the user to imm
 
 The order show page also shows the user, restaurant, and driver locations via the Google Maps Javascript API.  The two markers displayed represent the user and restaurant location, while the blue line will update and show the path of the driver in real time.  To test this functionality, leave one 'customer' browser on the order show page and then load the driver show page on a GPS-enabled mobile phone or computer.  The map will continuously update with the location of the mobile unit.
 
-![Location Tracking](docs/location-tracking-small.gif)
+![Location Tracking](docs/location-tracking-slow.gif)
 
 #### **Restaurant Information**
 (Test Accounts: restaurant(INSERT_NUMBER_HERE)@example.com), numbers: 1-5
@@ -39,7 +39,7 @@ This app uses the Locu API to populate the database with restaurant location det
 
 Currently, hours are not being used in this application, although the data is stored in the database.  Menu items with complex options are also mostly ignored; they do appear on the menu, but you cannot place an order with those items in the cart.
 
-![Restaurant Auto-Populate](docs/rest-auto-pop-small.gif)
+![Restaurant Auto-Populate](docs/rest-auto-pop-slow.gif)
 
 *Order Status Changes*
 
